@@ -7,18 +7,22 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
+          <p>
+            Francisco Javier Chiyah Garcia
+          </p>
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Coming soon!
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <p>
+            For now, you can visit: 
+              <ul className="App-list">
+                <li><a className="App-link" href="https://www.linkedin.com/in/javier-chiyah-garcia-469045a6/">LinkedIn profile</a></li>
+                <li><a className="App-link" href="https://scholar.google.co.uk/citations?hl=en&user=NQyCFjYAAAAJ#">Google Schoolar profile</a></li>
+                <li><a className="App-link" href="https://github.com/jchiyah">GitHub profile</a></li>
+              </ul>
+              You can also contact me at <tt>jchiyah@outlook.com</tt>
+          </p>
         </header>
       </div>
     );
