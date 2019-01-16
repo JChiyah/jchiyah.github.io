@@ -3,11 +3,12 @@ import React, { Component } from 'react';
 
 class NavigationElement extends Component {
 	render() {
+		const isActive = this.props.isActive;
+		let activeClass = isActive ? 'active' : '';
+
 		return (
 			<li className="navbar-elem">
-				<a href="#">
-					{this.props.text}
-				</a>
+				<a href="#" className={activeClass}>{this.props.text}</a>
 			</li>
 		);
 	}
@@ -19,6 +20,7 @@ class NavigationBar extends Component {
 		return (
 			<NavigationElement
 				text={title}
+				isActive={this.props.currentPage === title}
 		 	/>
 		 );
 	}

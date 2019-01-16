@@ -11,7 +11,9 @@ class Landing extends Component {
 	render() {
 		return (
 			<div className="landing">
-      			<NavigationBar />
+      			<NavigationBar 
+      				currentPage='Home'
+      			/>
       			<div className="landing-wrapper">
 					<div className="header">
 						<h1>Francisco Javier<br/>Chiyah Garcia</h1>
