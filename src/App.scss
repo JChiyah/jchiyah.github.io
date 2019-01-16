@@ -38,15 +38,29 @@
 
 /*** Start here ***/
 
+/** External Resources **/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto');
+
+
 /** Variables **/
+
+$color-primary-accent: #2980b9;
+$color-primary-text: #ffffff;
+$color-secondary-accent: #ffffff;
+$color-secondary-text: #000000;
 
 $navbar-padding: 0.5;
 
 
 
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
 .landing {
-	background: #2980b9;
-	color: #ffffff;
+	background: $color-primary-accent;
+	color: $color-primary-text;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -70,7 +84,7 @@ $navbar-padding: 0.5;
 			font-size: 100px;
 		}
 
-		h2 {
+		h3 {
 			font-size: 20px;
 		}
 	}
@@ -91,7 +105,7 @@ $navbar-padding: 0.5;
 
 				a {
 					padding: 1em;
-					color: #ffffff;
+					color: $color-primary-text;
 					text-decoration: none;
 				}
 
@@ -123,13 +137,34 @@ $navbar-padding: 0.5;
 
 .navbar-elem {
 	display: inline-block;
+
 	padding: $navbar-padding + em;
 
 	a {
-		padding: $navbar-padding + em;
+		position: relative;
+		padding: ($navbar-padding / 2) + em;
 
+		color: $color-primary-text;
 		font-size: 20px;
 		text-decoration: none;
 	}
+	a:after {
+		content: "";
+		position: absolute;
+		right: 0;
+		width: 0;
+		bottom: -3px;
+		background: $color-primary-text;
+		height: 2px;
+		transition-property: width;
+		transition-duration: 0.3s;
+		transition-timing-function: ease-out;
+	}
+	a:hover:after,
+	a:focus:after,
+	a:active:after {
+		left: 0;
+		right: auto;
+		width: 100%;
+	}
 }
-

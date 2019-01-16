@@ -15,7 +15,7 @@ class Landing extends Component {
       			<div className="landing-wrapper">
 					<div className="header">
 						<h1>Francisco Javier<br/>Chiyah Garcia</h1>
-						<h2>Software Engineer | Explainable Autonomy | Human-Computer Interaction</h2>
+						<h3>Software Engineer | Explainable Autonomy | Human-Computer Interaction</h3>
 					</div>
 					<div className="subheader">
 						<ul>
