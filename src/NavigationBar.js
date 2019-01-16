@@ -4,11 +4,13 @@ import React, { Component } from 'react';
 class NavigationElement extends Component {
 	render() {
 		const isActive = this.props.isActive;
-		let activeClass = isActive ? 'active' : '';
+		const activeClass = isActive ? 'active' : '';
+
+		const url = "/" + (this.props.text).toLowerCase().replace(" ", "-");
 
 		return (
 			<li className="navbar-elem">
-				<a href="#" className={activeClass}>{this.props.text}</a>
+				<a href={url} className={activeClass}>{this.props.text}</a>
 			</li>
 		);
 	}
