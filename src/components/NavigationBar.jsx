@@ -35,7 +35,7 @@ class NavigationBar extends Component {
 					{this.renderElement('About')}
 					{this.renderElement('Projects')}
 					{this.renderElement('Publications')}
-					{this.renderElement('Professional Activity')}
+					{this.renderElement('Professional Activities')}
 					{this.renderElement('Contact')}
 				</ul>
 			</nav>

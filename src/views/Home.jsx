@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
+import './../App.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-import NavigationBar from './NavigationBar';
+import NavigationBar from './../components/NavigationBar';
 
 
-class Landing extends Component {
+class Home extends Component {
 	render() {
 		return (
 			<div className="landing">
-      			<NavigationBar 
-      				currentPage='Home'
-      			/>
-      			<div className="landing-wrapper">
+				<NavigationBar currentPage='Home' />
+
+				<div className="landing-wrapper">
 					<div className="header">
 						<h1>Francisco Javier<br/>Chiyah Garcia</h1>
 						<h3>Software Engineer | Explainable Autonomy | Human-Computer Interaction</h3>
@@ -33,4 +33,4 @@ class Landing extends Component {
 }
 
 
-export default Landing;
+export default Home;
