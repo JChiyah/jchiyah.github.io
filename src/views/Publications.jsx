@@ -53,15 +53,17 @@ class Publications extends Component {
 					<h1>Publications</h1>
 					<p style={{marginBottom: '2em'}}>The following is a list of publications. You can also check my <a href={publicationsFile} target="_blank"><FontAwesomeIcon className="fa-icon" icon={faBook} /> bibtex file</a> or 
 						my <a href="https://scholar.google.co.uk/citations?hl=en&user=NQyCFjYAAAAJ#" target="_blank"><FontAwesomeIcon className="fa-icon" icon={faGraduationCap} /> Google Scholar profile</a>.
-						If you need access to any of the publications and the link is broken, do not hesitate to contact me and I will happily provide a copy.
+						<br/><br/>If you need access to any of the publications and the link is broken, do not hesitate to contact me and I will happily provide a copy.
 					</p>
 					<ul>{pubs}</ul>
 					<br/>
 					<hr/>
 					<h2>My Name</h2>
-					<p>Sometimes there is confusion about my name and the correct way to use it. I have two surnames ("Chiyah" and "Garcia"). <br/>
+					<p>Sometimes there is confusion about my name and the correct way to use it. I have two surnames <em>Chiyah</em> and <em>Garcia</em>, thus both "should" be used (but it doesn't matter too much!). 
+					I follow the guidelines from this very <a href="https://blog.apastyle.org/apastyle/2017/05/whats-in-a-name-two-part-surnames-in-apa-style.html" target="_blank">comprenhensive guide</a>. 
+					Check below for the quick answer.<br/><br/>
 
-					Please use the following guidelines if you have doubts when citing my name (but it doesn't matter too much!):</p>
+					I recommend the following styles, being <em>Chiyah</em> my preferred surname:</p>
 					<ul>
 						<li>Chiyah Garcia et al.</li>
 						<li>Chiyah et al.</li>
