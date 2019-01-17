@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import BibtexParser from './../bibtexParse';
 import './../App.scss';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGraduationCap, faBook } from '@fortawesome/free-solid-svg-icons';
+
 import NavigationBar from './../components/NavigationBar';
 import PublicationItem from './../components/PublicationItem';
 
@@ -36,7 +39,7 @@ class Publications extends Component {
 		const pubsArray = this.state.publicationsArray;
 		const pubs = pubsArray.map((entry) => {
 			return (
-				<li>
+				<li key={entry['citationKey']}>
 					<PublicationItem bibtex={entry} />
 				</li>
 			)
@@ -48,8 +51,23 @@ class Publications extends Component {
 
 				<div className="app-body">
 					<h1>Publications</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p style={{marginBottom: '2em'}}>The following is a list of publications. You can also check my <a href={publicationsFile} target="_blank"><FontAwesomeIcon className="fa-icon" icon={faBook} /> bibtex file</a> or 
+						my <a href="https://scholar.google.co.uk/citations?hl=en&user=NQyCFjYAAAAJ#" target="_blank"><FontAwesomeIcon className="fa-icon" icon={faGraduationCap} /> Google Scholar profile</a>.
+						If you need access to any of the publications and the link is broken, do not hesitate to contact me and I will happily provide a copy.
+					</p>
 					<ul>{pubs}</ul>
+					<br/>
+					<hr/>
+					<h2>My Name</h2>
+					<p>Sometimes there is confusion about my name and the correct way to use it. I have two surnames ("Chiyah" and "Garcia"). <br/>
+
+					Please use the following guidelines if you have doubts when citing my name (but it doesn't matter too much!):</p>
+					<ul>
+						<li>Chiyah Garcia et al.</li>
+						<li>Chiyah et al.</li>
+						<li>Chiyah Garcia, F. J.</li>
+						<li>Chiyah Garcia, Francisco J.</li>
+					</ul>
 				</div>
 			</div>
 		);

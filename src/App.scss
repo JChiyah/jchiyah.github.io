@@ -119,11 +119,34 @@ body {
 
 .app-body {
 	width: 80%;
-	margin: 1em auto;
+	margin: 1em auto 3em auto;
 
 	h1 {
 		font-size: 3.5em;
 	}
+
+	h1 {
+		font-size: 2.5em;
+	}
+
+	.button-link {
+		background:none!important;
+		color:inherit;
+		border:none;
+		padding:0!important;
+		font: inherit;
+		cursor: pointer;
+	}
+
+	a, .button-link {
+		color: $color-secondary-accent;
+		text-decoration: none;
+		font-weight: 600;
+	}
+	a:hover, .button-link:hover {
+		color: lighten($color-primary-accent, 15);
+	}
+
 }
 
 /* Home/Landing */
@@ -189,4 +212,53 @@ body {
 			}
 		}
 	}
+}
+
+.publication-item {
+	
+	em {
+		font-weight: 600;
+	}
+
+	.publication-item-menu {
+		list-style: none;
+
+		li {
+			display: inline-block;
+			margin: 0 0.5em;
+		}
+		li.bibtex-block {
+			display: block;
+			margin: 0.7em 0;
+		}
+	}
+}
+
+.bibtex-block {
+	height: auto;
+	background: lighten($color-primary-accent, 55);
+	padding: 0.5em;
+	margin: 0.7em 0;
+	box-sizing: border-box;
+
+	border-radius: 3px;
+	border: 2px solid $color-secondary-accent;
+
+	transition-property: all;
+	transition-duration: .8s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+
+	p {
+		margin: 0;
+	}
+}
+.bibtex-block:hover {
+	border: 2px solid lighten($color-primary-accent, 20);
+}
+.bibtex-block-closed {
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+	margin: 0 !important;
+	padding: 0;
 }
