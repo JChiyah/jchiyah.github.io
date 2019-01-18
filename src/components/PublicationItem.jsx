@@ -17,6 +17,7 @@ function formatAuthors(authorString) {
 }
 
 function escapeRegExp(str) {
+	// eslint-disable-next-line
     return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
 }
 
@@ -29,10 +30,8 @@ class PublicationItem extends Component {
 	constructor(props) {
 		super(props);
 
-		this.setupPublication(this.props.bibtex);
-	}
+		const bibtexJSON = this.props.bibtex;
 
-	setupPublication(bibtexJSON) {
 		const authors = formatAuthors(bibtexJSON['entryTags']['author']);
 
 		this.state = {
@@ -47,7 +46,7 @@ class PublicationItem extends Component {
 			doi: bibtexJSON['entryTags']['doi'] || bibtexJSON['entryTags']['DOI'],
 			url: bibtexJSON['entryTags']['url'],
 			isDrawerOpen: false,
-		}
+		};
 	}
 
 	toggleDrawer() {
@@ -75,7 +74,7 @@ class PublicationItem extends Component {
 					{this.state.author}. ({this.state.year}). <em>{this.state.title}</em>. In {this.state.booktitle} ({this.state.series}), {this.state.address}.
 				</p>
 				<ul className="publication-item-menu">
-					<li><a href={pubLink} target="_blank"><FontAwesomeIcon className="fa-icon" icon={faLink} /> Link</a></li>
+					<li><a href={pubLink} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faLink} /> Link</a></li>
 					<li><button className="button-link" onClick={() => this.toggleDrawer()}><FontAwesomeIcon className="fa-icon" icon={faBook} /> Bibtex</button></li>
 					{doiPart}
 					<li className={classes}><p><tt dangerouslySetInnerHTML={{ __html: bibtexString }}></tt></p></li>
