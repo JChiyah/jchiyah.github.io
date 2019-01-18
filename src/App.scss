@@ -117,9 +117,25 @@ body {
 	}
 }
 
+$break-small: 400px;
+$break-medium: 800px;
+$break-large: 1200px;
+
 .app-body {
-	width: 80%;
-	margin: 1em auto 3em auto;
+	width: 50%;
+	margin: 1em auto 6em auto;
+
+	@media screen and (max-width: $break-large) {
+		width: 65%;
+	}
+
+	@media screen and (max-width: $break-medium) {
+		width: 80%;
+	}
+
+	@media screen and (max-width: $break-small) {
+		width: 90%;
+	}
 
 	h1 {
 		font-size: 3.5em;
@@ -146,8 +162,8 @@ body {
 	a:hover, .button-link:hover {
 		color: lighten($color-primary-accent, 15);
 	}
-
 }
+
 
 /* Home/Landing */
 
@@ -222,6 +238,7 @@ body {
 
 	.publication-item-menu {
 		list-style: none;
+		padding-inline-start: 0;
 
 		li {
 			display: inline-block;
