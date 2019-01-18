@@ -4,7 +4,7 @@ import * as serviceWorker from './serviceWorker';
 
 import './index.css';
 
-import { Switch, BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 
 import Home from './views/Home';
 import About from './views/About';
@@ -19,12 +19,12 @@ ReactDOM.render(
 	<Router>
 		<Switch>
 			<Route exact path="/" component={Home}/>
-			<Route path="/home" component={Home}/>
-			<Route path="/about" component={About}/>
-			<Route path="/projects" component={Projects}/>
-			<Route path="/publications" component={Publications}/>
-			<Route path="/professional-activities" component={Activities}/>
-			<Route path="/contact" component={Contact}/>
+			<Route exact path="/home" component={Home}/>
+			<Route exact path="/about" component={About}/>
+			<Route exact path="/projects" component={Projects}/>
+			<Route exact path="/publications" component={Publications}/>
+			<Route exact path="/professional-activities" component={Activities}/>
+			<Route exact path="/contact" component={Contact}/>
 			<Route component={PageNotFound} />
 		</Switch>
 	</Router>,
