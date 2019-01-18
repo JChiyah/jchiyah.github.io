@@ -1,3 +1,4 @@
+/* eslint-disable */ 
 /* start bibtexParse 0.0.24 */
 
 //Original work by Henrik Muehe (c) 2010
