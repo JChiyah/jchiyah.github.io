@@ -54,9 +54,15 @@ $navbar-padding: 0.5;
 
 
 
-body {
+html, body {
+	height: 100%;
+
 	font-family: 'Montserrat', sans-serif;
 	color: $color-secondary-text;
+}
+
+#root {
+	height: 100%;
 }
 
 /* Navigation Bar */
@@ -174,8 +180,8 @@ $break-large: 1200px;
 	flex-direction: column;
 	justify-content: center;
 
-	height: stretch;
-	width: stretch;
+	height: 100%;
+	width: 100%;
 	box-sizing: border-box;
 
 	.navbar {
