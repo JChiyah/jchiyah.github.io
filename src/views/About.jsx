@@ -34,7 +34,7 @@ class About extends Component {
 
 							I will finish my studies in May 2019 and I am currently looking to do a PhD in one of these areas, particularly something to do 
 							with explainability and autonomy (e.g. control of systems through natural language). Ideally, this PhD would
-							involve applied research. Any offers are welcome!
+							involve applied research. Any offers are welcome regardless of location!
 						</p>
 					</div>
 				</div>
