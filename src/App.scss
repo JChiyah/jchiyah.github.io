@@ -391,3 +391,49 @@ $break-large: 1200px;
 		border-color: $color-primary-accent;
 	}
 }
+
+.activity-section {
+
+	h2 {
+		margin-top: 1.2em;
+		margin-bottom: 0;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding-inline-start: 0;
+		padding: 0 1em;
+
+		li {
+		}
+		li:nth-child(n+1) {
+			border-bottom: 1px solid #7f8c8d;
+		}
+	}
+}
+
+.activity-item {
+	padding: 1em 0;
+	
+	p {
+		margin: 0.2em 0;
+	}
+
+	.activity-item-title {
+		font-weight: 600;
+	}
+
+	.activity-item-subtitle {
+		margin-top: 0.8em;
+	}
+
+	.activity-item-date {
+		color: #7f8c8d;
+		margin-bottom: 0.8em;
+	}
+
+	.activity-item-description {
+
+	}
+}
