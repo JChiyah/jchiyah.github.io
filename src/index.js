@@ -14,6 +14,11 @@ import Activities from './views/Activities';
 import Contact from './views/Contact';
 import PageNotFound from './views/PageNotFound';
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fas);
+
 
 ReactDOM.render(
 	<Router>
