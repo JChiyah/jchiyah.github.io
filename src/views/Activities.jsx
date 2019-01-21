@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Timeline } from 'react-event-timeline';
 import './../App.scss';
 
 import NavigationBar from './../components/NavigationBar';
@@ -7,13 +8,20 @@ import ActivityItem from './../components/ActivityItem';
 
 const activitiesFile = "/activities.json";
 
+const timelineLineStyle = {
+	width: '3px',
+	height: 'auto',
+	top: '20px',
+	bottom: '0px',
+}
+
 
 class Activities extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			activityArray: [],
-			jumpToArray: {},
+			colorIndex: 0
 		}
 
 		this.getActivities(this.setActivities);
@@ -35,22 +43,27 @@ class Activities extends Component {
 	renderSection(json) {
 		const list = json['list'].map((entry, index) => {
 			return (
-				<li key={json['id'] + index}>
-					<ActivityItem source={entry} />
-				</li>
+				<ActivityItem 
+					key={json['id'] + index} 
+					source={entry}
+					index={this.state.colorIndex++}
+				/>
 			);
 		});
 
-		var arr = this.state.jumpToArray;
-		if (arr[json['id']]) {
-			arr[json['id']] = json['title'];
-			this.setState({jumpToArray: arr});
-		}
-
 		return (
-			<div className="activity-section" key={json['id']} id={json['id']}>
+			<div 
+				className="activity-section" 
+				key={json['id']} 
+				id={json['id']}
+			>
 				<h2>{json['title']}</h2>
-				<ul>{list}</ul>
+				<Timeline 
+					style={{width: '98%'}}
+					lineStyle={timelineLineStyle}
+				>
+				{list}
+				</Timeline>
 			</div>
 		);
 	}
