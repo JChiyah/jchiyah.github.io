@@ -375,16 +375,19 @@ $break-large: 1200px;
 	0% {
 		border-color: $color-primary-accent;
 	}
-	20% {
-		border-color: #16a085;
+	17% {
+		border-color: #1abc9c;
 	}
-	40% {
+	34% {
+		border-color: #f1c40f;
+	}
+	51% {
 		border-color: #e67e22;
 	}
-	60% {
+	68% {
 		border-color: #c0392b;
 	}
-	80% {
+	85% {
 		border-color: #27ae60;
 	}
 	100% {
@@ -414,7 +417,7 @@ $break-large: 1200px;
 }
 
 .activity-item {
-	padding: 1em 0;
+	padding-bottom: 1em;
 	
 	p {
 		margin: 0.2em 0;
@@ -430,7 +433,7 @@ $break-large: 1200px;
 
 	.activity-item-date {
 		color: #7f8c8d;
-		margin-bottom: 0.8em;
+		margin-bottom: 2.8em;
 	}
 
 	.activity-item-description {
