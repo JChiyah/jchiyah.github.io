@@ -5,7 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const defaultTimelineIcon = "coffee";
 
-const colourArray = ['#27ae60', '#e74c3c', '#f1c40f', '#3498db'];
+const borderColourArray =     ['#27ae60', '#e74c3c', '#f1c40f', '#3498db'];
+const backgroundColourArray = ['#c8f3da', '#fbdedb', '#fbedb8', '#cce5f6'];
 
 
 // define here everything, including date (aka the actual title)
@@ -13,6 +14,7 @@ const itemStyle = {
 	fontSize: '1.3em',
 	fontWeight: '900',
 	paddingLeft: '15px',
+	paddingBottom: '1em',
 };
 const titleStyle = {
 	fontSize: '0.85em',
@@ -53,8 +55,8 @@ class ActivityItem extends Component {
 		};
 	}
 
-	getColour() {
-		return colourArray[this.props.index % colourArray.length];
+	getColour(array) {
+		return array[this.props.index % array.length];
 	}
 
 	// toggleDrawer() {
@@ -65,11 +67,11 @@ class ActivityItem extends Component {
 	render() {
 		// note how we perform a deep copy
 		var bubbleStyleCopy = JSON.parse(JSON.stringify(bubbleStyle));
-		bubbleStyleCopy['borderColor'] = this.getColour();
+		bubbleStyleCopy['borderColor'] = this.getColour(borderColourArray);
+		bubbleStyleCopy['background'] = this.getColour(backgroundColourArray);
 
 		return (
 			<TimelineEvent 
-				className="activity-item"
 				createdAt={this.state.title}
 				title={this.state.date}
 				subtitle={this.state.subtitle}
@@ -92,18 +94,3 @@ class ActivityItem extends Component {
 }
 
 export default ActivityItem;
-
-			// 	<TimelineEvent 
-			// 		key={json['id'] + index}
-			// 		title={entry['date']}
-   //      			createdAt={entry['title']}
-   //    				icon={<FontAwesomeIcon className="fa-icon" icon={entry['icon'] || defaultTimelineIcon} />}
-			// 	>
-			// 		<ActivityItem source={entry} />
-			// 	</TimelineEvent>
-
-
-				// <p className="activity-item-title">{this.state.title}</p>
-				// <p className="activity-item-subtitle">{this.state.subtitle}</p>
-				// <p className="activity-item-date">{this.state.date}</p>
-				// <p className="activity-item-description">{this.state.description}</p>
