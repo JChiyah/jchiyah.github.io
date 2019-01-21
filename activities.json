@@ -1,0 +1,146 @@
+[
+	{
+		"title": "Jobs and Experience",
+		"id": "jobs",
+		"list": [
+			{
+				"title": "Lab Helper for Software Development Courses",
+				"subtitle": "Heriot-Watt University",
+				"date": "Sep 2017 - Present",
+				"description": "Lab helper for software development courses for First Year students."
+			},
+			{
+				"title": "Software Developer Internship",
+				"subtitle": "Heriot-Watt University",
+				"date": "Jun 2017 - Aug 2017 (full-time) | Sep 2017 - May 2018 (part-time)",
+				"description": "Developing MIRIAM, a multimodal interface for autonomous systems using Agile methodologies. The project was funded by the Ministry of Defence and it involved working with other companies in the industry (SeeByte and Tekever). Some languages used in this project are: Python, PHP, Artificial Intelligence Markup Language (AIML), MySQL, HTML, JS, etc."
+			},
+			{
+				"title": "Software Developer Intern",
+				"subtitle": "SeeByte Ltd",
+				"date": "Jun 2018 - Dec 2018",
+				"description": ""
+			}
+		]
+	},
+	{
+		"title": "Awards",
+		"id": "awards",
+		"list": [
+			{
+				"title": "Runner-up Finalist for Young Software Engineer of the Year 2018",
+				"subtitle": "ScotlandIS",
+				"date": "Oct 2018",
+				"description": "Given to the best undergraduate software projects, it is drawn from across all students studying computing science and software engineering in Scotland. Each university submits the best final year undergraduate software engineering project from amongst their students."
+			},
+			{
+				"title": "The Cooper-Walker Engineering Ltd 2017/2018 Prize",
+				"subtitle": "Heriot-Watt University",
+				"date": "Sep 2018",
+				"description": "Prize awarded for outstanding project work in a degree programme in the Department of Computer Science."
+			},
+			{
+				"title": "The University Prize",
+				"subtitle": "Heriot-Watt University",
+				"date": "Sep 2017",
+				"description": "Prize awarded by Heriot-Watt University for achieving the highest marks of the Computer Science class during my 3rd Year (2016/2017)."
+			},
+			{
+				"title": "Certificate of Merit",
+				"subtitle": "Heriot-Watt University",
+				"date": "Aug 2017",
+				"description": "Received after third year of university to recognise the high grades obtained during the year 2016-2017."
+			},
+			{
+				"title": "Second Place in 3rd Year Group Project",
+				"subtitle": "Heriot-Watt University",
+				"date": "Apr 2017",
+				"description": "Awarded for ending up in second place for a year-long 3rd Year Group Project in Computer Science with industry."
+			},
+			{
+				"title": "Certificate of Merit",
+				"subtitle": "Heriot-Watt University",
+				"date": "Aug 2016",
+				"description": "Received after third year of university to recognise the high grades obtained during the year 2015-2016."
+			},
+			{
+				"title": "ICL Prize",
+				"subtitle": "Heriot-Watt University",
+				"date": "Aug 2015",
+				"description": "Received for being the best student with the highest marks in first year for BSc Computer Science."
+			},
+			{
+				"title": "Certificate of Merit",
+				"subtitle": "Heriot-Watt University",
+				"date": "Aug 2015",
+				"description": "Received after third year of university to recognise the high grades obtained during the year 2014-2015."
+			}
+		]
+	},
+	{
+		"title": "Seminars and Workshops",
+		"id": "seminars",
+		"list": [
+			{
+				"title": "Explainable Software for Cyber-Physical Systems (ES4CPS)",
+				"subtitle": "Schloss Dagstuhl GI Seminar",
+				"date": "Jan 2018",
+				"description": ""
+			}
+		]
+	},
+	{
+		"title": "Talks",
+		"id": "talks",
+		"list": [
+			{
+				"title": "Explainable Autonomy through Natural Language",
+				"subtitle": "Schloss Dagstuhl GI Seminar",
+				"date": "Jan 2018",
+				"description": ""
+			},
+			{
+				"title": "Generating Explanations in Natural Language for Clear Mental Models of Remote Autonomous Systems",
+				"subtitle": "SICSA Workshop on Conversational AI",
+				"date": "Dec 2018",
+				"description": ""
+			}
+		]
+	},
+	{
+		"title": "Education",
+		"id": "education",
+		"list": [
+			{
+				"title": "Heriot-Watt University",
+				"subtitle": "Master of Engineering in Software Engineering (MEng)",
+				"date": "2014 - 2019",
+				"description": "Grades above 80%"
+			},
+			{
+				"title": "Hogar Escuela M. A.",
+				"subtitle": "Primary, secondary and high school",
+				"date": "1999 - 2014",
+				"description": ""
+			}
+		]
+	},
+	{
+		"title": "Other",
+		"id": "other",
+		"list": [
+			{
+				"title": "Stock Associate",
+				"subtitle": "Hollister Co.",
+				"date": "Sep 2016 - Sep 2017",
+				"description": "Job mainly at the warehouse and helping around the store as a part of a team."
+			},
+			{
+				"title": "Customer Service Assistant",
+				"subtitle": "Sainsbury's",
+				"date": "Nov 2015 - May 2016",
+				"description": "Experience facing customers in general and providing a quality service within a busy environment."
+			}
+		]
+	}
+]
