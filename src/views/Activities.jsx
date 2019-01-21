@@ -13,6 +13,7 @@ const timelineLineStyle = {
 	height: 'auto',
 	top: '20px',
 	bottom: '0px',
+	left: '21px',
 }
 
 
@@ -75,7 +76,11 @@ class Activities extends Component {
 		});
 
 		const jumpToBody = actArray.map((entry, index) => {
-			return ( <li key={"link-" + entry['id'] + index}><a href={"#" + entry['id']}>{entry['title']}</a></li> );
+			return (
+				<li key={"link-" + entry['id'] + index}>
+					<a href={"#" + entry['id']}>{entry['title']}</a>
+				</li>
+			);
 		});
 
 		return (

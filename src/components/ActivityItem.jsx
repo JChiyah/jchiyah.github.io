@@ -12,6 +12,7 @@ const colourArray = ['#27ae60', '#e74c3c', '#f1c40f', '#3498db'];
 const itemStyle = {
 	fontSize: '1.3em',
 	fontWeight: '900',
+	paddingLeft: '15px',
 };
 const titleStyle = {
 	fontSize: '0.85em',
@@ -27,9 +28,13 @@ const contentStyle = {
 const bubbleStyle = {
 	borderWidth: '3px',
 	marginLeft: '0',
+	width: '40px',
+	height: '40px',
 };
 const iconStyle = {
-
+	width: '40px',
+	height: '40px',
+	fontSize: '1.3em',
 }
 
 
@@ -45,7 +50,6 @@ class ActivityItem extends Component {
 			date: source['date'],
 			description: source['description'],
 			icon: source['icon'] || '',
-			isOpen: false,
 		};
 	}
 
@@ -71,6 +75,7 @@ class ActivityItem extends Component {
 				subtitle={this.state.subtitle}
 				icon={<FontAwesomeIcon className="fa-icon" icon={this.state.icon || defaultTimelineIcon} />}
 				collapsible={true}
+				showContent={true}
 				// the styles for this object are done inline at the beginning of this file
 				style={itemStyle}
 				titleStyle={titleStyle}
