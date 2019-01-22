@@ -85,7 +85,7 @@ class Activities extends Component {
 
 		return (
 			<div className="App">
-				<NavigationBar currentPage='Activities' />
+				<NavigationBar currentPage='Professional Activities' />
 
 				<div className="app-body">
 					<h1>Professional Activities</h1>
