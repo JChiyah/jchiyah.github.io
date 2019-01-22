@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 
 class NavigationElement extends Component {
@@ -18,6 +20,44 @@ class NavigationElement extends Component {
 
 
 class NavigationBar extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			isDrawerOpen: false,
+		}
+
+		this.menuButtonRef = React.createRef();
+	}
+
+	toggleDrawer() {
+		this.setState({isDrawerOpen: !this.state.isDrawerOpen});
+	}
+
+	// this is just to trigger a rendering on window resize
+	updateDrawer() {
+		this.setState({isDrawerOpen: this.state.isDrawerOpen});
+	}
+
+	showMenu() {
+		let width = window.innerWidth;
+		if (width < 500) {
+			return this.state.isDrawerOpen;
+		}
+
+		return true;
+	}
+
+	// add an event listener so the component is re-rendered on window resize
+	componentDidMount() {
+		this.updateDrawer();
+		window.addEventListener("resize", this.updateDrawer.bind(this));
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener("resize", this.updateDrawer.bind(this));
+	}
+
 	renderElement(title) {
 		return (
 			<NavigationElement
@@ -30,7 +70,15 @@ class NavigationBar extends Component {
 	render() {
 		return (
 			<nav className="navbar">
-				<ul>
+				<div 
+					id="responsive-title" 
+					className="navbar-elem"
+					style={this.state.isDrawerOpen ? {display: 'none'} : {}}
+				>
+					<a href={"/" + (this.props.currentPage).toLowerCase().replace(" ", "-")} className="active">{this.props.currentPage}</a>
+				</div>
+
+				<ul style={{display: (this.showMenu() ? 'block' : 'none')}}>
 					{this.renderElement('Home')}
 					{this.renderElement('About')}
 					{this.renderElement('Projects')}
@@ -38,6 +86,14 @@ class NavigationBar extends Component {
 					{this.renderElement('Professional Activities')}
 					{this.renderElement('Contact')}
 				</ul>
+
+				<div 
+					id="responsive-menu-button" 
+					onClick={() => this.toggleDrawer()} 
+					ref={this.menuButtonRef}
+				>
+					<FontAwesomeIcon className="fa-icon" icon={this.state.isDrawerOpen ? faTimes : faBars} />
+				</div>
 			</nav>
 		);
 	}
