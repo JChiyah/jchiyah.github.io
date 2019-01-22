@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './../App.scss';
 
 import NavigationBar from './../components/NavigationBar';
+import Footer from './../components/Footer';
 
 
 class PageNotFound extends Component {
@@ -16,6 +17,8 @@ class PageNotFound extends Component {
 
 					<h2>It seems that this page does not exists</h2>
 				</div>
+
+				<Footer />
 			</div>
 		);
 	}

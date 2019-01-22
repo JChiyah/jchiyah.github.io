@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGraduationCap, faBook } from '@fortawesome/free-solid-svg-icons';
 
 import NavigationBar from './../components/NavigationBar';
+import Footer from './../components/Footer';
 import PublicationItem from './../components/PublicationItem';
 
 
@@ -71,6 +72,8 @@ class Publications extends Component {
 						<li>Chiyah Garcia, Francisco J.</li>
 					</ul>
 				</div>
+
+				<Footer />
 			</div>
 		);
 	}

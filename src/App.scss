@@ -11,8 +11,10 @@ $color-primary-text: #ffffff;
 $color-secondary-accent: #003c8f;
 $color-secondary-text: darken(#2c3e50, 5);
 
-$navbar-padding: 0.5;
+$color-footer-background: lighten($color-primary-accent, 0);
+$color-footer-text: #ffffff;
 
+$navbar-padding: 0.5;
 
 $break-small: 500px;
 $break-medium: 800px;
@@ -24,12 +26,17 @@ html, body {
 
 	font-family: 'Montserrat', sans-serif;
 	color: $color-secondary-text;
+	background: $color-footer-background;
 
 	scroll-behavior: smooth;
 }
 
 #root {
 	height: 100%;
+}
+
+.App {
+	background: #ffffff;
 }
 
 /* Navigation Bar */
@@ -148,9 +155,71 @@ html, body {
 	}
 }
 
+.footer {
+	display: flex;
+	padding: 1em 16%;
+	justify-content: space-between;
+
+	background: $color-footer-background;
+	color: $color-footer-text;
+
+	font-size: 0.9em;
+
+	a {
+		display: inline-block;
+
+		font-weight: 600;
+		text-decoration: none;
+		color: $color-footer-text;
+	}
+	a:hover {
+		color: #95a5a6;
+		text-decoration: underline;
+	}
+
+	.quick-links {
+		flex: 1 0 auto;
+		margin-left: 1em;
+
+		ul {
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+
+			width: fit-content;
+			list-style: none;
+			padding-inline-start: 0;
+			margin-left: auto;
+			margin-right: auto;
+
+			font-size: 0.95em;
+
+			li {
+				width: fit-content;
+
+				margin-bottom: 0.4em;
+			}
+		}
+	}
+
+	.footer-text {
+		flex: 1 1 auto;
+	}
+
+	@media screen and (max-width: $break-small) {
+		flex-direction: column;
+
+		.quick-links {
+			ul {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
 .app-body {
 	width: 50%;
-	margin: 1em auto 6em auto;
+	margin: 1em auto 3em auto;
 
 	@media screen and (max-width: $break-large) {
 		width: 65%;

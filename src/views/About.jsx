@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './../App.scss';
 
 import NavigationBar from './../components/NavigationBar';
+import Footer from './../components/Footer';
 
 
 class About extends Component {
@@ -38,6 +39,8 @@ class About extends Component {
 						</p>
 					</div>
 				</div>
+
+				<Footer />
 			</div>
 		);
 	}

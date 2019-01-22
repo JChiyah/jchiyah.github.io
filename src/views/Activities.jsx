@@ -3,6 +3,7 @@ import { Timeline } from 'react-event-timeline';
 import './../App.scss';
 
 import NavigationBar from './../components/NavigationBar';
+import Footer from './../components/Footer';
 import ActivityItem from './../components/ActivityItem';
 
 
@@ -93,6 +94,8 @@ class Activities extends Component {
 					<ul>{jumpToBody}</ul>
 					{body}
 				</div>
+
+				<Footer />
 			</div>
 		);
 	}

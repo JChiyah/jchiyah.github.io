@@ -6,6 +6,7 @@ import { faEnvelope, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 import NavigationBar from './../components/NavigationBar';
+import Footer from './../components/Footer';
 
 
 class Contact extends Component {
@@ -41,6 +42,8 @@ class Contact extends Component {
 						<li><a href="https://scholar.google.co.uk/citations?hl=en&user=NQyCFjYAAAAJ#"><FontAwesomeIcon className="fa-icon" icon={faGraduationCap} /> Google Scholar</a></li>
 					</ul>
 				</div>
+
+				<Footer />
 			</div>
 		);
 	}
