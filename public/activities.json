@@ -4,10 +4,10 @@
 		"id": "jobs",
 		"list": [
 			{
-				"title": "Lab Helper for Software Development Courses",
+				"title": "Lab Helper",
 				"subtitle": "Heriot-Watt University",
 				"date": "Sep 2017 - Present",
-				"description": "Lab helper for software development courses for First Year students.",
+				"description": "Lab helper for several software development courses for First Year students.",
 				"icon": "chalkboard-teacher"
 			},
 			{
@@ -34,7 +34,7 @@
 				"title": "SIGGEN Hackathon",
 				"subtitle": "INLG 2018",
 				"date": "Nov 2018",
-				"description": "First prize at the hackathon, developing a chatbot and training it in less than a day",
+				"description": "First prize at the hackathon, developing a chatbot and training it in record time.",
 				"icon": "award"
 			},
 			{
