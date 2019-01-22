@@ -31,6 +31,13 @@
 		"id": "awards",
 		"list": [
 			{
+				"title": "SIGGEN Hackathon",
+				"subtitle": "INLG 2018",
+				"date": "Nov 2018",
+				"description": "First prize at the hackathon, developing a chatbot and training it in less than a day",
+				"icon": "award"
+			},
+			{
 				"title": "Runner-up Finalist for Young Software Engineer of the Year 2018",
 				"subtitle": "ScotlandIS",
 				"date": "Oct 2018",
@@ -43,6 +50,13 @@
 				"date": "Sep 2018",
 				"description": "Prize awarded for outstanding project work in a degree programme in the Department of Computer Science.",
 				"icon": "trophy"
+			},
+			{
+				"title": "Mokanix Challenge",
+				"subtitle": "CreatED Hackathon",
+				"date": "Apr 2018",
+				"description": "",
+				"icon": "award"
 			},
 			{
 				"title": "The University Prize",
@@ -108,7 +122,7 @@
 			{
 				"title": "Explainable Autonomy through Natural Language",
 				"subtitle": "Schloss Dagstuhl GI Seminar",
-				"date": "Jan 2018",
+				"date": "Jan 2019",
 				"description": "",
 				"icon": "users"
 			},
