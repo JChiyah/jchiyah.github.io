@@ -9,7 +9,8 @@ const borderColourArray =     ['#27ae60', '#e74c3c', '#f1c40f', '#3498db'];
 const backgroundColourArray = ['#c8f3da', '#fbdedb', '#fbedb8', '#cce5f6'];
 
 
-// define here everything, including date (aka the actual title)
+// because the library does not allow to change the date style,
+// we set everything in itemStyle and then we "normalise" in the other styles
 const itemStyle = {
 	fontSize: '1.3em',
 	fontWeight: '900',
@@ -58,11 +59,6 @@ class ActivityItem extends Component {
 	getColour(array) {
 		return array[this.props.index % array.length];
 	}
-
-	// toggleDrawer() {
-	// 	const isDrawerOpen = this.state.isDrawerOpen;
-	// 	this.setState({isDrawerOpen: !isDrawerOpen});
-	// }
 
 	render() {
 		// note how we perform a deep copy
