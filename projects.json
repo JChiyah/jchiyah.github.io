@@ -1,0 +1,42 @@
+[
+	{
+		"id": "miriam",
+		"title": "MIRIAM",
+		"subtitle": "The Multimodal Interface",
+		"role": "Software Developer",
+		"description": "MIRIAM allows operators to interrogate autonomous underwater vehicle's actions and status in real time through natural language chat. This was developed as part of an internship in 2017. I still work on it and I have added many features like speech-recognition, speech-to-text, etc.",
+		"url": "http://www2.macs.hw.ac.uk/miriam/interface/",
+		"topics": ["Natural Language Generation and Understanding", "Explainability", "Chatbot", "Autonomy Behaviours"],
+		"skills": ["Python", "JavaScript", "PHP", "MySQL", "HTML", "SASS", "CSS"]
+	},
+	{
+		"id": "mar",
+		"title": "Maritime Augmented Reality",
+		"subtitle": "SeeByte Ltd",
+		"role": "Main Software Developer",
+		"description": "A cross-platform augmented reality program to monitor underwater vehicles in real-time through a camera. I developed this during my placement at SeeByte (June - December 2018).",
+		"url": "",
+		"topics": ["Augmented Reality", "Image Processing", "Android Dev", "Real-time Performance"],
+		"skills": ["C++", "Java", "Android SDK", "SQLite", "XML", "CMake", "Hunter", "Polly", "C#"]
+	},
+	{
+		"id": "jchiyah.github.io",
+		"title": "This Website!",
+		"subtitle": "A CV as a website",
+		"role": "Full-Stack Developer (I guess)",
+		"description": "I built this website using React and SASS (Syntactically Awesome Style Sheets). Hosted in GitHub pages, it is front-end only, but all the data displayed is dynamically loaded, without using a server!",
+		"url": "",
+		"topics": ["React.JS"],
+		"skills": ["JavaScript", "HTML", "SASS", "CSS"]
+	},
+	{
+		"id": "purplesky",
+		"title": "PurpleSky",
+		"subtitle": "Employee Allocation Website",
+		"role": "Lead Software Developer and Team Manager",
+		"description": "Website for a year-long group project during my 3rd Year at Heriot-Watt University. It involved students from different courses. The team and I achieved 2nd place and obtained a prize for it.",
+		"url": "https://github.com/JChiyah/purplesky",
+		"topics": ["Feature-rich Website", "Marketing", "Agile"],
+		"skills": ["PHP", "JavaScript", "MySQL", "HTML", "SASS", "CSS", "CodeIgniter"]
+	}
+]
