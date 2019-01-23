@@ -158,6 +158,7 @@ html, body {
 .footer {
 	display: flex;
 	padding: 1em 16%;
+	margin-top: -5px;
 	justify-content: space-between;
 
 	background: $color-footer-background;
@@ -363,6 +364,16 @@ html, body {
 		}
 	}
 }
+
+
+/** 404 PageNotFound **/
+
+.page-not-found {
+	min-height: 70vh;
+}
+
+
+/** Publications **/
 
 .publication-item {
 	
