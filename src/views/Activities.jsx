@@ -17,13 +17,15 @@ const timelineLineStyle = {
 	left: '21px',
 }
 
+// this could not be a state property because then the component would go into an infinite loop
+var colorIndex = 0;
+
 
 class Activities extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			activityArray: [],
-			colorIndex: 0
 		}
 
 		this.getActivities();
@@ -48,7 +50,7 @@ class Activities extends Component {
 				<ActivityItem 
 					key={json['id'] + index} 
 					source={entry}
-					index={this.state.colorIndex++}
+					index={colorIndex++}
 				/>
 			);
 		});

@@ -13,8 +13,7 @@ class Projects extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			projectsArray: [],
-			colorIndex: 0
+			projectsArray: []
 		}
 
 		this.getProjects();
@@ -56,6 +55,8 @@ class Projects extends Component {
 					<div className="items">
 						{this.renderProjects()}
 					</div>
+
+					<p>This is a work in progress, so there may be projects missing.</p>
 				</div>
 
 				<Footer />

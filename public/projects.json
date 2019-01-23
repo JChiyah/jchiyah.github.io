@@ -14,7 +14,7 @@
 		"title": "Maritime Augmented Reality",
 		"subtitle": "SeeByte Ltd",
 		"role": "Main Software Developer",
-		"description": "A cross-platform augmented reality program to monitor underwater vehicles in real-time through a camera. I developed this during my placement at SeeByte (June - December 2018)",
+		"description": "A cross-platform augmented reality program to monitor underwater vehicles in real-time through a camera. I developed this during my placement at SeeByte (June - December 2018).",
 		"url": "",
 		"topics": ["Augmented Reality", "Image Processing", "Android Dev", "Real-time Performance"],
 		"skills": ["C++", "Java", "Android SDK", "SQLite", "XML", "CMake", "Hunter", "Polly", "C#"]
