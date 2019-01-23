@@ -26,10 +26,10 @@ class Activities extends Component {
 			colorIndex: 0
 		}
 
-		this.getActivities(this.setActivities);
+		this.getActivities();
 	}
 
-	getActivities(callback) {
+	getActivities() {
 		fetch(activitiesFile).then((r) => r.text()).then(text  => {
 			this.setActivities(text);
 		});
