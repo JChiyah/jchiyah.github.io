@@ -554,3 +554,75 @@ html, body {
 		}
 	}
 }
+
+
+/** Projects **/
+
+.projects {
+
+	.items {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: stretch;
+	}
+}
+
+.project-item {
+	flex: 1 1 40%;
+	padding: 0.5em 1em;
+	margin: .5em 1em 1em 0;
+	color: $color-primary-text;
+
+	.project-item-title {
+		margin-bottom: 0.3em;
+
+		font-size: 1.1em;
+	}
+	.project-item-subtitle {
+		font-size: 0.8em;
+		color: darken($color-primary-text, 10);
+	}
+	.project-item-role {
+		margin-top: 0.3em;
+		font-size: 0.8em;
+		color: darken($color-primary-text, 10);
+	}
+	.project-item-description {
+		font-size: 0.9em;
+	}
+	.project-item-skills {
+		font-size: 0.8em;
+	}
+	.project-item-url {
+		a {
+			color: $color-primary-text;
+			text-decoration: underline;
+		}
+		a:hover {
+			color: $color-primary-accent;
+		}
+	}
+}
+.project-item:hover {
+	position: relative;
+	top: -5px;
+	left: -5px;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 2px 1px -1px;
+}
+// const borderColourArray =     ['#27ae60', '#e74c3c', '#f1c40f', '#3498db'];
+// const backgroundColourArray = ['#c8f3da', '#fbdedb', '#fbedb8', '#cce5f6'];
+
+.project-item:nth-child(10n+1) {
+	background: #27ae60;
+}
+.project-item:nth-child(10n+2) {
+	background: #e74c3c;
+}
+.project-item:nth-child(10n+3) {
+	background: #e67e22;
+}
+.project-item:nth-child(10n+4) {
+	background: #3498db;
+}

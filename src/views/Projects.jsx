@@ -3,18 +3,59 @@ import './../App.scss';
 
 import NavigationBar from './../components/NavigationBar';
 import Footer from './../components/Footer';
+import ProjectItem from './../components/ProjectItem';
+
+
+const projectsFile = "/projects.json";
 
 
 class Projects extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			projectsArray: [],
+			colorIndex: 0
+		}
+
+		this.getProjects();
+	}
+
+	getProjects() {
+		fetch(projectsFile).then((r) => r.text()).then(text  => {
+			this.setProjects(text);
+		});
+	}
+
+	setProjects(text) {
+		const parsed = JSON.parse(text);
+		this.setState({
+			projectsArray: parsed,
+		});
+	}
+
+	renderProjects() {
+		return this.state.projectsArray.map((entry) => {
+			return (
+				<ProjectItem
+					key={entry['id']}
+					source={entry}
+				/>
+			);
+		});
+	}
+
 	render() {
+
 		return (
 			<div className="App">
 				<NavigationBar currentPage='Projects' />
 
-				<div className="app-body">
+				<div className="app-body projects">
 					<h1>Projects</h1>
-					<h2>Work in progress, sorry!</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+					<div className="items">
+						{this.renderProjects()}
+					</div>
 				</div>
 
 				<Footer />
