@@ -41,7 +41,7 @@ class NavigationBar extends Component {
 
 	showMenu() {
 		let width = window.innerWidth;
-		if (width < 500) {
+		if (width <= 500) {
 			return this.state.isDrawerOpen;
 		}
 
