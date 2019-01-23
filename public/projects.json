@@ -4,7 +4,7 @@
 		"title": "MIRIAM",
 		"subtitle": "The Multimodal Interface",
 		"role": "Software Developer",
-		"description": "MIRIAM allows operators to interrogate autonomous underwater vehicle's actions and status in real time through natural language chat. This was developed as part of an internship in 2017. I have added many features.",
+		"description": "MIRIAM allows operators to interrogate autonomous underwater vehicle's actions and status in real time through natural language chat. This was developed as part of an internship in 2017. I still work on it and I have added many features like speech-recognition, speech-to-text, etc.",
 		"url": "http://www2.macs.hw.ac.uk/miriam/interface/",
 		"topics": ["Natural Language Generation and Understanding", "Explainability", "Chatbot", "Autonomy Behaviours"],
 		"skills": ["Python", "JavaScript", "PHP", "MySQL", "HTML", "SASS", "CSS"]
@@ -24,7 +24,7 @@
 		"title": "This Website!",
 		"subtitle": "A CV as a website",
 		"role": "Full-Stack Developer (I guess)",
-		"description": "I built this website using React and a few simple tricks. All the data displayed is dynamically loaded, without using a server!",
+		"description": "I built this website using React and SASS (Syntactically Awesome Style Sheets). Hosted in GitHub pages, it is front-end only, but all the data displayed is dynamically loaded, without using a server!",
 		"url": "",
 		"topics": ["React.JS"],
 		"skills": ["JavaScript", "HTML", "SASS", "CSS"]
