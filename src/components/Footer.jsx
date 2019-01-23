@@ -22,7 +22,7 @@ class Footer extends Component {
 					</p>
 					<p>
 						This website does not use cookies or collect information on visitors. 
-						However, it is hosted by GitHub and thus <a href="https://github.com/">GitHub</a> itself may use cookies.
+						However, it is hosted by GitHub and thus <a href="https://github.com/">GitHub</a> itself may do.
 					</p>
 				</div>
 
