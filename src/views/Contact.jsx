@@ -24,14 +24,14 @@ class Contact extends Component {
 						<h2><FontAwesomeIcon className="fa-icon" icon={faEnvelope} />&nbsp; Email</h2>
 						<p>Preferable email for contact:</p>
 
-						<a href="mailto:jchiyah@outlook.com">jchiyah@outlook.com</a>
+						<a href="#">&#106;&#099;&#104;&#105;&#121;&#097;&#104;&#032;(&#097;&#116;)&#032;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#032;(&#100;&#111;&#116;)&#032;&#099;&#111;&#109;</a>
 					</div>
 					<hr/>
 					<div className="email-box">
 						<h2><FontAwesomeIcon className="fa-icon" icon={faEnvelope} />&nbsp; Alternative Email</h2>
 						<p>Feel free to contact me at my university email if appropriate. My current university email is below:</p>
 
-						<a href="mailto:jchiyah@outlook.com">fjc3@hw.ac.uk</a><br/><br/>
+						<a href="#">&#102;&#106;&#099;&#051;&#032;(&#097;&#116;)&#032;&#104;&#119;&#032;(&#100;&#111;&#116;)&#032;&#097;&#099;&#032;(&#100;&#111;&#116;)&#032;&#117;&#107;</a><br/><br/>
 						<p>Note that this email may change over time!</p>
 					</div>
 					<hr/>
