@@ -573,6 +573,8 @@ html, body {
 	flex: 1 1 40%;
 	padding: 0.5em 1em;
 	margin: .5em 1em 1em 0;
+
+	background: #27ae60;
 	color: $color-primary-text;
 
 	.project-item-title {
@@ -614,9 +616,9 @@ html, body {
 // const borderColourArray =     ['#27ae60', '#e74c3c', '#f1c40f', '#3498db'];
 // const backgroundColourArray = ['#c8f3da', '#fbdedb', '#fbedb8', '#cce5f6'];
 
-.project-item:nth-child(10n+1) {
-	background: #27ae60;
-}
+// .project-item:nth-child(1n) {
+// 	background: #27ae60;
+// }
 .project-item:nth-child(10n+2) {
 	background: #e74c3c;
 }
@@ -625,4 +627,7 @@ html, body {
 }
 .project-item:nth-child(10n+4) {
 	background: #3498db;
+}
+.project-item:nth-child(10n+5) {
+	background: #9b59b6;
 }
