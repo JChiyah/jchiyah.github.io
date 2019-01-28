@@ -14,7 +14,7 @@
 		"title": "Explainable MIRIAM",
 		"subtitle": "Explainable Autonomy through Natural Language",
 		"role": "4th Year Thesis",
-		"description": "Extension to MIRIAM so it is able to predict and explain the behaviours of the autonomous underwater vehicles. Enables operators to ask about unexpected events that they may not fully understand. This was merged into the main MIRIAM project once my thesis was finished and due to its commercial applications.",
+		"description": "Extension to MIRIAM so it is able to predict and explain the behaviours of the autonomous underwater vehicles. Enables operators to ask about unexpected events that they may not fully understand. This was merged into the main MIRIAM project due to its commercial applications once my thesis was finished.",
 		"url": "",
 		"topics": ["Explainability", "Autonomy Behaviours", "Trust", "Transparency", "Mental Models", "Laravel Framework"],
 		"skills": ["Python", "JavaScript", "PHP", "MySQL", "HTML", "SASS", "CSS"]
