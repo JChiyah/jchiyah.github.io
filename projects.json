@@ -6,7 +6,17 @@
 		"role": "Software Developer",
 		"description": "MIRIAM allows operators to interrogate autonomous underwater vehicle's actions and status in real time through natural language chat. This was developed as part of an internship in 2017. I still work on it and I have added many features like speech-recognition, speech-to-text, etc.",
 		"url": "http://www2.macs.hw.ac.uk/miriam/interface/",
-		"topics": ["Natural Language Generation and Understanding", "Explainability", "Chatbot", "Autonomy Behaviours"],
+		"topics": ["Natural Language Generation", "Natural Language Understanding", "Dialogue System", "Chatbot"],
+		"skills": ["Python", "JavaScript", "PHP", "MySQL", "HTML", "SASS", "CSS"]
+	},
+	{
+		"id": "emiriam",
+		"title": "Explainable MIRIAM",
+		"subtitle": "Explainable Autonomy through Natural Language",
+		"role": "4th Year Thesis",
+		"description": "Extension to MIRIAM so it is able to predict and explain the behaviours of the autonomous underwater vehicles. Enables operators to ask about unexpected events that they may not fully understand. This was merged into the main MIRIAM project once my thesis was finished and due to its commercial applications.",
+		"url": "",
+		"topics": ["Explainability", "Autonomy Behaviours", "Trust", "Transparency", "Mental Models", "Laravel Framework"],
 		"skills": ["Python", "JavaScript", "PHP", "MySQL", "HTML", "SASS", "CSS"]
 	},
 	{
@@ -38,5 +48,15 @@
 		"url": "https://github.com/JChiyah/purplesky",
 		"topics": ["Feature-rich Website", "Marketing", "Agile"],
 		"skills": ["PHP", "JavaScript", "MySQL", "HTML", "SASS", "CSS", "CodeIgniter"]
+	},
+	{
+		"id": "blackout",
+		"title": "Blackout Machine",
+		"subtitle": "Simple game for Android",
+		"role": "Software Developer",
+		"description": "Simple roulette game for Android devices that integrates with the Facebook API. It was for a small company in Spain. The code is not actively developed anymore.",
+		"url": "https://github.com/JChiyah/blackout-machine",
+		"topics": ["Android Development", "Game", "Facebook API"],
+		"skills": ["Java", "XML", "Android SDK", "Facebook SDK"]
 	}
 ]
