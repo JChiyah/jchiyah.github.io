@@ -613,12 +613,6 @@ html, body {
 	left: -5px;
 	box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 2px 1px -1px;
 }
-// const borderColourArray =     ['#27ae60', '#e74c3c', '#f1c40f', '#3498db'];
-// const backgroundColourArray = ['#c8f3da', '#fbdedb', '#fbedb8', '#cce5f6'];
-
-// .project-item:nth-child(1n) {
-// 	background: #27ae60;
-// }
 .project-item:nth-child(10n+2) {
 	background: #e74c3c;
 }
@@ -629,5 +623,5 @@ html, body {
 	background: #3498db;
 }
 .project-item:nth-child(10n+5) {
-	background: #9b59b6;
+	background: #8e44ad;
 }
