@@ -30,6 +30,16 @@
 		"skills": ["C++", "Java", "Android SDK", "SQLite", "XML", "CMake", "Hunter", "Polly", "C#"]
 	},
 	{
+		"id": "datavalidation",
+		"title": "Data Validation",
+		"subtitle": "Automatic validation of bike geometries",
+		"role": "5th Year MEng Project",
+		"description": "A Python package for validating bike geometries and calculating missing parameters using maths.",
+		"url": "https://jchiyah.github.io/data-validation-submission/readme.html",
+		"topics": ["Big Data", "Validation", "Geometry", "Bicycles"],
+		"skills": ["Python"]
+	},
+	{
 		"id": "jchiyah.github.io",
 		"title": "This Website!",
 		"subtitle": "A CV as a website",
