@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faExternalLinkAlt} from "@fortawesome/free-solid-svg-icons";
+
 
 class ProjectItem extends Component {
 	constructor(props) {
@@ -31,7 +34,10 @@ class ProjectItem extends Component {
 				<p className="project-item-description">{this.state.description}</p>
 				<p className="project-item-skills"><strong>Topics:</strong> {this.state.topics.join(', ')}</p>
 				<p className="project-item-skills"><strong>Skills:</strong> {this.state.skills.join(', ')}</p>
-				{this.state.url ? <p className="project-item-url"><a href={this.state.url} target="_blank" rel="noopener noreferrer">Check Project</a></p> : '' }
+				{this.state.url ?
+					<p className="project-item-url"><a href={this.state.url} target="_blank" rel="noopener noreferrer">
+						<FontAwesomeIcon className="fa-icon" icon={faExternalLinkAlt} /> Check Project</a></p>
+					: '' }
 			</div>
 		);
 	}

@@ -647,17 +647,19 @@ html, body {
 	.project-item-url {
 		a {
 			color: $color-primary-text;
-			text-decoration: underline;
+			text-decoration: none;
+			border-bottom: 1px solid $color-primary-text;
 		}
 		a:hover {
 			color: $color-primary-accent;
+			border-bottom: 1px solid $color-primary-accent;
 		}
 	}
 }
 .project-item:hover {
 	position: relative;
-	top: -5px;
-	left: -5px;
+	top: -2px;
+	left: -2px;
 	box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 2px 1px -1px;
 }
 .project-item:nth-child(5n+1) {

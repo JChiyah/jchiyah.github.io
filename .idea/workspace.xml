@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="30ac0c43-b88c-4b0e-9284-dd121520465b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProjectItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProjectItem.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/PublicationItem.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="51" column="40" lean-forward="true" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
+            <state relative-caret-position="221">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -42,32 +43,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="661" column="1" selection-start-line="661" selection-start-column="1" selection-end-line="661" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/About.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="39" column="22" lean-forward="true" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/Publications.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="30" column="10" lean-forward="true" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="213">
+              <caret line="661" column="15" lean-forward="true" selection-start-line="661" selection-start-column="15" selection-end-line="661" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -85,21 +62,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/publications.bib">
+        <entry file="file://$PROJECT_DIR$/src/views/Publications.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bibtexParse.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="-1765">
+              <caret line="30" column="10" lean-forward="true" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -107,7 +75,14 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/ProjectItem.jsx">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -141,6 +116,9 @@
       <find>publica</find>
       <find>a:hover</find>
       <find>4</find>
+      <find>project</find>
+      <find>check</find>
+      <find>project-item-ur</find>
     </findStrings>
     <replaceStrings>
       <replace>publicationsObject</replace>
@@ -157,11 +135,12 @@
         <option value="$PROJECT_DIR$/src/components/PublicationItem.jsx" />
         <option value="$PROJECT_DIR$/src/views/Publications.jsx" />
         <option value="$PROJECT_DIR$/src/views/About.jsx" />
+        <option value="$PROJECT_DIR$/src/components/ProjectItem.jsx" />
         <option value="$PROJECT_DIR$/src/App.scss" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="260" />
     <option name="y" value="25" />
     <option name="width" value="1400" />
@@ -192,6 +171,12 @@
               <item name="jchiyah.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="jchiyah.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jchiyah.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jchiyah.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jchiyah.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -283,12 +268,12 @@
       <option name="presentableId" value="Default" />
       <updated>1557162790865</updated>
       <workItem from="1557162795707" duration="16950000" />
-      <workItem from="1557227647208" duration="6322000" />
+      <workItem from="1557227647208" duration="6835000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23272000" />
+    <option name="totallyTimeSpent" value="23785000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -373,35 +358,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ProjectItem.jsx">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/referenceUtils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="69" column="57" lean-forward="true" selection-start-line="69" selection-start-column="57" selection-end-line="69" selection-end-column="57" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PublicationItem.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="51" column="40" lean-forward="true" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Publications.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="30" column="10" lean-forward="true" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -416,10 +378,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ProjectItem.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/PublicationItem.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Publications.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1765">
+          <caret line="30" column="10" lean-forward="true" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="661" column="1" selection-start-line="661" selection-start-column="1" selection-end-line="661" selection-end-column="1" />
+        <state relative-caret-position="213">
+          <caret line="661" column="15" lean-forward="true" selection-start-line="661" selection-start-column="15" selection-end-line="661" selection-end-column="15" />
         </state>
       </provider>
     </entry>
