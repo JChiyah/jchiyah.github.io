@@ -622,7 +622,6 @@ html, body {
 	padding: 0.5em 1em;
 	margin: .5em 1em 1em 0;
 
-	background: #27ae60;
 	color: $color-primary-text;
 
 	.project-item-title {
@@ -661,15 +660,18 @@ html, body {
 	left: -5px;
 	box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 2px 1px -1px;
 }
-.project-item:nth-child(10n+2) {
+.project-item:nth-child(5n+1) {
+	background: #27ae60;
+}
+.project-item:nth-child(5n+2) {
 	background: #e74c3c;
 }
-.project-item:nth-child(10n+3) {
+.project-item:nth-child(5n+3) {
 	background: #e67e22;
 }
-.project-item:nth-child(10n+4) {
+.project-item:nth-child(5n+4) {
 	background: #3498db;
 }
-.project-item:nth-child(10n+5) {
+.project-item:nth-child(5n+5) {
 	background: #8e44ad;
 }
