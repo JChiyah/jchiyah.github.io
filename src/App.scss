@@ -6,10 +6,10 @@
 
 /** Variables **/
 
-$color-primary-accent: #1565c0;
+$color-primary-accent: #203453;
 $color-primary-text: #ffffff;
-$color-secondary-accent: #003c8f;
-$color-secondary-text: darken(#2c3e50, 5);
+$color-secondary-accent: lighten(#203453, 13);
+$color-secondary-text: darken(#2c3e50, 10);
 
 $color-footer-background: lighten($color-primary-accent, 0);
 $color-footer-text: #ffffff;
