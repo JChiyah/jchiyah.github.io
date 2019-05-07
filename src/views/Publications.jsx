@@ -21,17 +21,18 @@ class Publications extends Component {
 		const test = {citationKey: "ChiyahHRI18",
 			entryTags: {
 			address: "Chicago, IL, USA",
-		author: "Chiyah Garcia, Francisco J. and Robb, David A., and Liu, X. and Laskov, Atanas and  Patron, Patron and Hastie, Helen",
-		booktitle: "Proceedings of Explainable Robotic Systems Workshop",
-		series: "HRI'18",
-		title: "Explain Yourself: A Natural Language Interface for Scrutable Autonomous Robots",
-		year: "2018",
-		__proto__: Object},
-		entryType: "inproceedings"};
+			author: "Chiyah Garcia, Francisco J. and Robb, David A., and Liu, X. and Laskov, Atanas and  Patron, Patron and Hastie, Helen",
+			booktitle: "Proceedings of Explainable Robotic Systems Workshop",
+			series: "HRI'18",
+			title: "Explain Yourself: A Natural Language Interface for Scrutable Autonomous Robots",
+			year: "2018",
+			__proto__: Object},
+			entryType: "inproceedings"
+		};
 
 		this.state = {
 			publicationsObject: [],
-			openModal: true,
+			openModal: false,
 			modalPublication: test,
 		};
 
@@ -107,7 +108,9 @@ class Publications extends Component {
 				open={openModal}
 				onClose={() => this.onCloseModal()}
 				classNames={{
-					modal: "customModal",
+					overlay: "publication-overlay",
+					modal: "publication-modal",
+					closeButton: "publication-modal-button",
 				}}
 				center>
 				<h2>Cite</h2>

@@ -48,8 +48,8 @@ class PublicationItem extends Component {
 			<div className="publication-item">
 				<p>
 					{/*{this.state.author} ({this.state.year}). <b>&lsquo;{this.state.title}&rsquo;</b>. In: <i>{this.state.booktitle}</i>. {this.state.series}. {this.state.address}.*/}
-					<a href={pubLink} target="_blank" rel="noopener noreferrer">{state.title}</a> <br/>
-					{state.author} <br/>
+					<a href={pubLink} target="_blank" rel="noopener noreferrer">{state.title}</a><br/>
+					{state.author}.<br/>
 					<i>{state.booktitle}</i>. {state.series}. {state.address}.
 				</p>
 				<ul className="publication-item-menu">

@@ -18,11 +18,14 @@ export const getAPACitation = (bibtex) => {
 	*/
 	const author = formatAuthor(getAuthor(bibtex), false, true);
 	const pages = getPages(bibtex, true);
-	const publisher = getPublisher(bibtex);
+	let publisher = getPublisher(bibtex);
+	publisher = publisher !== "" ? ". " + publisher : "";
 	const booktitle = getBookTitle(bibtex);
+	let address = getAddress(bibtex);
+	address = address !== "" ? ". " + address : "";
 
 	return author + " (" + bibtex['entryTags']['year'] + "). " + bibtex['entryTags']['title'] + ". " + booktitle
-		+ pages + publisher;
+		+ pages + publisher + address + ".";
 };
 
 
@@ -37,11 +40,14 @@ export const getHarvardCitation = (bibtex) => {
 	*/
 	const author = formatAuthor(getAuthor(bibtex), false, true);
 	const pages = getPages(bibtex, true);
-	const publisher = getPublisher(bibtex);
+	let publisher = getPublisher(bibtex);
+	publisher = publisher !== "" ? ". " + publisher : "";
 	const booktitle = getBookTitle(bibtex);
+	let address = getAddress(bibtex);
+	address = address !== "" ? ". " + address : "";
 
 	return author + ", " + bibtex['entryTags']['year'] + ". " + bibtex['entryTags']['title'] + ". " + booktitle
-		+ pages + publisher + ".";
+		+ pages + publisher + address + ".";
 };
 
 
@@ -58,11 +64,13 @@ export const getChicagoCitation = (bibtex) => {
 	let pages = getPages(bibtex, false);
 	pages = pages !== "" ? ", " + pages : "";
 	let publisher = getPublisher(bibtex);
-	publisher = publisher !== "" ? publisher + "," : "";
+	publisher = publisher !== "" ? " " + publisher + "," : "";
 	const booktitle = getBookTitle(bibtex);
+	let address = getAddress(bibtex);
+	address = address !== "" ? ", " + address + "." : "";
 
 	return author + ". \"" + bibtex['entryTags']['title'] + "\". " + booktitle
-		+ pages + publisher + " " + bibtex['entryTags']['year'] + ".";
+		+ pages + address + publisher + " " + bibtex['entryTags']['year'] + ".";
 };
 
 
@@ -122,13 +130,14 @@ export function formatAuthor(authorArray, firstName = true, surnameFirst = true)
 
 
 function getPages(bibtex, brackets = true) {
-	const pages = bibtex['entryTags']['pages'];
+	let pages = bibtex['entryTags']['pages'];
 
 	if (pages === undefined) {
 		return "";
 
 	} else {
-		return brackets ? " (pp. " + pages + ")" : pages;
+		pages = replaceAll(pages, "--", "-");
+		return brackets ? " (pp. " + pages + ")" : "pp. " + pages;
 	}
 }
 
@@ -139,7 +148,7 @@ function getPublisher(bibtex) {
 		return "";
 
 	} else {
-		return ". " + publisher;
+		return publisher;
 	}
 }
 
@@ -161,6 +170,17 @@ export function getBookTitle(bibtex) {
 	}
 
 	return booktitle;
+}
+
+function getAddress(bibtex) {
+	const address = bibtex['entryTags']['address'];
+
+	if (address === undefined) {
+		return "";
+
+	} else {
+		return address;
+	}
 }
 
 
