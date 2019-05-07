@@ -1,29 +1,9 @@
 import React, { Component } from 'react';
-import BibtexParser from './../bibtexParse';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLink, faBook } from '@fortawesome/free-solid-svg-icons';
+import { faLink, faBook, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 
-
-function formatAuthors(authorString) {
-	const authorArray = authorString.split(" and ");
-
-	const finalString = authorArray.map((entry) => {
-		const author = entry.split(",");
-		return author[1] + " " + author[0];
-	});
-
-	return finalString.join(", ");
-}
-
-function escapeRegExp(str) {
-	// eslint-disable-next-line
-	return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
-}
-
-function replaceAll(str, find, replace) {
-	return str.replace(new RegExp(escapeRegExp(find), 'g'), replace);
-}
+import {getBibtexHTML, getAuthor, formatAuthor} from './../referenceUtils';
 
 
 class PublicationItem extends Component {
@@ -32,19 +12,10 @@ class PublicationItem extends Component {
 
 		const bibtexJSON = this.props.bibtex;
 
-		let authors = "";
-
-		if (bibtexJSON['entryTags']['author'] !== undefined) {
-			authors = formatAuthors(bibtexJSON['entryTags']['author']);
-		} else if (bibtexJSON['entryTags']['editor'] !== undefined) {
-			authors = formatAuthors(bibtexJSON['entryTags']['editor']) + ", eds";
-		}
-
 		this.state = {
-			bibtex: bibtexJSON,
 			citationKey: bibtexJSON['citationKey'],
 			title: bibtexJSON['entryTags']['title'],
-			author: authors,
+			author: formatAuthor(getAuthor(bibtexJSON), true, false),
 			year: bibtexJSON['entryTags']['year'],
 			booktitle: bibtexJSON['entryTags']['booktitle'],
 			series: bibtexJSON['entryTags']['series'],
@@ -61,29 +32,32 @@ class PublicationItem extends Component {
 	}
 
 	render() {
-		var bibtexString = BibtexParser.toBibtex([this.state.bibtex], false);
-		bibtexString = replaceAll(bibtexString, "\n", "<br/>");
-		while (bibtexString.endsWith("<br/>")) {
-			bibtexString = bibtexString.substring(0, bibtexString.length - 6);
-		}
-		bibtexString = replaceAll(bibtexString, "    ", "&nbsp;&nbsp;&nbsp;&nbsp;");
+		let state = this.state;
 
-		const classes = "bibtex-block " + (!this.state.isDrawerOpen ? "bibtex-block-closed" : "");
+		const {modalCallback, bibtex} = this.props;
 
-		const doiPart = this.state.doi ? <li>DOI: {this.state.doi}</li> : <li></li>;
+		const bibtexString = getBibtexHTML(bibtex);
 
-		const pubLink = this.state.url ? this.state.url : ("/" + this.state.citationKey + ".pdf");
+		const classes = "bibtex-block " + (!state.isDrawerOpen ? "bibtex-block-closed" : "");
+
+		// const doiPart = state.doi ? <li>DOI: {state.doi}</li> : <li></li>;
+
+		const pubLink = state.url ? state.url : ("/" + state.citationKey + ".pdf");
 
 		return (
 			<div className="publication-item">
 				<p>
-					{this.state.author} ({this.state.year}). <b>&lsquo;{this.state.title}&rsquo;</b>. In: <i>{this.state.booktitle}</i>. {this.state.series}. {this.state.address}.
+					{/*{this.state.author} ({this.state.year}). <b>&lsquo;{this.state.title}&rsquo;</b>. In: <i>{this.state.booktitle}</i>. {this.state.series}. {this.state.address}.*/}
+					<a href={pubLink} target="_blank" rel="noopener noreferrer">{state.title}</a> <br/>
+					{state.author} <br/>
+					<i>{state.booktitle}</i>. {state.series}. {state.address}.
 				</p>
 				<ul className="publication-item-menu">
 					<li><a href={pubLink} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faLink} /> Link</a></li>
+					<li><button className="button-link" onClick={() => modalCallback(bibtex)}><FontAwesomeIcon className="fa-icon" icon={faQuoteRight} /> Cite</button></li>
 					<li><button className="button-link" onClick={() => this.toggleDrawer()}><FontAwesomeIcon className="fa-icon" icon={faBook} /> Bibtex</button></li>
-					{doiPart}
-					<li className={classes}><p><tt dangerouslySetInnerHTML={{ __html: bibtexString }}></tt></p></li>
+					{/*{doiPart}*/}
+					<li className={classes}><p><tt dangerouslySetInnerHTML={{__html: bibtexString}}/></p></li>
 				</ul>
 			</div>
 		);
