@@ -4,24 +4,38 @@
 		"id": "jobs",
 		"list": [
 			{
+				"title": "Research Assistant",
+				"subtitle": "Heriot-Watt University, ORCA Hub",
+				"date": "Jul 2019 - Present",
+				"description": "Preparing a large-scale data collection experiment using dialogue interfaces.",
+				"icon": "laptop-code"
+			},
+			{
+				"title": "Technical Lead",
+				"subtitle": "Heriot-Watt University, ORCA Hub",
+				"date": "May 2019 - Jul 2019",
+				"description": "Organising a part of what was needed for the ORCA Hub stands at the Royal Society Summer Science Exhibition in London. It involved coding, sorting inventory and other technical related things.",
+				"icon": "chalkboard-teacher"
+			},
+			{
 				"title": "Lab Helper",
 				"subtitle": "Heriot-Watt University",
-				"date": "Sep 2017 - Present",
-				"description": "Lab helper for several software development courses for First Year students.",
+				"date": "Sep 2017 - Apr 2019 (term-time only)",
+				"description": "Helping students with coursework and marking them in three subjects: Software Development 1 & 2 (Java courses for 1st Year students) and Language Processors (compiler course for 3rd Year students). Furthermore, I also assisted with the Code Clinic, a weekly workshop for students with programming questions during the academic year 2017/2018.",
 				"icon": "chalkboard-teacher"
 			},
 			{
 				"title": "Software Developer Intern",
 				"subtitle": "SeeByte Ltd",
 				"date": "Jun 2018 - Dec 2018",
-				"description": "6-month long placement at SeeByte working with autonomous underwater vehicles. I worked with augmented reality technologies, image processing, mobile development, sensors, etc. Most of the work was in C++, Java and some C#.",
+				"description": "Working in a proof-of-concept project to monitor underwater vehicles using augmented reality. The project involved coding a cross-platform program that was able to connect to these vehicles and show them through a camera at their real-world location. This project involved high-performance code for real-time image processing in C++ with OpenCV, Java (for Android development) and using ROS for communicating with sensors.",
 				"icon": "code"
 			},
 			{
-				"title": "Software Developer Intern",
+				"title": "Research Assistant",
 				"subtitle": "Heriot-Watt University",
 				"date": "Jun 2017 - Aug 2017 (full-time) | Sep 2017 - May 2018 (part-time)",
-				"description": "Developing MIRIAM, a multimodal interface for autonomous systems using Agile methodologies. The project was funded by the Ministry of Defence and it involved working with other companies in the industry (SeeByte and Tekever). Some languages used in this project are: Python, PHP, Artificial Intelligence Markup Language (AIML), MySQL, HTML, JS, etc.",
+				"description": "Project funded by the Ministry of Defence which involved working with industry (SeeByte and Tekever) to develop MIRIAM, a multimodal interface for autonomous systems using Agile methodologies. This interface enables operators to interrogate vehicles using speech or text about their actions or status. I led the work on the system’s conversational capabilities such as natural language processing (for parsing, intent recognition and speech recognition), natural language generation (including text-to-speech output) and dialogue management. I also carried out customer MoD presentations and system demonstrations. Work resulted in four publications including human evaluations in simulations and with real vehicles.",
 				"icon": "laptop-code"
 			}
 		]
@@ -30,6 +44,13 @@
 		"title": "Awards",
 		"id": "awards",
 		"list": [
+			{
+				"title": "The British Computer Society Prize",
+				"subtitle": "British Computer Society (BCS)",
+				"date": "June 2019",
+				"description": "Prize awarded to the best student in the MEng programme.",
+				"icon": "trophy"
+			},
 			{
 				"title": "SIGGEN Hackathon",
 				"subtitle": "INLG 2018",
