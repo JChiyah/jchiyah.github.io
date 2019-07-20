@@ -162,6 +162,13 @@
 		"id": "talks",
 		"list": [
 			{
+				"title": "Offer Holder Talk",
+				"subtitle": "Heriot-Watt University",
+				"date": "Mar 2019",
+				"description": "Several presentations to students with offers from the university about my work and experience.",
+				"icon": "users"
+			},
+			{
 				"title": "Explainable Autonomy through Natural Language",
 				"subtitle": "Schloss Dagstuhl GI Seminar",
 				"date": "Jan 2019",
@@ -172,7 +179,7 @@
 				"title": "Generating Explanations in Natural Language for Clear Mental Models of Remote Autonomous Systems",
 				"subtitle": "SICSA Workshop on Conversational AI",
 				"date": "Dec 2018",
-				"description": "",
+				"description": "Presentation at the workshop about the work published at the INLG'18 Conference.",
 				"icon": "users"
 			}
 		]
