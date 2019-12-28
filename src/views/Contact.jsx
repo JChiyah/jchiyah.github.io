@@ -17,7 +17,7 @@ class Contact extends Component {
 
 				<div className="app-body contact">
 					<h1>Contact</h1>
-					<p>The easiest way to contact me is through email, and then we can arrange something else (e.g. Skype, phone or in person). <br/><br/>I might not see messages sent to LinkedIn or through other means.</p>
+					<p>The easiest way to contact me is through email. I don't check other means as regularly, so I might miss messages (e.g. LinkedIn).</p>
 					
 					<hr/>
 					<div className="email-box">

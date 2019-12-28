@@ -6,23 +6,30 @@
 			{
 				"title": "Research Assistant",
 				"subtitle": "Heriot-Watt University, ORCA Hub",
-				"date": "Jul 2019 - Present",
-				"description": "Preparing a large-scale data collection experiment using dialogue interfaces.",
+				"date": "Jul 2019 - Dec 2019",
+				"description": "Preparing a large-scale crowd-sourced data collection experiment using a novel dialogue interface.",
 				"icon": "laptop-code"
+			},
+			{
+				"title": "Lab Helper & Enhanced Lab Helper",
+				"subtitle": "Heriot-Watt University",
+				"date": "Sep 2017 - Dec 2019 (term-time only)",
+				"description": "Helping students with coursework and marking them in several courses: Software Development 1 & 2 (Java courses for 1st Year students), Language Processors (compiler course for 3rd Year students) and Artificial Intelligence (AI course for 3rd Year and MSc students). Furthermore, I assisted with the Code Clinic, a weekly workshop for students with programming questions during the academic year 2017/2018.",
+				"icon": "chalkboard-teacher"
 			},
 			{
 				"title": "Technical Lead",
 				"subtitle": "Heriot-Watt University, ORCA Hub",
 				"date": "May 2019 - Jul 2019",
 				"description": "Organising a part of what was needed for the ORCA Hub stands at the Royal Society Summer Science Exhibition in London. It involved coding, sorting inventory and other technical related things.",
-				"icon": "chalkboard-teacher"
+				"icon": "tasks"
 			},
 			{
-				"title": "Lab Helper",
+				"title": "Supervision of Intern",
 				"subtitle": "Heriot-Watt University",
-				"date": "Sep 2017 - Apr 2019 (term-time only)",
-				"description": "Helping students with coursework and marking them in three subjects: Software Development 1 & 2 (Java courses for 1st Year students) and Language Processors (compiler course for 3rd Year students). Furthermore, I also assisted with the Code Clinic, a weekly workshop for students with programming questions during the academic year 2017/2018.",
-				"icon": "chalkboard-teacher"
+				"date": "Jul 2019",
+				"description": "Supervising an intern that developed software to estimate the remaining battery level of a robot based on voltage readings and motor speeds.",
+				"icon": "user-friends"
 			},
 			{
 				"title": "Software Developer Intern",
@@ -149,6 +156,13 @@
 		"id": "seminars",
 		"list": [
 			{
+				"title": "SRPe RAS & AI in Advanced Manufacturing Workshop",
+				"subtitle": "Scottish Research Partnership in Engineering, University of Strathclyde",
+				"date": "Sep 2019",
+				"description": "",
+				"icon": "industry"
+			},
+			{
 				"title": "Explainable Software for Cyber-Physical Systems (ES4CPS)",
 				"subtitle": "Schloss Dagstuhl GI Seminar 19023",
 				"date": "Jan 2019",
@@ -165,7 +179,7 @@
 				"title": "Offer Holder Talk",
 				"subtitle": "Heriot-Watt University",
 				"date": "Mar 2019",
-				"description": "Several presentations to students with offers from the university about my work and experience.",
+				"description": "Several presentations to students with offers from the university about my work and experiences.",
 				"icon": "users"
 			},
 			{
@@ -189,10 +203,17 @@
 		"id": "education",
 		"list": [
 			{
+				"title": "PhD in Monitoring Manufacturing through Natural Language",
+				"subtitle": "Heriot-Watt University, Siemens",
+				"date": "2019 - Current",
+				"description": "Researching and developing systems to improve human-robot interaction for collaborative manufacturing though natural language.",
+				"icon": "university"
+			},
+			{
 				"title": "Master of Engineering in Software Engineering (MEng)",
 				"subtitle": "Heriot-Watt University",
 				"date": "2014 - 2019",
-				"description": "Graduated in June 2019 with Distinction and with the highest marks of the class. Average grades above 80%.",
+				"description": "Graduated in June 2019 with Distinction and with the highest marks of the class (average grades above 80%). BSc in Computer Science from 2014 to 2017.",
 				"icon": "user-graduate"
 			},
 			{

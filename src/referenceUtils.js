@@ -12,7 +12,7 @@ export const getAPACitation = (bibtex) => {
 	Returns a string with the APA Citation style of the given bibtex
 
 	Example:
-		Hastie, H., Garcia, F. J. C., Robb, D. A., Patron, P., & Laskov, A. (2017, November). MIRIAM: a
+		Hastie, H., Garcia, F. J. C., Robb, D. A., Patron, P., & Laskov, A. (2017). MIRIAM: a
 		multimodal chat-based interface for autonomous systems. In Proceedings of the 19th ACM International
 		Conference on Multimodal Interaction (pp. 495-496). ACM.
 	*/
@@ -82,7 +82,7 @@ export const getBibtexHTML = (bibtex) => {
 	bibtexString = replaceAll(bibtexString, "\n", "<br/>");
 
 	while (bibtexString.endsWith("<br/>")) {
-		bibtexString = bibtexString.substring(0, bibtexString.length - 6);
+		bibtexString = bibtexString.substring(0, bibtexString.length - 5);
 	}
 	return replaceAll(bibtexString, "    ", "&nbsp;&nbsp;&nbsp;&nbsp;");
 };
