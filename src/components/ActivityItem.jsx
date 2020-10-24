@@ -24,10 +24,6 @@ const titleStyle = {
 const subtitleStyle = {
 	fontWeight: '400',
 };
-const contentStyle = {
-	fontSize: '0.85em',
-	fontWeight: '400',
-};
 const bubbleStyle = {
 	borderWidth: '3px',
 	marginLeft: '0',
@@ -38,6 +34,19 @@ const iconStyle = {
 	width: '40px',
 	height: '40px',
 	fontSize: '1.3em',
+}
+const contentStyle = {
+	fontSize: '0.85em',
+	fontWeight: '400',
+	display: 'flex',
+	alignItems: 'center',
+};
+const contentTextStyle = {
+	flex: '1'
+}
+const contentImgStyle = {
+	flex: '2',
+	textAlign: 'center'
 }
 
 
@@ -51,9 +60,15 @@ class ActivityItem extends Component {
 			title: source['title'],
 			subtitle: source['subtitle'],
 			date: source['date'],
-			description: source['description'],
+			description: source['description'] || '',
 			icon: source['icon'] || '',
+			image: source['image'] || undefined,
+			imageAlt: source['image-alt'] || '',
 		};
+		if (this.state.image && !this.state.imageAlt) {
+			// do not allow images without an image-alt (in case I forget :p)
+			throw new Error(`ActivityItem '${this.state.title}' missing image-alt attribute`);
+		}
 	}
 
 	getColour(array) {
@@ -62,9 +77,19 @@ class ActivityItem extends Component {
 
 	render() {
 		// note how we perform a deep copy
-		var bubbleStyleCopy = JSON.parse(JSON.stringify(bubbleStyle));
+		let bubbleStyleCopy = JSON.parse(JSON.stringify(bubbleStyle));
 		bubbleStyleCopy['borderColor'] = this.getColour(borderColourArray);
 		bubbleStyleCopy['background'] = this.getColour(backgroundColourArray);
+
+		// the following is done to avoid empty bubbles in TimelineEvents
+		let bubbleContent = this.state.description ? <div dangerouslySetInnerHTML={{ __html: this.state.description }} /> : null;
+		// null objects won't be rendered
+		if (this.state.image) {
+			let image = <img src={this.state.image}  alt={this.state.imageAlt}/>;
+			// depending on whether there is a non-null description or not, we append the image to
+			// the description object OR we just replace the null content for the image altogether
+			bubbleContent = bubbleContent ? <><div style={contentTextStyle}>{bubbleContent}</div><div style={contentImgStyle}>{image}</div></> : image;
+		}
 
 		return (
 			<TimelineEvent 
@@ -83,7 +108,7 @@ class ActivityItem extends Component {
 				iconStyle={iconStyle}
 				classNameTime="activity-item-date"
 			>
-				{this.state.description}
+				{bubbleContent}
 			</TimelineEvent>
 		);
 	}

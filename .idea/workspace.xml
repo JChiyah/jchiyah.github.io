@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30ac0c43-b88c-4b0e-9284-dd121520465b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/jchiyah.github.io.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jchiyah.github.io.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/jchiyah.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/jchiyah.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/activities.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/activities.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/projects.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/projects.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/publications.bib" beforeDir="false" afterPath="$PROJECT_DIR$/public/publications.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bibtexParse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/bibtexParse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ActivityItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ActivityItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PublicationItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PublicationItem.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/referenceUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/referenceUtils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/About.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Contact.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Publications.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Publications.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +38,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -41,14 +46,18 @@
     <property name="js.last.introduce.type" value="LET" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="D:\xampp\htdocs\jchiyah.github.io\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="npm.jchiyah.github.io run deploy">
     <configuration default="true" type="js.build_tools.npm">
@@ -98,18 +107,7 @@
       <item itemvalue="npm.jchiyah.github.io run deploy" />
     </list>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -124,41 +122,45 @@
       <workItem from="1557227647208" duration="7505000" />
       <workItem from="1577113469133" duration="681000" />
       <workItem from="1577360716865" duration="1357000" />
-      <workItem from="1577386495913" duration="9460000" />
+      <workItem from="1577386495913" duration="10209000" />
+      <workItem from="1588772327768" duration="3496000" />
+      <workItem from="1603554066546" duration="36000" />
+      <workItem from="1603554298721" duration="354000" />
+      <workItem from="1603554696878" duration="7000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577361425700">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="860" y="432" key="#ESLint" timestamp="1603557731267">
+      <screen x="64" y="0" width="1856" height="1080" />
     </state>
-    <state x="414" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1577361425700" />
-    <state x="640" y="254" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1577564559256">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="860" y="432" key="#ESLint/64.0.1856.1080@64.0.1856.1080" timestamp="1603557731267" />
+    <state width="1835" height="231" key="GridCell.Tab.0.bottom" timestamp="1603560722366">
+      <screen x="64" y="0" width="1856" height="1080" />
     </state>
-    <state x="640" y="254" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1577564559256" />
-    <state width="1899" height="284" key="GridCell.Tab.0.bottom" timestamp="1577569262336">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1835" height="231" key="GridCell.Tab.0.bottom/64.0.1856.1080@64.0.1856.1080" timestamp="1603560722366" />
+    <state width="1835" height="231" key="GridCell.Tab.0.center" timestamp="1603560722365">
+      <screen x="64" y="0" width="1856" height="1080" />
     </state>
-    <state width="1899" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1577569262336" />
-    <state width="1899" height="284" key="GridCell.Tab.0.center" timestamp="1577569262336">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1835" height="231" key="GridCell.Tab.0.center/64.0.1856.1080@64.0.1856.1080" timestamp="1603560722365" />
+    <state width="1835" height="231" key="GridCell.Tab.0.left" timestamp="1603560722365">
+      <screen x="64" y="0" width="1856" height="1080" />
     </state>
-    <state width="1899" height="284" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1577569262336" />
-    <state width="1899" height="284" key="GridCell.Tab.0.left" timestamp="1577569262336">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1835" height="231" key="GridCell.Tab.0.left/64.0.1856.1080@64.0.1856.1080" timestamp="1603560722365" />
+    <state width="1835" height="231" key="GridCell.Tab.0.right" timestamp="1603560722365">
+      <screen x="64" y="0" width="1856" height="1080" />
     </state>
-    <state width="1899" height="284" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1577569262336" />
-    <state width="1899" height="284" key="GridCell.Tab.0.right" timestamp="1577569262336">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1835" height="231" key="GridCell.Tab.0.right/64.0.1856.1080@64.0.1856.1080" timestamp="1603560722365" />
+    <state x="493" y="185" key="SettingsEditor" timestamp="1603559751216">
+      <screen x="64" y="0" width="1856" height="1080" />
     </state>
-    <state width="1899" height="284" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1577569262336" />
-    <state x="461" y="168" key="SettingsEditor" timestamp="1577565437730">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="493" y="185" key="SettingsEditor/64.0.1856.1080@64.0.1856.1080" timestamp="1603559751216" />
+    <state x="655" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1603559739644">
+      <screen x="64" y="0" width="1856" height="1080" />
     </state>
-    <state x="461" y="168" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1577565437730" />
+    <state x="655" y="235" width="672" height="678" key="search.everywhere.popup/64.0.1856.1080@64.0.1856.1080" timestamp="1603559739644" />
   </component>
 </project>

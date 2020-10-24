@@ -18,7 +18,7 @@ class Footer extends Component {
 
 				<div className="footer-text">
 					<p>
-						Website created by myself using <a href="https://reactjs.org/"><FontAwesomeIcon className="fa-icon" icon={faAtom} /> React</a>. No templates were used.
+						Website created by myself using <a href="https://reactjs.org/"><FontAwesomeIcon className="fa-icon" icon={faAtom} /> React</a>.
 					</p>
 					<p>
 						This website does not use cookies or collect information on visitors. 

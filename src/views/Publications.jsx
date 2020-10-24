@@ -21,7 +21,8 @@ class Publications extends Component {
 		const test = {citationKey: "ChiyahHRI18",
 			entryTags: {
 			address: "Chicago, IL, USA",
-			author: "Chiyah Garcia, Francisco J. and Robb, David A., and Liu, X. and Laskov, Atanas and  Patron, Patron and Hastie, Helen",
+				// eslint-disable-next-line no-useless-escape
+			author: "Chiyah Garc{\'i}a, Francisco J. and Robb, David A., and Liu, X. and Laskov, Atanas and  Patron, Patron and Hastie, Helen",
 			booktitle: "Proceedings of Explainable Robotic Systems Workshop",
 			series: "HRI'18",
 			title: "Explain Yourself: A Natural Language Interface for Scrutable Autonomous Robots",

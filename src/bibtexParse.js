@@ -33,7 +33,7 @@
         this.notKey = [',','{','}',' ','='];
         this.pos = 0;
         this.input = "";
-        this.entries = new Array();
+        this.entries = [];
 
         this.currentEntry = "";
 
@@ -58,7 +58,7 @@
             } else {
                 throw TypeError("Token mismatch: match", "expected " + s + ", found "
                         + this.input.substring(this.pos));
-            };
+            }
             this.skipWhitespace(canCommentOut);
         };
 
@@ -66,7 +66,7 @@
             if (canCommentOut == undefined || canCommentOut == null)
                 canCommentOut = true;
             this.skipWhitespace(canCommentOut);
-            if (this.input.substring(this.pos, this.pos + s.length) == s) {
+            if (this.input.substring(this.pos, this.pos + s.length) === s) {
                 return true;
             } else {
                 return false;
@@ -89,13 +89,13 @@
         this.skipWhitespace = function(canCommentOut) {
             while (this.isWhitespace(this.input[this.pos])) {
                 this.pos++;
-            };
-            if (this.input[this.pos] == "%" && canCommentOut == true) {
+            }
+            if (this.input[this.pos] === "%" && canCommentOut === true) {
                 while (this.input[this.pos] != "\n") {
                     this.pos++;
-                };
+                }
                 this.skipWhitespace(canCommentOut);
-            };
+            }
         };
 
         this.value_braces = function() {

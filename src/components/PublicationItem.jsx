@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink, faBook, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 
-import {getBibtexHTML, getAuthor, formatAuthor} from './../referenceUtils';
+import {getBibtexHTML, getAuthor, formatAuthor, getTitle} from './../referenceUtils';
 
 
 class PublicationItem extends Component {
@@ -14,7 +14,7 @@ class PublicationItem extends Component {
 
 		this.state = {
 			citationKey: bibtexJSON['citationKey'],
-			title: bibtexJSON['entryTags']['title'],
+			title: getTitle(bibtexJSON),
 			author: formatAuthor(getAuthor(bibtexJSON), true, false),
 			year: bibtexJSON['entryTags']['year'],
 			booktitle: bibtexJSON['entryTags']['booktitle'],

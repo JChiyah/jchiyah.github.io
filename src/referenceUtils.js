@@ -17,6 +17,7 @@ export const getAPACitation = (bibtex) => {
 		Conference on Multimodal Interaction (pp. 495-496). ACM.
 	*/
 	const author = formatAuthor(getAuthor(bibtex), false, true);
+	const title = getTitle(bibtex);
 	const pages = getPages(bibtex, true);
 	let publisher = getPublisher(bibtex);
 	publisher = publisher !== "" ? ". " + publisher : "";
@@ -24,7 +25,7 @@ export const getAPACitation = (bibtex) => {
 	let address = getAddress(bibtex);
 	address = address !== "" ? ". " + address : "";
 
-	return author + " (" + bibtex['entryTags']['year'] + "). " + bibtex['entryTags']['title'] + ". " + booktitle
+	return author + " (" + bibtex['entryTags']['year'] + "). " + title + ". " + booktitle
 		+ pages + publisher + address + ".";
 };
 
@@ -39,6 +40,7 @@ export const getHarvardCitation = (bibtex) => {
 		Conference on Multimodal Interaction (pp. 495-496). ACM.
 	*/
 	const author = formatAuthor(getAuthor(bibtex), false, true);
+	const title = getTitle(bibtex);
 	const pages = getPages(bibtex, true);
 	let publisher = getPublisher(bibtex);
 	publisher = publisher !== "" ? ". " + publisher : "";
@@ -46,7 +48,7 @@ export const getHarvardCitation = (bibtex) => {
 	let address = getAddress(bibtex);
 	address = address !== "" ? ". " + address : "";
 
-	return author + ", " + bibtex['entryTags']['year'] + ". " + bibtex['entryTags']['title'] + ". " + booktitle
+	return author + ", " + bibtex['entryTags']['year'] + ". " + title + ". " + booktitle
 		+ pages + publisher + address + ".";
 };
 
@@ -61,6 +63,7 @@ export const getChicagoCitation = (bibtex) => {
 		International Conference on Multimodal Interaction, pp. 495-496. ACM, 2017.
 	*/
 	const author = formatAuthor(getAuthor(bibtex), true, false);
+	const title = getTitle(bibtex);
 	let pages = getPages(bibtex, false);
 	pages = pages !== "" ? ", " + pages : "";
 	let publisher = getPublisher(bibtex);
@@ -69,7 +72,7 @@ export const getChicagoCitation = (bibtex) => {
 	let address = getAddress(bibtex);
 	address = address !== "" ? ", " + address + "." : "";
 
-	return author + ". \"" + bibtex['entryTags']['title'] + "\". " + booktitle
+	return author + ". \"" + title + "\". " + booktitle
 		+ pages + address + publisher + " " + bibtex['entryTags']['year'] + ".";
 };
 
@@ -114,7 +117,17 @@ export function formatAuthor(authorArray, firstName = true, surnameFirst = true)
 	}
 
 	return authorArray.map((entry) => {
-		const author = entry.split(", ");
+		// replace some characters
+		//  todo: fix these replaces
+		// eslint-disable-next-line no-useless-escape
+		let author = replaceAll(entry, "{\\'e}", "é");
+		// eslint-disable-next-line no-useless-escape
+		author = replaceAll(author, "\\'{o}", "ó");
+		author = replaceAll(author, "\\`{E}", "É");
+		author = replaceAll(author, "{\\'i}", "í");
+		author = replaceAll(author, "\\'{\\i}", "í");
+		author = author.split(", ");
+
 		let name;
 		if (firstName) {
 			name = author[1];
@@ -126,6 +139,20 @@ export function formatAuthor(authorArray, firstName = true, surnameFirst = true)
 		}
 		return surnameFirst ? author[0] + ", " + name : name + " " + author[0];
 	}).join(", ");
+}
+
+
+export function getTitle(bibtex) {
+	let title = bibtex['entryTags']['title'];
+
+	if (title === undefined) {
+		throw new Error("Publication title cannot be empty: " + bibtex);
+
+	} else {
+		title = replaceAll(title, "{", "");
+		title = replaceAll(title, "}", "");
+		return title;
+	}
 }
 
 
