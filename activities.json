@@ -166,8 +166,10 @@
 				"title": "Explainable Software for Cyber-Physical Systems (ES4CPS)",
 				"subtitle": "Schloss Dagstuhl GI Seminar 19023",
 				"date": "Jan 2019",
-				"description": "",
-				"icon": "book-reader"
+				"description": "Check the <a href='https://www.dagstuhl.de/en/program/calendar/evhp/?semnr=19023'>seminar website</a>.",
+				"icon": "book-reader",
+				"image": "jchiyah_shcloss_dagstuhl.jpg",
+				"image-alt": "Me at the Schloss Dagstuhl Seminar"
 			}
 		]
 	},

@@ -1,11 +1,21 @@
 [
 	{
+		"id": "crwiz",
+		"title": "CRWIZ",
+		"subtitle": "The Intelligent Wizard Interface ",
+		"role": "Software Developer & Research Assistant",
+		"description": "A framework for collecting real-time Wizard-of-Oz dialogues through crowd-sourcing for collaborative, complex tasks. This framework uses semi-guided dialogue to avoid interactions that breach procedures and processes only known to experts, while enabling the capture of a wide variety of interactions. It resides on Slurk (Schlangen et al., 2018). For more information, check the the conference publication in LREC 2020 and website below.",
+		"url": "https://github.com/JChiyah/crwiz",
+		"topics": ["Crowd-sourcing", "Amazon Mechanical Turk", "Dialogue System", "Complex Tasks"],
+		"skills": ["Python", "JavaScript", "MySQL", "Docker", "HTML", "SASS", "CSS", "PHP"]
+	},
+	{
 		"id": "miriam",
 		"title": "MIRIAM",
 		"subtitle": "The Multimodal Interface",
-		"role": "Software Developer",
-		"description": "MIRIAM allows operators to interrogate autonomous underwater vehicle's actions and status in real time through natural language chat. This was developed as part of an internship in 2017. I still work on it and I have added many features like speech-recognition, speech-to-text, etc.",
-		"url": "http://www2.macs.hw.ac.uk/miriam/interface/",
+		"role": "Software Developer & Research Assistant",
+		"description": "MIRIAM allows operators to interrogate autonomous underwater vehicle's actions and status in real time through natural language chat. This was developed as part of an internship in 2017. I still work on it and I have added many features like speech-recognition, speech-to-text, etc. The BBC wrote an article about it: https://www.bbc.co.uk/news/uk-scotland-edinburgh-east-fife-54282984",
+		"url": "https://miriamproject.github.io/",
 		"topics": ["Natural Language Generation", "Natural Language Understanding", "Dialogue System", "Chatbot"],
 		"skills": ["Python", "JavaScript", "PHP", "MySQL", "HTML", "SASS", "CSS"]
 	},
@@ -15,7 +25,7 @@
 		"subtitle": "Explainable Autonomy through Natural Language",
 		"role": "4th Year Thesis",
 		"description": "Extension to MIRIAM so it is able to predict and explain the behaviours of the autonomous underwater vehicles. Enables operators to ask about unexpected events that they may not fully understand. This was merged into the main MIRIAM project due to its commercial applications once my thesis was finished.",
-		"url": "",
+		"url": "https://miriamproject.github.io/",
 		"topics": ["Explainability", "Autonomy Behaviours", "Trust", "Transparency", "Mental Models", "Laravel Framework"],
 		"skills": ["Python", "JavaScript", "PHP", "MySQL", "HTML", "SASS", "CSS"]
 	},
