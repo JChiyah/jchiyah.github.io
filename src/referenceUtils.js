@@ -125,6 +125,7 @@ export function formatAuthor(authorArray, showFirstName = true, putSurnameFirst 
 		// eslint-disable-next-line no-useless-escape
 		let author = replaceAll(entry, "{\\'e}", "é");
 		// eslint-disable-next-line no-useless-escape
+		author = replaceAll(author, "\\'{e}", "é");
 		author = replaceAll(author, "\\'{o}", "ó");
 		author = replaceAll(author, "\\`{E}", "É");
 		author = replaceAll(author, "{\\'i}", "í");
