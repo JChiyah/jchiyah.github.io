@@ -1,3 +1,36 @@
+# jchiyah.github.io
+
+My personal website!
+
+## Installation
+
+```shell script
+# Install NPM if first time
+npm install
+
+# Update packages if needed
+npm update
+```
+
+## Run
+
+```shell script
+npm start
+```
+
+## Deploy
+
+```shell script
+npm run build
+
+npm run deploy
+```
+
+
+---------------------------
+
+Everything below this line was automatically written from the React README.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -15,7 +15,7 @@ class PublicationItem extends Component {
 		this.state = {
 			citationKey: bibtexJSON['citationKey'],
 			title: getTitle(bibtexJSON),
-			author: formatAuthor(getAuthor(bibtexJSON), true, false),
+			author: formatAuthor(getAuthor(bibtexJSON), true, false, true),
 			year: bibtexJSON['entryTags']['year'],
 			booktitle: bibtexJSON['entryTags']['booktitle'],
 			series: bibtexJSON['entryTags']['series'],
@@ -50,7 +50,9 @@ class PublicationItem extends Component {
 					{/*{this.state.author} ({this.state.year}). <b>&lsquo;{this.state.title}&rsquo;</b>. In: <i>{this.state.booktitle}</i>. {this.state.series}. {this.state.address}.*/}
 					<a href={pubLink} target="_blank" rel="noopener noreferrer">{state.title}</a><br/>
 					{state.author}.<br/>
-					<i>{state.booktitle}</i>. {state.series}. {state.address}.
+					<i>{state.booktitle}</i>
+					. {state.series}{state.series ? '. ' : ''}
+					{state.address}{state.address ? '.' : ''}
 				</p>
 				<ul className="publication-item-menu">
 					<li><a href={pubLink} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faLink} /> Link</a></li>

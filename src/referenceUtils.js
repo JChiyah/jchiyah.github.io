@@ -62,7 +62,8 @@ export const getChicagoCitation = (bibtex) => {
 		"MIRIAM: a multimodal chat-based interface for autonomous systems." In Proceedings of the 19th ACM
 		International Conference on Multimodal Interaction, pp. 495-496. ACM, 2017.
 	*/
-	const author = formatAuthor(getAuthor(bibtex), true, false);
+	const author = formatAuthor(getAuthor(bibtex), true, false, true);
+	console.log(author);
 	const title = getTitle(bibtex);
 	let pages = getPages(bibtex, false);
 	pages = pages !== "" ? ", " + pages : "";
@@ -102,11 +103,14 @@ export function getAuthor(bibtex) {
 }
 
 
-export function formatAuthor(authorArray, firstName = true, surnameFirst = true) {
-	if (!surnameFirst) {
-		// modify first entry so even if surnameFirst is false, the first author still shows by surname first
+export function formatAuthor(authorArray, showFirstName = true, putSurnameFirst = true, firstAuthorBySurname = null) {
+	if (!putSurnameFirst && firstAuthorBySurname === null) {
+		throw new Error("You should define whether firstAuthorBySurname is true or false")
+	}
+	if (firstAuthorBySurname) {
+		// modify first entry so the first author shows by surname first
 		let tmp = authorArray[0].split(", ");
-		authorArray[0] = tmp[1] + ", " + tmp[0];
+		authorArray[0] = tmp[1] + ", " + tmp[0] + ",";
 
 		// add "and" to the last author
 		let tmp2 = authorArray[authorArray.length-1].split(", ");
@@ -129,7 +133,7 @@ export function formatAuthor(authorArray, firstName = true, surnameFirst = true)
 		author = author.split(", ");
 
 		let name;
-		if (firstName) {
+		if (showFirstName) {
 			name = author[1];
 		} else {
 			const nameArray = author[1].split(" ");
@@ -137,7 +141,7 @@ export function formatAuthor(authorArray, firstName = true, surnameFirst = true)
 				return n[0] + ".";
 			}).join(" ");
 		}
-		return surnameFirst ? author[0] + ", " + name : name + " " + author[0];
+		return putSurnameFirst ? author[0] + ", " + name : name + " " + author[0];
 	}).join(", ");
 }
 

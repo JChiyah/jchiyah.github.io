@@ -35,7 +35,7 @@ class About extends Component {
 							<br/><br/>
 
 							I graduated from an MEng in May 2019 and started an iCASE PhD with Siemens in September 2020 in
-							the field of monitoring and control of systems using natural language.
+							the field of monitoring and control of manufacturing systems using natural language.
 						</p>
 					</div>
 				</div>
