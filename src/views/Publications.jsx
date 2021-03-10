@@ -131,9 +131,11 @@ class Publications extends Component {
 		pubKeys.sort(function (a, b) {
 			return parseInt(b) - parseInt(a);
 		});
+		let totalPublications = 0;
 		// create the publications by year
 		const publications = pubKeys.map((year) => {
 			let pubEntries = pubObject[year].map((entry) => {
+				totalPublications += 1;
 				return (
 					<li key={entry['citationKey']}>
 						<PublicationItem bibtex={entry} modalCallback={(bibtex) => this.onOpenModal(bibtex)} />
@@ -154,9 +156,9 @@ class Publications extends Component {
 
 				<div className="app-body">
 					<h1>Publications</h1>
-					<p style={{marginBottom: '2em'}}>The following is a list of publications. You can also check my <a href={publicationsFile} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faBook} /> bibtex file</a> or
-						my <a href="https://scholar.google.co.uk/citations?hl=en&user=NQyCFjYAAAAJ#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faGraduationCap} /> Google Scholar profile</a>.
-						<br/><br/>If you need access to any of the publications and the link is broken, do not hesitate to contact me and I will happily provide a copy.
+					<p style={{marginBottom: '2em'}}>
+						You can also check my <a href={publicationsFile} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faBook} /> bibtex file</a> or
+							my <a href="https://scholar.google.co.uk/citations?hl=en&user=NQyCFjYAAAAJ#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faGraduationCap} /> Google Scholar profile</a>. If you need access to any of the publications and the link is broken, do not hesitate to contact me and I will happily provide a copy. List of publications below ({totalPublications} in total).
 					</p>
 					{modal}
 					{publications}

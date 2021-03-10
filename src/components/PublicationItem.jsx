@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLink, faBook, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
+import { faLink, faBook, faQuoteRight, faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 
 import {getBibtexHTML, getAuthor, formatAuthor, getTitle} from './../referenceUtils';
 
+
+const EXTRA_MATERIAL = {
+	ChiyahGarciaHRI21Video: {
+		video: 'https://youtu.be/1CZm6bsILaw'
+	}
+};
 
 class PublicationItem extends Component {
 	constructor(props) {
@@ -44,6 +50,17 @@ class PublicationItem extends Component {
 
 		const pubLink = state.url ? state.url : ("/" + state.citationKey + ".pdf");
 
+		let extra = <li></li>;
+		if (state.citationKey in EXTRA_MATERIAL) {
+			if ("video" in EXTRA_MATERIAL[state.citationKey]) {
+				extra = <li><a href={EXTRA_MATERIAL[state.citationKey].video} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faPlayCircle} /> Video</a></li>
+			}
+
+			if (extra === <li></li>) {
+				throw new Error("Type not recognised");
+			}
+		}
+
 		return (
 			<div className="publication-item">
 				<p>
@@ -59,6 +76,7 @@ class PublicationItem extends Component {
 					<li><button className="button-link" onClick={() => modalCallback(bibtex)}><FontAwesomeIcon className="fa-icon" icon={faQuoteRight} /> Cite</button></li>
 					<li><button className="button-link" onClick={() => this.toggleDrawer()}><FontAwesomeIcon className="fa-icon" icon={faBook} /> Bibtex</button></li>
 					{/*{doiPart}*/}
+					{extra}
 					<li className={classes}><p><tt dangerouslySetInnerHTML={{__html: bibtexString}}/></p></li>
 				</ul>
 			</div>

@@ -63,7 +63,6 @@ export const getChicagoCitation = (bibtex) => {
 		International Conference on Multimodal Interaction, pp. 495-496. ACM, 2017.
 	*/
 	const author = formatAuthor(getAuthor(bibtex), true, false, true);
-	console.log(author);
 	const title = getTitle(bibtex);
 	let pages = getPages(bibtex, false);
 	pages = pages !== "" ? ", " + pages : "";
