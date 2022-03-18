@@ -1,5 +1,15 @@
 [
 	{
+		"id": "exploring-mm-in-simmc2",
+		"title": "Exploring Multi-Modal Representations in the SIMMC 2.0 Challenge",
+		"subtitle": "Code and models",
+		"role": "First Author/Developer",
+		"description": "Code and models for the paper 'Exploring Multi-Modal Representations for Ambiguity Detection & Coreference Resolution in the SIMMC 2.0 Challenge' published at AAAI 2022 DSTC10 Workshop.",
+		"url": "https://github.com/jchiyah/exloring-mm-in-simmc2",
+		"topics": ["NLP", "Vision and Language Models", "BERT", "SIMMC2.0", "Detectron2"],
+		"skills": ["Python", "Deep Learning", "PyTorch", "Object Detection"]
+	},
+	{
 		"id": "crwiz",
 		"title": "CRWIZ",
 		"subtitle": "The Intelligent Wizard Interface ",

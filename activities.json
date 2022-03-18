@@ -7,7 +7,7 @@
 				"title": "Lab Helper & Enhanced Lab Helper",
 				"subtitle": "Heriot-Watt University",
 				"date": "Sep 2017 - Now (term-time only)",
-				"description": "Helping students and marking coursework/exams in several courses: Software Development 1 & 2 (Java courses for 1st Year students), Language Processors (compiler course for 3rd Year students) and Artificial Intelligence (AI course for 3rd Year and MSc students). Furthermore, I assisted with the Code Clinic, a weekly workshop for students with programming questions during the academic year 2017/2018.",
+				"description": "Helping students and marking coursework/exams in several courses: Artificial Intelligence (AI course for 3rd Year and MSc students), Language Processors (compiler course for 3rd Year students), Programming Languages and Software Development 1 & 2. Furthermore, I assisted with the Code Clinic, a weekly workshop for students with programming questions during the academic year 2017/2018.",
 				"icon": "chalkboard-teacher"
 			},
 			{
@@ -152,9 +152,16 @@
 		]
 	},
 	{
-		"title": "Seminars and Workshops",
+		"title": "Seminars, Workshops and other Events",
 		"id": "seminars",
 		"list": [
+			{
+				"title": "AAAI 2022 Queer in AI Events",
+				"subtitle": "Co-organiser",
+				"date": "Feb 2022",
+				"description": "Co-organiser of the Queer in AI events at AAAI 2022, check here: <a href='https://sites.google.com/view/queer-in-ai/aaai-2022' target='_blank'>https://sites.google.com/view/queer-in-ai/aaai-2022</a>",
+				"icon": "users"
+			},
 			{
 				"title": "SRPe RAS & AI in Advanced Manufacturing Workshop",
 				"subtitle": "Scottish Research Partnership in Engineering, University of Strathclyde",
