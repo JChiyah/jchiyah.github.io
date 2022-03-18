@@ -36,7 +36,7 @@ class ProjectItem extends Component {
 				<p className="project-item-skills"><strong>Skills:</strong> {this.state.skills.join(', ')}</p>
 				{this.state.url ?
 					<p className="project-item-url"><a href={this.state.url} target="_blank" rel="noopener noreferrer">
-						<FontAwesomeIcon className="fa-icon" icon={faExternalLinkAlt} /> Check Project</a></p>
+						<FontAwesomeIcon className="fa-icon" icon={faExternalLinkAlt} /> {this.state.url}</a></p>
 					: '' }
 			</div>
 		);

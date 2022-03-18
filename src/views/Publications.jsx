@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import BibtexParser from './../bibtexParse';
 import './../App.scss';
-import Modal from 'react-responsive-modal';
+import 'react-responsive-modal/styles.css';
+import { Modal } from 'react-responsive-modal';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGraduationCap, faBook } from '@fortawesome/free-solid-svg-icons';
@@ -16,6 +17,7 @@ const publicationsFile = '/publications.bib';
 
 
 class Publications extends Component {
+
 	constructor(props) {
 		super(props);
 		const test = {citationKey: "ChiyahHRI18",
@@ -158,25 +160,18 @@ class Publications extends Component {
 					<h1>Publications</h1>
 					<p style={{marginBottom: '2em'}}>
 						You can also check my <a href={publicationsFile} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faBook} /> bibtex file</a> or
-							my <a href="https://scholar.google.co.uk/citations?hl=en&user=NQyCFjYAAAAJ#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faGraduationCap} /> Google Scholar profile</a>. If you need access to any of the publications and the link is broken, do not hesitate to contact me and I will happily provide a copy. List of publications below ({totalPublications} in total).
+							my <a href="https://scholar.google.co.uk/citations?hl=en&user=NQyCFjYAAAAJ#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faGraduationCap} /> Google Scholar profile</a>. If you need access to any of the publications and the link is broken, do not hesitate to contact me and I will happily provide a copy.
 					</p>
 					{modal}
 					{publications}
 					<br/>
+					({totalPublications} in total)
+					<br/>
 					<hr/>
 					<h2>My Name</h2>
-					<p>Sometimes there is confusion about my name and the correct way to use it. I have two surnames <em>Chiyah</em> and <em>Garcia</em>, thus I use both.
-					I follow the guidelines from this very <a href="https://blog.apastyle.org/apastyle/2017/05/whats-in-a-name-two-part-surnames-in-apa-style.html" target="_blank" rel="noopener noreferrer">comprenhensive guide</a>. <em>Chiyah</em> is my preferred surname.
-					Check below for the quick answer.<br/><br/>
-
-					<strong>TL;DR</strong> prefered ways of citing me:</p>
-					<ul>
-						<li>Chiyah Garcia et al.</li>
-						<li>Chiyah-Garcia et al.</li>
-						<li>Chiyah et al.</li>
-						<li>Chiyah Garcia, F. J.</li>
-						<li>Chiyah Garcia, Francisco J.</li>
-					</ul>
+					<p>Please cite me as <em>Chiyah-Garcia</em> !
+					I follow the guidelines from this <a href="https://blog.apastyle.org/apastyle/2017/05/whats-in-a-name-two-part-surnames-in-apa-style.html" target="_blank" rel="noopener noreferrer">guide</a>.
+					</p>
 				</div>
 
 				<Footer />

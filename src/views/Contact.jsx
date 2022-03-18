@@ -17,8 +17,8 @@ class Contact extends Component {
 
 				<div className="app-body contact">
 					<h1>Contact</h1>
-					<p>The easiest way to contact me is through email. I don't check other means as regularly, so I might miss messages (e.g. LinkedIn).</p>
-					
+					<p>The easiest way to contact me is through email. I don't check other means as regularly, so I might miss messages (e.g., LinkedIn).</p>
+
 					<hr/>
 					<div className="email-box">
 						<h2><FontAwesomeIcon className="fa-icon" icon={faEnvelope} />&nbsp; Email</h2>

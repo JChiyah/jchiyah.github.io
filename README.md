@@ -2,13 +2,19 @@
 
 My personal website!
 
+Last compiled: 2022-03-18
+System: Ubuntu 20.04 WSL2 and Windows 11
+Node version: 17.7.1
+NPM version: 8.5.5
+
+
 ## Installation
 
 ```shell script
 # Install NPM if first time
 npm install
 
-# Update packages if needed
+# Update packages if needed, see below for major changes
 npm update
 ```
 
@@ -25,6 +31,31 @@ npm run build
 
 npm run deploy
 ```
+
+If you are having issues with npm start due to "envelope routines::unsupported" then check https://stackoverflow.com/questions/69692842/error-message-error0308010cdigital-envelope-routinesunsupported
+
+
+## Update
+
+Check: https://flaviocopes.com/update-npm-dependencies/
+
+To update to a new major version all the packages, install the npm-check-updates package globally:
+
+`npm install -g npm-check-updates`
+
+then run it:
+
+`ncu -u`
+
+this will upgrade all the version hints in the package.json file, to dependencies and devDependencies, so npm can install the new major version.
+
+You are now ready to run the update:
+
+`npm update`
+
+If you just downloaded the project without the node_modules dependencies and you want to install the shiny new versions first, just run
+
+`npm install`
 
 
 ---------------------------

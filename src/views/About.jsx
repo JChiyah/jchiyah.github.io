@@ -18,7 +18,7 @@ class About extends Component {
 							<img src="about_photo.jpg" alt="selfie" />
 						</div>
 						<p>
-							I am currently a 2nd Year PhD student at Heriot-Watt University, Edinburgh (UK), mainly interested in human-robot interaction through natural language.
+							I am currently a 3rd Year PhD student at Heriot-Watt University, Edinburgh (UK), mainly interested in situated human-robot interaction through natural language.
 							<br/><br/>
 
 							I have worked in a few cool projects during internships and placements with industry that have led to considerable research output and commercial applications.
@@ -27,7 +27,7 @@ class About extends Component {
 
 							Python, C++, JavaScript, Java and PHP are my strongest programming languages, but I learn quite quickly as needed. Most of my important projects involved one or more of these.
 							I like to use stable and modern technology stacks, thus I am familiar with many frameworks in these languages
-							(e.g. ROS, Flask, React, Laravel, etc.) and other tools (CMake, Hunter, Gulp, etc.).
+							(e.g. PyTorch, ROS, Flask, React, Laravel, etc.) and other tools (CMake, Hunter, Gulp, etc.).
 							I often automate everything with easy-to-use scripts and use Docker daily for development and deployment.
 							<br/><br/>
 
