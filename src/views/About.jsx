@@ -15,7 +15,7 @@ class About extends Component {
 					<h1>About Me</h1>
 					<div className="about">
 						<div className="about-img-wrapper">
-							<img src="about_photo.jpg" alt="selfie" />
+							<img src="about_photo.jpeg" alt="selfie" />
 						</div>
 						<p>
 							(he/him) I am currently a 3rd Year PhD student at Heriot-Watt University, Edinburgh (UK), mainly interested in situated human-robot interaction through natural language.
