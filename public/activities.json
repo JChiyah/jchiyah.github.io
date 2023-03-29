@@ -4,6 +4,13 @@
 		"id": "jobs",
 		"list": [
 			{
+				"title": "Applied Scientist Intern",
+				"subtitle": "Amazon Alexa AI",
+				"date": "Jan 2023 - Now",
+				"description": "Working in the Alexa Prize SocialBot, stay tuned for more!",
+				"icon": "fa-comments"
+			},
+			{
 				"title": "Lab Helper & Enhanced Lab Helper",
 				"subtitle": "Heriot-Watt University",
 				"date": "Sep 2017 - Now (term-time only)",

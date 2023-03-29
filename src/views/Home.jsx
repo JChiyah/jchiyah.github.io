@@ -16,8 +16,8 @@ class Home extends Component {
 
 				<div className="landing-wrapper">
 					<div className="header">
-						<h1><span className="small-name">Francisco Javier</span><br/>Chiyah-Garcia</h1>
-						<h3>Human-Robot Interaction | Conversational Agents | Explainable Autonomy</h3>
+						<h1><span className="small-name">Javier Chiyah-Garcia</span></h1>
+						<h3>NLP | Conversational AI | Human-Robot Interaction | Explainable Autonomy</h3>
 					</div>
 					<div className="subheader">
 						<ul>

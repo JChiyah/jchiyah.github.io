@@ -2,10 +2,17 @@
 
 My personal website!
 
-Last compiled: 2022-03-18
-System: Ubuntu 20.04 WSL2 and Windows 11
-Node version: 17.7.1
-NPM version: 8.5.5
+__2023-03-29__
+- System: Windows 11
+- Node version: 17.7.1
+- NPM version: 8.5.5
+- Warning: getting some errors when trying to update packages, might need to use another template. Maybe check: https://github.com/academicpages/academicpages.github.io
+
+
+__2022-03-18__
+- System: Ubuntu 20.04 WSL2 and Windows 11
+- Node version: 17.7.1
+- NPM version: 8.5.5
 
 
 ## Installation

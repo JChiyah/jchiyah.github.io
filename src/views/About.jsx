@@ -18,7 +18,7 @@ class About extends Component {
 							<img src="about_photo.jpg" alt="selfie" />
 						</div>
 						<p>
-							I am currently a 3rd Year PhD student at Heriot-Watt University, Edinburgh (UK), mainly interested in situated human-robot interaction through natural language.
+							(he/him) I am currently a 3rd Year PhD student at Heriot-Watt University, Edinburgh (UK), mainly interested in situated human-robot interaction through natural language.
 							<br/><br/>
 
 							I have worked in a few cool projects during internships and placements with industry that have led to considerable research output and commercial applications.
@@ -34,8 +34,8 @@ class About extends Component {
 							My interests include human-computer and human-robot interaction, autonomous systems, natural language (e.g. chatbots) and explainability.
 							<br/><br/>
 
-							I graduated from an MEng in May 2019 and started an iCASE PhD with Siemens in September 2020 in
-							the field of monitoring and control of manufacturing systems using natural language.
+							I graduated from an MEng in May 2019 and started an iCASE PhD with Siemens in September 2019 in
+							the field of monitoring and control of manufacturing systems using natural language. Currently doing an internship at Amazon Alexa AI, say hi!
 						</p>
 					</div>
 				</div>
