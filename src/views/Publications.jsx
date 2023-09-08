@@ -20,7 +20,8 @@ class Publications extends Component {
 
 	constructor(props) {
 		super(props);
-		const test = {citationKey: "ChiyahHRI18",
+		const test = {
+			citationKey: "ChiyahHRI18",
 			entryTags: {
 			address: "Chicago, IL, USA",
 				// eslint-disable-next-line no-useless-escape
@@ -33,10 +34,21 @@ class Publications extends Component {
 			entryType: "inproceedings"
 		};
 
+		// check if we need to redirect
+		let params = new URLSearchParams(window.location.search);
+		let redirectLink = params.get('link');
+		if (redirectLink) {
+			// do a manual fix for the SIGDIAL poster where URL does not match bib key
+			if (redirectLink === 'sigdial2023') {
+				redirectLink = 'chiyah-garcia2023sigdial';
+			}
+		}
+		
 		this.state = {
 			publicationsObject: [],
 			openModal: false,
 			modalPublication: test,
+			redirectLink: redirectLink
 		};
 
 		this.getPublications(this.setPublications);
@@ -60,9 +72,17 @@ class Publications extends Component {
 	}
 
 	setPublications(text) {
+		let { redirectLink } = this.state;
 		const parsed = BibtexParser.toJSON(text);
 		let pubsArray = {};
+
 		parsed.forEach(function (entry) {
+			// first check if we need to redirect
+			if (redirectLink && entry['citationKey'] === redirectLink) {
+				console.log(`Found match for redirect: ${entry['citationKey']} = ${entry['entryTags']['url']}`);
+				window.location.replace(entry['entryTags']['url']);
+			}
+			// organise by publication Year otherwise
 			const pubYear = entry['entryTags']['year'];
 			if (!(pubYear in pubsArray)) {
 				pubsArray[pubYear] = [entry];
@@ -131,10 +151,11 @@ class Publications extends Component {
 		// get keys with years and sort them
 		let pubKeys = Object.keys(pubObject);
 		pubKeys.sort(function (a, b) {
-			return parseInt(b) - parseInt(a);
+			return b === 'Upcoming' || parseInt(b) - parseInt(a);
 		});
-		let totalPublications = 0;
+
 		// create the publications by year
+		let totalPublications = 0;
 		const publications = pubKeys.map((year) => {
 			let pubEntries = pubObject[year].map((entry) => {
 				totalPublications += 1;
@@ -151,6 +172,7 @@ class Publications extends Component {
 		});
 
 		const modal = this.renderModal();
+		if (totalPublications > 0) console.log(totalPublications + " publications in total :)"); // avoid displaying if pubs not loaded
 
 		return (
 			<div className="App">
@@ -164,8 +186,6 @@ class Publications extends Component {
 					</p>
 					{modal}
 					{publications}
-					<br/>
-					({totalPublications} in total)
 					<br/>
 					<hr/>
 					<h2>My Name</h2>

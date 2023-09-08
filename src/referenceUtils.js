@@ -155,6 +155,8 @@ export function getTitle(bibtex) {
 	} else {
 		title = replaceAll(title, "{", "");
 		title = replaceAll(title, "}", "");
+		title = replaceAll(title, "\\&", "&");
+
 		return title;
 	}
 }

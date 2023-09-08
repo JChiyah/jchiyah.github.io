@@ -5,7 +5,7 @@ import BibtexParser from "./bibtexParse";
 
 const bibtexCite = `
 @inproceedings{ChiyahINLG18,
-    title = {Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models},
+    title = {Explainable Autonomy: A Study of Explanation \& Styles for Building Clear Mental Models},
     author = {Chiyah Garcia, Francisco J. and Robb, David A. and Laskov, Atanas and Liu, Xingkun and Patron, Pedro and Hastie, Helen},
     booktitle = {Proceedings of The 11th International Natural Language Generation Conference},
     series = {INLG'18},
