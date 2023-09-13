@@ -163,6 +163,20 @@
 		"id": "seminars",
 		"list": [
 			{
+				"title": "Young Researchers Roundtable for Spoken Dialogue Systems 2023",
+				"subtitle": "Co-organiser",
+				"date": "Sep 2023",
+				"description": "Co-organiser of the <a href='https://sites.google.com/view/yrrsds2023' target='_blank'>19th YRRSDS Workshop</a> colocated with SIGDIAL 2023 in Prague, Czech Republic.",
+				"icon": "users"
+			},
+			{
+				"title": "Young Researchers Roundtable for Spoken Dialogue Systems 2022",
+				"subtitle": "Co-organiser",
+				"date": "Sep 2022",
+				"description": "Co-organiser of the <a href='https://sites.google.com/view/yrrsds2022/home' target='_blank'>18th YRRSDS Workshop</a> colocated with SIGDIAL 2022 in Edinburgh, Scotland.",
+				"icon": "users"
+			},
+			{
 				"title": "AAAI 2022 Queer in AI Events",
 				"subtitle": "Co-organiser",
 				"date": "Feb 2022",
