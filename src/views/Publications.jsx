@@ -10,7 +10,8 @@ import { faGraduationCap, faBook } from '@fortawesome/free-solid-svg-icons';
 import NavigationBar from './../components/NavigationBar';
 import Footer from './../components/Footer';
 import PublicationItem from './../components/PublicationItem';
-import {getAPACitation, getHarvardCitation, getChicagoCitation, getBibtexHTML} from './../referenceUtils';
+import { getAPACitation, getHarvardCitation, getChicagoCitation } from './../referenceUtils';
+import { Reference, parseBibtexFile } from './../references';
 
 
 const publicationsFile = '/publications.bib';
@@ -23,14 +24,15 @@ class Publications extends Component {
 		const test = {
 			citationKey: "ChiyahHRI18",
 			entryTags: {
-			address: "Chicago, IL, USA",
+				address: "Chicago, IL, USA",
 				// eslint-disable-next-line no-useless-escape
-			author: "Chiyah Garc{\'i}a, Francisco J. and Robb, David A., and Liu, X. and Laskov, Atanas and  Patron, Patron and Hastie, Helen",
-			booktitle: "Proceedings of Explainable Robotic Systems Workshop",
-			series: "HRI'18",
-			title: "Explain Yourself: A Natural Language Interface for Scrutable Autonomous Robots",
-			year: "2018",
-			__proto__: Object},
+				author: "Chiyah Garc{\'i}a, Francisco J. and Robb, David A., and Liu, X. and Laskov, Atanas and  Patron, Patron and Hastie, Helen",
+				booktitle: "Proceedings of Explainable Robotic Systems Workshop",
+				series: "HRI'18",
+				title: "Explain Yourself: A Natural Language Interface for Scrutable Autonomous Robots",
+				year: "2018",
+				__proto__: Object
+			},
 			entryType: "inproceedings"
 		};
 
@@ -43,21 +45,21 @@ class Publications extends Component {
 				redirectLink = 'chiyah-garcia2023sigdial';
 			}
 		}
-		
+
 		this.state = {
 			publicationsObject: [],
 			openModal: false,
-			modalPublication: test,
+			modalPublication: undefined,
 			redirectLink: redirectLink
 		};
 
 		this.getPublications(this.setPublications);
 	}
 
-	onOpenModal(bibtex) {
+	onOpenModal(entry) {
 		this.setState({
 			openModal: true,
-			modalPublication: bibtex
+			modalPublication: entry
 		});
 	};
 
@@ -66,34 +68,47 @@ class Publications extends Component {
 	};
 
 	getPublications(callback) {
-		fetch(publicationsFile).then((r) => r.text()).then(text  => {
+		fetch(publicationsFile).then((r) => r.text()).then(text => {
 			this.setPublications(text);
 		});
 	}
 
 	setPublications(text) {
 		let { redirectLink } = this.state;
-		const parsed = BibtexParser.toJSON(text);
+		// const parsed = BibtexParser.toJSON(text);
+		// const parsed = Cite.input(text);
+
 		let pubsArray = {};
 
-		parsed.forEach(function (entry) {
-			// first check if we need to redirect
-			if (redirectLink && entry['citationKey'] === redirectLink) {
-				console.log(`Found match for redirect: ${entry['citationKey']} = ${entry['entryTags']['url']}`);
-				window.location.replace(entry['entryTags']['url']);
-			}
-			// organise by publication Year otherwise
-			const pubYear = entry['entryTags']['year'];
-			if (!(pubYear in pubsArray)) {
-				pubsArray[pubYear] = [entry];
-			} else {
-				pubsArray[pubYear].push(entry);
-			}
+		parseBibtexFile(publicationsFile).then(references => {
+			references.forEach(reference => {
+				// console.log(reference);
+				if (redirectLink && reference.getCitationKey() === redirectLink) {
+					console.log(`Found match for redirect: ${reference.getCitationKey()} = ${reference.getURL()}`);
+					window.location.replace(reference.getURL());
+				}
+				// organise by publication Year otherwise
+				// const pubYear = entry.getDate(); // ['entryTags']['year'];
+				const pubYear = reference.getYear(); // Extract the year from the date
+
+				if (!(pubYear in pubsArray)) {
+					pubsArray[pubYear] = [reference];
+				} else {
+					pubsArray[pubYear].push(reference);
+				}
+
+			});
+
+			this.setState({
+				publicationsObject: pubsArray,
+			});
 		});
 
-		this.setState({
-			publicationsObject: pubsArray,
-		});
+		// parsed.forEach(function (entry) {
+		// 	// first check if we need to redirect
+		// 	// print out the entry
+
+		// });
 	}
 
 	renderCitationStyles() {
@@ -105,19 +120,23 @@ class Publications extends Component {
 		return (<>
 			<tr>
 				<th>APA</th>
-				<td>{getAPACitation(modalPublication)}</td>
+				{/* <td>{getAPACitation(modalPublication)}</td> */}
+				<td>{modalPublication.getAPACitation()}</td>
 			</tr>
 			<tr>
 				<th>Harvard</th>
-				<td>{getHarvardCitation(modalPublication)}</td>
+				{/* <td>{getHarvardCitation(modalPublication)}</td> */}
+				<td>{modalPublication.getHarvardCitation()}</td>
 			</tr>
 			<tr>
-				<th>Chicago</th>
-				<td>{getChicagoCitation(modalPublication)}</td>
+				<th>ACL</th>
+				{/* <td>{getChicagoCitation(modalPublication)}</td> */}
+				<td>{modalPublication.getACLCitation()}</td>
 			</tr>
 			<tr>
 				<th>Bibtex</th>
-				<td><tt dangerouslySetInnerHTML={{__html: getBibtexHTML(modalPublication)}}/></td>
+				{/* <td><tt dangerouslySetInnerHTML={{__html: getBibtexHTML(modalPublication)}}/></td> */}
+				<td><tt dangerouslySetInnerHTML={{ __html: modalPublication.getBibtexHTML() }} /></td>
 			</tr>
 		</>);
 	}
@@ -160,8 +179,8 @@ class Publications extends Component {
 			let pubEntries = pubObject[year].map((entry) => {
 				totalPublications += 1;
 				return (
-					<li key={entry['citationKey']}>
-						<PublicationItem bibtex={entry} modalCallback={(bibtex) => this.onOpenModal(bibtex)} />
+					<li key={entry.getCitationKey()}>
+						<PublicationItem bibtex={entry} modalCallback={(entry) => this.onOpenModal(entry)} reference={entry} />
 					</li>
 				)
 			});
@@ -180,17 +199,17 @@ class Publications extends Component {
 
 				<div className="app-body">
 					<h1>Publications</h1>
-					<p style={{marginBottom: '2em'}}>
+					<p style={{ marginBottom: '2em' }}>
 						You can also check my <a href={publicationsFile} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faBook} /> bibtex file</a> or
-							my <a href="https://scholar.google.co.uk/citations?hl=en&user=NQyCFjYAAAAJ#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faGraduationCap} /> Google Scholar profile</a>. If you need access to any of the publications and the link is broken, do not hesitate to contact me and I will happily provide a copy.
+						my <a href="https://scholar.google.co.uk/citations?hl=en&user=NQyCFjYAAAAJ#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faGraduationCap} /> Google Scholar profile</a>. If you need access to any of the publications and the link is broken, contact me and I will happily provide a copy.
 					</p>
 					{modal}
 					{publications}
-					<br/>
-					<hr/>
+					<br />
+					<hr />
 					<h2>My Name</h2>
 					<p>Please cite me as <em>Chiyah-Garcia</em> !
-					I follow the guidelines from this <a href="https://blog.apastyle.org/apastyle/2017/05/whats-in-a-name-two-part-surnames-in-apa-style.html" target="_blank" rel="noopener noreferrer">guide</a>.
+						I follow the guidelines from this <a href="https://blog.apastyle.org/apastyle/2017/05/whats-in-a-name-two-part-surnames-in-apa-style.html" target="_blank" rel="noopener noreferrer">guide</a>.
 					</p>
 				</div>
 

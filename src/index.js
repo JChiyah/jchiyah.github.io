@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
@@ -23,13 +24,13 @@ library.add(fas);
 ReactDOM.render(
 	<Router>
 		<Switch>
-			<Route exact path="/" component={Home}/>
-			<Route exact path="/home" component={Home}/>
-			<Route exact path="/about" component={About}/>
-			<Route exact path="/projects" component={Projects}/>
-			<Route exact path="/publications" component={Publications}/>
-			<Route exact path="/professional-activities" component={Activities}/>
-			<Route exact path="/contact" component={Contact}/>
+			<Route exact path="/" component={Home} />
+			<Route exact path="/home" component={Home} />
+			<Route exact path="/about" component={About} />
+			<Route exact path="/projects" component={Projects} />
+			<Route exact path="/publications" component={Publications} />
+			<Route exact path="/professional-activities" component={Activities} />
+			<Route exact path="/contact" component={Contact} />
 			<Route component={PageNotFound} />
 		</Switch>
 	</Router>,

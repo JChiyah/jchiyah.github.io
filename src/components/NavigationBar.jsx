@@ -1,18 +1,39 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes, faHouse, faUser, faCubes, faBriefcase, faFileLines, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+// import { faHouse as faHouseRegular, faUser as faUserRegular, faCubes as faCubesRegular, faBriefcase as faBriefcaseRegular, faFile as faFileRegular, faEnvelope as faEnvelopeRegular } from '@fortawesome/free-regular-svg-icons';
 
 
 class NavigationElement extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			isHovered: false,
+		};
+	}
+
+	handleMouseEnter = () => {
+        this.setState({ isHovered: true });
+    };
+
+    handleMouseLeave = () => {
+        this.setState({ isHovered: false });
+    };
+
 	render() {
-		const isActive = this.props.isActive;
+        const { isActive, icon, text } = this.props;
+		const { isHovered } = this.state;
 		const activeClass = isActive ? 'active' : '';
 
 		const url = "/" + (this.props.text).toLowerCase().replace(" ", "-");
 
 		return (
 			<li className="navbar-elem">
-				<a href={url} className={activeClass}>{this.props.text}</a>
+				<a href={url} className={activeClass} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
+					<FontAwesomeIcon 
+						icon={icon} bounce={isHovered}
+						style={{ marginRight: '5px', fontSize: '0.8em' }} />{text}
+				</a>
 			</li>
 		);
 	}
@@ -58,10 +79,11 @@ class NavigationBar extends Component {
 		window.removeEventListener("resize", this.updateDrawer.bind(this));
 	}
 
-	renderElement(title) {
+	renderElement(title, icon) {
 		return (
 			<NavigationElement
 				text={title}
+				icon={icon}
 				isActive={this.props.currentPage === title}
 		 	/>
 		 );
@@ -79,12 +101,12 @@ class NavigationBar extends Component {
 				</div>
 
 				<ul style={{display: (this.showMenu() ? 'block' : 'none')}}>
-					{this.renderElement('Home')}
-					{this.renderElement('About')}
-					{this.renderElement('Projects')}
-					{this.renderElement('Publications')}
-					{this.renderElement('Professional Activities')}
-					{this.renderElement('Contact')}
+					{this.renderElement('Home', faHouse)}
+					{this.renderElement('About', faUser)}
+					{this.renderElement('Projects', faCubes)}
+					{this.renderElement('Publications', faFileLines)}
+					{this.renderElement('Professional Activities', faBriefcase)}
+					{this.renderElement('Contact', faEnvelope)}
 				</ul>
 
 				<div 
