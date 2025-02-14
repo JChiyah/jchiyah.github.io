@@ -1,15 +1,10 @@
-import React, { Component, useState, useRef } from 'react';
-
-import Overlay from 'react-bootstrap/Overlay';
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import Tooltip from 'react-bootstrap/Tooltip';
+import React, { Component } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLink, faQuoteRight, faPlayCircle, faArrowUpRightFromSquare, faClipboardCheck } from '@fortawesome/free-solid-svg-icons';
-import { faClipboard } from '@fortawesome/free-regular-svg-icons';
+import { faTrophy, faQuoteRight, faPlayCircle, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-// import { getBibtexHTML } from './../referenceUtils';
+import CopyButton from './CopyButton';
 
 
 const ADDITIONAL_CONTENT = {
@@ -50,6 +45,13 @@ const ADDITIONAL_CONTENT = {
 			newTab: true,
 			text: 'Code',
 			url: 'https://github.com/JChiyah/what-are-you-referring-to',
+		},
+		{
+			icon: faTrophy,
+			theme: 'award',
+			newTab: false,
+			text: 'Best Paper Award',
+			url: '#chiyah-garcia-etal-2023-referring',
 		}
 	],
 };
@@ -58,7 +60,7 @@ class PublicationItem extends Component {
 	constructor(props) {
 		super(props);
 
-		const bibtexJSON = this.props.bibtex;
+		// const bibtexJSON = this.props.bibtex;
 		const reference = this.props.reference;
 
 		this.state = {
@@ -67,33 +69,14 @@ class PublicationItem extends Component {
 			author: reference.getAuthors(),
 			year: reference.getYear(),
 			booktitle: reference.getJournal(),
-			series: reference.getSeries(),
+			series: reference.getShortJournal({ year: true }),
 			address: reference.getAddress(),
 			doi: reference.getDOI(),
 			url: reference.getURL(),
 			isDrawerOpen: false,
 			isBibtexButtonActive: false
 		};
-
-		// this.state = {
-		// 	citationKey: bibtexJSON['citationKey'],
-		// 	title: getTitle(bibtexJSON),
-		// 	author: formatAuthor(getAuthor(bibtexJSON), true, false, true),
-		// 	year: bibtexJSON['entryTags']['year'],
-		// 	booktitle: bibtexJSON['entryTags']['booktitle'],
-		// 	series: bibtexJSON['entryTags']['series'],
-		// 	address: bibtexJSON['entryTags']['address'],
-		// 	doi: bibtexJSON['entryTags']['doi'] || bibtexJSON['entryTags']['DOI'],
-		// 	url: bibtexJSON['entryTags']['url'],
-		// 	isDrawerOpen: false,
-		// };
 	}
-
-	// To-do: remove this when not needed anymore
-	// toggleDrawer() {
-	// 	const isDrawerOpen = this.state.isDrawerOpen;
-	// 	this.setState({ isDrawerOpen: !isDrawerOpen });
-	// }
 
 	copyBibtexToClipboard() {
 		const bibtexString = this.props.reference.getBibtexString();
@@ -151,9 +134,8 @@ class PublicationItem extends Component {
 
 		const { modalCallback, bibtex } = this.props;
 
-		const bibtexString = this.props.reference.getBibtexHTML();
-
-		const classes = "bibtex-block " + (!state.isDrawerOpen ? "bibtex-block-closed" : "");
+		// const bibtexString = this.props.reference.getBibtexHTML();
+		// const classes = "bibtex-block " + (!state.isDrawerOpen ? "bibtex-block-closed" : "");
 
 		// const doiPart = state.doi ? <li>DOI: {state.doi}</li> : <li></li>;
 
@@ -177,11 +159,6 @@ class PublicationItem extends Component {
 					</li>
 				);
 			});
-			// how can I append HTML TOGETHER ?? CHATGPT SEE ABOVE
-
-			// if (extra === <li></li>) {
-			// 	throw new Error("Type not recognised");
-			// }
 		}
 		// wrap additionalHtml in a <ul> tag
 		// additionalHtml = <ul>{additionalHtml}</ul>;
@@ -197,35 +174,36 @@ class PublicationItem extends Component {
 		// ) : null;
 
 		// two button states either with a clipboard (default) or with a check
-		let bibtexButtonHtml = (
-			<OverlayTrigger
-				placement='right'
-				trigger={['hover', 'focus']}
-				delay={{ hide: state.isBibtexButtonActive ? 1000 : 0 }}
-				overlay={
-					<Tooltip>{state.isBibtexButtonActive ? 'Copied!' : 'Copy BibTeX'}</Tooltip>
-				}
-			>
-				<button
-					className={"btn btn-sm " + (state.isBibtexButtonActive ? "btn-success" : "btn-secondary")}
-					onClick={this.copyBibtexButton.bind(this)}
-				>
-					<FontAwesomeIcon
-						className="fa-icon inline-icon-before"
-						icon={state.isBibtexButtonActive ? faClipboardCheck : faClipboard}
-					/>
-					BibTeX
-				</button>
-			</OverlayTrigger>
-		);
+		// let bibtexButtonHtml = (
+		// 	<OverlayTrigger
+		// 		placement='right'
+		// 		trigger={['hover', 'focus']}
+		// 		delay={{ hide: state.isBibtexButtonActive ? 1000 : 0 }}
+		// 		overlay={
+		// 			<Tooltip>{state.isBibtexButtonActive ? 'Copied!' : 'Copy BibTeX'}</Tooltip>
+		// 		}
+		// 	>
+		// 		<button
+		// 			className={"btn btn-sm " + (state.isBibtexButtonActive ? "btn-success" : "btn-secondary")}
+		// 			onClick={this.copyBibtexButton.bind(this)}
+		// 		>
+		// 			<FontAwesomeIcon
+		// 				className="fa-icon inline-icon-before"
+		// 				icon={state.isBibtexButtonActive ? faClipboardCheck : faClipboard}
+		// 			/>
+		// 			BibTeX
+		// 		</button>
+		// 	</OverlayTrigger>
+		// );
+		// let bibtexButtonHtml = ;
 
 		return (
-			<div className="publication-item">
+			<div className="publication-item" id={state.citationKey}>
 				<p>
 					{/*{this.state.author} ({this.state.year}). <b>&lsquo;{this.state.title}&rsquo;</b>. In: <i>{this.state.booktitle}</i>. {this.state.series}. {this.state.address}.*/}
 					<a href={pubLink} target="_blank" rel="noopener noreferrer">{state.title}</a><br />
 					{this.getAuthorStringHtml(state.author)}.<br />
-					<span className="conference">{state.series}{state.series ? ' - ' : ''}<i>{state.booktitle}</i></span>
+					<span className="conference">{state.series ? '[' : ''}{state.series}{state.series ? '] ' : ''}<i>{state.booktitle}</i></span>
 					{/* . {state.series}{state.series ? '. ' : ''}
 					{state.address}{state.address ? '.' : ''} */}
 				</p>
@@ -238,10 +216,13 @@ class PublicationItem extends Component {
 						<button className="btn btn-sm btn-secondary" onClick={() => modalCallback(bibtex)}><FontAwesomeIcon className="fa-icon inline-icon-before" icon={faQuoteRight} />Cite</button>
 					</li>
 					<li>
-						{bibtexButtonHtml}
-						{/* <button className="button-link" onClick={this.copyBibtexButton.bind(this)} id="copy-button">
-							<FontAwesomeIcon className="fa-icon" icon={faClipboard} id="clipboard-icon" /> BibTex
-						</button> */}
+						<CopyButton
+							buttonText="BibTeX"
+							tooltipTextBefore="Copy BibTeX"
+							tooltipTextAfter="Copied!"
+							contentToCopy={this.props.reference.getBibtexString()}
+							className="btn-secondary"
+						/>
 					</li>
 					{/*{doiPart}*/}
 					{additionalHtml}

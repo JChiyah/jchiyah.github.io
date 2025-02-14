@@ -6,12 +6,16 @@
 $custom-theme-colors: (
 	// primary: purple
 	// add new colours
+	success-flash: lighten(#27ae60, 56),
+	// special
 	github: #8957e5,
 	github-text: #ffffff,
 	amazon: darkOrange,
 	amazon-text: #ffffff,
 	youtube: red,
 	youtube-text: #ffffff,
+	award: #ffd700,
+	award-text: #000000,
 );
 
 // merge new colours with existing colours
@@ -457,16 +461,17 @@ body {
 	margin-bottom: 1rem;
 
 	p {
-		margin-bottom: 0.75rem;
+		margin-bottom: 0.1rem;
 	}
 
 	.publication-item-menu {
 		list-style: none;
 		padding-inline-start: 0;
+		padding: 0.3rem 0rem;
 
 		li {
 			display: inline-block;
-			margin: 0 0.5em;
+			margin: 0.3rem 0.3rem;
 		}
 
 		li.bibtex-block {
@@ -474,8 +479,8 @@ body {
 			margin: 0.7em 0;
 		}
 
-		a:hover {
-			// border-bottom: none;
+		.btn-award {
+			pointer-events: none;
 		}
 	}
 
@@ -483,9 +488,6 @@ body {
 		color: $gray-600;
 	}
 
-	strong {
-		// font-weight: 900;
-	}
 }
 
 .publication-overlay {
@@ -514,6 +516,7 @@ body {
 			th {
 				text-align: right;
 				vertical-align: top;
+				padding: 0.25rem 0rem;
 				padding-right: 0.8em;
 
 				// make text unselectable
@@ -522,7 +525,39 @@ body {
 			}
 
 			td {
-				padding-bottom: 1em;
+				padding: 0.25rem 0rem;
+			}
+
+			.citation-text {
+				padding: 0.05rem 0.5rem;
+				border-radius: 0.2rem;
+				position: relative;
+				min-height: 2.0rem;
+				transition: background-color 0.2s ease; // Add smooth transition
+
+				span {
+					line-height: 1.5;
+				}
+
+				.copy-button {
+					display: block;
+					position: absolute;
+					right: 0.0rem;
+					bottom: 0.0rem;
+					transform: none;
+				}
+
+				div {
+					display: inline;
+				}
+			}
+
+			.text-bg-light {
+				border: 1px solid #ffffff;
+			}
+
+			.text-bg-success-flash {
+				border: 1px solid darken(theme-color("success-flash"), 15);
 			}
 		}
 	}
@@ -531,6 +566,8 @@ body {
 .publication-modal-button:hover {
 	cursor: pointer;
 }
+
+
 
 .bibtex-block {
 	height: auto;

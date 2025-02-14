@@ -4,25 +4,40 @@
 import Cite from 'citation-js';
 
 
-// async, from website
-// const templateName = 'association-for-computational-linguistics';
-// const website = 'https://raw.githubusercontent.com/citation-style-language/styles/master/association-for-computational-linguistics.csl';
-
-// async function addCSLStyle() {
-//     const response = await fetch(website);
-//     const csl = await response.text();
-
-//     Cite.plugins.config.get('@csl').templates.add('acl', csl);
-// }
-// addCSLStyle();
-
+function newCSLTemplate(name, csl) {
+	// Cite.plugins.config.get('@csl').locales.add('en-US', csl);
+	Cite.plugins.config.get('@csl').templates.add(name, csl);
+}
 
 // local adding CSL style
-import csl from './association-for-computational-linguistics.csl';
+// Parse CSL content
+async function loadCSLStyle(name, localPublicFile) {
+	try {
+		// Load local CSL file
+		const response = await fetch(localPublicFile);
+		const csl = await response.text();
+		// console.debug(csl);
 
-// Add the CSL style to citation-js
-Cite.plugins.config.get('@csl').templates.add('association-for-computational-linguistics', csl);
-// check other styles here: https://github.com/citation-style-language/styles
+		// Parse CSL content
+		const parser = new DOMParser();
+		const xmlDoc = parser.parseFromString(csl, "application/xml");
+
+		if (xmlDoc.getElementsByTagName("parsererror").length > 0) {
+			throw new Error("Invalid CSL XML");
+		}
+
+		// Add CSL template
+		newCSLTemplate(name, csl);
+
+		// console.log('CSL style loaded successfully');
+	} catch (error) {
+		console.error('Error loading CSL style:', error);
+		throw error;
+	}
+}
+// const aclStyle = 'https://raw.githubusercontent.com/citation-style-language/styles/master/association-for-computational-linguistics.csl';
+// Load CSL style
+loadCSLStyle('acl', '/association-for-computational-linguistics.csl');
 
 
 class Reference {
@@ -55,6 +70,19 @@ class Reference {
 		return this.data['container-title'];
 	}
 
+	getShortJournal(year = false) {
+		let series = this.getSeries();
+		if (!series) {
+			return null;
+		}
+		// remove year
+		series = series.replace(/'\d{2}/, '');
+		if (year) {
+			series = series + ' ' + this.getYear();
+		}
+		return series;
+	}
+
 	getDOI() {
 		return this.data.DOI;
 	}
@@ -71,36 +99,74 @@ class Reference {
 		return this.data['collection-title'];
 	}
 
-	getAPACitation() {
+	getCitation(format = 'html', template = 'apa') {
 		return this.cite.format('bibliography', {
-			format: 'text',
-			template: 'apa',
+			format: format,
+			template: template,
 			lang: 'en-US'
 		});
 	}
 
-	getHarvardCitation() {
-		return this.cite.format('bibliography', {
-			format: 'text',
-			template: 'harvard1',
-			lang: 'en-US'
-		});
+	getAPACitation(format = 'html') {
+		return this.getCitation(format, 'apa');
 	}
 
-	// getChicagoCitation() {
-	// 	return this.cite.format('bibliography', {
-	// 		format: 'text',
-	// 		template: 'acl',
-	// 		lang: 'en-US'
-	// 	});
-	// }
+	getHarvardCitation(format = 'html') {
+		return this.getCitation(format, 'harvard1');
+	}
 
-	getACLCitation() {
-		return this.cite.format('bibliography', {
-			format: 'text',
-			template: 'acl',
-			lang: 'en-US'
-		});
+	getACLCitation(format = 'html') {
+		let citation = this.getCitation(format, 'acl');
+		// replace sanitised < and > with actual characters
+		if (format === 'html') {
+			citation = citation.replace(/&#60;/g, '<').replace(/&#62;/g, '>');
+		} else {
+			// remove html tags
+			citation = citation.replace(/<[^>]*>?/g, '');
+		}
+		return citation;
+	}
+
+	getACLBibkey(format = 'html') {
+		// first check if ACL by checking url
+		if (this.data.URL.includes('aclanthology')) {
+			if (format === 'html') {
+				return `<samp>${this.data['citation-key']}</samp>`;
+			} else {
+				return this.data['citation-key'];
+			}
+		}
+		return null;
+	}
+
+	getMarkdownCitation(format = 'html') {
+		// Get paper details
+		const title = this.getTitle();
+		const url = this.getURL();
+		const year = this.getYear();
+		const venue = this.getShortJournal() || this.getJournal();
+
+		// Format authors (First Author et al.)
+		const authors = this.data.author || this.data.editor;
+		const authorText = authors.length > 1
+			? `${authors[0].family} et al.`
+			: authors[0].family;
+
+		// Build markdown citation
+		let markdownText = `[${title}](${url}) (${authorText}, ${venue} ${year})`;
+
+		if (format === 'html') {
+			markdownText = this.getMarkdownCitationRendered(markdownText);
+		}
+		return markdownText;
+	}
+
+	getMarkdownCitationRendered(markdownText) {
+		// Convert markdown link [text](url) to HTML <a> tag
+		return markdownText.replace(
+			/\[([^\]]+)\]\(([^)]+)\)/g,
+			'<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
+		);
 	}
 
 	getBibtexString() {
@@ -111,14 +177,24 @@ class Reference {
 		return bibtex;
 	}
 
+	getBibtexCitation(format = 'html') {
+		if (format === 'html') {
+			return this.getBibtexHTML();
+		} else {
+			return this.getBibtexString();
+		}
+	}
+
 	getBibtexHTML() {
 		let bibtex = this.getBibtexString();
 
 		// Remove the abstract field
 		bibtex = bibtex.replace(/,\s*abstract\s*=\s*{[^}]*}/, '');
+		bibtex = bibtex.replace(/,\s*abstract\s*=\s*"[^"]*"/, '');
 
 		// Replace newlines with HTML line breaks and indentation
 		bibtex = bibtex.replace(/(?:\r\n|\r|\n)/g, '<br/>&nbsp;&nbsp;&nbsp;');
+		bibtex = bibtex.replace(/(<br\/>&nbsp;&nbsp;&nbsp;})/g, '}');
 
 		// Remove new lines after "and"
 		bibtex = bibtex.replace(/and\s*<br\/>&nbsp;&nbsp;&nbsp;/g, 'and ');
@@ -128,13 +204,13 @@ class Reference {
 
 		// Replace BibTeX entry delimiters with HTML tags
 		bibtex = bibtex.replace(/@(\w+)\s*{/, '<b>@$1</b>{');
-		// bibtex = bibtex.replace(/,\s*([a-zA-Z]+)\s*=\s*{/, ',<br/>&nbsp;&nbsp;&nbsp;&nbsp;<b>$1</b> = {');
 		bibtex = bibtex.replace(/}\s*$/, '<br/>}');
 
 		// Remove extra new lines at the end
 		bibtex = bibtex.replace(/(<br\/>&nbsp;&nbsp;&nbsp;)+$/, '');
+		bibtex = bibtex.replace(/(<br\/>&nbsp;&nbsp;&nbsp;)+}$/, '}');
 
-		return bibtex
+		return `<tt>${bibtex}</tt>`;
 	}
 }
 
@@ -148,5 +224,3 @@ export async function parseBibtexFile(bibtexFile) {
 }
 
 export default Reference;
-
-

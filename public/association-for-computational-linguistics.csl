@@ -199,7 +199,17 @@
       <choose>
         <!-- corresponds to "article" in bibtex -->
         <if type="article-journal">
-          <text variable="title" prefix=" " suffix="."/>
+          <group prefix=" " suffix=".">
+            <choose>
+              <if variable="URL">
+                <text variable="URL" prefix="&lt;a href=&quot;" suffix="&quot;&gt;"/>
+                <text variable="title" suffix="&lt;/a&gt;"/>
+              </if>
+              <else>
+                <text variable="title"/>
+              </else>
+            </choose>
+          </group>
           <group prefix=" " suffix=".">
             <text variable="container-title" font-style="italic"/>
             <text variable="volume" prefix=", "/>
@@ -209,7 +219,17 @@
         </if>
         <!-- corresponds to "proceedings", "manual", "book", and "periodical" in bibtex -->
         <else-if type="book">
-          <text variable="title" prefix=" " suffix="." font-style="italic"/>
+          <group prefix=" " suffix="." font-style="italic">
+            <choose>
+              <if variable="URL">
+                <text variable="URL" prefix="&lt;a href=&quot;" suffix="&quot;&gt;"/>
+                <text variable="title" suffix="&lt;/a&gt;"/>
+              </if>
+              <else>
+                <text variable="title"/>
+              </else>
+            </choose>
+          </group>
           <group delimiter=", " suffix=".">
             <text macro="volume-and-collection-title"/>
           </group>
@@ -221,7 +241,17 @@
         </else-if>
         <!-- corresponds to "inbook" and "incollection" in bibtex -->
         <else-if type="chapter">
-          <text variable="title" prefix=" " suffix="."/>
+          <group prefix=" " suffix=".">
+            <choose>
+              <if variable="URL">
+                <text variable="URL" prefix="&lt;a href=&quot;" suffix="&quot;&gt;"/>
+                <text variable="title" suffix="&lt;/a&gt;"/>
+              </if>
+              <else>
+                <text variable="title"/>
+              </else>
+            </choose>
+          </group>
           <text term="in" text-case="capitalize-first" prefix=" " suffix=" "/>
           <group delimiter=", " suffix=".">
             <text macro="editor"/>
@@ -251,10 +281,19 @@
         </else-if>
         <!-- corresponds to "inproceedings" and "conference" in bibtex -->
         <else-if type="paper-conference">
-          <text variable="title" prefix=" " suffix=". "/>
+          <group prefix=" " suffix=". ">
+            <choose>
+              <if variable="URL">
+                <text variable="URL" prefix="&lt;a href=&quot;" suffix="&quot;&gt;"/>
+                <text variable="title" suffix="&lt;/a&gt;"/>
+              </if>
+              <else>
+                <text variable="title"/>
+              </else>
+            </choose>
+          </group>
           <text term="in" text-case="capitalize-first" suffix=" "/>
           <group suffix="." delimiter=", ">
-            <text macro="editor"/>
             <text variable="container-title" font-style="italic"/>
             <text macro="volume-or-number"/>
             <group delimiter=" ">
@@ -290,7 +329,17 @@
         </else-if>
         <!-- misc. -->
         <else>
-          <text variable="title" prefix=" " suffix="."/>
+          <group prefix=" " suffix=".">
+            <choose>
+              <if variable="URL">
+                <text variable="URL" prefix="&lt;a href=&quot;" suffix="&quot;&gt;"/>
+                <text variable="title" suffix="&lt;/a&gt;"/>
+              </if>
+              <else>
+                <text variable="title"/>
+              </else>
+            </choose>
+          </group>
         </else>
       </choose>
       <!-- note -->

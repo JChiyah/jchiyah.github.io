@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BibtexParser from './../bibtexParse';
+
 import './../App.scss';
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
@@ -10,9 +10,8 @@ import { faGraduationCap, faBook } from '@fortawesome/free-solid-svg-icons';
 import NavigationBar from './../components/NavigationBar';
 import Footer from './../components/Footer';
 import PublicationItem from './../components/PublicationItem';
-import { getAPACitation, getHarvardCitation, getChicagoCitation } from './../referenceUtils';
-import { Reference, parseBibtexFile } from './../references';
-
+import { parseBibtexFile } from './../references';
+import CopyButton from './../components/CopyButton';
 
 const publicationsFile = '/publications.bib';
 
@@ -47,10 +46,20 @@ class Publications extends Component {
 		}
 
 		this.state = {
+			citationStyles: [
+				{ name: 'ACL', func: 'getACLCitation' },
+				// { name: 'APA', func: 'getAPACitation' },
+				{ name: 'Harvard', func: 'getHarvardCitation' },
+				{ name: 'Markdown<br/>(Informal)', func: 'getMarkdownCitation' },
+				{ name: 'ACL&nbsp;Bibkey', func: 'getACLBibkey' },
+				{ name: 'BibTex', func: 'getBibtexCitation' },
+			],
 			publicationsObject: [],
 			openModal: false,
 			modalPublication: undefined,
-			redirectLink: redirectLink
+			redirectLink: redirectLink,
+			isCitationHighlighted: null,
+			activeHighlightTimer: null
 		};
 
 		this.getPublications(this.setPublications);
@@ -64,6 +73,7 @@ class Publications extends Component {
 	};
 
 	onCloseModal() {
+		this.clearHighlightCitation();
 		this.setState({ openModal: false });
 	};
 
@@ -111,33 +121,59 @@ class Publications extends Component {
 		// });
 	}
 
-	renderCitationStyles() {
-		const { modalPublication } = this.state;
-
-		if (modalPublication === undefined) {
-			return (<></>);
+	clearHighlightCitation() {
+		// clear any existing timer
+		this.setState({ isCitationHighlighted: null });
+		if (this.state.activeHighlightTimer) {
+			clearTimeout(this.state.activeHighlightTimer);
 		}
+	}
+
+	highlightCitation(citation) {
+		this.clearHighlightCitation();
+
+		this.setState({ isCitationHighlighted: citation });
+
+		// set a new timer
+		let timeout = setTimeout(() => {
+			this.setState({ isCitationHighlighted: null });
+		}, 1500);
+		this.setState({ activeHighlightTimer: timeout });
+	}
+
+	renderCitationStyles() {
+		const { modalPublication, citationStyles } = this.state;
+
+		if (!modalPublication) return null;
+
 		return (<>
-			<tr>
-				<th>APA</th>
-				{/* <td>{getAPACitation(modalPublication)}</td> */}
-				<td>{modalPublication.getAPACitation()}</td>
-			</tr>
-			<tr>
-				<th>Harvard</th>
-				{/* <td>{getHarvardCitation(modalPublication)}</td> */}
-				<td>{modalPublication.getHarvardCitation()}</td>
-			</tr>
-			<tr>
-				<th>ACL</th>
-				{/* <td>{getChicagoCitation(modalPublication)}</td> */}
-				<td>{modalPublication.getACLCitation()}</td>
-			</tr>
-			<tr>
-				<th>Bibtex</th>
-				{/* <td><tt dangerouslySetInnerHTML={{__html: getBibtexHTML(modalPublication)}}/></td> */}
-				<td><tt dangerouslySetInnerHTML={{ __html: modalPublication.getBibtexHTML() }} /></td>
-			</tr>
+			{citationStyles.map(citeStyle => {
+				const { isCitationHighlighted } = this.state;
+
+				return (
+					<tr key={citeStyle.name}>
+						<th dangerouslySetInnerHTML={{
+							__html: citeStyle.name
+						}}></th>
+						<td>
+							<div className={`citation-text ${isCitationHighlighted === (citeStyle.name + modalPublication.key) ? 'text-bg-success-flash' : 'text-bg-light'}`}>
+								<span
+									dangerouslySetInnerHTML={{
+										__html: modalPublication[citeStyle.func]()
+									}}
+								/>
+								<CopyButton
+									contentToCopy={modalPublication[citeStyle.func]('text')}
+									className="btn-secondary"
+									buttonText=""
+									tooltipTextBefore="Copy citation"
+									onClick={() => this.highlightCitation(citeStyle.name + modalPublication.key)}
+								/>
+							</div>
+						</td>
+					</tr>
+				);
+			})}
 		</>);
 	}
 
@@ -184,13 +220,12 @@ class Publications extends Component {
 					</li>
 				)
 			});
-			return (<div key={year}>
+			return (<div key={year} id={"papers-" + year}>
 				<h3>{year}</h3>
 				<ul>{pubEntries}</ul>
 			</div>);
 		});
 
-		const modal = this.renderModal();
 		if (totalPublications > 0) console.log(totalPublications + " publications in total :)"); // avoid displaying if pubs not loaded
 
 		return (
@@ -203,7 +238,7 @@ class Publications extends Component {
 						You can also check my <a href={publicationsFile} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faBook} /> bibtex file</a> or
 						my <a href="https://scholar.google.co.uk/citations?hl=en&user=NQyCFjYAAAAJ#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faGraduationCap} /> Google Scholar profile</a>. If you need access to any of the publications and the link is broken, contact me and I will happily provide a copy.
 					</p>
-					{modal}
+					{this.renderModal()}
 					{publications}
 					<br />
 					<hr />
