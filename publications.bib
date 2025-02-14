@@ -3,25 +3,65 @@
     author = "Chiyah-Garcia, Javier  and
       Suglia, Alessandro  and
       Eshghi, Arash",
-    booktitle = "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP'24)",
+    editor = "Al-Onaizan, Yaser  and
+      Bansal, Mohit  and
+      Chen, Yun-Nung",
+    booktitle = "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing",
     series = "EMNLP'24",
     month = nov,
     year = "2024",
-    url = "https://doi.org/10.48550/arXiv.2409.14247",
+    address = "Miami, Florida, USA",
     publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.emnlp-main.643/",
+    doi = "10.18653/v1/2024.emnlp-main.643",
+    pages = "11523--11542",
+    abstract = "In dialogue, the addressee may initially misunderstand the speaker and respond erroneously, often prompting the speaker to correct the misunderstanding in the next turn with a Third Position Repair (TPR). The ability to process and respond appropriately to such repair sequences is thus crucial in conversational AI systems. In this paper, we first collect, analyse, and publicly release BlockWorld-Repairs: a dataset of multi-modal TPR sequences in an instruction-following manipulation task that is, by design, rife with referential ambiguity. We employ this dataset to evaluate several state-of-the-art Vision and Language Models (VLM) across multiple settings, focusing on their capability to process and accurately respond to TPRs and thus recover from miscommunication. We find that, compared to humans, all models significantly underperform in this task. We then show that VLMs can benefit from specialised losses targeting relevant tokens during fine-tuning, achieving better performance and generalising better to new scenarios. Our results suggest that these models are not yet ready to be deployed in multi-modal collaborative settings where repairs are common, and highlight the need to design training regimes and objectives that facilitate learning from interaction. Our code and data are available at www.github.com/JChiyah/blockworld-repairs"
 }
 
 @inproceedings{chiyah-garcia-etal-2024-adapting,
-    title = "Adapting LLM Predictions in In-Context Learning with Data Priors",
+    title = "Adapting {LLM} Predictions in In-Context Learning with Data Priors",
     author = "Chiyah-Garcia, Javier  and
       Goyal, Prasoon  and
       Johnston, Michael  and
       Ghanadan, Reza",
-    booktitle = "Workshop on Customizable NLP (CustomNLP4U) at EMNLP'24",
+    editor = "Kumar, Sachin  and
+      Balachandran, Vidhisha  and
+      Park, Chan Young  and
+      Shi, Weijia  and
+      Hayati, Shirley Anugrah  and
+      Tsvetkov, Yulia  and
+      Smith, Noah  and
+      Hajishirzi, Hannaneh  and
+      Kang, Dongyeop  and
+      Jurgens, David",
+    booktitle = "Proceedings of the 1st Workshop on Customizable NLP: Progress and Challenges in Customizing NLP for a Domain, Application, Group, or Individual (CustomNLP4U)",
     series = "CustomNLP4U at EMNLP'24",
     month = nov,
     year = "2024",
+    address = "Miami, Florida, USA",
     publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.customnlp4u-1.23/",
+    doi = "10.18653/v1/2024.customnlp4u-1.23",
+    pages = "305--316",
+    abstract = "In-Context Learning (ICL) has enabled Large Language Models (LLMs) to excel as general-purpose models in zero and few-shot task settings. However, since LLMs are often not trained on the downstream tasks, they lack crucial contextual knowledge from the data distributions, which limits their task adaptability.This paper explores using data priors to automatically customize prompts in ICL. We extract these priors in a dataset-agnostic way basedon historical information, enabling LLMs to personalize their output towards users or tasks at inference time. We find that they improve LLM`s output by injecting latent dataset-specific information for the task of rating prediction. Throughout a series of experiments, we show replicable results across LLMs and datasets on what information and methods are most effective for adapting ICL outputs with priors. Our findings offer a systematic approach to customizing prompts with additional information in a privacy-friendly manner, requiring only aggregated data that is computationally efficient."
+}
+
+@inproceedings{10.1145/3687272.3690900,
+    author = {Wilson, Bruce W and Eswaran, Shivaanee and Riyaz, Omar and Chiyah-Garcia, Javier and Aylett, Matthew Peter},
+    title = {Follow the Yellow or Red Brick Road? Investigating the Impact of Narratives in a Guided Navigation Task},
+    year = {2024},
+    isbn = {9798400711787},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3687272.3690900},
+    doi = {10.1145/3687272.3690900},
+    abstract = {Sharing casual stories in conversations is a natural human behaviour that adds personal and unique details, while also offering measurable benefits such as improved memory recall and more positive social human-human interactions. However, as social robots become more common in everyday environments, it is unclear whether these stories, or narratives, have similar effects on human-robot interactions with embodied agents. In this paper, we develop and run a pilot evaluation with a direction-giver agent to study the effects of narratives in the interaction. We use a Furhat robot with an LLM to guide participants through a virtual environment in Minecraft, providing instructions and answering follow-up questions throughout the task. We present preliminary results that show participants made fewer navigational mistakes and preferred narratives, and assess using virtual environments for tasks that typically require a physical one.},
+    booktitle = {Proceedings of the 12th International Conference on Human-Agent Interaction},
+    pages = {411–413},
+    numpages = {3},
+    keywords = {Social agents, narratives, navigation},
+    location = {Swansea, United Kingdom},
+    series = {HAI'24}
 }
 
 @inproceedings{chiyah-garcia-etal-2023-referring,
@@ -29,6 +69,7 @@
     author = "Chiyah-Garcia, Javier and Suglia, Alessandro and Eshghi, Arash and Hastie, Helen",
     editor = "Stoyanchev, Svetlana and Joty, Shafiq and Schlangen, David and Dusek, Ondrej and Kennington, Casey and Alikhani, Malihe",
     booktitle = "Proceedings of the 24th Annual Meeting of the Special Interest Group on Discourse and Dialogue",
+    series = "SIGDIAL'23",
     month = sep,
     year = "2023",
     address = "Prague, Czechia",
@@ -38,11 +79,26 @@
     pages = "175--182"
 }
 
+@proceedings{yrrsds-2023-young,
+    title = "Proceedings of the 19th Annual Meeting of the Young Reseachers' Roundtable on Spoken Dialogue Systems",
+    editor = "Hudecek, Vojtech  and
+      Schmidtova, Patricia  and
+      Dinkar, Tanvi  and
+      Chiyah-Garcia, Javier  and
+      Sieinska, Weronika",
+    month = sep,
+    year = "2023",
+    address = "Prague, Czechia",
+    series = "YRRSDS'23",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.yrrsds-1.0",
+    annotation = "YRRSDS'23 Workshop"
+}
 
 @inproceedings{chiyah-garcia2022dstc10,
     title={Exploring Multi-Modal Representations for Ambiguity Detection \& Coreference Resolution in the SIMMC 2.0 Challenge},
     author={Chiyah-Garcia, Javier and Suglia, Alessandro and Lopes, Jos\'{e} David and Eshghi, Arash and Hastie, Helen},
-    booktitle={AAAI 2022 DSTC10 Workshop},
+    booktitle={DSTC10 Workshop at AAAI 2022},
     year={2022},
     month={feb},
     url={https://arxiv.org/abs/2202.12645},
@@ -74,7 +130,7 @@
     title={The Lab vs The Crowd: An Investigation into Data Quality for Neural Dialogue Models},
     author={Lopes, Jos{\'e} and Chiyah Garcia, Francisco J. and Hastie, Helen},
     year={2020},
-    booktitle={Workshop on Human in the Loop Dialogue Systems at NeurIPS 2020},
+    booktitle={Human in the Loop Dialogue Systems Workshop at NeurIPS 2020},
     eprint={2012.03855},
     archivePrefix={arXiv},
     url = {https://arxiv.org/abs/2012.03855}
