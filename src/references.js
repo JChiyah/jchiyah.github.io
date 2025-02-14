@@ -210,7 +210,7 @@ class Reference {
 		bibtex = bibtex.replace(/(<br\/>&nbsp;&nbsp;&nbsp;)+$/, '');
 		bibtex = bibtex.replace(/(<br\/>&nbsp;&nbsp;&nbsp;)+}$/, '}');
 
-		return `<tt>${bibtex}</tt>`;
+		return `<tt class="bibtex-citation">${bibtex}</tt>`;
 	}
 }
 

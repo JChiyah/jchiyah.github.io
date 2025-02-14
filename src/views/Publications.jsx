@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 
 import './../App.scss';
-import 'react-responsive-modal/styles.css';
-import { Modal } from 'react-responsive-modal';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGraduationCap, faBook } from '@fortawesome/free-solid-svg-icons';
@@ -12,6 +10,7 @@ import Footer from './../components/Footer';
 import PublicationItem from './../components/PublicationItem';
 import { parseBibtexFile } from './../references';
 import CopyButton from './../components/CopyButton';
+import NewModal from './../components/NewModal';
 
 const publicationsFile = '/publications.bib';
 
@@ -177,29 +176,29 @@ class Publications extends Component {
 		</>);
 	}
 
-	renderModal() {
-		const { openModal } = this.state;
-		const content = this.renderCitationStyles();
+	// renderModal() {
+	// 	const { openModal } = this.state;
+	// 	const content = this.renderCitationStyles();
 
-		return (
-			<Modal
-				open={openModal}
-				onClose={() => this.onCloseModal()}
-				classNames={{
-					overlay: "publication-overlay",
-					modal: "publication-modal",
-					closeButton: "publication-modal-button",
-				}}
-				center>
-				<h2>Cite</h2>
-				<table>
-					<tbody>
-						{content}
-					</tbody>
-				</table>
-			</Modal>
-		)
-	}
+	// 	return (
+	// 		<Modal
+	// 			open={openModal}
+	// 			onClose={() => this.onCloseModal()}
+	// 			classNames={{
+	// 				overlay: "publication-overlay",
+	// 				modal: "publication-modal",
+	// 				closeButton: "publication-modal-button",
+	// 			}}
+	// 			center>
+	// 			<h2>Cite</h2>
+	// 			<table>
+	// 				<tbody>
+	// 					{content}
+	// 				</tbody>
+	// 			</table>
+	// 		</Modal>
+	// 	)
+	// }
 
 	render() {
 		const pubObject = this.state.publicationsObject;
@@ -238,7 +237,13 @@ class Publications extends Component {
 						You can also check my <a href={publicationsFile} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faBook} /> bibtex file</a> or
 						my <a href="https://scholar.google.co.uk/citations?hl=en&user=NQyCFjYAAAAJ#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faGraduationCap} /> Google Scholar profile</a>. If you need access to any of the publications and the link is broken, contact me and I will happily provide a copy.
 					</p>
-					{this.renderModal()}
+					<NewModal
+						show={this.state.openModal}
+						onHide={() => this.onCloseModal()}
+						publication={this.state.modalPublication}
+						citationStyles={this.state.citationStyles}
+						onCitationCopy={(citationId) => this.highlightCitation(citationId)}
+					/>
 					{publications}
 					<br />
 					<hr />

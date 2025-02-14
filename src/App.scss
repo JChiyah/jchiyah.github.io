@@ -508,59 +508,6 @@ body {
 		margin-block-start: 0;
 		text-align: center;
 	}
-
-	table {
-		tbody {
-			font-size: 0.9em;
-
-			th {
-				text-align: right;
-				vertical-align: top;
-				padding: 0.25rem 0rem;
-				padding-right: 0.8em;
-
-				// make text unselectable
-				-webkit-touch-callout: none;
-				user-select: none;
-			}
-
-			td {
-				padding: 0.25rem 0rem;
-			}
-
-			.citation-text {
-				padding: 0.05rem 0.5rem;
-				border-radius: 0.2rem;
-				position: relative;
-				min-height: 2.0rem;
-				transition: background-color 0.2s ease; // Add smooth transition
-
-				span {
-					line-height: 1.5;
-				}
-
-				.copy-button {
-					display: block;
-					position: absolute;
-					right: 0.0rem;
-					bottom: 0.0rem;
-					transform: none;
-				}
-
-				div {
-					display: inline;
-				}
-			}
-
-			.text-bg-light {
-				border: 1px solid #ffffff;
-			}
-
-			.text-bg-success-flash {
-				border: 1px solid darken(theme-color("success-flash"), 15);
-			}
-		}
-	}
 }
 
 .publication-modal-button:hover {
@@ -841,4 +788,96 @@ body {
 
 .btn-primary {
 	color: $color-primary-text !important;
+}
+
+// Add these styles if you want to customize the Bootstrap modal
+.modal {
+	.modal-dialog {
+		max-width: 65%; // or whatever width you prefer
+	}
+
+	.modal-content {
+		border-radius: 0.5rem;
+	}
+
+	.modal-header {
+		border-bottom: none;
+		padding: 1.5rem 1.5rem 0.5rem;
+	}
+
+	.modal-title {
+		text-align: center;
+	}
+
+	.modal-body {
+		padding: 0.1rem 1.0rem 1.0rem;
+	}
+
+	.table {
+		margin-bottom: 0;
+		font-size: 0.85em;
+		// width: 100%;
+
+		th {
+			text-align: right;
+			vertical-align: top;
+			padding: 0.25rem 0rem;
+			padding-right: 0.8em;
+
+			// make text unselectable
+			-webkit-touch-callout: none;
+			user-select: none;
+			width: 20%;
+		}
+
+		td {
+			position: relative;
+			padding: 0.25rem 0rem;
+			white-space: normal;
+		}
+
+		.citation-text {
+			padding: 0.05rem 0.5rem;
+			border-radius: 0.2rem;
+			position: relative;
+			min-height: 2.0rem;
+			transition: background-color 0.2s ease; // Add smooth transition
+
+			span {
+				line-height: 1.5;
+				display: inline-block;
+				white-space: normal;
+				width: 100%;
+			}
+
+			.copy-button {
+				display: block;
+				position: absolute;
+				right: 0.0rem;
+				bottom: 0.0rem;
+				transform: none;
+			}
+
+			div {
+				display: inline;
+			}
+		}
+
+		.bibtex-citation {
+			// white-space: nowrap;
+			overflow-x: auto;
+			display: block;
+			max-height: 40vh;
+			// max-width: 80%;
+			position: relative;
+		}
+
+		.text-bg-light {
+			// border: 1px solid #ffffff;
+		}
+
+		.text-bg-success-flash {
+			// border: 1px solid darken(theme-color("success-flash"), 15);
+		}
+	}
 }
