@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as Icons from '@fortawesome/free-solid-svg-icons';
 
 const TimelineItem = ({ icon, title, subtitle, date, description }) => (
-	<div className="timeline-item">
+	<div className="timeline-item fade-animation-on-load">
 		<div className="timeline-icon">
 			<FontAwesomeIcon icon={Icons[icon]} />
 		</div>
@@ -22,7 +22,7 @@ const TimelineItem = ({ icon, title, subtitle, date, description }) => (
 const NewTimeline = ({ events = [] }) => {
 	return (
 		<Container>
-			<div className="timeline">
+			<div className="timeline fade-animation-sequence">
 				{events.map((event, index) => (
 					<TimelineItem key={index} {...event} />
 				))}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import './../App.scss';
 
+import { Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGraduationCap, faBook } from '@fortawesome/free-solid-svg-icons';
 
@@ -58,13 +59,23 @@ class Publications extends Component {
 			modalPublication: undefined,
 			redirectLink: redirectLink,
 			isCitationHighlighted: null,
-			activeHighlightTimer: null
+			activeHighlightTimer: null,
+			error: null
 		};
+		this._isMounted = false;
+	}
 
-		this.getPublications(this.setPublications);
+	componentDidMount() {
+		this._isMounted = true;
+		this.getPublications();
+	}
+
+	componentWillUnmount() {
+		this._isMounted = false;
 	}
 
 	onOpenModal(entry) {
+		console.log("onOpenModal", entry);
 		this.setState({
 			openModal: true,
 			modalPublication: entry
@@ -76,7 +87,7 @@ class Publications extends Component {
 		this.setState({ openModal: false });
 	};
 
-	getPublications(callback) {
+	getPublications() {
 		fetch(publicationsFile).then((r) => r.text()).then(text => {
 			this.setPublications(text);
 		});
@@ -84,40 +95,42 @@ class Publications extends Component {
 
 	setPublications(text) {
 		let { redirectLink } = this.state;
-		// const parsed = BibtexParser.toJSON(text);
-		// const parsed = Cite.input(text);
-
 		let pubsArray = {};
 
-		parseBibtexFile(publicationsFile).then(references => {
-			references.forEach(reference => {
-				// console.log(reference);
-				if (redirectLink && reference.getCitationKey() === redirectLink) {
-					console.log(`Found match for redirect: ${reference.getCitationKey()} = ${reference.getURL()}`);
-					window.location.replace(reference.getURL());
+		parseBibtexFile(publicationsFile)
+			.then(references => {
+				references.forEach(reference => {
+					if (redirectLink && reference.getCitationKey() === redirectLink) {
+						console.log(`Found match for redirect: ${reference.getCitationKey()} = ${reference.getURL()}`);
+						window.location.replace(reference.getURL());
+					}
+
+					const pubYear = reference.getYear();
+
+					if (!(pubYear in pubsArray)) {
+						pubsArray[pubYear] = [reference];
+					} else {
+						pubsArray[pubYear].push(reference);
+					}
+				});
+
+				// output number of publications
+				console.log(references.length + " publications in total :)");
+
+				if (this._isMounted) {
+					this.setState({
+						publicationsObject: pubsArray,
+					});
 				}
-				// organise by publication Year otherwise
-				// const pubYear = entry.getDate(); // ['entryTags']['year'];
-				const pubYear = reference.getYear(); // Extract the year from the date
-
-				if (!(pubYear in pubsArray)) {
-					pubsArray[pubYear] = [reference];
-				} else {
-					pubsArray[pubYear].push(reference);
+			})
+			.catch(error => {
+				console.error('Error parsing bibtex file:', error);
+				if (this._isMounted) {
+					this.setState({
+						error: 'Failed to load publications'
+					});
 				}
-
 			});
-
-			this.setState({
-				publicationsObject: pubsArray,
-			});
-		});
-
-		// parsed.forEach(function (entry) {
-		// 	// first check if we need to redirect
-		// 	// print out the entry
-
-		// });
 	}
 
 	clearHighlightCitation() {
@@ -200,33 +213,42 @@ class Publications extends Component {
 	// 	)
 	// }
 
-	render() {
-		const pubObject = this.state.publicationsObject;
-		// get keys with years and sort them
-		let pubKeys = Object.keys(pubObject);
-		pubKeys.sort(function (a, b) {
-			return b === 'Upcoming' || parseInt(b) - parseInt(a);
-		});
+	renderPublications() {
+		const { publicationsObject } = this.state;
+		let publications = [];
 
-		// create the publications by year
-		let totalPublications = 0;
-		const publications = pubKeys.map((year) => {
-			let pubEntries = pubObject[year].map((entry) => {
-				totalPublications += 1;
-				return (
-					<li key={entry.getCitationKey()}>
-						<PublicationItem bibtex={entry} modalCallback={(entry) => this.onOpenModal(entry)} reference={entry} />
-					</li>
-				)
+		Object.keys(publicationsObject)
+			// order the publications by year, keeping upcoming at first
+			.sort((a, b) => {
+				if (a === 'Upcoming') return -1;  // a comes first
+				if (b === 'Upcoming') return 1;   // b comes first
+				return parseInt(b) - parseInt(a);  // normal year comparison
+			})  // Sort years in descending order
+			.forEach((year) => {
+				publications.push(
+					<div key={year} id={"papers-" + year}>
+						<h3>{year}</h3>
+						<ul className="publications-list fade-animation-sequence">
+							{publicationsObject[year].map((entry) => (
+								<PublicationItem
+									key={entry.getCitationKey()}
+									bibtex={entry}
+									entry={entry}
+									className="fade-animation-on-load"
+									// onCiteClick={() => this.onOpenModal(entry)}
+									modalCallback={(entry) => this.onOpenModal(entry)}
+								/>
+							))}
+						</ul>
+					</div>
+				);
 			});
-			return (<div key={year} id={"papers-" + year}>
-				<h3>{year}</h3>
-				<ul>{pubEntries}</ul>
-			</div>);
-		});
 
-		if (totalPublications > 0) console.log(totalPublications + " publications in total :)"); // avoid displaying if pubs not loaded
 
+		return publications;
+	}
+
+	render() {
 		return (
 			<div className="App">
 				<NavigationBar currentPage='Publications' />
@@ -244,7 +266,9 @@ class Publications extends Component {
 						citationStyles={this.state.citationStyles}
 						onCitationCopy={(citationId) => this.highlightCitation(citationId)}
 					/>
-					{publications}
+					<Container>
+						{this.renderPublications()}
+					</Container>
 					<br />
 					<hr />
 					<h2>My Name</h2>

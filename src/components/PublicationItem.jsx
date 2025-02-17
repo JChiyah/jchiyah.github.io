@@ -61,7 +61,7 @@ class PublicationItem extends Component {
 		super(props);
 
 		// const bibtexJSON = this.props.bibtex;
-		const reference = this.props.reference;
+		const reference = this.props.entry;
 
 		this.state = {
 			citationKey: reference.getCitationKey(),
@@ -79,12 +79,12 @@ class PublicationItem extends Component {
 	}
 
 	copyBibtexToClipboard() {
-		const bibtexString = this.props.reference.getBibtexString();
+		const bibtexString = this.props.entry.getBibtexString();
 
 		navigator.clipboard.writeText(bibtexString).then(() => {
-			console.log(`BibTeX ${this.props.reference.getCitationKey()} copied to clipboard`);
+			console.log(`BibTeX ${this.props.entry.getCitationKey()} copied to clipboard`);
 		}).catch(err => {
-			console.error(`Failed to copy BibTeX ${this.props.reference.getCitationKey()} to clipboard: `, err);
+			console.error(`Failed to copy BibTeX ${this.props.entry.getCitationKey()} to clipboard: `, err);
 		});
 	}
 
@@ -160,45 +160,9 @@ class PublicationItem extends Component {
 				);
 			});
 		}
-		// wrap additionalHtml in a <ul> tag
-		// additionalHtml = <ul>{additionalHtml}</ul>;
-		// additionalHtml = additionalHtml.length > 0 ? (
-		// 	<>
-		// 		<ul className="publication-item-menu">
-		// 			<li>
-		// 				<span>Other info: </span>
-		// 			</li>
-		// 			{additionalHtml}
-		// 		</ul>
-		// 	</>
-		// ) : null;
-
-		// two button states either with a clipboard (default) or with a check
-		// let bibtexButtonHtml = (
-		// 	<OverlayTrigger
-		// 		placement='right'
-		// 		trigger={['hover', 'focus']}
-		// 		delay={{ hide: state.isBibtexButtonActive ? 1000 : 0 }}
-		// 		overlay={
-		// 			<Tooltip>{state.isBibtexButtonActive ? 'Copied!' : 'Copy BibTeX'}</Tooltip>
-		// 		}
-		// 	>
-		// 		<button
-		// 			className={"btn btn-sm " + (state.isBibtexButtonActive ? "btn-success" : "btn-secondary")}
-		// 			onClick={this.copyBibtexButton.bind(this)}
-		// 		>
-		// 			<FontAwesomeIcon
-		// 				className="fa-icon inline-icon-before"
-		// 				icon={state.isBibtexButtonActive ? faClipboardCheck : faClipboard}
-		// 			/>
-		// 			BibTeX
-		// 		</button>
-		// 	</OverlayTrigger>
-		// );
-		// let bibtexButtonHtml = ;
 
 		return (
-			<div className="publication-item" id={state.citationKey}>
+			<li className="publication-item fade-animation-on-load" id={state.citationKey}>
 				<p>
 					{/*{this.state.author} ({this.state.year}). <b>&lsquo;{this.state.title}&rsquo;</b>. In: <i>{this.state.booktitle}</i>. {this.state.series}. {this.state.address}.*/}
 					<a href={pubLink} target="_blank" rel="noopener noreferrer">{state.title}</a><br />
@@ -213,14 +177,16 @@ class PublicationItem extends Component {
 							<FontAwesomeIcon className="fa-icon inline-icon-before" icon={faArrowUpRightFromSquare} />Publication</a>
 					</li>
 					<li>
-						<button className="btn btn-sm btn-secondary" onClick={() => modalCallback(bibtex)}><FontAwesomeIcon className="fa-icon inline-icon-before" icon={faQuoteRight} />Cite</button>
+						<button className="btn btn-sm btn-secondary" onClick={() => modalCallback(bibtex)}>
+							<FontAwesomeIcon className="fa-icon inline-icon-before" icon={faQuoteRight} />Cite
+						</button>
 					</li>
 					<li>
 						<CopyButton
 							buttonText="BibTeX"
 							tooltipTextBefore="Copy BibTeX"
 							tooltipTextAfter="Copied!"
-							contentToCopy={this.props.reference.getBibtexString()}
+							contentToCopy={this.props.entry.getBibtexString()}
 							className="btn-secondary"
 						/>
 					</li>
@@ -228,7 +194,7 @@ class PublicationItem extends Component {
 					{additionalHtml}
 					{/* <li className={classes}><p><tt dangerouslySetInnerHTML={{ __html: bibtexString }} /></p></li> */}
 				</ul>
-			</div>
+			</li>
 		);
 	}
 }

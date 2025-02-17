@@ -1,11 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
+import { createRoot } from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
-
-import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 
 import Home from './views/Home';
 import About from './views/About';
@@ -20,21 +20,49 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 
 library.add(fas);
 
+// Define routes using the new createBrowserRouter
+const router = createBrowserRouter([
+	{
+		path: "/",
+		element: <Home />,
+	},
+	{
+		path: "/home",
+		element: <Home />,
+	},
+	{
+		path: "/about",
+		element: <About />,
+	},
+	{
+		path: "/projects",
+		element: <Projects />,
+	},
+	{
+		path: "/publications",
+		element: <Publications />,
+	},
+	{
+		path: "/professional-activities",
+		element: <Activities />,
+	},
+	{
+		path: "/contact",
+		element: <Contact />,
+	},
+	{
+		path: "*",
+		element: <PageNotFound />,
+	},
+]);
 
-ReactDOM.render(
-	<Router>
-		<Switch>
-			<Route exact path="/" component={Home} />
-			<Route exact path="/home" component={Home} />
-			<Route exact path="/about" component={About} />
-			<Route exact path="/projects" component={Projects} />
-			<Route exact path="/publications" component={Publications} />
-			<Route exact path="/professional-activities" component={Activities} />
-			<Route exact path="/contact" component={Contact} />
-			<Route component={PageNotFound} />
-		</Switch>
-	</Router>,
-	document.getElementById('root'));
+// Create root and render
+const root = createRoot(document.getElementById('root'));
+root.render(
+	<React.StrictMode>
+		<RouterProvider router={router} />
+	</React.StrictMode>
+);
 
 // ReactDOM.render(<App />, document.getElementById('root'));
 

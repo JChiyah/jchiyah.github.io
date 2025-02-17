@@ -881,3 +881,28 @@ body {
 		}
 	}
 }
+
+/** Animations **/
+
+.fade-animation-on-load {
+	opacity: 0;
+	transform: translateY(20px);
+	animation: fadeIn 0.5s ease forwards;
+}
+
+.fade-animation-sequence {
+	>.fade-animation-on-load {
+		@for $i from 1 through 10 {
+			&:nth-child(#{$i}) {
+				animation-delay: #{$i * 0.1}s;
+			}
+		}
+	}
+}
+
+@keyframes fadeIn {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

@@ -58,7 +58,7 @@ class Activities extends Component {
 		// });
 
 		if (json['hidden']) {
-			return null;
+			return <></>;
 		} else {
 			// Skip if already in shortcutBar to avoid duplicates
 			// if (this.state.shortcutBar.find(item => item.id === json['id'])) {

@@ -2,6 +2,12 @@
 
 My personal website!
 
+__2025-02-17__
+- System: MacOS 15.3
+- Node version: 20.11.0
+- NPM version: 10.9.0
+WIP
+
 __2023-03-29__
 - System: Windows 11
 - Node version: 17.7.1
