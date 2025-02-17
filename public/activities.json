@@ -8,49 +8,49 @@
 				"subtitle": "Amazon Alexa AI",
 				"date": "Jan 2023 - Now",
 				"description": "Working in the Alexa Prize SocialBot, stay tuned for more!",
-				"icon": "fa-comments"
+				"icon": "faComments"
 			},
 			{
 				"title": "Lab Helper & Enhanced Lab Helper",
 				"subtitle": "Heriot-Watt University",
 				"date": "Sep 2017 - Now (term-time only)",
 				"description": "Helping students and marking coursework/exams in several courses: Artificial Intelligence (AI course for 3rd Year and MSc students), Language Processors (compiler course for 3rd Year students), Programming Languages and Software Development 1 & 2. Furthermore, I assisted with the Code Clinic, a weekly workshop for students with programming questions during the academic year 2017/2018.",
-				"icon": "chalkboard-teacher"
+				"icon": "faChalkboardTeacher"
 			},
 			{
 				"title": "Research Assistant",
 				"subtitle": "Heriot-Watt University, ORCA Hub",
 				"date": "Jul 2019 - Dec 2019",
 				"description": "Preparing a large-scale crowd-sourced data collection experiment using a novel dialogue interface.",
-				"icon": "laptop-code"
+				"icon": "faLaptopCode"
 			},
 			{
 				"title": "Technical Lead",
 				"subtitle": "Heriot-Watt University, ORCA Hub",
 				"date": "May 2019 - Jul 2019",
 				"description": "Organising a part of what was needed for the ORCA Hub stands at the Royal Society Summer Science Exhibition in London. It involved coding, sorting inventory and other technical related things.",
-				"icon": "tasks"
+				"icon": "faTasks"
 			},
 			{
 				"title": "Supervision of Intern",
 				"subtitle": "Heriot-Watt University",
 				"date": "Jul 2019",
 				"description": "Supervising an intern that developed software to estimate the remaining battery level of a robot based on voltage readings and motor speeds.",
-				"icon": "user-friends"
+				"icon": "faUserFriends"
 			},
 			{
 				"title": "Software Developer Intern",
 				"subtitle": "SeeByte Ltd",
 				"date": "Jun 2018 - Dec 2018",
 				"description": "Working in a proof-of-concept project to monitor underwater vehicles using augmented reality. The project involved coding a cross-platform program that was able to connect to these vehicles and show them through a camera at their real-world location. This project involved high-performance code for real-time image processing in C++ with OpenCV, Java (for Android development) and using ROS for communicating with sensors.",
-				"icon": "code"
+				"icon": "faCode"
 			},
 			{
 				"title": "Research Assistant",
 				"subtitle": "Heriot-Watt University",
 				"date": "Jun 2017 - Aug 2017 (full-time) | Sep 2017 - May 2018 (part-time)",
 				"description": "Project funded by the Ministry of Defence which involved working with industry (SeeByte and Tekever) to develop MIRIAM, a multimodal interface for autonomous systems using Agile methodologies. This interface enables operators to interrogate vehicles using speech or text about their actions or status. I led the work on the system’s conversational capabilities such as natural language processing (for parsing, intent recognition and speech recognition), natural language generation (including text-to-speech output) and dialogue management. I also carried out customer MoD presentations and system demonstrations. Work resulted in four publications including human evaluations in simulations and with real vehicles.",
-				"icon": "laptop-code"
+				"icon": "faLaptopCode"
 			}
 		]
 	},
@@ -63,98 +63,98 @@
 				"subtitle": "British Computer Society (BCS)",
 				"date": "June 2019",
 				"description": "Prize awarded to the best student in the MEng programme of Heriot-Watt University.",
-				"icon": "trophy"
+				"icon": "faTrophy"
 			},
 			{
 				"title": "Deputy Principal's Award",
 				"subtitle": "Heriot-Watt University",
 				"date": "June 2019",
 				"description": "Awarded for excellent academic performance during the academic year 2018-2019.",
-				"icon": "award"
+				"icon": "faAward"
 			},
 			{
 				"title": "Certificate of Merit",
 				"subtitle": "Heriot-Watt University",
 				"date": "June 2019",
 				"description": "Received after fifth year of university to recognise the high grades obtained during the academic year 2018-2019.",
-				"icon": "award"
+				"icon": "faAward"
 			},
 			{
 				"title": "SIGGEN Hackathon",
 				"subtitle": "INLG 2018",
 				"date": "Nov 2018",
 				"description": "First prize at the hackathon, developing a chatbot and training it in record time.",
-				"icon": "award"
+				"icon": "faAward"
 			},
 			{
 				"title": "Runner-up Finalist for Young Software Engineer of the Year 2018",
 				"subtitle": "ScotlandIS",
 				"date": "Oct 2018",
 				"description": "Given to the best undergraduate software projects, it is drawn from across all students studying computing science and software engineering in Scotland. Each university submits the best final year undergraduate software engineering project from amongst their students.",
-				"icon": "award"
+				"icon": "faAward"
 			},
 			{
 				"title": "The Cooper-Walker Engineering Ltd 2017/2018 Prize",
 				"subtitle": "Heriot-Watt University",
 				"date": "Sep 2018",
 				"description": "Prize awarded for outstanding project work in a degree programme in the Department of Computer Science.",
-				"icon": "trophy"
+				"icon": "faTrophy"
 			},
 			{
 				"title": "Deputy Principal's Award",
 				"subtitle": "Heriot-Watt University",
 				"date": "July 2018",
 				"description": "Awarded for excellent academic performance during the academic year 2017-2018.",
-				"icon": "award"
+				"icon": "faAward"
 			},
 			{
 				"title": "Mokanix Challenge",
 				"subtitle": "CreatED Hackathon",
 				"date": "Apr 2018",
 				"description": "",
-				"icon": "award"
+				"icon": "faAward"
 			},
 			{
 				"title": "The University Prize",
 				"subtitle": "Heriot-Watt University",
 				"date": "Sep 2017",
 				"description": "Prize awarded by Heriot-Watt University for achieving the highest marks of the Computer Science class during my 3rd Year (2016/2017).",
-				"icon": "trophy"
+				"icon": "faTrophy"
 			},
 			{
 				"title": "Certificate of Merit",
 				"subtitle": "Heriot-Watt University",
 				"date": "Aug 2017",
 				"description": "Received after third year of university to recognise the high grades obtained during the academic year 2016-2017.",
-				"icon": "award"
+				"icon": "faAward"
 			},
 			{
 				"title": "Leidos Best Student Group Project Prize",
 				"subtitle": "Heriot-Watt University",
 				"date": "Apr 2017",
 				"description": "Awarded for ending up in second place for a year-long 3rd Year Group Project in Computer Science with industry.",
-				"icon": "trophy"
+				"icon": "faTrophy"
 			},
 			{
 				"title": "Certificate of Merit",
 				"subtitle": "Heriot-Watt University",
 				"date": "Aug 2016",
 				"description": "Received after third year of university to recognise the high grades obtained during the academic year 2015-2016.",
-				"icon": "award"
+				"icon": "faAward"
 			},
 			{
 				"title": "ICL Prize",
 				"subtitle": "Heriot-Watt University",
 				"date": "Aug 2015",
 				"description": "Received for being the best student with the highest marks in first year for BSc Computer Science.",
-				"icon": "trophy"
+				"icon": "faTrophy"
 			},
 			{
 				"title": "Certificate of Merit",
 				"subtitle": "Heriot-Watt University",
 				"date": "Aug 2015",
 				"description": "Received after third year of university to recognise the high grades obtained during the academic year 2014-2015.",
-				"icon": "award"
+				"icon": "faAward"
 			}
 		]
 	},
@@ -167,21 +167,21 @@
 				"subtitle": "Co-organiser",
 				"date": "Feb 2022",
 				"description": "Co-organiser of the Queer in AI events at AAAI 2022, check here: <a href='https://sites.google.com/view/queer-in-ai/aaai-2022' target='_blank'>https://sites.google.com/view/queer-in-ai/aaai-2022</a>",
-				"icon": "users"
+				"icon": "faUsers"
 			},
 			{
 				"title": "SRPe RAS & AI in Advanced Manufacturing Workshop",
 				"subtitle": "Scottish Research Partnership in Engineering, University of Strathclyde",
 				"date": "Sep 2019",
 				"description": "",
-				"icon": "industry"
+				"icon": "faIndustry"
 			},
 			{
 				"title": "Explainable Software for Cyber-Physical Systems (ES4CPS)",
 				"subtitle": "Schloss Dagstuhl GI Seminar 19023",
 				"date": "Jan 2019",
 				"description": "Check the <a href='https://www.dagstuhl.de/en/program/calendar/evhp/?semnr=19023'>seminar website</a>.",
-				"icon": "book-reader",
+				"icon": "faBookReader",
 				"image": "jchiyah_shcloss_dagstuhl.jpg",
 				"image-alt": "Me at the Schloss Dagstuhl Seminar"
 			}
@@ -192,32 +192,39 @@
 		"id": "talks",
 		"list": [
 			{
+				"title": "EUtopica - todo",
+				"subtitle": "Robot Talk Podcast",
+				"date": "March 2021",
+				"description": "I was interviewed by Dr Claire Asher about human-robot collaboration, check the podcast episode here: <a href=\"https://ukrobotics.libsyn.com/episode-six-human-robot-collaboration-working-together\" target=\"_blank\">https://ukrobotics.libsyn.com/episode-six-human-robot-collaboration-working-together</a>",
+				"icon": "faRobot"
+			},
+			{
 				"title": "Podcast Interview",
 				"subtitle": "Robot Talk Podcast",
 				"date": "March 2021",
 				"description": "I was interviewed by Dr Claire Asher about human-robot collaboration, check the podcast episode here: <a href=\"https://ukrobotics.libsyn.com/episode-six-human-robot-collaboration-working-together\" target=\"_blank\">https://ukrobotics.libsyn.com/episode-six-human-robot-collaboration-working-together</a>",
-				"icon": "robot"
+				"icon": "faRobot"
 			},
 			{
 				"title": "Offer Holder Talk",
 				"subtitle": "Heriot-Watt University",
 				"date": "Mar 2019",
 				"description": "Several presentations to students with offers from the university about my work and experiences.",
-				"icon": "users"
+				"icon": "faUsers"
 			},
 			{
 				"title": "Explainable Autonomy through Natural Language",
 				"subtitle": "Schloss Dagstuhl GI Seminar",
 				"date": "Jan 2019",
 				"description": "",
-				"icon": "users"
+				"icon": "faUsers"
 			},
 			{
 				"title": "Generating Explanations in Natural Language for Clear Mental Models of Remote Autonomous Systems",
 				"subtitle": "SICSA Workshop on Conversational AI",
 				"date": "Dec 2018",
 				"description": "Presentation at the workshop about the work published at the INLG'18 Conference.",
-				"icon": "users"
+				"icon": "faUsers"
 			}
 		]
 	},
@@ -230,41 +237,42 @@
 				"subtitle": "Heriot-Watt University, Siemens",
 				"date": "2019 - Current",
 				"description": "Researching and developing systems to improve human-robot interaction for collaborative manufacturing though natural language.",
-				"icon": "university"
+				"icon": "faUniversity"
 			},
 			{
 				"title": "Master of Engineering in Software Engineering (MEng)",
 				"subtitle": "Heriot-Watt University",
 				"date": "2014 - 2019",
 				"description": "Graduated in June 2019 with Distinction and with the highest marks of the class (average grades above 80%). BSc in Computer Science from 2014 to 2017.",
-				"icon": "user-graduate"
+				"icon": "faUserGraduate"
 			},
 			{
 				"title": "Primary, secondary and high school",
 				"subtitle": "Hogar Escuela M. A.",
 				"date": "1999 - 2014",
 				"description": "",
-				"icon": "school"
+				"icon": "faSchool"
 			}
 		]
 	},
 	{
 		"title": "Other",
 		"id": "other",
+		"hidden": true,
 		"list": [
 			{
 				"title": "Stock Associate",
 				"subtitle": "Hollister Co.",
 				"date": "Sep 2016 - Sep 2017",
 				"description": "Job mainly at the warehouse and helping around the store as a part of a team.",
-				"icon": "shopping-bag"
+				"icon": "faBagShopping"
 			},
 			{
 				"title": "Customer Service Assistant",
 				"subtitle": "Sainsbury's",
 				"date": "Nov 2015 - May 2016",
 				"description": "Experience facing customers in general and providing a quality service within a busy environment.",
-				"icon": "shopping-cart"
+				"icon": "faCartShopping"
 			}
 		]
 	}

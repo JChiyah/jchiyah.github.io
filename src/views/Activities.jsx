@@ -1,24 +1,25 @@
 import React, { Component } from 'react';
-import { Timeline } from 'react-event-timeline';
 import './../App.scss';
 
 import NavigationBar from './../components/NavigationBar';
 import Footer from './../components/Footer';
-import ActivityItem from './../components/ActivityItem';
-
+// import { Timeline } from 'react-event-timeline';
+// import ActivityItem from './../components/ActivityItem';
+import NewTimeline from './../components/Timeline';
+import './../components/Timeline.scss';
 
 const activitiesFile = "/activities.json";
 
-const timelineLineStyle = {
-	width: '3px',
-	height: 'auto',
-	top: '20px',
-	bottom: '0px',
-	left: '21px',
-}
+// const timelineLineStyle = {
+// 	width: '3px',
+// 	height: 'auto',
+// 	top: '20px',
+// 	bottom: '0px',
+// 	left: '21px',
+// }
 
 // this could not be a state property because then the component would go into an infinite loop
-var colorIndex = 0;
+// var colorIndex = 0;
 
 
 class Activities extends Component {
@@ -26,13 +27,14 @@ class Activities extends Component {
 		super(props);
 		this.state = {
 			activityArray: [],
+			shortcutBar: []
 		}
 
 		this.getActivities();
 	}
 
 	getActivities() {
-		fetch(activitiesFile).then((r) => r.text()).then(text  => {
+		fetch(activitiesFile).then((r) => r.text()).then(text => {
 			this.setActivities(text);
 		});
 	}
@@ -45,29 +47,47 @@ class Activities extends Component {
 	}
 
 	renderSection(json) {
-		const list = json['list'].map((entry, index) => {
-			return (
-				<ActivityItem 
-					key={json['id'] + index} 
-					source={entry}
-					index={colorIndex++}
-				/>
-			);
-		});
+		// const list = json['list'].map((entry, index) => {
+		// 	return (
+		// 		<ActivityItem
+		// 			key={json['id'] + index}
+		// 			source={entry}
+		// 			index={colorIndex++}
+		// 		/>
+		// 	);
+		// });
+
+		if (json['hidden']) {
+			return null;
+		} else {
+			// Skip if already in shortcutBar to avoid duplicates
+			// if (this.state.shortcutBar.find(item => item.id === json['id'])) {
+			// 	return;
+			// }
+			// this.setState(prevState => ({
+			// 	shortcutBar: prevState.shortcutBar.concat({
+			// 		title: json['title'],
+			// 		id: json['id']
+			// 	})
+			// }));
+		}
 
 		return (
-			<div 
-				className="activity-section" 
-				key={json['id']} 
+			<div
+				className="activity-section"
+				key={json['id']}
 				id={json['id']}
 			>
 				<h2>{json['title']}</h2>
-				<Timeline 
-					style={{width: '98%'}}
+				<NewTimeline events={json['list']} />
+
+				{/* <Timeline
+					style={{ width: '98%' }}
 					lineStyle={timelineLineStyle}
 				>
-				{list}
-				</Timeline>
+					{list}
+				</Timeline> */}
+
 			</div>
 		);
 	}
@@ -79,11 +99,15 @@ class Activities extends Component {
 		});
 
 		const jumpToBody = actArray.map((entry, index) => {
-			return (
-				<li key={"link-" + entry['id'] + index}>
-					<a href={"#" + entry['id']}>{entry['title']}</a>
-				</li>
-			);
+			if (entry['hidden']) {
+				return null;
+			} else {
+				return (
+					<li key={"link-" + entry['id'] + index}>
+						<a href={"#" + entry['id']}>{entry['title']}</a>
+					</li>
+				);
+			}
 		});
 
 		return (
