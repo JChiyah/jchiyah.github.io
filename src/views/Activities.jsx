@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import './../App.scss';
+import * as bootstrap from 'bootstrap';  // Import Bootstrap JS
 
 import NavigationBar from './../components/NavigationBar';
 import Footer from './../components/Footer';
-// import { Timeline } from 'react-event-timeline';
-// import ActivityItem from './../components/ActivityItem';
 import NewTimeline from './../components/Timeline';
-import './../components/Timeline.scss';
+import VerticalNav from './../components/VerticalNav';
 
 const activitiesFile = "/activities.json";
 
@@ -29,8 +28,28 @@ class Activities extends Component {
 			activityArray: [],
 			shortcutBar: []
 		}
+		this.scrollSpyRef = React.createRef();  // Create ref for scrollspy
+	}
 
+	componentDidMount() {
 		this.getActivities();
+		// Initialize ScrollSpy after the component mounts
+		this.initScrollSpy();
+	}
+
+	componentWillUnmount() {
+		// Clean up ScrollSpy
+		if (this.scrollspy) {
+			this.scrollspy.dispose();
+		}
+	}
+
+	initScrollSpy() {
+		// Initialize ScrollSpy
+		this.scrollspy = new bootstrap.ScrollSpy(document.body, {
+			target: '#vertical-nav',
+			offset: 100  // Adjust this value based on your needs
+		});
 	}
 
 	getActivities() {
@@ -41,24 +60,16 @@ class Activities extends Component {
 
 	setActivities(text) {
 		const parsed = JSON.parse(text);
+		// remove hidden activities
+		const filtered = parsed.filter(item => !item.hidden);
 		this.setState({
-			activityArray: parsed,
+			activityArray: filtered,
 		});
 	}
 
 	renderSection(json) {
-		// const list = json['list'].map((entry, index) => {
-		// 	return (
-		// 		<ActivityItem
-		// 			key={json['id'] + index}
-		// 			source={entry}
-		// 			index={colorIndex++}
-		// 		/>
-		// 	);
-		// });
-
 		if (json['hidden']) {
-			return <></>;
+			return null;	// keep null here to avoid duplicate key issues
 		} else {
 			// Skip if already in shortcutBar to avoid duplicates
 			// if (this.state.shortcutBar.find(item => item.id === json['id'])) {
@@ -70,55 +81,77 @@ class Activities extends Component {
 			// 		id: json['id']
 			// 	})
 			// }));
-		}
 
-		return (
-			<div
-				className="activity-section"
-				key={json['id']}
-				id={json['id']}
-			>
-				<h2>{json['title']}</h2>
-				<NewTimeline events={json['list']} />
+			return (
+				<div
+					className="activity-section"
+					key={"section-" + json['id']}
+					id={json['id']}
+				>
+					<h2>{json['title']}</h2>
+					<NewTimeline events={json['list']} />
 
-				{/* <Timeline
+					{/* <Timeline
 					style={{ width: '98%' }}
 					lineStyle={timelineLineStyle}
 				>
 					{list}
 				</Timeline> */}
 
-			</div>
-		);
+				</div>
+			);
+		}
 	}
 
 	render() {
-		const actArray = this.state.activityArray;
-		const body = actArray.map((entry) => {
+		const activityArray = this.state.activityArray;
+		const body = activityArray.map((entry) => {
 			return this.renderSection(entry);
 		});
 
-		const jumpToBody = actArray.map((entry, index) => {
-			if (entry['hidden']) {
-				return null;
-			} else {
-				return (
-					<li key={"link-" + entry['id'] + index}>
-						<a href={"#" + entry['id']}>{entry['title']}</a>
-					</li>
-				);
-			}
-		});
+		// const jumpToBody = activityArray.map((entry, index) => {
+		// 	if (entry['hidden']) {
+		// 		return null;
+		// 	} else {
+		// 		return (
+		// 			<li key={"link-" + entry['id'] + index}>
+		// 				<a href={"#" + entry['id']}>{entry['title']}</a>
+		// 			</li>
+		// 		);
+		// 	}
+		// });
 
+		// Convert activity array to nav items with proper hash paths
+		const navItems = activityArray.map((entry) => {
+			return { label: entry['title'], path: entry['id'] };
+		});
+		// add top of page to nav items
+		// navItems.unshift({ label: 'Professional Activities', path: 'root' });
+
+		// todo remove the >br>
 		return (
-			<div className="App">
+			<div className="App" data-bs-spy="scroll" data-bs-target="#vertical-nav">
 				<NavigationBar currentPage='Professional Activities' />
 
-				<div className="app-body">
-					<h1>Professional Activities</h1>
-					<p>Jump to:</p>
-					<ul>{jumpToBody}</ul>
-					{body}
+				<br />
+				<div className="container-fluid">
+					<div className="row">
+						{/* Left sidebar - same width as right */}
+						<div className="col-md-2" key="sidebar-left">
+
+						</div>
+
+						{/* Main content */}
+						<div className="col-md-8" key="main-contentasdf">
+							<h1>Professional Activities</h1>
+							{body}
+						</div>
+
+						{/* Right sidebar with vertical nav */}
+						<div className="col-md-2" key="sidebar-right">
+							<VerticalNav items={navItems} />
+						</div>
+					</div>
 				</div>
 
 				<Footer />

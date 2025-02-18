@@ -1,0 +1,70 @@
+@import '../App.scss';
+
+.vertical-nav {
+	padding: 1rem 0;
+	position: sticky;
+	top: 1rem;
+	font-size: 0.8rem;
+
+	.vertical-nav-title {
+		font-size: 0.85rem;
+		color: theme-color('secondary');
+		margin-bottom: 1rem;
+		padding: 0 1rem;
+		font-weight: 600;
+
+		&::after {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 1px;
+			background-color: lighten(theme-color('secondary'), 45);
+			margin-top: 0.3rem;
+		}
+	}
+
+	.nav-link {
+		padding: 0.3rem 1rem;
+		color: theme-color('secondary');
+		position: relative;
+
+		// &:hover, &:focus {
+		// 	color: #dc3545;
+		// 	text-decoration: none;
+		// 	background: none;
+		// }
+
+		&:hover,
+		&:focus,
+		&.active {
+			color: #dc3545;
+			background: none;
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 2px;
+				bottom: 2px;
+				width: 2px;
+				background-color: #dc3545;
+			}
+		}
+
+		&.active {
+			font-weight: 500;
+		}
+	}
+}
+
+// .sticky-sidebar {
+// 	position: sticky;
+// 	top: 1rem; // Adjust this value to control when sticking starts
+// 	max-height: calc(100vh - 2rem); // Prevent overflow
+// 	overflow-y: auto; // Allow scrolling if content is too tall
+// }
+
+// Add smooth scrolling to the document
+html {
+	scroll-behavior: smooth;
+}

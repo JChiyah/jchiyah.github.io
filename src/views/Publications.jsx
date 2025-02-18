@@ -75,7 +75,6 @@ class Publications extends Component {
 	}
 
 	onOpenModal(entry) {
-		console.log("onOpenModal", entry);
 		this.setState({
 			openModal: true,
 			modalPublication: entry
@@ -154,6 +153,7 @@ class Publications extends Component {
 	}
 
 	renderCitationStyles() {
+		// todo: use the flash class to highlight the citation
 		const { modalPublication, citationStyles } = this.state;
 
 		if (!modalPublication) return null;
