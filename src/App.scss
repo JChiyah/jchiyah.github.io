@@ -663,31 +663,6 @@ body {
 	}
 }
 
-.activity-section {
-
-	h2 {
-		margin-top: 1.2em;
-		margin-bottom: 0;
-	}
-
-	ul {
-		list-style: none;
-		margin: 0;
-		padding-inline-start: 0;
-		padding: 0 1em;
-
-		li {}
-
-		li:nth-child(n+1) {
-			border-bottom: 1px solid #7f8c8d;
-		}
-	}
-
-	img {
-		width: 80%;
-	}
-}
-
 
 /** Projects **/
 

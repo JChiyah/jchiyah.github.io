@@ -2,14 +2,20 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as Icons from '@fortawesome/free-solid-svg-icons';
+import * as BrandIcons from '@fortawesome/free-brands-svg-icons';
 
 import './../components/Timeline.scss';
 
 
-const TimelineItem = ({ icon, title, subtitle, date, description }) => {
+const TimelineItem = ({ icon, title, subtitle, date, description, description_items, image, image_alt }) => {
 	const [isExpanded, setIsExpanded] = useState(false);
 	const [isTruncated, setIsTruncated] = useState(false);
 	const descriptionRef = useRef(null);
+
+	// add items to description if they exist
+	description = description_items ? description + '<ul class="accented-list">' + description_items.map(item => '<li>' + item + '</li>').join('') + '</ul>' : description;
+	// add image if it exists
+	description = image ? description + '<img src="' + image + '" alt="' + image_alt + '" />' : description;
 
 	useEffect(() => {
 		const checkTruncation = () => {
@@ -41,7 +47,7 @@ const TimelineItem = ({ icon, title, subtitle, date, description }) => {
 	return (
 		<div className="timeline-item fade-animation-on-load">
 			<div className="timeline-icon">
-				<FontAwesomeIcon icon={Icons[icon]} />
+				<FontAwesomeIcon icon={Icons[icon] || BrandIcons[icon]} />
 			</div>
 			<div className="timeline-content" >
 				<h3>

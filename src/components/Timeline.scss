@@ -121,6 +121,13 @@
 				max-height: 2000px !important; // Large enough for content
 				transition: max-height 1s ease-in-out; // Smooth transition for expand
 			}
+
+			img {
+				max-width: 40%;
+				height: auto;
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
 		}
 
 		&:not(.expanded) .timeline-description {
@@ -160,6 +167,18 @@
 			&:hover {
 				text-decoration: underline;
 			}
+		}
+	}
+}
+
+.accented-list {
+	li {
+		margin: 0.3rem 0;
+		padding-left: 0.5rem;
+		list-style-type: disc;
+
+		&::marker {
+			color: #c0392b;
 		}
 	}
 }

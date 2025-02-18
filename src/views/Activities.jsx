@@ -88,7 +88,7 @@ class Activities extends Component {
 					key={"section-" + json['id']}
 					id={json['id']}
 				>
-					<h2>{json['title']}</h2>
+					<h4>{json['title']}</h4>
 					<NewTimeline events={json['list']} />
 
 					{/* <Timeline
