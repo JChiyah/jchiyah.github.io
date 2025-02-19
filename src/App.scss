@@ -288,20 +288,20 @@ body {
 }
 
 .app-body {
-	width: 50%;
+	// width: 50%;
 	margin: 1em auto 3em auto;
 
-	@media screen and (max-width: $break-large) {
-		width: 65%;
-	}
+	// @media screen and (max-width: $break-large) {
+	// 	width: 65%;
+	// }
 
-	@media screen and (max-width: $break-medium) {
-		width: 80%;
-	}
+	// @media screen and (max-width: $break-medium) {
+	// 	width: 80%;
+	// }
 
-	@media screen and (max-width: $break-small) {
-		width: 90%;
-	}
+	// @media screen and (max-width: $break-small) {
+	// 	width: 90%;
+	// }
 
 	h1 {
 		font-size: 3.5em;

@@ -1,20 +1,16 @@
 import React, { Component } from 'react';
-import './../App.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSadTear } from '@fortawesome/free-solid-svg-icons';
 
-import NavigationBar from './../components/NavigationBar';
-import Footer from './../components/Footer';
+import PageLayout from './PageLayout';
 
 
 class PageNotFound extends Component {
 
 	render() {
 		return (
-			<div className="App">
-				<NavigationBar currentPage='404 Error' />
-
+			<PageLayout>
 				<div className="app-body page-not-found">
 					<h1>Ooops!</h1>
 
@@ -22,15 +18,13 @@ class PageNotFound extends Component {
 
 					<h3>404 Error</h3>
 
-					<FontAwesomeIcon className="fa-icon" icon={faSadTear} style={{fontSize: '5em'}} />
+					<FontAwesomeIcon className="fa-icon" icon={faSadTear} style={{ fontSize: '5em' }} />
 
 					<h4>It seems that this page does not exists (or I forgot something)</h4>
 
 					<p>Please, send me an email if you think that there should be something here!</p>
 				</div>
-
-				<Footer />
-			</div>
+			</PageLayout>
 		);
 	}
 }

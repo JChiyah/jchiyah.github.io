@@ -13,7 +13,7 @@ class Home extends Component {
 	render() {
 		return (
 			<div className="landing">
-				<NavigationBar currentPage='Home' />
+				{/* <NavigationBar currentPage='Home' /> */}
 
 				<div className="landing-wrapper">
 					<div className="header">

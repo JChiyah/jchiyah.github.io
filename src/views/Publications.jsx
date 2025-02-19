@@ -12,6 +12,7 @@ import PublicationItem from './../components/PublicationItem';
 import { parseBibtexFile } from './../references';
 import CopyButton from './../components/CopyButton';
 import NewModal from './../components/NewModal';
+import PageLayout from './PageLayout';
 
 const publicationsFile = '/publications.bib';
 
@@ -67,7 +68,7 @@ class Publications extends Component {
 
 	componentDidMount() {
 		this._isMounted = true;
-		this.getPublications();
+		this.loadPublications();
 	}
 
 	componentWillUnmount() {
@@ -86,9 +87,20 @@ class Publications extends Component {
 		this.setState({ openModal: false });
 	};
 
-	getPublications() {
+	loadPublications() {
 		fetch(publicationsFile).then((r) => r.text()).then(text => {
 			this.setPublications(text);
+		});
+	}
+
+	getPublicationsByYear() {
+		// return an object of publications by year, 
+		// first sorting the publications by year, keeping upcoming at first
+		const { publicationsObject } = this.state;
+		return Object.keys(publicationsObject).sort((a, b) => {
+			if (a === 'Upcoming') return -1;  // a comes first
+			if (b === 'Upcoming') return 1;   // b comes first
+			return parseInt(b) - parseInt(a);  // normal year comparison
 		});
 	}
 
@@ -118,7 +130,7 @@ class Publications extends Component {
 
 				if (this._isMounted) {
 					this.setState({
-						publicationsObject: pubsArray,
+						publicationsObject: pubsArray
 					});
 				}
 			})
@@ -217,71 +229,65 @@ class Publications extends Component {
 		const { publicationsObject } = this.state;
 		let publications = [];
 
-		Object.keys(publicationsObject)
-			// order the publications by year, keeping upcoming at first
-			.sort((a, b) => {
-				if (a === 'Upcoming') return -1;  // a comes first
-				if (b === 'Upcoming') return 1;   // b comes first
-				return parseInt(b) - parseInt(a);  // normal year comparison
-			})  // Sort years in descending order
-			.forEach((year) => {
-				publications.push(
-					<div key={year} id={"papers-" + year}>
-						<h3>{year}</h3>
-						<ul className="publications-list fade-animation-sequence">
-							{publicationsObject[year].map((entry) => (
-								<PublicationItem
-									key={entry.getCitationKey()}
-									bibtex={entry}
-									entry={entry}
-									className="fade-animation-on-load"
-									// onCiteClick={() => this.onOpenModal(entry)}
-									modalCallback={(entry) => this.onOpenModal(entry)}
-								/>
-							))}
-						</ul>
-					</div>
-				);
-			});
+		this.getPublicationsByYear().forEach((year) => {
+			publications.push(
+				<div key={year} id={"papers-" + year}>
+					<h3>{year}</h3>
+					<ul className="publications-list fade-animation-sequence">
+						{publicationsObject[year].map((entry) => (
+							<PublicationItem
+								key={entry.getCitationKey()}
+								bibtex={entry}
+								entry={entry}
+								className="fade-animation-on-load"
+								// onCiteClick={() => this.onOpenModal(entry)}
+								modalCallback={(entry) => this.onOpenModal(entry)}
+							/>
+						))}
+					</ul>
+				</div>
+			);
+		});
 
 
 		return publications;
 	}
 
 	render() {
+		const navItems = this.getPublicationsByYear().map((year) => {
+			return { label: year, path: "papers-" + year };
+		});
+
 		return (
-			<div className="App">
-				<NavigationBar currentPage='Publications' />
-
-				<div className="app-body">
-					<h1>Publications</h1>
-					<p style={{ marginBottom: '2em' }}>
-						You can also check my <a href={publicationsFile} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faBook} /> bibtex file</a> or
-						my <a href="https://scholar.google.co.uk/citations?hl=en&user=NQyCFjYAAAAJ#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faGraduationCap} /> Google Scholar profile</a>. If you need access to any of the publications and the link is broken, contact me and I will happily provide a copy.
-					</p>
-					<NewModal
-						show={this.state.openModal}
-						onHide={() => this.onCloseModal()}
-						publication={this.state.modalPublication}
-						citationStyles={this.state.citationStyles}
-						onCitationCopy={(citationId) => this.highlightCitation(citationId)}
-					/>
-					<Container>
-						{this.renderPublications()}
-					</Container>
-					<br />
-					<hr />
-					<h2>My Name</h2>
-					<p>Please cite me as <em>Chiyah-Garcia</em> !
-						I follow the guidelines from this <a href="https://blog.apastyle.org/apastyle/2017/05/whats-in-a-name-two-part-surnames-in-apa-style.html" target="_blank" rel="noopener noreferrer">guide</a>.
-					</p>
-				</div>
-
-				<Footer />
-			</div>
+			<PageLayout
+				pageTitle="Publications"
+				navTitle="Publications"
+				navItems={navItems}
+			>
+				<h1>Publications</h1>
+				<p style={{ marginBottom: '2em' }}>
+					You can also check my <a href={publicationsFile} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faBook} /> bibtex file</a> or
+					my <a href="https://scholar.google.co.uk/citations?hl=en&user=NQyCFjYAAAAJ#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faGraduationCap} /> Google Scholar profile</a>. If you need access to any of the publications and the link is broken, contact me and I will happily provide a copy.
+				</p>
+				<NewModal
+					show={this.state.openModal}
+					onHide={() => this.onCloseModal()}
+					publication={this.state.modalPublication}
+					citationStyles={this.state.citationStyles}
+					onCitationCopy={(citationId) => this.highlightCitation(citationId)}
+				/>
+				<Container>
+					{this.renderPublications()}
+				</Container>
+				<br />
+				<hr />
+				<h2>My Name</h2>
+				<p>Please cite me as <em>Chiyah-Garcia</em> !
+					I follow the guidelines from this <a href="https://blog.apastyle.org/apastyle/2017/05/whats-in-a-name-two-part-surnames-in-apa-style.html" target="_blank" rel="noopener noreferrer">guide</a>.
+				</p>
+			</PageLayout >
 		);
 	}
-
 }
 
 export default Publications;

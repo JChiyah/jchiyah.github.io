@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import './../App.scss';
 
-import NavigationBar from './../components/NavigationBar';
-import Footer from './../components/Footer';
 import ProjectItem from './../components/ProjectItem';
+import PageLayout from './PageLayout';
 
 
 const projectsFile = "/projects.json";
@@ -20,7 +18,7 @@ class Projects extends Component {
 	}
 
 	getProjects() {
-		fetch(projectsFile).then((r) => r.text()).then(text  => {
+		fetch(projectsFile).then((r) => r.text()).then(text => {
 			this.setProjects(text);
 		});
 	}
@@ -46,9 +44,7 @@ class Projects extends Component {
 	render() {
 
 		return (
-			<div className="App">
-				<NavigationBar currentPage='Projects' />
-
+			<PageLayout>
 				<div className="app-body projects">
 					<h1>Projects</h1>
 
@@ -58,9 +54,7 @@ class Projects extends Component {
 
 					<p>This is a work in progress, so there may be projects missing.</p>
 				</div>
-
-				<Footer />
-			</div>
+			</PageLayout>
 		);
 	}
 }

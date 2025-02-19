@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faHouse, faUser, faCubes, faBriefcase, faFileLines, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 // import { faHouse as faHouseRegular, faUser as faUserRegular, faCubes as faCubesRegular, faBriefcase as faBriefcaseRegular, faFile as faFileRegular, faEnvelope as faEnvelopeRegular } from '@fortawesome/free-regular-svg-icons';
@@ -13,15 +15,15 @@ class NavigationElement extends Component {
 	}
 
 	handleMouseEnter = () => {
-        this.setState({ isHovered: true });
-    };
+		this.setState({ isHovered: true });
+	};
 
-    handleMouseLeave = () => {
-        this.setState({ isHovered: false });
-    };
+	handleMouseLeave = () => {
+		this.setState({ isHovered: false });
+	};
 
 	render() {
-        const { isActive, icon, text } = this.props;
+		const { isActive, icon, text } = this.props;
 		const { isHovered } = this.state;
 		const activeClass = isActive ? 'active' : '';
 
@@ -29,11 +31,16 @@ class NavigationElement extends Component {
 
 		return (
 			<li className="navbar-elem">
-				<a href={url} className={activeClass} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
-					<FontAwesomeIcon 
+				{/* <a href={url} className={activeClass} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
+					<FontAwesomeIcon
 						icon={icon} bounce={isHovered}
 						style={{ marginRight: '5px', fontSize: '0.8em' }} />{text}
-				</a>
+				</a> */}
+				<Link to={url} className={activeClass} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
+					<FontAwesomeIcon
+						icon={icon} bounce={isHovered}
+						style={{ marginRight: '5px', fontSize: '0.8em' }} />{text}
+				</Link>
 			</li>
 		);
 	}
@@ -52,12 +59,12 @@ class NavigationBar extends Component {
 	}
 
 	toggleDrawer() {
-		this.setState({isDrawerOpen: !this.state.isDrawerOpen});
+		this.setState({ isDrawerOpen: !this.state.isDrawerOpen });
 	}
 
 	// this is just to trigger a rendering on window resize
 	updateDrawer() {
-		this.setState({isDrawerOpen: this.state.isDrawerOpen});
+		this.setState({ isDrawerOpen: this.state.isDrawerOpen });
 	}
 
 	showMenu() {
@@ -85,22 +92,23 @@ class NavigationBar extends Component {
 				text={title}
 				icon={icon}
 				isActive={this.props.currentPage === title}
-		 	/>
-		 );
+			/>
+		);
 	}
 
 	render() {
 		return (
 			<nav className="navbar">
-				<div 
-					id="responsive-title" 
+				<div
+					id="responsive-title"
 					className="navbar-elem"
-					style={this.state.isDrawerOpen ? {display: 'none'} : {}}
+					style={this.state.isDrawerOpen ? { display: 'none' } : {}}
 				>
-					<a href={"/" + (this.props.currentPage).toLowerCase().replace(" ", "-")} className="active">{this.props.currentPage}</a>
+					{/* <a href={"/" + (this.props.currentPage).toLowerCase().replace(" ", "-")} className="active">{this.props.currentPage}</a> */}
+					<Link to={"/" + (this.props.currentPage).toLowerCase().replace(" ", "-")} className="active">{this.props.currentPage}</Link>
 				</div>
 
-				<ul style={{display: (this.showMenu() ? 'block' : 'none')}}>
+				<ul style={{ display: (this.showMenu() ? 'block' : 'none') }}>
 					{this.renderElement('Home', faHouse)}
 					{this.renderElement('About', faUser)}
 					{this.renderElement('Projects', faCubes)}
@@ -109,9 +117,9 @@ class NavigationBar extends Component {
 					{this.renderElement('Contact', faEnvelope)}
 				</ul>
 
-				<div 
-					id="responsive-menu-button" 
-					onClick={() => this.toggleDrawer()} 
+				<div
+					id="responsive-menu-button"
+					onClick={() => this.toggleDrawer()}
 					ref={this.menuButtonRef}
 				>
 					<FontAwesomeIcon className="fa-icon" icon={this.state.isDrawerOpen ? faTimes : faBars} />

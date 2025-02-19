@@ -6,7 +6,7 @@ import { Link, useLocation } from 'react-router-dom';
 import './VerticalNav.scss';
 
 
-const VerticalNav = ({ items = [] }) => {
+const VerticalNav = ({ items = [], title = "" }) => {
 	const location = useLocation();
 
 	useEffect(() => {
@@ -26,7 +26,7 @@ const VerticalNav = ({ items = [] }) => {
 
 	return (
 		<Nav className="nav flex-column vertical-nav sticky-sidebar" id="vertical-nav">
-			<span className="vertical-nav-title">Quick Links</span>
+			<span className="vertical-nav-title">{title || "Quick Links"}</span>
 			{items.map((item, index) => (
 				<Nav.Link
 					key={"vertical-nav-item-" + item.path}
