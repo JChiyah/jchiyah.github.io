@@ -881,3 +881,34 @@ body {
 		transform: translateY(0);
 	}
 }
+
+/** Scrollbar **/
+/* Force scrollbar to always show */
+html {
+	overflow-y: scroll;
+	/* Firefox */
+	scrollbar-width: thin;
+}
+
+/* WebKit and Chromium browsers */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+}
+
+/* For Internet Explorer */
+body {
+	-ms-overflow-style: scrollbar;
+}
+
+/* Optional: If you want to standardize the scrollbar width across all elements */
+* {
+	/* Firefox */
+	scrollbar-width: thin;
+
+	/* IE and Edge */
+	-ms-overflow-style: scrollbar;
+}
