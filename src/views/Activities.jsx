@@ -109,18 +109,6 @@ class Activities extends Component {
 			return this.renderSection(entry);
 		});
 
-		// const jumpToBody = activityArray.map((entry, index) => {
-		// 	if (entry['hidden']) {
-		// 		return null;
-		// 	} else {
-		// 		return (
-		// 			<li key={"link-" + entry['id'] + index}>
-		// 				<a href={"#" + entry['id']}>{entry['title']}</a>
-		// 			</li>
-		// 		);
-		// 	}
-		// });
-
 		// Convert activity array to nav items with proper hash paths
 		const navItems = activityArray.map((entry) => {
 			return { label: entry['title'], path: entry['id'] };
@@ -128,13 +116,19 @@ class Activities extends Component {
 		// add top of page to nav items
 		// navItems.unshift({ label: 'Professional Activities', path: 'root' });
 
-		// todo remove the >br>
+		// todo remove the <br>
 		return (
-			<div className="App" data-bs-spy="scroll" data-bs-target="#vertical-nav">
+			<div className="App">
 				<NavigationBar currentPage='Professional Activities' />
 
 				<br />
-				<div className="container-fluid">
+				<div
+					className="container-fluid"
+					data-bs-spy="scroll"
+					data-bs-target="#vertical-nav"
+					data-bs-offset="0"
+					tabIndex="0"
+				>
 					<div className="row">
 						{/* Left sidebar - same width as right */}
 						<div className="col-md-2" key="sidebar-left">
@@ -143,7 +137,7 @@ class Activities extends Component {
 
 						{/* Main content */}
 						<div className="col-md-8" key="main-contentasdf">
-							<h1>Professional Activities</h1>
+							{/* <h1>Professional Activities</h1> */}
 							{body}
 						</div>
 

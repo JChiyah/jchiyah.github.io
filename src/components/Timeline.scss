@@ -109,6 +109,7 @@
 		.timeline-description {
 			margin: 0;
 			line-height: 1.5;
+			// todo: this animation is not working
 			// transition: max-height 0.3s ease;
 			transition: max-height 0.5s cubic-bezier(0, 1, 0, 1); // Smooth transition for collapse
 			overflow: hidden;
