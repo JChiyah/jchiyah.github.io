@@ -171,7 +171,7 @@ body {
 	a:after {
 		content: "";
 		position: absolute;
-		left: 2px;
+		left: 0px;
 		width: 0;
 		bottom: -6px;
 		background: $color-primary-text;
@@ -188,7 +188,7 @@ body {
 	a:active:after {
 		// left: 0;
 		// right: auto;
-		width: calc(100% - 4px); // Set the width to 100% minus 5px
+		width: calc(100% - 0px); // Set the width to 100% minus 5px
 	}
 
 	.active:after {
@@ -911,4 +911,25 @@ body {
 
 	/* IE and Edge */
 	-ms-overflow-style: scrollbar;
+}
+
+/** Highlight Animation **/
+@keyframes softHighlight {
+	0% {
+		background-color: transparent;
+	}
+
+	50% {
+		background-color: rgba(255, 255, 0, 0.2);
+		/* Soft yellow highlight */
+	}
+
+	100% {
+		background-color: transparent;
+	}
+}
+
+.highlight-target {
+	animation: softHighlight 2s ease-in-out;
+	opacity: 1;
 }

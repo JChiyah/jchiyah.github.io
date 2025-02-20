@@ -12,7 +12,6 @@ const PageLayout = ({
 	navTitle = ""
 }) => {
 	const showVerticalNav = navItems.length > 0;
-	console.log(showVerticalNav);
 
 	return (
 		<div className="App">

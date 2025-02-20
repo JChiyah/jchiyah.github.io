@@ -49,7 +49,7 @@ const NewModal = ({
 												className="btn-secondary"
 												buttonText=""
 												tooltipTextBefore="Copy citation"
-												onCopy={() => onCitationCopy(citeStyle.name + publication.key)}
+												onClick={(e) => onCitationCopy(citeStyle.name + publication.key, e)}
 											/>
 										</div>
 									</td>

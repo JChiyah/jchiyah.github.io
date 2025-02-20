@@ -25,11 +25,11 @@ const CopyButton = ({
 		};
 	}, []);
 
-	const handleCopy = async () => {
+	const handleCopy = async (e) => {
 		try {
 			await navigator.clipboard.writeText(contentToCopy);
 			setIsActive(true);
-			if (onClick) onClick();
+			if (onClick) onClick(e);
 
 			// Clear any existing timeout
 			if (timeoutRef.current) {

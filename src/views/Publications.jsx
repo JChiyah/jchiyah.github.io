@@ -68,11 +68,43 @@ class Publications extends Component {
 
 	componentDidMount() {
 		this._isMounted = true;
-		this.loadPublications();
+		// this.fetchPublications();
+		this.loadPublications(publicationsFile)
+			.then(() => {
+				// Handle initial hash after publications are loaded
+				// wait for a few ms to ensure the item is in the DOM
+				setTimeout(() => {
+					this.handleHashChange();
+				}, 300);
+			});
+
+		// Add hash change listener
+		window.addEventListener('hashchange', this.handleHashChange);
 	}
 
 	componentWillUnmount() {
 		this._isMounted = false;
+		// Remove hash change listener
+		window.removeEventListener('hashchange', this.handleHashChange);
+	}
+
+	handleHashChange = () => {
+		const hash = window.location.hash.slice(1);
+		if (hash) {
+			const element = document.getElementById(hash);
+			if (element) {
+				this.highlightTarget(element);
+				element.scrollIntoView({ behavior: 'smooth' });
+			}
+		}
+	};
+
+	highlightTarget(element) {
+		// Remove highlight class and re-add it to trigger animation
+		element.classList.remove('highlight-target');
+		// Force a reflow to ensure the animation plays again
+		void element.offsetWidth;
+		element.classList.add('highlight-target');
 	}
 
 	onOpenModal(entry) {
@@ -87,9 +119,9 @@ class Publications extends Component {
 		this.setState({ openModal: false });
 	};
 
-	loadPublications() {
+	fetchPublications() {
 		fetch(publicationsFile).then((r) => r.text()).then(text => {
-			this.setPublications(text);
+			this.loadPublications(text);
 		});
 	}
 
@@ -104,11 +136,11 @@ class Publications extends Component {
 		});
 	}
 
-	setPublications(text) {
+	loadPublications(text) {
 		let { redirectLink } = this.state;
 		let pubsArray = {};
 
-		parseBibtexFile(publicationsFile)
+		return parseBibtexFile(publicationsFile)  // Return the promise
 			.then(references => {
 				references.forEach(reference => {
 					if (redirectLink && reference.getCitationKey() === redirectLink) {
@@ -152,78 +184,18 @@ class Publications extends Component {
 		}
 	}
 
-	highlightCitation(citation) {
-		this.clearHighlightCitation();
-
-		this.setState({ isCitationHighlighted: citation });
-
-		// set a new timer
-		let timeout = setTimeout(() => {
-			this.setState({ isCitationHighlighted: null });
-		}, 1500);
-		this.setState({ activeHighlightTimer: timeout });
+	highlightCitation(citation, event) {
+		// Find the citation element and apply the highlight
+		const element = event?.target.closest('.citation-text.text-bg-light');
+		if (element) {
+			element.classList.remove('text-bg-light');
+			this.highlightTarget(element);
+			setTimeout(() => {
+				element.classList.remove('highlight-target');
+				element.classList.add('text-bg-light');
+			}, 2000);
+		}
 	}
-
-	renderCitationStyles() {
-		// todo: use the flash class to highlight the citation
-		const { modalPublication, citationStyles } = this.state;
-
-		if (!modalPublication) return null;
-
-		return (<>
-			{citationStyles.map(citeStyle => {
-				const { isCitationHighlighted } = this.state;
-
-				return (
-					<tr key={citeStyle.name}>
-						<th dangerouslySetInnerHTML={{
-							__html: citeStyle.name
-						}}></th>
-						<td>
-							<div className={`citation-text ${isCitationHighlighted === (citeStyle.name + modalPublication.key) ? 'text-bg-success-flash' : 'text-bg-light'}`}>
-								<span
-									dangerouslySetInnerHTML={{
-										__html: modalPublication[citeStyle.func]()
-									}}
-								/>
-								<CopyButton
-									contentToCopy={modalPublication[citeStyle.func]('text')}
-									className="btn-secondary"
-									buttonText=""
-									tooltipTextBefore="Copy citation"
-									onClick={() => this.highlightCitation(citeStyle.name + modalPublication.key)}
-								/>
-							</div>
-						</td>
-					</tr>
-				);
-			})}
-		</>);
-	}
-
-	// renderModal() {
-	// 	const { openModal } = this.state;
-	// 	const content = this.renderCitationStyles();
-
-	// 	return (
-	// 		<Modal
-	// 			open={openModal}
-	// 			onClose={() => this.onCloseModal()}
-	// 			classNames={{
-	// 				overlay: "publication-overlay",
-	// 				modal: "publication-modal",
-	// 				closeButton: "publication-modal-button",
-	// 			}}
-	// 			center>
-	// 			<h2>Cite</h2>
-	// 			<table>
-	// 				<tbody>
-	// 					{content}
-	// 				</tbody>
-	// 			</table>
-	// 		</Modal>
-	// 	)
-	// }
 
 	renderPublications() {
 		const { publicationsObject } = this.state;
@@ -240,7 +212,6 @@ class Publications extends Component {
 								bibtex={entry}
 								entry={entry}
 								className="fade-animation-on-load"
-								// onCiteClick={() => this.onOpenModal(entry)}
 								modalCallback={(entry) => this.onOpenModal(entry)}
 							/>
 						))}
@@ -248,7 +219,6 @@ class Publications extends Component {
 				</div>
 			);
 		});
-
 
 		return publications;
 	}
@@ -274,7 +244,7 @@ class Publications extends Component {
 					onHide={() => this.onCloseModal()}
 					publication={this.state.modalPublication}
 					citationStyles={this.state.citationStyles}
-					onCitationCopy={(citationId) => this.highlightCitation(citationId)}
+					onCitationCopy={(citationId, e) => this.highlightCitation(citationId, e)}
 				/>
 				<Container>
 					{this.renderPublications()}
