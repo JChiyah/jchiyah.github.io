@@ -6,13 +6,10 @@ import { Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGraduationCap, faBook } from '@fortawesome/free-solid-svg-icons';
 
-import NavigationBar from './../components/NavigationBar';
-import Footer from './../components/Footer';
 import PublicationItem from './../components/PublicationItem';
-import { parseBibtexFile } from './../references';
-import CopyButton from './../components/CopyButton';
 import NewModal from './../components/NewModal';
 import PageLayout from './PageLayout';
+import { parseBibtexFile } from './../references';
 
 const publicationsFile = '/publications.bib';
 
@@ -204,7 +201,7 @@ class Publications extends Component {
 		this.getPublicationsByYear().forEach((year) => {
 			publications.push(
 				<div key={year} id={"papers-" + year}>
-					<h3>{year}</h3>
+					<h4>{year}</h4>
 					<ul className="publications-list fade-animation-sequence">
 						{publicationsObject[year].map((entry) => (
 							<PublicationItem
@@ -234,7 +231,7 @@ class Publications extends Component {
 				navTitle="Publications"
 				navItems={navItems}
 			>
-				<h1>Publications</h1>
+				<h3>Publications</h3>
 				<p style={{ marginBottom: '2em' }}>
 					You can also check my <a href={publicationsFile} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faBook} /> bibtex file</a> or
 					my <a href="https://scholar.google.co.uk/citations?hl=en&user=NQyCFjYAAAAJ#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faGraduationCap} /> Google Scholar profile</a>. If you need access to any of the publications and the link is broken, contact me and I will happily provide a copy.

@@ -7,7 +7,7 @@ class About extends Component {
 	render() {
 		return (
 			<PageLayout>
-				<h1>About Me</h1>
+				<h3>About Me</h3>
 				<div className="about">
 					<div className="about-img-wrapper">
 						<img src="about_photo.jpeg" alt="selfie" />

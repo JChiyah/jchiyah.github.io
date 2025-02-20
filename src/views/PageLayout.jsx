@@ -1,7 +1,5 @@
 import React from 'react';
 
-import NavigationBar from './../components/NavigationBar';
-import Footer from './../components/Footer';
 import VerticalNav from './../components/VerticalNav';
 
 
@@ -17,7 +15,7 @@ const PageLayout = ({
 		<div className="App">
 			{/* <NavigationBar currentPage={pageTitle} /> */}
 
-			<br />
+			{/* <br /> */}
 			<div
 				className="container-fluid"
 				data-bs-spy="scroll"

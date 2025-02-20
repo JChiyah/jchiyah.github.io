@@ -45,8 +45,8 @@ class Projects extends Component {
 
 		return (
 			<PageLayout>
-				<div className="app-body projects">
-					<h1>Projects</h1>
+				<div className="projects">
+					<h3>Projects</h3>
 
 					<div className="items">
 						{this.renderProjects()}
