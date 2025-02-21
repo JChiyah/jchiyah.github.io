@@ -1,50 +1,93 @@
-// import React from 'react';
-// import { Navbar, Nav, Container } from 'react-bootstrap';
-// import { Link, useLocation } from 'react-router-dom';
+import {
+	faHouse,
+	faUser,
+	faCubes,
+	faBriefcase,
+	faFileLines,
+	faEnvelope,
+	faTimes
+} from '@fortawesome/free-solid-svg-icons';
+import {
+	Navbar,
+	Container,
+	Nav
+} from 'react-bootstrap';
+import {
+	Link,
+	useLocation
+} from 'react-router-dom';
+import {
+	useState
+} from 'react';
+import {
+	FontAwesomeIcon
+} from '@fortawesome/react-fontawesome';
 
-// const NavigationBar = () => {
-//     const location = useLocation();
+const NavigationLink = ({ icon, text, onNavigate }) => {
+	const [isHovered, setIsHovered] = useState(false);
+	const location = useLocation();
+	const url = `/${text.toLowerCase().replace(" ", "-")}`;
+	const isActive = location.pathname === url;
 
-//     return (
-//         <Navbar expand="lg" className="bg-body-tertiary">
-//             <Container>
-//                 <Navbar.Brand as={Link} to="/">Your Brand</Navbar.Brand>
-//                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
-//                 <Navbar.Collapse id="basic-navbar-nav">
-//                     <Nav className="me-auto">
-//                         <Nav.Link
-//                             as={Link}
-//                             to="/"
-//                             active={location.pathname === '/'}
-//                         >
-//                             Home
-//                         </Nav.Link>
-//                         <Nav.Link
-//                             as={Link}
-//                             to="/about"
-//                             active={location.pathname === '/about'}
-//                         >
-//                             About
-//                         </Nav.Link>
-//                         <Nav.Link
-//                             as={Link}
-//                             to="/publications"
-//                             active={location.pathname === '/publications'}
-//                         >
-//                             Publications
-//                         </Nav.Link>
-//                         <Nav.Link
-//                             as={Link}
-//                             to="/contact"
-//                             active={location.pathname === '/contact'}
-//                         >
-//                             Contact
-//                         </Nav.Link>
-//                     </Nav>
-//                 </Navbar.Collapse>
-//             </Container>
-//         </Navbar>
-//     );
-// };
+	return (
+		<Nav.Link
+			as={Link}
+			to={url}
+			className={`${isActive ? 'active' : ''}`}
+			onMouseEnter={() => setIsHovered(true)}
+			onMouseLeave={() => setIsHovered(false)}
+			onClick={onNavigate}
+		>
+			<FontAwesomeIcon icon={icon} bounce={isHovered} />
+			{text}
+		</Nav.Link>
+	);
+};
 
-// export default NavigationBar;
+const NewNavBar = () => {
+	const [expanded, setExpanded] = useState(false);
+	const location = useLocation();
+	const currentPage = location.pathname.substring(1).replace("-", " ").replace(/\b\w/g, char => char.toUpperCase());
+
+	const handleNavigate = () => {
+		setExpanded(false);
+	};
+
+	return (
+		<Navbar
+			expand="lg"
+			expanded={expanded}
+			onToggle={() => setExpanded(!expanded)}
+			className="fixed-top"
+			data-bs-theme="dark"
+		>
+			<Container>
+				<Navbar.Brand as={Link} to="/">
+					JavierCG
+					<span className="ms-2 text-secondary d-md-none">
+						{currentPage !== '' && currentPage !== 'Home' ? `/ ${currentPage}` : ''}
+					</span>
+				</Navbar.Brand>
+				<Navbar.Toggle aria-controls="basic-navbar-nav">
+					<span className={`navbar-toggler-icon ${expanded ? 'd-none' : ''} `} />
+					<FontAwesomeIcon
+						icon={faTimes}
+						className={expanded ? '' : 'd-none'}
+					/>
+				</Navbar.Toggle>
+				<Navbar.Collapse id="basic-navbar-nav" className="text-center">
+					<Nav className="mx-auto">
+						<NavigationLink icon={faHouse} text="Home" onNavigate={handleNavigate} />
+						<NavigationLink icon={faUser} text="About" onNavigate={handleNavigate} />
+						<NavigationLink icon={faCubes} text="Projects" onNavigate={handleNavigate} />
+						<NavigationLink icon={faFileLines} text="Publications" onNavigate={handleNavigate} />
+						<NavigationLink icon={faBriefcase} text="Activities" onNavigate={handleNavigate} />
+						<NavigationLink icon={faEnvelope} text="Contact" onNavigate={handleNavigate} />
+					</Nav>
+				</Navbar.Collapse>
+			</Container>
+		</Navbar>
+	);
+};
+
+export default NewNavBar;

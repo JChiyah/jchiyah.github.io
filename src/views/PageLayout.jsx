@@ -13,9 +13,6 @@ const PageLayout = ({
 
 	return (
 		<div className="App">
-			{/* <NavigationBar currentPage={pageTitle} /> */}
-
-			{/* <br /> */}
 			<div
 				className="container-fluid"
 				data-bs-spy="scroll"
@@ -41,8 +38,6 @@ const PageLayout = ({
 					</div>
 				</div>
 			</div>
-
-			{/* <Footer /> */}
 		</div>
 	);
 };

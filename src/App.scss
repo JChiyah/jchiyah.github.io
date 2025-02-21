@@ -30,9 +30,6 @@ $btn-hover-bg-tint-amount: 25%; // 15% !default;
 // $btn-active-border-shade-amount: 25% !default;
 // $btn-active-border-tint-amount: 10% !default;
 
-/** External Resources **/
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto');
-@import '~bootstrap/scss/bootstrap';
 
 /** Variables **/
 
@@ -45,13 +42,33 @@ $color-footer-background: lighten($color-primary-accent, 0);
 $color-footer-text: #ffffff;
 
 $navbar-padding: 0.5;
-$break-small: 500px;
-$break-medium: 800px;
-$break-large: 1200px;
+// $break-small: 500px;
+// $break-medium: 800px;
+// $break-large: 1200px;
+
+// Navbar variables, after importing _variables but before bootstrap
+$navbar-dark-icon-color: $color-primary-text;
+$navbar-dark-color: $color-primary-text;
+$navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-icon-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+$navbar-padding-y: $spacer * .9;
+$navbar-nav-link-padding-x: 1.0rem;
+$nav-link-padding-y: .8rem;
+$nav-link-height: $font-size-base * $line-height-base + $nav-link-padding-y * 2;
+$navbar-toggler-transition: box-shadow .15s ease-in-out;
+
+$navbar-final-height: $navbar-brand-height + $navbar-brand-padding-y * 2;
+
+/** External Resources **/
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto');
+@import '~bootstrap/scss/bootstrap';
 
 // to-do: use this to get colours (from https: //getbootstrap.com/docs/4.0/getting-started/theming/)
 @function theme-color($key: "primary") {
 	@return map-get($theme-colors, $key);
+}
+
+@function breakpoint($key: "sm") {
+	@return map-get($grid-breakpoints, $key);
 }
 
 // to-do: modify this
@@ -85,6 +102,8 @@ $break-large: 1200px;
 
 html,
 body {
+	// this gives the fixed navbar space
+	padding-top: $navbar-final-height;
 	height: 100%;
 
 	font-family: 'Montserrat', sans-serif;
@@ -103,125 +122,200 @@ body {
 }
 
 /* Navigation Bar */
+$navbar-dark-icon-color: $color-primary-text;
+$navbar-dark-color: $color-primary-text;
+
 .navbar {
-	display: flex;
-	justify-content: space-between;
-	width: stretch;
-	height: auto;
-	flex-basis: auto;
-	padding: 5px 8%;
-	background: $color-primary-accent;
+	color: $color-primary-text;
+	background-color: $color-primary-accent;
 
-	box-shadow: 0px 3px lighten($color-primary-accent, 20);
-
-	ul {
-		list-style: none;
-		text-align: right;
-
-		width: 100%;
-		margin: 0 auto;
-		padding-inline-start: 0;
+	.navbar-brand {
+		font-weight: 600;
 	}
 
-	#responsive-title {
-		display: none;
-	}
-
-	#responsive-menu-button {
-		display: none;
-		height: fit-content;
-		padding: $navbar-padding + em;
-
-		font-size: 1.3em;
-		color: $color-primary-text;
-
-		cursor: pointer;
-	}
-
-	@media screen and (max-width: $break-small) {
-		text-align: right;
-
-		ul {
-			text-align: left;
-		}
-
-		#responsive-title {
-			display: flex;
-		}
-
-		#responsive-menu-button {
-			display: inline-block;
-		}
-	}
-}
-
-.navbar-elem {
-	display: inline-block;
-	margin: $navbar-padding + em;
-
-	a {
+	.navbar-toggler {
+		width: 40px;
+		height: 40px;
 		position: relative;
-		margin: ($navbar-padding / 2) + em;
-
 		color: $color-primary-text;
-		font-size: 1.2em;
-		text-decoration: none;
+
+		.navbar-toggler-icon,
+		.fa-times {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 1.25rem;
+		}
 	}
 
-	a:after {
+	.nav-link {
+		font-size: 1.2rem;
+		position: relative;
+
+		.svg-inline--fa {
+			margin-right: 0.4rem;
+			font-size: 0.8em;
+		}
+	}
+
+	.nav-link:after {
 		content: "";
 		position: absolute;
-		left: 0px;
+		left: $navbar-nav-link-padding-x;
 		width: 0;
-		bottom: -6px;
+		bottom: 5px;
 		background: $color-primary-text;
-		height: 3px;
-		border-radius: 3px;
+		height: 2px;
+		border-radius: 2px;
 		transition-property: width;
 		transition-duration: 0.3s;
 		transition-timing-function: ease-out;
 		display: inline-block;
 	}
 
-	a:hover:after,
-	a:focus:after,
-	a:active:after {
+	.nav-link:hover:after,
+	.nav-link:focus:after,
+	.nav-link:active:after {
 		// left: 0;
 		// right: auto;
-		width: calc(100% - 0px); // Set the width to 100% minus 5px
+		width: calc(100% - #{$navbar-nav-link-padding-x * 2});
+
+		@media screen and (max-width: breakpoint("md")) {
+			width: 0;
+		}
 	}
 
 	.active:after {
 		// left: 0;
 		// right: auto;
-		width: calc(100% - 4px); // Set the width to 100% minus 5px
-	}
+		width: calc(100% - #{$navbar-nav-link-padding-x * 2});
 
-	@media screen and (max-width: $break-large) {
-		a {
-			font-size: 1.1em;
-		}
-	}
-
-	@media screen and (max-width: $break-medium) {
-		a {
-			font-size: 1em;
-		}
-	}
-
-	@media screen and (max-width: $break-small) {
-		display: block;
-
-		a:after {
-			bottom: 0px;
-		}
-
-		.active:after {
-			left: 2px;
-			width: 98%;
+		@media screen and (max-width: breakpoint("md")) {
+			width: 0;
 		}
 	}
 }
+
+// .navbar {
+// 	display: flex;
+// 	justify-content: space-between;
+// 	width: stretch;
+// 	height: auto;
+// 	flex-basis: auto;
+// 	padding: 5px 8%;
+// 	background: $color-primary-accent;
+
+// 	box-shadow: 0px 3px lighten($color-primary-accent, 20);
+
+// 	ul {
+// 		list-style: none;
+// 		text-align: right;
+
+// 		width: 100%;
+// 		margin: 0 auto;
+// 		padding-inline-start: 0;
+// 	}
+
+// 	#responsive-title {
+// 		display: none;
+// 	}
+
+// 	#responsive-menu-button {
+// 		display: none;
+// 		height: fit-content;
+// 		padding: $navbar-padding + em;
+
+// 		font-size: 1.3em;
+// 		color: $color-primary-text;
+
+// 		cursor: pointer;
+// 	}
+
+// 	@media screen and (max-width: $break-small) {
+// 		text-align: right;
+
+// 		ul {
+// 			text-align: left;
+// 		}
+
+// 		#responsive-title {
+// 			display: flex;
+// 		}
+
+// 		#responsive-menu-button {
+// 			display: inline-block;
+// 		}
+// 	}
+// }
+
+// .navbar-elem {
+// 	display: inline-block;
+// 	margin: $navbar-padding + em;
+
+// 	a {
+// 		position: relative;
+// 		margin: ($navbar-padding / 2) + em;
+
+// 		color: $color-primary-text;
+// 		font-size: 1.2em;
+// 		text-decoration: none;
+// 	}
+
+// 	a:after {
+// 		content: "";
+// 		position: absolute;
+// 		left: 0px;
+// 		width: 0;
+// 		bottom: -6px;
+// 		background: $color-primary-text;
+// 		height: 3px;
+// 		border-radius: 3px;
+// 		transition-property: width;
+// 		transition-duration: 0.3s;
+// 		transition-timing-function: ease-out;
+// 		display: inline-block;
+// 	}
+
+// 	a:hover:after,
+// 	a:focus:after,
+// 	a:active:after {
+// 		// left: 0;
+// 		// right: auto;
+// 		width: calc(100% - 0px); // Set the width to 100% minus 5px
+// 	}
+
+// 	.active:after {
+// 		// left: 0;
+// 		// right: auto;
+// 		width: calc(100% - 4px); // Set the width to 100% minus 5px
+// 	}
+
+// 	@media screen and (max-width: $break-large) {
+// 		a {
+// 			font-size: 1.1em;
+// 		}
+// 	}
+
+// 	@media screen and (max-width: $break-medium) {
+// 		a {
+// 			font-size: 1em;
+// 		}
+// 	}
+
+// 	@media screen and (max-width: $break-small) {
+// 		display: block;
+
+// 		a:after {
+// 			bottom: 0px;
+// 		}
+
+// 		.active:after {
+// 			left: 2px;
+// 			width: 98%;
+// 		}
+// 	}
+// }
 
 // .footer {
 // 	display: flex;
@@ -422,7 +516,7 @@ body {
 		}
 	}
 
-	@media screen and (max-width: $break-large) {
+	@media screen and (max-width: breakpoint("lg")) {
 		.header {
 			h1 {
 				font-size: 5.5em;
@@ -430,7 +524,7 @@ body {
 		}
 	}
 
-	@media screen and (max-width: $break-medium) {
+	@media screen and (max-width: breakpoint("md")) {
 		margin: 0 3em 3em 3em;
 
 		.header {
@@ -444,7 +538,7 @@ body {
 		}
 	}
 
-	@media screen and (max-width: $break-small) {
+	@media screen and (max-width: breakpoint("md")) {
 		margin: 0 2em 2em 2em;
 
 		.header {
@@ -505,14 +599,14 @@ body {
 
 .publication-overlay {
 
-	@media screen and (max-width: $break-small) {
+	@media screen and (max-width: breakpoint("sm")) {
 		padding: 0.7em;
 	}
 }
 
 .publication-modal {
 
-	@media screen and (max-width: $break-small) {
+	@media screen and (max-width: breakpoint("sm")) {
 		padding-left: 0.5em;
 		padding-right: 0.5em;
 	}
@@ -595,11 +689,11 @@ body {
 .about {
 	display: flex;
 
-	@media screen and (max-width: $break-medium) {
+	@media screen and (max-width: breakpoint("md")) {
 		flex-wrap: wrap;
 	}
 
-	@media screen and (max-width: $break-small) {
+	@media screen and (max-width: breakpoint("sm")) {
 		justify-content: center;
 	}
 
@@ -624,7 +718,7 @@ body {
 			animation-iteration-count: infinite;
 		}
 
-		@media screen and (max-width: $break-small) {
+		@media screen and (max-width: breakpoint("sm")) {
 			width: 100%;
 			height: 100%;
 

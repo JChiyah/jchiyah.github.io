@@ -7,17 +7,6 @@ import PageLayout from './PageLayout';
 
 const activitiesFile = "/activities.json";
 
-// const timelineLineStyle = {
-// 	width: '3px',
-// 	height: 'auto',
-// 	top: '20px',
-// 	bottom: '0px',
-// 	left: '21px',
-// }
-
-// this could not be a state property because then the component would go into an infinite loop
-// var colorIndex = 0;
-
 
 class Activities extends Component {
 	constructor(props) {
@@ -28,24 +17,18 @@ class Activities extends Component {
 	}
 
 	componentDidMount() {
-		this.getActivities();
-	}
-
-	getActivities() {
+		// read the activities file and set the activities
 		fetch(activitiesFile).then((r) => r.text()).then(text => {
-			this.setActivities(text);
+			// parse the activities, filter and then set the new state
+			const parsed = JSON.parse(text);
+			const filtered = parsed.filter(item => !item.hidden);
+			this.setState({
+				activityArray: filtered,
+			});
 		});
 	}
 
-	setActivities(text) {
-		const parsed = JSON.parse(text);
-		const filtered = parsed.filter(item => !item.hidden);
-		this.setState({
-			activityArray: filtered,
-		});
-	}
-
-	renderSection(json) {
+	renderActivitySection(json) {
 		if (json['hidden']) {
 			return null;
 		}
@@ -64,7 +47,7 @@ class Activities extends Component {
 	render() {
 		const activityArray = this.state.activityArray;
 		const body = activityArray.map((entry) => {
-			return this.renderSection(entry);
+			return this.renderActivitySection(entry);
 		});
 
 		const navItems = activityArray.map((entry) => {

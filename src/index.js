@@ -1,13 +1,13 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import { createRoot } from 'react-dom/client';
-import { createBrowserRouter, RouterProvider, Outlet, useLocation } from "react-router-dom";
-import NavigationBar from './components/NavigationBar';
-import Footer from './components/Footer';
+import { Navigate, createBrowserRouter, RouterProvider, Outlet, useLocation } from "react-router-dom";
 
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
+
+import NavigationBar from './components/NavigationBar';
+import NewNavBar from './components/NewNavBar';
+import Footer from './components/Footer';
 
 import Home from './views/Home';
 import About from './views/About';
@@ -33,7 +33,7 @@ const RootLayout = () => {
 		'/about': 'About',
 		'/projects': 'Projects',
 		'/publications': 'Publications',
-		'/professional-activities': 'Professional Activities',
+		'/professional-activities': 'Activities',
 		'/contact': 'Contact'
 	};
 
@@ -41,7 +41,8 @@ const RootLayout = () => {
 
 	return (
 		<>
-			<NavigationBar currentPage={currentPage} />
+			{/* <NavigationBar currentPage={currentPage} /> */}
+			<NewNavBar currentPage={currentPage} />
 			<Outlet />
 			<Footer />
 		</>
@@ -60,7 +61,7 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "/home",
-				element: <Home />,
+				element: <Navigate to="/" />,
 			},
 			{
 				path: "/about",
@@ -75,7 +76,7 @@ const router = createBrowserRouter([
 				element: <Publications />,
 			},
 			{
-				path: "/professional-activities",
+				path: "/activities",
 				element: <Activities />,
 			},
 			{

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faHouse, faUser, faCubes, faBriefcase, faFileLines, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-// import { faHouse as faHouseRegular, faUser as faUserRegular, faCubes as faCubesRegular, faBriefcase as faBriefcaseRegular, faFile as faFileRegular, faEnvelope as faEnvelopeRegular } from '@fortawesome/free-regular-svg-icons';
 
 
 class NavigationElement extends Component {
@@ -31,11 +30,6 @@ class NavigationElement extends Component {
 
 		return (
 			<li className="navbar-elem">
-				{/* <a href={url} className={activeClass} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
-					<FontAwesomeIcon
-						icon={icon} bounce={isHovered}
-						style={{ marginRight: '5px', fontSize: '0.8em' }} />{text}
-				</a> */}
 				<Link to={url} className={activeClass} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
 					<FontAwesomeIcon
 						icon={icon} bounce={isHovered}

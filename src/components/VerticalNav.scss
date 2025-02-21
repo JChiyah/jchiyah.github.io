@@ -3,7 +3,7 @@
 .vertical-nav {
 	padding: 1rem 0;
 	position: sticky;
-	top: 1rem;
+	top: $navbar-final-height * 2;
 	font-size: 0.8rem;
 
 	.vertical-nav-title {
