@@ -85,7 +85,7 @@ const NewHome = () => {
 						I've collaborated with companies like <strong className="text-accent">Siemens</strong> or <strong className="text-accent">SeeByte</strong> throughout my research, including interning at <strong className="text-accent">Amazon Alexa AI</strong> and <strong className="text-accent">SeeByte</strong>, applying my work to real-world challenges. This has resulted in many publications at top conferences and several industry partnerships.
 						<br /><br />
 
-						I'm currently actively <strong className="text-accent">looking for new opportunities</strong> in the field of AI and NLP, particularly with multi-modal LLMs, so don't hesitate to <Link to="/contact">contact me!</Link>
+						I'm currently actively <strong className="text-accent">looking for new opportunities</strong> in the field of AI and NLP, particularly with multi-modal LLMs, so don't hesitate to <Link to="/#contact">contact me!</Link>
 					</p>
 				</section>
 

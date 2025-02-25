@@ -52,7 +52,7 @@ class Projects extends Component {
 						Here are some of the project I have worked on, but this is a <strong className="text-accent">work in progress</strong>!
 					</p>
 
-					<div className="row row-cols-1 row-cols-lg-2 items">
+					<div className="row row-cols-1 row-cols-lg-2 items fade-animation-sequence">
 						{this.renderProjects()}
 					</div>
 				</div>

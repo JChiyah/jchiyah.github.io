@@ -25,7 +25,7 @@ class ProjectItem extends Component {
 
 	render() {
 		return (
-			<div className="card project-item h-100">
+			<div className="card project-item h-100 fade-animation-on-load">
 				<div className="card-body p-3 p-md-4">
 					<p className="text-muted small mb-1">{this.state.subtitle}</p>
 
