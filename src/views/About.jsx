@@ -32,6 +32,14 @@ class About extends Component {
 						I graduated from an MEng in May 2019 and started an iCASE PhD with Siemens in September 2019 in
 						the field of monitoring and control of manufacturing systems using natural language. Currently doing an internship at Amazon Alexa AI, say hi!
 					</p>
+					<p>
+						Hi! I'm Javier Chiyah-Garcia, a Computer Science researcher with a passion for making communication between humans and intelligent systems more natural and effective. I recently completed my PhD at Heriot-Watt University, where I focused on helping conversational AI systems understand and overcome miscommunications in dialogues.
+						My research journey has taken me from helping underwater robots explain their actions to teaching large language models to understand ambiguous instructions, combining vision and language modalities effectively.
+
+						I've collaborated with many companies like Siemens or SeeByte throughout my research, including interning at Amazon Alexa AI and SeeByte, applying my work to real-world challenges. This has resulted in many publications at important conferences and partnerships with industry.
+
+						I'm currently actively looking for new opportunities in the field of AI and NLP, so don't hesitate to contact me!
+					</p>
 				</div>
 			</PageLayout>
 		);

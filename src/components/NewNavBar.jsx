@@ -23,10 +23,10 @@ import {
 	FontAwesomeIcon
 } from '@fortawesome/react-fontawesome';
 
-const NavigationLink = ({ icon, text, onNavigate }) => {
+const NavigationLink = ({ icon, text, onNavigate, customUrl = "" }) => {
 	const [isHovered, setIsHovered] = useState(false);
 	const location = useLocation();
-	const url = `/${text.toLowerCase().replace(" ", "-")}`;
+	const url = customUrl || `/${text.toLowerCase().replace(" ", "-")}`;
 	const isActive = location.pathname === url;
 
 	return (
@@ -78,11 +78,11 @@ const NewNavBar = () => {
 				<Navbar.Collapse id="basic-navbar-nav" className="text-center">
 					<Nav className="mx-auto">
 						<NavigationLink icon={faHouse} text="Home" onNavigate={handleNavigate} />
-						<NavigationLink icon={faUser} text="About" onNavigate={handleNavigate} />
+						{/* <NavigationLink icon={faUser} text="About" onNavigate={handleNavigate} /> */}
 						<NavigationLink icon={faCubes} text="Projects" onNavigate={handleNavigate} />
 						<NavigationLink icon={faFileLines} text="Publications" onNavigate={handleNavigate} />
 						<NavigationLink icon={faBriefcase} text="Activities" onNavigate={handleNavigate} />
-						<NavigationLink icon={faEnvelope} text="Contact" onNavigate={handleNavigate} />
+						<NavigationLink icon={faEnvelope} text="Contact" customUrl="#contact" onNavigate={handleNavigate} />
 					</Nav>
 				</Navbar.Collapse>
 			</Container>

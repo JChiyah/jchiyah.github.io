@@ -3,13 +3,14 @@ import * as serviceWorker from './serviceWorker';
 import { createRoot } from 'react-dom/client';
 import { Navigate, createBrowserRouter, RouterProvider, Outlet, useLocation } from "react-router-dom";
 
-import './index.css';
+import './App.scss';
 
 import NavigationBar from './components/NavigationBar';
 import NewNavBar from './components/NewNavBar';
 import Footer from './components/Footer';
 
 import Home from './views/Home';
+import NewHome from './views/NewHome';
 import About from './views/About';
 import Projects from './views/Projects';
 import Publications from './views/Publications';
@@ -30,7 +31,7 @@ const RootLayout = () => {
 	const pathToTitle = {
 		'/': 'Home',
 		'/home': 'Home',
-		'/about': 'About',
+		// '/about': 'About',
 		'/projects': 'Projects',
 		'/publications': 'Publications',
 		'/professional-activities': 'Activities',
@@ -57,16 +58,16 @@ const router = createBrowserRouter([
 		children: [
 			{
 				path: "/",
-				element: <Home />,
+				element: <NewHome />,
 			},
 			{
 				path: "/home",
 				element: <Navigate to="/" />,
 			},
-			{
-				path: "/about",
-				element: <About />,
-			},
+			// {
+			// 	path: "/about",
+			// 	element: <About />,
+			// },
 			{
 				path: "/projects",
 				element: <Projects />,
@@ -80,8 +81,8 @@ const router = createBrowserRouter([
 				element: <Activities />,
 			},
 			{
-				path: "/contact",
-				element: <Contact />,
+				path: "/#contact",
+				element: <Home />,
 			},
 			{
 				path: "*",

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './../App.scss';
+// import './../App.scss';
 import * as bootstrap from 'bootstrap';  // Import Bootstrap JS
 
 import NewTimeline from './../components/Timeline';
@@ -34,7 +34,7 @@ class Activities extends Component {
 		}
 		return (
 			<div
-				className="activity-section"
+				className="activity-section scroll-target"
 				key={"section-" + json['id']}
 				id={json['id']}
 			>

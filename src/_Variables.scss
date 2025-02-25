@@ -1,0 +1,148 @@
+/** Import Bootstrap SCSS **/
+@import "~bootstrap/scss/_functions";
+@import "~bootstrap/scss/_variables";
+
+// backgroundLight/dark
+// text dark/light/secondary
+// accent
+
+$theme-array: (
+	navyBlue: ( //
+		backgroundLight: #ffffff,
+		backgroundDark: #203453,
+		textLight: #ffffff,
+		textDark: #000000,
+		textSecondary: #888,
+		accent: #203453,
+	),
+	crimsonRed: ( //
+		backgroundLight: #ffffff,
+		backgroundDark: darken(#dc3545, 20),
+		textLight: #ffffff,
+		textDark: #000000,
+		textSecondary: #888,
+		accent: #dc3545,
+	),
+	flatPurple: ( //
+		backgroundLight: #ffffff,
+		backgroundDark: darken(#8e44ad, 10),
+		textLight: #ffffff,
+		textDark: #000000,
+		textSecondary: #888,
+		accent: #9b59b6,
+	),
+);
+
+// set the default theme
+$_theme: map-get($theme-array, flatPurple);
+
+@function getColour($key) {
+	@return map-get($_theme, $key);
+}
+
+// modify defaults to match colour theme
+$custom-theme-colors: (
+	// primary: purple
+	primary: getColour("accent"),
+	// add new colours
+	success-flash: lighten(#27ae60, 56),
+	// special
+	github: #8957e5,
+	github-text: #ffffff,
+	amazon: darkOrange,
+	amazon-text: #ffffff,
+	youtube: red,
+	youtube-text: #ffffff,
+	award: #ffd700,
+	award-text: #000000,
+);
+
+// merge new colours with existing colours
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+
+$btn-hover-bg-shade-amount: 25%; // 15% !default;
+$btn-hover-bg-tint-amount: 25%; // 15% !default;
+// $btn-hover-border-shade-amount: 20% !default;
+// $btn-hover-border-tint-amount: 10% !default;
+// $btn-active-bg-shade-amount: 20% !default;
+// $btn-active-bg-tint-amount: 20% !default;
+// $btn-active-border-shade-amount: 25% !default;
+// $btn-active-border-tint-amount: 10% !default;
+
+
+/** Variables **/
+
+$color-primary-accent: #203453;
+$color-primary-text: #ffffff;
+$color-secondary-accent: lighten(#203453, 13);
+$color-secondary-text: darken(#2c3e50, 10);
+
+$color-footer-background: lighten($color-primary-accent, 0);
+$color-footer-text: #ffffff;
+
+$navbar-padding: 0.5;
+// $break-small: 500px;
+// $break-medium: 800px;
+// $break-large: 1200px;
+
+// to-do: use this to get colours (from https: //getbootstrap.com/docs/4.0/getting-started/theming/)
+@function theme-color($key: "primary") {
+	@return map-get($theme-colors, $key);
+}
+
+@function breakpoint($key: "sm") {
+	@return map-get($grid-breakpoints, $key);
+}
+
+// to-do: modify this
+//** Global textual link color.
+// $link-color: $brand-primary !default;
+// //** Link hover color set via `darken()` function.
+// $link-hover-color: darken($link-color, 15%) !default;
+// //** Link hover decoration.
+// $link-hover-decoration: underline !default;
+
+/** Changes to Bootstrap colors **/
+// .btn-primary {
+// 	@include button-variant($color-primary-accent, darken($color-primary-accent, 7.5%), darken($color-primary-accent, 10%), lighten($color-primary-accent, 15%), lighten($color-primary-accent, 25%), darken($color-primary-accent, 30%));
+// }
+
+// set text color for buttons according to the custom colours
+@mixin generate-text-colors($colors) {
+	@each $key, $value in $colors {
+		@if str-index($key, "-text") {
+			$base: str-slice($key, 1, str-index($key, "-text") - 1);
+
+			.btn-#{$base} {
+				color: theme-color("#{$key}") !important;
+			}
+		}
+	}
+}
+
+@include generate-text-colors($custom-theme-colors);
+
+
+// Navbar variables, after importing _variables but before bootstrap
+$navbar-dark-icon-color: getColour("textDark");
+$navbar-dark-color: getColour("textDark");
+$navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{getColour('textLight')}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+$navbar-padding-y: $spacer * .9;
+$navbar-nav-link-padding-x: 1.0rem;
+$nav-link-padding-y: .8rem;
+$nav-link-height: $font-size-base * $line-height-base + $nav-link-padding-y * 2;
+$navbar-toggler-transition: box-shadow .15s ease-in-out;
+
+$navbar-final-height: $navbar-brand-height + $navbar-brand-padding-y * 2;
+
+/** Fonts **/
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+// $font-family-base: 'Montserrat', sans-serif;
+$font-family-base: 'Raleway', serif;
+
+/** External Resources **/
+@import '~bootstrap/scss/bootstrap';
+
+// End of variables

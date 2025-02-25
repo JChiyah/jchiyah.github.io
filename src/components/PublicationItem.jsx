@@ -162,7 +162,7 @@ class PublicationItem extends Component {
 		}
 
 		return (
-			<li className="publication-item fade-animation-on-load" id={state.citationKey}>
+			<li className="publication-item fade-animation-on-load scroll-target" id={state.citationKey}>
 				<p>
 					{/*{this.state.author} ({this.state.year}). <b>&lsquo;{this.state.title}&rsquo;</b>. In: <i>{this.state.booktitle}</i>. {this.state.series}. {this.state.address}.*/}
 					<a href={pubLink} target="_blank" rel="noopener noreferrer">{state.title}</a><br />

@@ -15,7 +15,7 @@ const TimelineItem = ({ icon, title, subtitle, date, description, description_it
 	// add items to description if they exist
 	description = description_items ? description + '<ul class="accented-list">' + description_items.map(item => '<li>' + item + '</li>').join('') + '</ul>' : description;
 	// add image if it exists
-	description = image ? description + '<img src="' + image + '" alt="' + image_alt + '" />' : description;
+	description = image ? description + '<br/><img src="' + image + '" alt="' + image_alt + '" />' : description;
 
 	useEffect(() => {
 		const checkTruncation = () => {
@@ -52,7 +52,7 @@ const TimelineItem = ({ icon, title, subtitle, date, description, description_it
 			<div className="timeline-content" >
 				<h3>
 					{title}
-					{subtitle ? ',' : ''}{subtitle && <span className="timeline-subtitle"> {subtitle}</span>}
+					{subtitle ? ',' : ''}{subtitle && <span className="timeline-subtitle"> <strong>{subtitle}</strong></span>}
 				</h3>
 				<p className="timeline-date">{date}</p>
 				<div className={`timeline-description-wrapper ${isExpanded ? 'expanded' : ''} ${isTruncated ? 'truncated' : ''}`}>

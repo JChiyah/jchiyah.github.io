@@ -1,3 +1,6 @@
+@import "../_Variables.scss";
+
+
 .timeline {
 	position: relative;
 	padding: 20px 0;
@@ -53,7 +56,7 @@
 	flex-shrink: 0;
 
 	svg {
-		color: #6c757d;
+		color: getColour("textSecondary");
 		font-size: 1.2rem;
 	}
 
@@ -75,14 +78,14 @@
 	h3 {
 		font-size: 1.1rem;
 		margin-bottom: 0.25rem;
-		color: #212529;
+		// color: #212529;
 
 		@media (max-width: 768px) {
 			font-size: 1rem;
 		}
 
 		.timeline-subtitle {
-			color: #dc3545;
+			color: getColour('accent');
 			font-weight: normal;
 
 			@media (max-width: 768px) {
@@ -93,7 +96,7 @@
 	}
 
 	.timeline-date {
-		color: #6c757d;
+		color: getColour('textSecondary');
 		font-size: 0.8rem;
 		margin-bottom: 0.75rem;
 
@@ -158,7 +161,7 @@
 			transform: translateX(-50%);
 			background: white;
 			border: none;
-			color: #0d6efd;
+			color: lighten(getColour('accent'), 10);
 			padding: 0 0.5rem;
 			cursor: pointer;
 			font-size: 0.7rem;

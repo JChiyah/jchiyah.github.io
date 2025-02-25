@@ -47,16 +47,16 @@
 
 
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin, faReact } from '@fortawesome/free-brands-svg-icons';
-import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faReact } from '@fortawesome/free-brands-svg-icons';
+
+import { SocialLinks } from './SocialLinks';
 
 
 const Footer = () => {
 	return (
-		<footer className="footer py-3">
+		<footer className="footer py-3 fade-in">
 			<div className="container">
 				<div className="row align-items-center text-center text-md-start">
 					<div className="col-md-7 mb-7 mb-md-0">
@@ -68,7 +68,9 @@ const Footer = () => {
 						<p className="m-0 text-md-end">Copyright © {new Date().getFullYear()}</p>
 					</div>
 					<div className="col-md-2">
-						<div className="social-links d-flex justify-content-center justify-content-md-end">
+						<SocialLinks classes="justify-content-md-end" />
+
+						{/* <div className="social-links d-flex justify-content-center justify-content-md-end">
 							<Link
 								to="https://github.com/jchiyah"
 								target="_blank"
@@ -91,8 +93,8 @@ const Footer = () => {
 								rel="noopener noreferrer"
 							>
 								<FontAwesomeIcon icon={faGraduationCap} />
-							</Link>
-						</div>
+							</Link> */}
+						{/* </div> */}
 					</div>
 				</div>
 			</div>

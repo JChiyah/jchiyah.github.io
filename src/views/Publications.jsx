@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './../App.scss';
+// import './../App.scss';
 
 import { Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -200,15 +200,14 @@ class Publications extends Component {
 
 		this.getPublicationsByYear().forEach((year) => {
 			publications.push(
-				<div key={year} id={"papers-" + year}>
+				<div key={year} id={"papers-" + year} className="publication-section scroll-target">
 					<h4>{year}</h4>
-					<ul className="publications-list fade-animation-sequence">
+					<ul className="fade-animation-sequence">
 						{publicationsObject[year].map((entry) => (
 							<PublicationItem
 								key={entry.getCitationKey()}
 								bibtex={entry}
 								entry={entry}
-								className="fade-animation-on-load"
 								modalCallback={(entry) => this.onOpenModal(entry)}
 							/>
 						))}

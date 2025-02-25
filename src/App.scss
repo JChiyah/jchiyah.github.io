@@ -1,115 +1,18 @@
-/** Import Bootstrap SCSS **/
-@import "~bootstrap/scss/_functions";
-@import "~bootstrap/scss/_variables";
-
-// modify defaults to match colour theme
-$custom-theme-colors: (
-	// primary: purple
-	// add new colours
-	success-flash: lighten(#27ae60, 56),
-	// special
-	github: #8957e5,
-	github-text: #ffffff,
-	amazon: darkOrange,
-	amazon-text: #ffffff,
-	youtube: red,
-	youtube-text: #ffffff,
-	award: #ffd700,
-	award-text: #000000,
-);
-
-// merge new colours with existing colours
-$theme-colors: map-merge($theme-colors, $custom-theme-colors);
-
-$btn-hover-bg-shade-amount: 25%; // 15% !default;
-$btn-hover-bg-tint-amount: 25%; // 15% !default;
-// $btn-hover-border-shade-amount: 20% !default;
-// $btn-hover-border-tint-amount: 10% !default;
-// $btn-active-bg-shade-amount: 20% !default;
-// $btn-active-bg-tint-amount: 20% !default;
-// $btn-active-border-shade-amount: 25% !default;
-// $btn-active-border-tint-amount: 10% !default;
+@import "_Variables.scss";
 
 
-/** Variables **/
-
-$color-primary-accent: #203453;
-$color-primary-text: #ffffff;
-$color-secondary-accent: lighten(#203453, 13);
-$color-secondary-text: darken(#2c3e50, 10);
-
-$color-footer-background: lighten($color-primary-accent, 0);
-$color-footer-text: #ffffff;
-
-$navbar-padding: 0.5;
-// $break-small: 500px;
-// $break-medium: 800px;
-// $break-large: 1200px;
-
-// Navbar variables, after importing _variables but before bootstrap
-$navbar-dark-icon-color: $color-primary-text;
-$navbar-dark-color: $color-primary-text;
-$navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-icon-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
-$navbar-padding-y: $spacer * .9;
-$navbar-nav-link-padding-x: 1.0rem;
-$nav-link-padding-y: .8rem;
-$nav-link-height: $font-size-base * $line-height-base + $nav-link-padding-y * 2;
-$navbar-toggler-transition: box-shadow .15s ease-in-out;
-
-$navbar-final-height: $navbar-brand-height + $navbar-brand-padding-y * 2;
-
-/** External Resources **/
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto');
-@import '~bootstrap/scss/bootstrap';
-
-// to-do: use this to get colours (from https: //getbootstrap.com/docs/4.0/getting-started/theming/)
-@function theme-color($key: "primary") {
-	@return map-get($theme-colors, $key);
+html {
+	// this gives the fixed navbar space
+	padding-top: $navbar-final-height * 2;
+	scroll-margin-top: $navbar-final-height * 2;
 }
-
-@function breakpoint($key: "sm") {
-	@return map-get($grid-breakpoints, $key);
-}
-
-// to-do: modify this
-//** Global textual link color.
-// $link-color: $brand-primary !default;
-// //** Link hover color set via `darken()` function.
-// $link-hover-color: darken($link-color, 15%) !default;
-// //** Link hover decoration.
-// $link-hover-decoration: underline !default;
-
-/** Changes to Bootstrap colors **/
-// .btn-primary {
-// 	@include button-variant($color-primary-accent, darken($color-primary-accent, 7.5%), darken($color-primary-accent, 10%), lighten($color-primary-accent, 15%), lighten($color-primary-accent, 25%), darken($color-primary-accent, 30%));
-// }
-
-// set text color for buttons according to the custom colours
-@mixin generate-text-colors($colors) {
-	@each $key, $value in $colors {
-		@if str-index($key, "-text") {
-			$base: str-slice($key, 1, str-index($key, "-text") - 1);
-
-			.btn-#{$base} {
-				color: theme-color("#{$key}") !important;
-			}
-		}
-	}
-}
-
-@include generate-text-colors($custom-theme-colors);
-
 
 html,
 body {
-	// this gives the fixed navbar space
-	padding-top: $navbar-final-height;
 	height: 100%;
-
-	font-family: 'Montserrat', sans-serif;
-	color: $color-secondary-text;
-	background: $color-footer-background;
-
+	font-family: $font-family-base;
+	color: getColour("textDark");
+	background-color: getColour("backgroundDark");
 	scroll-behavior: smooth;
 }
 
@@ -118,16 +21,14 @@ body {
 }
 
 .App {
-	background: #ffffff;
+	background-color: getColour("backgroundLight");
 }
 
 /* Navigation Bar */
-$navbar-dark-icon-color: $color-primary-text;
-$navbar-dark-color: $color-primary-text;
 
 .navbar {
-	color: $color-primary-text;
-	background-color: $color-primary-accent;
+	color: getColour("textLight");
+	background-color: getColour("backgroundDark");
 
 	.navbar-brand {
 		font-weight: 600;
@@ -137,7 +38,7 @@ $navbar-dark-color: $color-primary-text;
 		width: 40px;
 		height: 40px;
 		position: relative;
-		color: $color-primary-text;
+		color: getColour("textLight");
 
 		.navbar-toggler-icon,
 		.fa-times {
@@ -150,6 +51,7 @@ $navbar-dark-color: $color-primary-text;
 	}
 
 	.nav-link {
+		color: getColour("textLight");
 		font-size: 1.2rem;
 		position: relative;
 
@@ -165,7 +67,7 @@ $navbar-dark-color: $color-primary-text;
 		left: $navbar-nav-link-padding-x;
 		width: 0;
 		bottom: 5px;
-		background: $color-primary-text;
+		background-color: getColour("textLight");
 		height: 2px;
 		border-radius: 2px;
 		transition-property: width;
@@ -204,7 +106,7 @@ $navbar-dark-color: $color-primary-text;
 // 	height: auto;
 // 	flex-basis: auto;
 // 	padding: 5px 8%;
-// 	background: $color-primary-accent;
+// 	background-color: getColour("backgroundDark");
 
 // 	box-shadow: 0px 3px lighten($color-primary-accent, 20);
 
@@ -227,7 +129,7 @@ $navbar-dark-color: $color-primary-text;
 // 		padding: $navbar-padding + em;
 
 // 		font-size: 1.3em;
-// 		color: $color-primary-text;
+// 		color: getColour("textDark");
 
 // 		cursor: pointer;
 // 	}
@@ -257,7 +159,7 @@ $navbar-dark-color: $color-primary-text;
 // 		position: relative;
 // 		margin: ($navbar-padding / 2) + em;
 
-// 		color: $color-primary-text;
+// 		color: getColour("textDark");
 // 		font-size: 1.2em;
 // 		text-decoration: none;
 // 	}
@@ -381,75 +283,77 @@ $navbar-dark-color: $color-primary-text;
 // 	}
 // }
 
+.social-links {
+	a {
+		color: getColour("textDark");
+		font-size: 1.2rem;
+		transition: color 0.3s ease;
+
+		&:hover {
+			color: getColour("textSecondary");
+			text-decoration: none;
+		}
+	}
+}
+
 .footer {
-	background-color: $color-primary-accent;
-	color: $color-primary-text;
+	background-color: getColour("backgroundDark");
+	color: getColour("textLight");
 	padding: 1rem 0;
 	width: 100%;
 	font-size: 0.8rem;
-}
 
-.social-links a {
-	color: white;
-	font-size: 1.2rem;
-	transition: color 0.3s ease;
-}
+	.social-links {
+		a {
+			color: getColour("textLight");
 
-.social-links a:hover {
-	color: #888;
-	text-decoration: none;
-}
+			&:hover {
+				color: getColour("textSecondary");
+				text-decoration: none;
+			}
+		}
 
+
+	}
+}
 
 .app-body {
-	// width: 50%;
-	margin: 1em auto 3em auto;
+	padding: 1.3rem 0;
+	margin: 1em auto 2em auto;
 
-	// @media screen and (max-width: $break-large) {
-	// 	width: 65%;
+	// .button-link {
+	// 	background: none !important;
+	// 	color: inherit;
+	// 	border: none;
+	// 	padding: 0 !important;
+	// 	font: inherit;
+	// 	cursor: pointer;
 	// }
 
-	// @media screen and (max-width: $break-medium) {
-	// 	width: 80%;
+	// a,
+	// .button-link {
+	// 	position: relative;
+	// 	color: $color-secondary-accent;
+	// 	text-decoration: none;
+	// 	font-weight: 600;
 	// }
 
-	// @media screen and (max-width: $break-small) {
-	// 	width: 90%;
+	// a:hover,
+	// .button-link:hover {
+	// 	color: lighten($color-primary-accent, 5);
 	// }
 
-	.button-link {
-		background: none !important;
-		color: inherit;
-		border: none;
-		padding: 0 !important;
-		font: inherit;
-		cursor: pointer;
-	}
-
-	a,
-	.button-link {
-		position: relative;
-		color: $color-secondary-accent;
-		text-decoration: none;
-		font-weight: 600;
-	}
-
-	a:hover,
-	.button-link:hover {
-		color: lighten($color-primary-accent, 5);
-	}
-
-	a:hover {
-		border-bottom: 1px solid lighten($color-primary-accent, 5);
-	}
+	// a:hover {
+	// 	border-bottom: 1px solid lighten($color-primary-accent, 5);
+	// }
 }
 
 
 /* Home/Landing */
 
 .landing {
-	background: $color-primary-accent;
-	color: $color-primary-text;
+	background-color: getColour("backgroundDark");
+	color: getColour("textDark");
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -501,7 +405,7 @@ $navbar-dark-color: $color-primary-text;
 
 				a {
 					padding: 1em;
-					color: $color-primary-text;
+					color: getColour("textDark");
 					text-decoration: none;
 				}
 
@@ -553,6 +457,349 @@ $navbar-dark-color: $color-primary-text;
 	}
 }
 
+/** New Home **/
+.home-container {
+
+	.home-section {
+		padding-bottom: 1rem;
+
+		h2 {
+			font-size: 2rem;
+			font-weight: 600;
+		}
+
+		h3 {
+			font-size: 1.5rem;
+			font-weight: 600;
+		}
+
+		.section-divider {
+			position: relative;
+
+			@media (min-width: 992px) {
+				padding-left: 1rem;
+
+				&:before {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
+					bottom: 0;
+					width: 1px;
+					background: linear-gradient(to bottom,
+							transparent,
+							rgba(getColour("textSecondary"), 0.2) 20%,
+							rgba(getColour("textSecondary"), 0.2) 80%,
+							transparent);
+				}
+			}
+		}
+
+		.col-lg-6 {
+			padding-bottom: 1rem;
+		}
+
+	}
+
+	.home-header {
+		text-align: center;
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+
+		.name-title {
+			font-size: 3.5rem;
+			margin-bottom: 2rem;
+			color: getColour("textDark");
+
+			.lastname {
+				color: getColour("accent");
+			}
+		}
+
+		.profile-image {
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			object-fit: cover;
+			margin-bottom: 2rem;
+		}
+
+		.social-links a {
+			font-size: 2.5rem;
+			color: getColour("accent");
+
+			&:hover {
+				color: getColour("textDark");
+			}
+		}
+
+		.keywords-section {
+			padding: 1rem 0;
+
+			ul {
+				list-style: none;
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				gap: 0px;
+				margin: 0;
+				font-size: 1.2rem;
+				font-weight: 300;
+				line-height: 2.2;
+
+				li {
+					display: inline;
+
+					&:not(:last-child)::after {
+						content: '|';
+						margin: 0 0.3rem;
+						color: getColour("textSecondary");
+						user-select: none;
+					}
+				}
+			}
+		}
+	}
+
+	.interests-description {
+		color: getColour("textSecondary");
+		margin-bottom: 1.5rem;
+		font-size: 1rem;
+	}
+
+	.research-interests-list {
+		padding-left: 0;
+		margin: 0;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 1rem;
+
+		li {
+			list-style: none;
+			padding: 0.75rem 1rem;
+			background: rgba(getColour("textSecondary"), 0.05);
+			border-radius: 8px;
+			// transition: transform 0.3s ease;
+			font-size: 0.9rem;
+			font-weight: 600;
+
+			&:hover {
+				background: rgba(getColour("textSecondary"), 0.1);
+				// transform: translateY(-8px);
+			}
+
+			&::before {
+				content: '→';
+				margin-right: 0.8rem;
+				color: getColour("accent");
+				font-weight: 500;
+			}
+		}
+	}
+
+	.updates-section {
+		ul {
+			padding-left: 0;
+			margin: 0;
+
+			li {
+				list-style: none;
+				margin-bottom: 1rem;
+				font-size: 0.9rem;
+				line-height: 1.5;
+			}
+
+			.year-separator {
+				display: flex;
+				align-items: center;
+				// margin: 2.5rem 0 1.5rem;
+				// font-size: 1rem;
+				font-weight: 500;
+				color: getColour("textSecondary");
+				letter-spacing: 0.5px;
+
+				&:first-child {
+					margin-top: 0;
+				}
+
+				&:after {
+					content: '';
+					height: 1px;
+					margin-left: 1rem;
+					flex-grow: 1;
+					background: linear-gradient(90deg,
+							getColour("accent") 0%,
+							rgba(getColour("accent"), 0.1) 100%);
+				}
+			}
+
+			.update-date {
+				display: inline-block;
+				font-weight: 300;
+				color: getColour("textDark");
+				background-color: rgba(getColour("textSecondary"), 0.1);
+				padding: 0.1rem 0.5rem;
+				border-radius: 4px;
+				margin-right: 0.7rem;
+				// font-size: 0.9rem;
+
+				&:after {
+					display: none; // Remove the old separator
+				}
+			}
+
+			.text-accent {
+				font-weight: 900;
+			}
+		}
+
+		a {
+			color: getColour("accent");
+			text-decoration: none;
+			font-weight: 500;
+			transition: all 0.3s ease;
+
+			&:hover {
+				opacity: 0.8;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.featured-publications-list {
+		list-style: none;
+		display: grid;
+		// grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+		gap: 0.25rem;
+		padding-left: 0.3rem;
+		margin-bottom: 0.5rem;
+
+		.publication-card {
+			list-style: none;
+			padding: 0.25rem 0.5rem;
+			// padding: 0.75rem 1rem;
+			// border-radius: 8px;
+			// border: 1px solid #ddd;
+			// transition: all 0.3s ease;
+			// background: rgba(getColour("textSecondary"), 0.05);
+
+			// &:hover {
+			// 	background: rgba(getColour("textSecondary"), 0.1);
+			// 	transform: translateY(-2px);
+			// }
+		}
+	}
+
+	.see-more-link {
+		// display: inline-flex;
+		// align-items: center;
+		// padding: 0.5rem 1rem;
+		// color: getColour("textLight");
+		// background-color: rgba(getColour("accent"), 0.8);
+		// border-radius: 6px;
+		// text-decoration: none;
+
+		&:after {
+			content: '→';
+			margin-left: 0.5rem;
+			transition: transform 0.3s ease;
+		}
+
+		&:hover:after {
+			transform: translateX(4px);
+		}
+	}
+
+	#contact {
+		.list-unstyled {
+			padding-left: 1rem;
+			margin-bottom: 0;
+
+			li {
+				span {
+					user-select: none;
+				}
+
+				a {
+					user-select: text;
+				}
+			}
+		}
+	}
+}
+
+.skill-carousel {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 1rem;
+
+	// Container for the scrolling items
+	&-container {
+		display: flex;
+		transition: transform 0.5s cubic-bezier(0.4, 0.0, 0.2, 1); // Material Design easing
+		justify-content: center; // Center the items horizontally
+		padding: 0 20px; // Add padding to prevent items from touching the edges
+	}
+
+	// Create fading effect on the sides
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 80px; // Width of the fade effect
+		pointer-events: none; // Make sure clicks pass through
+		z-index: 2;
+	}
+
+	// Left side fade
+	&::before {
+		left: 0;
+		background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+	}
+
+	// Right side fade
+	&::after {
+		right: 0;
+		background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+	}
+
+	.skill-box {
+		flex: 0 0 auto;
+		margin: 0 10px; // Equal margin on both sides for better spacing
+	}
+}
+
+.skill-box {
+	width: 6rem; // Adjust size as needed
+	height: 6rem; // Adjust size as needed
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	// background-color: getColour("backgroundLight"); // Background color
+	border: 2px solid getColour("accent"); // Border color
+	border-radius: 8px; // Rounded corners
+	// box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Shadow effect
+	margin: 10px; // Space around the box
+	// color: getColour("accent"); // Text color
+	text-align: center; // Center text
+	font-size: 1.8rem;
+
+	.icon {
+		// font-size: 50px; // Adjust icon size
+		margin-bottom: 15px; // Space between icon and text
+	}
+
+	.skill-text {
+		font-size: 0.9rem; // Adjust text size
+		// font-weight: 600; // Make text bold
+		color: getColour("textDark"); // Text color
+	}
+}
 
 /** 404 PageNotFound **/
 
@@ -563,9 +810,23 @@ $navbar-dark-color: $color-primary-text;
 
 /** Publications **/
 
+.publication-section {
+	scroll-margin-top: $navbar-final-height * 2;
+	padding-top: 1rem;
+	padding-bottom: 0rem;
+
+	ul {
+		margin-bottom: 0;
+	}
+}
+
 .publication-item {
 	font-size: 0.85rem;
 	margin-bottom: 1rem;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 
 	p {
 		margin-bottom: 0.1rem;
@@ -783,7 +1044,7 @@ $navbar-dark-color: $color-primary-text;
 	padding: 0.5em 1em;
 	margin: .5em 1em 1em 0;
 
-	color: $color-primary-text;
+	color: getColour("textDark");
 
 	.project-item-title {
 		margin-bottom: 0.3em;
@@ -812,7 +1073,7 @@ $navbar-dark-color: $color-primary-text;
 
 	.project-item-url {
 		a {
-			color: $color-primary-text;
+			color: getColour("textDark");
 			text-decoration: none;
 			border-bottom: 1px solid $color-primary-text;
 		}
@@ -860,6 +1121,10 @@ $navbar-dark-color: $color-primary-text;
 
 .inline-icon-after {
 	margin-left: 0.4em;
+}
+
+.text-accent {
+	color: getColour("accent");
 }
 
 .btn-primary {
@@ -967,10 +1232,11 @@ $navbar-dark-color: $color-primary-text;
 }
 
 .fade-animation-sequence {
+
 	>.fade-animation-on-load {
 		@for $i from 1 through 10 {
 			&:nth-child(#{$i}) {
-				animation-delay: #{$i * 0.1}s;
+				animation-delay: #{$i * 0.15}s;
 			}
 		}
 	}
@@ -1033,4 +1299,35 @@ body {
 .highlight-target {
 	animation: softHighlight 2s ease-in-out;
 	opacity: 1;
+}
+
+// todo: fix footer flashing when loading
+// .fade-in {
+// 	animation: fadeIn 1s ease-in;
+// 	animation-fill-mode: both;
+// }
+
+// @keyframes fadeIn {
+// 	0% {
+// 		opacity: 0;
+// 		transform: translateY(20px);
+// 	}
+
+// 	100% {
+// 		opacity: 1;
+// 		transform: translateY(0);
+// 	}
+// }
+
+// This ensures that the scroll target is always visible when it is in view,
+// offsetting the fixed navbar
+.scroll-target {
+	scroll-margin-top: $navbar-final-height * 2;
+}
+
+/** Activities **/
+
+.activity-section {
+	padding-top: 0.8rem;
+	padding-bottom: 0.8rem;
 }

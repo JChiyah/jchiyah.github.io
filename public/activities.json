@@ -68,9 +68,9 @@
 		"list": [
 			{
 				"title": "Best Short Paper Award",
-				"subtitle": "SIGDIAL 2024",
-				"date": "Oct 2024",
-				"description": "For the paper <a href='/p/chiyah-garcia-etal-2023-referring'>‘What are you referring to?’ Evaluating the Ability of Multi-Modal Dialogue Models to Process Clarificational Exchanges</a>.",
+				"subtitle": "SIGDIAL 2023",
+				"date": "Oct 2023",
+				"description": "For the paper <a href='/publications#chiyah-garcia-etal-2023-referring'>‘What are you referring to?’ Evaluating the Ability of Multi-Modal Dialogue Models to Process Clarificational Exchanges</a>.",
 				"icon": "faAward"
 			},
 			{
