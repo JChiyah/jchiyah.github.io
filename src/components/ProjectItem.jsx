@@ -33,7 +33,7 @@ class ProjectItem extends Component {
 
 					<p className="card-subtitle text-primary mb-3">{this.state.role}</p>
 
-					<p className="card-text mb-3">{this.state.description}</p>
+					<p className="card-text mb-3" dangerouslySetInnerHTML={{ __html: this.state.description }} />
 
 					<div>
 						<p className="mb-1 small">
