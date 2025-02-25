@@ -798,86 +798,72 @@ body {
 .projects {
 
 	.items {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: stretch;
+		// display: flex;
+		// flex-direction: row;
+		// flex-wrap: wrap;
+		// justify-content: space-between;
+		// align-items: stretch;
 	}
 }
 
 .project-item {
-	flex: 1 1 40%;
-	padding: 0.5em 1em;
-	margin: .5em 1em 1em 0;
-	border: 2px solid getColour("accent");
-	color: getColour("textDark");
-	background-color: getColour("backgroundLight");
+	// flex: 1 1 40%;
+	padding: .5em 1em 1em 0;
+	border: none !important;
+
+	.card-body {
+		padding: 0.5em 1em;
+		border: 1px solid lighten(getColour("textSecondary"), 30%);
+		color: getColour("textDark");
+		background-color: getColour("backgroundLight");
+		transition: all 0.3s ease;
+		border-radius: 4px;
+
+		&:hover {
+			background: rgba(getColour("textSecondary"), 0.1);
+			transform: translateY(-8px);
+		}
+	}
 
 	.project-item-title {
-		margin-bottom: 0.3em;
-
-		font-size: 1.1em;
+		margin-bottom: 0.3rem;
+		color: getColour("accent");
+		font-size: 1rem;
+		font-weight: bold;
 	}
 
 	.project-item-subtitle {
-		font-size: 0.8em;
-		color: darken($color-primary-text, 10);
+		font-size: 0.8rem;
 	}
 
 	.project-item-role {
-		margin-top: 0.3em;
-		font-size: 0.8em;
-		color: darken($color-primary-text, 10);
+		margin-top: 0.3rem;
+		font-size: 0.8rem;
+		color: getColour("textSecondary");
 	}
 
 	.project-item-description {
-		font-size: 0.9em;
+		font-size: 0.8rem;
 	}
 
 	.project-item-skills {
-		font-size: 0.8em;
+		font-size: 0.8rem;
 	}
 
 	.project-item-url {
+		font-size: 0.85rem;
+
 		a {
-			color: getColour("textDark");
-			text-decoration: none;
-			border-bottom: 1px solid $color-primary-text;
+			// color: getColour("textDark");
+			// text-decoration: none;
+			// border-bottom: 1px solid $color-primary-text;
 		}
 
 		a:hover {
-			color: $color-primary-accent;
-			border-bottom: 1px solid $color-primary-accent;
+			// color: $color-primary-accent;
+			// border-bottom: 1px solid $color-primary-accent;
 		}
 	}
-}
-
-.project-item:hover {
-	position: relative;
-	top: -2px;
-	left: -2px;
-	box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 2px 1px -1px;
-}
-
-.project-item:nth-child(5n+1) {
-	background: #27ae60;
-}
-
-.project-item:nth-child(5n+2) {
-	background: #e74c3c;
-}
-
-.project-item:nth-child(5n+3) {
-	background: #e67e22;
-}
-
-.project-item:nth-child(5n+4) {
-	background: #3498db;
-}
-
-.project-item:nth-child(5n+5) {
-	background: #8e44ad;
 }
 
 
@@ -895,9 +881,9 @@ body {
 	color: getColour("accent");
 }
 
-.btn-primary {
-	color: $color-primary-text !important;
-}
+// .btn-primary {
+// 	color: $color-primary-text !important;
+// }
 
 // Add these styles if you want to customize the Bootstrap modal
 .modal {

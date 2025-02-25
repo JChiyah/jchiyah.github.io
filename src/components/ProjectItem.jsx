@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faExternalLinkAlt} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 
 
 class ProjectItem extends Component {
@@ -25,19 +25,38 @@ class ProjectItem extends Component {
 
 	render() {
 		return (
-			<div className="project-item">
-				<p className="project-item-subtitle">{this.state.subtitle}</p>
+			<div className="card project-item h-100">
+				<div className="card-body p-3 p-md-4">
+					<p className="text-muted small mb-1">{this.state.subtitle}</p>
 
-				<h4 className="project-item-title">{this.state.title}</h4>
+					<h4 className="card-title fw-bold mb-2">{this.state.title}</h4>
 
-				<p className="project-item-role">{this.state.role}</p>
-				<p className="project-item-description">{this.state.description}</p>
-				<p className="project-item-skills"><strong>Topics:</strong> {this.state.topics.join(', ')}</p>
-				<p className="project-item-skills"><strong>Skills:</strong> {this.state.skills.join(', ')}</p>
-				{this.state.url ?
-					<p className="project-item-url"><a href={this.state.url} target="_blank" rel="noopener noreferrer">
-						<FontAwesomeIcon className="fa-icon" icon={faExternalLinkAlt} /> {this.state.url}</a></p>
-					: '' }
+					<p className="card-subtitle text-primary mb-3">{this.state.role}</p>
+
+					<p className="card-text mb-3">{this.state.description}</p>
+
+					<div>
+						<p className="mb-1 small">
+							<strong>Topics:</strong> {this.state.topics.join(', ')}
+						</p>
+
+						<p className="mb-2 small">
+							<strong>Skills:</strong> {this.state.skills.join(', ')}
+						</p>
+
+						{this.state.url ? (
+							<a
+								href={this.state.url}
+								className="btn btn-sm btn-outline-primary mt-2"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<FontAwesomeIcon className="me-1" icon={faExternalLinkAlt} />
+								<span className="small">Visit Project</span>
+							</a>
+						) : ''}
+					</div>
+				</div>
 			</div>
 		);
 	}

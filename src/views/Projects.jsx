@@ -52,11 +52,9 @@ class Projects extends Component {
 						Here are some of the project I have worked on, but this is a <strong className="text-accent">work in progress</strong>!
 					</p>
 
-					<div className="items">
+					<div className="row row-cols-1 row-cols-lg-2 items">
 						{this.renderProjects()}
 					</div>
-
-					<p>This is a work in progress, so there may be projects missing.</p>
 				</div>
 			</PageLayout>
 		);
