@@ -71,6 +71,14 @@ If you just downloaded the project without the node_modules dependencies and you
 `npm install`
 
 
+## Favicon
+
+See this: 
+
+- https://favicomatic.com/ generate favicon from image
+- https://github.com/audreyfeldroy/favicon-cheat-sheet extra info
+
+
 ---------------------------
 
 Everything below this line was automatically written from the React README.
