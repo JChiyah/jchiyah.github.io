@@ -1,13 +1,71 @@
 [
 	{
+		"id": "blockworld-repairs",
+		"title": "BlockWorld-Repairs Dataset & Models",
+		"subtitle": "Code, models and dataset for paper",
+		"role": "First Author/Developer",
+		"description": "Code and models for the paper <em>'Repairs in a Block World: A New Benchmark for Handling User Corrections with Multi-Modal Language Models'</em> published at EMNLP 2024. It includes the dataset of human dialogues and annotations, see paper for more details.",
+		"url": "https://github.com/JChiyah/blockworld-repairs",
+		"topics": [
+			"NLP",
+			"Vision and Large Language Models",
+			"Multi-Modal Dialogue",
+			"Embodied AI"
+		],
+		"skills": [
+			"Python",
+			"PyTorch",
+			"Transformers",
+			"Object Detection",
+			"Weight & Biases",
+			"HuggingFace"
+		]
+	},
+	{
+		"id": "what-are-you-referring-to",
+		"title": "`What are you referring to?' Evaluating Multi-Modal Dialogue Models",
+		"subtitle": "Code and models for paper",
+		"role": "First Author/Developer",
+		"description": "Code for the paper <em>'`What are you referring to?' Evaluating the Ability of Multi-Modal Dialogue Models to Process Clarificational Exchanges'</em> published at SIGDIAL 2023 and winner of the Best Short Paper Award.",
+		"url": "https://github.com/JChiyah/what-are-you-referring-to",
+		"topics": [
+			"NLP",
+			"Vision and Language Models",
+			"Language Modelling",
+			"Multi-Modal Dialogue",
+			"SIMMC2.0"
+		],
+		"skills": [
+			"Python",
+			"PyTorch",
+			"PyTorch Lightning",
+			"Transformers",
+			"Object Detection",
+			"Weight & Biases",
+			"NLTK",
+			"SpaCy"
+		]
+	},
+	{
 		"id": "exploring-mm-in-simmc2",
 		"title": "Exploring Multi-Modal Representations in the SIMMC 2.0 Challenge",
 		"subtitle": "Code and models",
 		"role": "First Author/Developer",
 		"description": "Code and models for the paper 'Exploring Multi-Modal Representations for Ambiguity Detection & Coreference Resolution in the SIMMC 2.0 Challenge' published at AAAI 2022 DSTC10 Workshop.",
 		"url": "https://github.com/jchiyah/exloring-mm-in-simmc2",
-		"topics": ["NLP", "Vision and Language Models", "BERT", "SIMMC2.0", "Detectron2"],
-		"skills": ["Python", "Deep Learning", "PyTorch", "Object Detection"]
+		"topics": [
+			"NLP",
+			"Vision and Language Models",
+			"BERT",
+			"SIMMC2.0",
+			"Detectron2"
+		],
+		"skills": [
+			"Python",
+			"Deep Learning",
+			"PyTorch",
+			"Object Detection"
+		]
 	},
 	{
 		"id": "crwiz",
@@ -16,8 +74,22 @@
 		"role": "Software Developer & Research Assistant",
 		"description": "A framework for collecting real-time Wizard-of-Oz dialogues through crowd-sourcing for collaborative, complex tasks. This framework uses semi-guided dialogue to avoid interactions that breach procedures and processes only known to experts, while enabling the capture of a wide variety of interactions. It resides on Slurk (Schlangen et al., 2018). For more information, check the the conference publication in LREC 2020 and website below.",
 		"url": "https://github.com/JChiyah/crwiz",
-		"topics": ["Crowd-sourcing", "Amazon Mechanical Turk", "Dialogue System", "Complex Tasks"],
-		"skills": ["Python", "JavaScript", "MySQL", "Docker", "HTML", "SASS", "CSS", "PHP"]
+		"topics": [
+			"Crowd-sourcing",
+			"Amazon Mechanical Turk",
+			"Dialogue System",
+			"Complex Tasks"
+		],
+		"skills": [
+			"Python",
+			"JavaScript",
+			"MySQL",
+			"Docker",
+			"HTML",
+			"SASS",
+			"CSS",
+			"PHP"
+		]
 	},
 	{
 		"id": "miriam",
@@ -26,8 +98,21 @@
 		"role": "Software Developer & Research Assistant",
 		"description": "MIRIAM allows operators to interrogate autonomous underwater vehicle's actions and status in real time through natural language chat. This was developed as part of an internship in 2017. I still work on it and I have added many features like speech-recognition, speech-to-text, etc. The BBC wrote an article about it: https://www.bbc.co.uk/news/uk-scotland-edinburgh-east-fife-54282984",
 		"url": "https://miriamproject.github.io/",
-		"topics": ["Natural Language Generation", "Natural Language Understanding", "Dialogue System", "Chatbot"],
-		"skills": ["Python", "JavaScript", "PHP", "MySQL", "HTML", "SASS", "CSS"]
+		"topics": [
+			"Natural Language Generation",
+			"Natural Language Understanding",
+			"Dialogue System",
+			"Chatbot"
+		],
+		"skills": [
+			"Python",
+			"JavaScript",
+			"PHP",
+			"MySQL",
+			"HTML",
+			"SASS",
+			"CSS"
+		]
 	},
 	{
 		"id": "emiriam",
@@ -36,8 +121,23 @@
 		"role": "4th Year Thesis",
 		"description": "Extension to MIRIAM so it is able to predict and explain the behaviours of the autonomous underwater vehicles. Enables operators to ask about unexpected events that they may not fully understand. This was merged into the main MIRIAM project due to its commercial applications once my thesis was finished.",
 		"url": "https://miriamproject.github.io/",
-		"topics": ["Explainability", "Autonomy Behaviours", "Trust", "Transparency", "Mental Models", "Laravel Framework"],
-		"skills": ["Python", "JavaScript", "PHP", "MySQL", "HTML", "SASS", "CSS"]
+		"topics": [
+			"Explainability",
+			"Autonomy Behaviours",
+			"Trust",
+			"Transparency",
+			"Mental Models",
+			"Laravel Framework"
+		],
+		"skills": [
+			"Python",
+			"JavaScript",
+			"PHP",
+			"MySQL",
+			"HTML",
+			"SASS",
+			"CSS"
+		]
 	},
 	{
 		"id": "mar",
@@ -46,8 +146,23 @@
 		"role": "Main Software Developer",
 		"description": "A cross-platform augmented reality program to monitor underwater vehicles in real-time through a camera. I developed this during my placement at SeeByte (June - December 2018).",
 		"url": "",
-		"topics": ["Augmented Reality", "Image Processing", "Android Dev", "Real-time Performance"],
-		"skills": ["C++", "Java", "Android SDK", "SQLite", "XML", "CMake", "Hunter", "Polly", "C#"]
+		"topics": [
+			"Augmented Reality",
+			"Image Processing",
+			"Android Dev",
+			"Real-time Performance"
+		],
+		"skills": [
+			"C++",
+			"Java",
+			"Android SDK",
+			"SQLite",
+			"XML",
+			"CMake",
+			"Hunter",
+			"Polly",
+			"C#"
+		]
 	},
 	{
 		"id": "datavalidation",
@@ -56,8 +171,15 @@
 		"role": "5th Year MEng Project",
 		"description": "A Python package for validating bike geometries and calculating missing parameters using maths.",
 		"url": "https://jchiyah.github.io/data-validation-submission/readme.html",
-		"topics": ["Big Data", "Validation", "Geometry", "Bicycles"],
-		"skills": ["Python"]
+		"topics": [
+			"Big Data",
+			"Validation",
+			"Geometry",
+			"Bicycles"
+		],
+		"skills": [
+			"Python"
+		]
 	},
 	{
 		"id": "jchiyah.github.io",
@@ -66,8 +188,15 @@
 		"role": "Full-Stack Developer (I guess)",
 		"description": "I built this website using React and SASS (Syntactically Awesome Style Sheets). Hosted in GitHub pages, it is front-end only, but all the data displayed is dynamically loaded, without using a server!",
 		"url": "",
-		"topics": ["React.JS"],
-		"skills": ["JavaScript", "HTML", "SASS", "CSS"]
+		"topics": [
+			"React.JS"
+		],
+		"skills": [
+			"JavaScript",
+			"HTML",
+			"SASS",
+			"CSS"
+		]
 	},
 	{
 		"id": "purplesky",
@@ -76,8 +205,20 @@
 		"role": "Lead Software Developer and Team Manager",
 		"description": "Website for a year-long group project during my 3rd Year at Heriot-Watt University. It involved students from different courses. The team and I achieved 2nd place and obtained a prize for it.",
 		"url": "https://github.com/JChiyah/purplesky",
-		"topics": ["Feature-rich Website", "Marketing", "Agile"],
-		"skills": ["PHP", "JavaScript", "MySQL", "HTML", "SASS", "CSS", "CodeIgniter"]
+		"topics": [
+			"Feature-rich Website",
+			"Marketing",
+			"Agile"
+		],
+		"skills": [
+			"PHP",
+			"JavaScript",
+			"MySQL",
+			"HTML",
+			"SASS",
+			"CSS",
+			"CodeIgniter"
+		]
 	},
 	{
 		"id": "blackout",
@@ -86,7 +227,16 @@
 		"role": "Software Developer",
 		"description": "Simple roulette game for Android devices that integrates with the Facebook API. It was for a small company in Spain. The code is not actively developed anymore.",
 		"url": "https://github.com/JChiyah/blackout-machine",
-		"topics": ["Android Development", "Game", "Facebook API"],
-		"skills": ["Java", "XML", "Android SDK", "Facebook SDK"]
+		"topics": [
+			"Android Development",
+			"Game",
+			"Facebook API"
+		],
+		"skills": [
+			"Java",
+			"XML",
+			"Android SDK",
+			"Facebook SDK"
+		]
 	}
 ]
