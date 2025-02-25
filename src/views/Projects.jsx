@@ -48,6 +48,10 @@ class Projects extends Component {
 				<div className="projects">
 					<h3>Projects</h3>
 
+					<p className="text-secondary">
+						Here are some of the project I have worked on, but this is a <strong className="text-accent">work in progress</strong>!
+					</p>
+
 					<div className="items">
 						{this.renderProjects()}
 					</div>

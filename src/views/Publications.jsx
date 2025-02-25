@@ -235,6 +235,9 @@ class Publications extends Component {
 					You can also check my <a href={publicationsFile} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faBook} /> bibtex file</a> or
 					my <a href="https://scholar.google.co.uk/citations?hl=en&user=NQyCFjYAAAAJ#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faGraduationCap} /> Google Scholar profile</a>. If you need access to any of the publications and the link is broken, contact me and I will happily provide a copy.
 				</p>
+				<p>Please cite me as <strong className="text-accent">Chiyah-Garcia</strong> !
+					I follow the guidelines from this <a href="https://blog.apastyle.org/apastyle/2017/05/whats-in-a-name-two-part-surnames-in-apa-style.html" target="_blank" rel="noopener noreferrer">guide</a>.
+				</p>
 				<NewModal
 					show={this.state.openModal}
 					onHide={() => this.onCloseModal()}
@@ -245,12 +248,6 @@ class Publications extends Component {
 				<Container>
 					{this.renderPublications()}
 				</Container>
-				<br />
-				<hr />
-				<h2>My Name</h2>
-				<p>Please cite me as <em>Chiyah-Garcia</em> !
-					I follow the guidelines from this <a href="https://blog.apastyle.org/apastyle/2017/05/whats-in-a-name-two-part-surnames-in-apa-style.html" target="_blank" rel="noopener noreferrer">guide</a>.
-				</p>
 			</PageLayout >
 		);
 	}

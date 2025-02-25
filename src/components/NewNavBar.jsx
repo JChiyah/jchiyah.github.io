@@ -82,7 +82,7 @@ const NewNavBar = () => {
 						<NavigationLink icon={faCubes} text="Projects" onNavigate={handleNavigate} />
 						<NavigationLink icon={faFileLines} text="Publications" onNavigate={handleNavigate} />
 						<NavigationLink icon={faBriefcase} text="Activities" onNavigate={handleNavigate} />
-						<NavigationLink icon={faEnvelope} text="Contact" customUrl="#contact" onNavigate={handleNavigate} />
+						<NavigationLink icon={faEnvelope} text="Contact" customUrl="/#contact" onNavigate={handleNavigate} />
 					</Nav>
 				</Navbar.Collapse>
 			</Container>
