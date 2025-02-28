@@ -219,59 +219,7 @@ const NewHome = () => {
 								{ icon: faCss3, text: "CSS" },
 								{ icon: faReact, text: "React" },
 								{ icon: faSass, text: "Sass" },
-							]}
-								showAllSkills={showAllSkills} />
-							<SkillCarousel skills={[
-								{ icon: faObjectUngroup, text: "Generative AI" },
-								{ icon: faSquareBinary, text: "PyTorch" },
-								{ icon: faDiagramProject, text: "HuggingFace" },
-								{ icon: faHexagonNodes, text: "Transformers" },
-								{ icon: faBraille, text: "Weight & Biases" },
-								{ icon: faBoltLightning, text: "PyTorch Lightning" },
-								{ icon: faObjectUngroup, text: "Multi-Modal LLMs" },
-								{ icon: faCode, text: "C++" },
-								{ icon: faPhp, text: "PHP" },
-								{ icon: faJs, text: "JavaScript" },
-								{ icon: faHtml5, text: "HTML" },
-								{ icon: faCss3, text: "CSS" },
-								{ icon: faReact, text: "React" },
-								{ icon: faSass, text: "Sass" },
-								{ icon: faJava, text: "Java" },
-								{ icon: faTerminal, text: "C" },
-								{ icon: faPython, text: "Python" },
-								{ icon: faLinux, text: "Linux" },
-								{ icon: faAmazon, text: "AWS" },
-								{ icon: faGit, text: "Git" },
-								{ icon: faDocker, text: "Docker" },
-							]}
-								startDirection="left"
-								showAllSkills={showAllSkills} />
-							<SkillCarousel skills={[
-								{ icon: faCode, text: "C++" },
-								{ icon: faPhp, text: "PHP" },
-								{ icon: faJs, text: "JavaScript" },
-								{ icon: faHtml5, text: "HTML" },
-								{ icon: faCss3, text: "CSS" },
-								{ icon: faReact, text: "React" },
-								{ icon: faSass, text: "Sass" },
-								{ icon: faObjectUngroup, text: "Generative AI" },
-								{ icon: faSquareBinary, text: "PyTorch" },
-								{ icon: faDiagramProject, text: "HuggingFace" },
-								{ icon: faHexagonNodes, text: "Transformers" },
-								{ icon: faBraille, text: "Weight & Biases" },
-								{ icon: faBoltLightning, text: "PyTorch Lightning" },
-								{ icon: faObjectUngroup, text: "Multi-Modal LLMs" },
-								{ icon: faJava, text: "Java" },
-								{ icon: faTerminal, text: "C" },
-								{ icon: faPython, text: "Python" },
-								{ icon: faLinux, text: "Linux" },
-								{ icon: faAmazon, text: "AWS" },
-								{ icon: faGit, text: "Git" },
-								{ icon: faDocker, text: "Docker" },
-							]}
-								startDirection="right"
-								showAllSkills={showAllSkills} />
-							<button className="btn btn-link text-decoration-none text-center">Show all <FontAwesomeIcon icon={faChevronDown} onClick={() => setShowAllSkills(!showAllSkills)} /></button>
+							]} rows={3} />
 						</div>
 					</div>
 				</section>

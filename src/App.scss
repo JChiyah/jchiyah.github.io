@@ -537,50 +537,119 @@ body {
 .skill-carousel {
 	position: relative;
 	width: 100%;
-	max-width: breakpoint("md");
-	overflow: hidden;
-	margin-bottom: 1rem;
+	max-width: 650px; // breakpoint("md");
 
 	// Container for the scrolling items
 	&-container {
 		display: flex;
 		transition: transform 0.5s cubic-bezier(0.4, 0.0, 0.2, 1); // Material Design easing
-		justify-content: center; // Center the items horizontally
-		padding: 0 20px; // Add padding to prevent items from touching the edges
+		// justify-content: center; // Center the items horizontally
+		padding: 0 30px; // Add padding to prevent items from touching the edges
 	}
 
-	// Create fading effect on the sides
-	&::before,
-	&::after {
-		content: '';
-		position: absolute;
-		top: 0;
-		height: 100%;
-		width: 80px; // Width of the fade effect
-		pointer-events: none; // Make sure clicks pass through
-		z-index: 2;
+	&-row {
+
+		// Create fading effect on the sides
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			height: 100%;
+			width: 80px; // Width of the fade effect
+			pointer-events: none; // Make sure clicks pass through
+			z-index: 2;
+		}
+
+		// Left side fade
+		&::before {
+			left: 0;
+			background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+		}
+
+		// Right side fade
+		&::after {
+			right: 0;
+			background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+		}
 	}
 
-	// Left side fade
-	&::before {
-		left: 0;
-		background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+	.skill-carousel-row {
+		margin-bottom: 1rem;
+		overflow: hidden;
 	}
 
-	// Right side fade
-	&::after {
-		right: 0;
-		background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+	.skill-carousel-row-all {
+		opacity: 0;
+		animation: fadeSlideDown 0.5s ease-out forwards;
+		overflow: hidden; // Change to hidden to prevent content flash	
+
+
+		.skill-carousel-container {
+			display: flex;
+			flex-wrap: wrap; // Allow items to wrap to new lines
+			justify-content: center;
+			gap: 20px; // Add consistent spacing between items
+			transition: none; // Remove the transform transition
+			opacity: 0; // Start with container hidden
+			transform: translateY(-20px);
+			animation: containerFadeIn 0.4s ease-out 0.1s forwards; // Slight delay
+		}
+
+		.skill-box {
+			// Remove any flex-grow/shrink properties
+			flex: 0 0 auto;
+			margin: 0; // Remove margin since we're using gap
+		}
 	}
 
 	.skill-box {
 		flex: 0 0 auto;
 		margin: 0 10px; // Equal margin on both sides for better spacing
 	}
+
+	.show-more-btn {
+		position: absolute;
+		// bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		background: white;
+		border: none;
+		color: lighten(getColour('accent'), 10);
+		padding: 0 0.5rem;
+		cursor: pointer;
+		font-size: 0.7rem;
+		z-index: 1;
+		transition: opacity 0.3s ease; // Smooth button fade
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }
 
-.show-all-skills {
-	overflow: visible;
+@keyframes fadeSlideDown {
+	from {
+		opacity: 0;
+		max-height: 0;
+	}
+
+	to {
+		opacity: 1;
+		max-height: 2000px;
+	}
+}
+
+@keyframes containerFadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 .skill-box {
@@ -1102,3 +1171,16 @@ body {
 	padding-top: 0.8rem;
 	padding-bottom: 0.8rem;
 }
+
+// 		opacity: 0;
+// 		transform: translateY(20px);
+// 	}
+
+// 	100% {
+// 		opacity: 1;
+// 		transform: translateY(0);
+// 	}
+// }
+
+// This ensures that the scroll target is always visible when it is in view,
+// offsetting the fixed navbar
