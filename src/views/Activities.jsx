@@ -56,8 +56,8 @@ class Activities extends Component {
 
 		return (
 			<PageLayout
-				pageTitle="Professional Activities"
-				navTitle="Activities"
+				pageTitle="Experience"
+				navTitle="Experience"
 				navItems={navItems}
 			>
 				{body}

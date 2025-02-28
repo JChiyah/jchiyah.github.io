@@ -165,9 +165,9 @@ class PublicationItem extends Component {
 			<li className="publication-item fade-animation-on-load scroll-target" id={state.citationKey}>
 				<p>
 					{/*{this.state.author} ({this.state.year}). <b>&lsquo;{this.state.title}&rsquo;</b>. In: <i>{this.state.booktitle}</i>. {this.state.series}. {this.state.address}.*/}
-					<a href={pubLink} target="_blank" rel="noopener noreferrer">{state.title}</a><br />
+					<a href={pubLink} target="_blank" rel="noopener noreferrer" className="publication-title">{state.title}</a><br />
 					{this.getAuthorStringHtml(state.author)}.<br />
-					<span className="conference">{state.series ? '[' : ''}{state.series}{state.series ? '] ' : ''}<i>{state.booktitle}</i></span>
+					<span className="text-secondary">{state.series ? '[' : ''}{state.series}{state.series ? '] ' : ''}<i>{state.booktitle}</i></span>
 					{/* . {state.series}{state.series ? '. ' : ''}
 					{state.address}{state.address ? '.' : ''} */}
 				</p>

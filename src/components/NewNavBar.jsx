@@ -63,7 +63,7 @@ const NewNavBar = () => {
 		>
 			<Container>
 				<Navbar.Brand as={Link} to="/">
-					JavierCG
+					Javier Chiyah-Garcia
 					<span className="ms-2 text-secondary d-md-none">
 						{currentPage !== '' && currentPage !== 'Home' ? `/ ${currentPage}` : ''}
 					</span>
@@ -81,7 +81,7 @@ const NewNavBar = () => {
 						{/* <NavigationLink icon={faUser} text="About" onNavigate={handleNavigate} /> */}
 						<NavigationLink icon={faCubes} text="Projects" onNavigate={handleNavigate} />
 						<NavigationLink icon={faFileLines} text="Publications" onNavigate={handleNavigate} />
-						<NavigationLink icon={faBriefcase} text="Activities" onNavigate={handleNavigate} />
+						<NavigationLink icon={faBriefcase} text="Experience" onNavigate={handleNavigate} />
 						<NavigationLink icon={faEnvelope} text="Contact" customUrl="/#contact" onNavigate={handleNavigate} />
 					</Nav>
 				</Navbar.Collapse>

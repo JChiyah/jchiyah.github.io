@@ -5,9 +5,9 @@
 	position: relative;
 	padding: 20px 0;
 	margin-left: 20px;
-	font-size: 0.85rem;
+	font-size: 0.95rem;
 
-	@media (max-width: 768px) {
+	@media (max-width: breakpoint("md")) {
 		margin-left: 10px;
 	}
 
@@ -20,7 +20,7 @@
 		width: 2px;
 		background: #e9ecef;
 
-		@media (max-width: 768px) {
+		@media (max-width: breakpoint("md")) {
 			left: 15px;
 			top: 30px;
 		}
@@ -32,7 +32,7 @@
 	margin-bottom: 40px;
 	position: relative;
 
-	@media (max-width: 768px) {
+	@media (max-width: breakpoint("md")) {
 		margin-bottom: 30px;
 	}
 
@@ -60,7 +60,7 @@
 		font-size: 1.2rem;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: breakpoint("md")) {
 		width: 30px;
 		height: 30px;
 		margin-right: 15px;
@@ -76,7 +76,7 @@
 	min-width: 0;
 
 	h3 {
-		font-size: 1.1rem;
+		font-size: 1.15rem;
 		margin-bottom: 0.25rem;
 		// color: #212529;
 
@@ -88,7 +88,7 @@
 			color: getColour('accent');
 			font-weight: normal;
 
-			@media (max-width: 768px) {
+			@media (max-width: breakpoint("md")) {
 				display: block;
 				margin-top: 0.25rem;
 			}
@@ -97,10 +97,10 @@
 
 	.timeline-date {
 		color: getColour('textSecondary');
-		font-size: 0.8rem;
+		font-size: 0.9rem;
 		margin-bottom: 0.75rem;
 
-		@media (max-width: 768px) {
+		@media (max-width: breakpoint("md")) {
 			font-size: 0.8rem;
 			margin-bottom: 0.5rem;
 		}

@@ -200,7 +200,7 @@ class Publications extends Component {
 
 		this.getPublicationsByYear().forEach((year) => {
 			publications.push(
-				<div key={year} id={"papers-" + year} className="publication-section scroll-target">
+				<div key={year} id={"papers-" + year} className="publication-section fade-animation-on-load scroll-target">
 					<h4>{year}</h4>
 					<ul className="fade-animation-sequence">
 						{publicationsObject[year].map((entry) => (
@@ -231,12 +231,12 @@ class Publications extends Component {
 				navItems={navItems}
 			>
 				<h3>Publications</h3>
-				<p style={{ marginBottom: '2em' }}>
-					You can also check my <a href={publicationsFile} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faBook} /> bibtex file</a> or
-					my <a href="https://scholar.google.co.uk/citations?hl=en&user=NQyCFjYAAAAJ#" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="fa-icon" icon={faGraduationCap} /> Google Scholar profile</a>. If you need access to any of the publications and the link is broken, contact me and I will happily provide a copy.
+				<p>
+					You can also check my <a href={publicationsFile} target="_blank" rel="noopener noreferrer" className="link"><FontAwesomeIcon className="fa-icon inline-icon-before" icon={faBook} />bibtex file</a> or
+					my <a href="https://scholar.google.co.uk/citations?hl=en&user=NQyCFjYAAAAJ#" target="_blank" rel="noopener noreferrer" className="link"><FontAwesomeIcon className="fa-icon inline-icon-before" icon={faGraduationCap} />Google Scholar profile</a>. If you need access to any of the publications and the link is broken, contact me and I will happily provide a copy.
 				</p>
 				<p>Please cite me as <strong className="text-accent">Chiyah-Garcia</strong> !
-					I follow the guidelines from this <a href="https://blog.apastyle.org/apastyle/2017/05/whats-in-a-name-two-part-surnames-in-apa-style.html" target="_blank" rel="noopener noreferrer">guide</a>.
+					I follow the guidelines from this <a href="https://blog.apastyle.org/apastyle/2017/05/whats-in-a-name-two-part-surnames-in-apa-style.html" target="_blank" rel="noopener noreferrer" className="link">guide</a>.
 				</p>
 				<NewModal
 					show={this.state.openModal}
@@ -245,7 +245,7 @@ class Publications extends Component {
 					citationStyles={this.state.citationStyles}
 					onCitationCopy={(citationId, e) => this.highlightCitation(citationId, e)}
 				/>
-				<Container>
+				<Container className="fade-animation-sequence">
 					{this.renderPublications()}
 				</Container>
 			</PageLayout >

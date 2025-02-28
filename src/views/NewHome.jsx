@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState, setState } from 'react';
 import { useEffect } from 'react';
 
 import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFileLines, faTrophy, faEnvelope, faHexagonNodes, faSquareBinary, faTerminal, faCode, faDiagramProject, faBoltLightning, faBraille, faObjectUngroup } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin, faPython, faJava, faJs, faHtml5, faCss3, faReact, faSass, faGit, faDocker, faPhp } from '@fortawesome/free-brands-svg-icons';
+import { faFileLines, faTrophy, faEnvelope, faHexagonNodes, faSquareBinary, faTerminal, faCode, faDiagramProject, faBoltLightning, faBraille, faObjectUngroup, faCaretDown, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faPython, faJava, faJs, faHtml5, faCss3, faReact, faSass, faGit, faDocker, faPhp, faAmazon, faLinux } from '@fortawesome/free-brands-svg-icons';
 
 import { SocialLinks } from '../components/SocialLinks';
 import PageLayout from './PageLayout';
@@ -30,9 +30,9 @@ const highlightTarget = (element) => {
 	element.classList.add('highlight-target');
 }
 
-
 const NewHome = () => {
 	const location = useLocation();
+	const [showAllSkills] = useState(false);
 
 	useEffect(() => {
 		const hash = location.hash;
@@ -44,6 +44,12 @@ const NewHome = () => {
 			}
 		}
 	}, [location]);
+
+	const setShowAllSkills = (showAllSkills) => {
+		// setStat(showAllSkills);
+		document.getElementsByClassName("skill-carousel-container").classList.add("show-all-skills");
+	}
+	console.log(showAllSkills);
 
 	return (
 		<PageLayout
@@ -85,7 +91,7 @@ const NewHome = () => {
 						I've collaborated with companies like <strong className="text-accent">Siemens</strong> or <strong className="text-accent">SeeByte</strong> throughout my research, including interning at <strong className="text-accent">Amazon Alexa AI</strong> and <strong className="text-accent">SeeByte</strong>, applying my work to real-world challenges. This has resulted in many publications at top conferences and several industry partnerships.
 						<br /><br />
 
-						I'm currently actively <strong className="text-accent">looking for new opportunities</strong> in the field of AI and NLP, particularly with multi-modal LLMs, so don't hesitate to <Link to="/#contact">contact me!</Link>
+						I'm currently actively <strong className="text-accent">looking for new opportunities</strong> in the field of AI and NLP, particularly with multi-modal LLMs, so don't hesitate to <Link to="/#contact" className="link">contact me!</Link>
 					</p>
 				</section>
 
@@ -120,7 +126,7 @@ const NewHome = () => {
 								<li className="fade-animation-on-load year-separator">2024</li>
 								<li className="fade-animation-on-load">
 									<span className="update-date">Nov</span>
-									Presented two papers [<Link to="/publications#chiyah-garcia-etal-2024-repairs">1</Link>, <Link to="/publications#chiyah-garcia-etal-2024-adapting">2</Link>] at EMNLP'24 in Miami
+									Presented two papers [<Link to="/publications#chiyah-garcia-etal-2024-repairs" className="link">1</Link>, <Link to="/publications#chiyah-garcia-etal-2024-adapting" className="link">2</Link>] at EMNLP'24 in Miami
 								</li>
 								<li className="fade-animation-on-load">
 									<span className="update-date">Oct</span>
@@ -129,15 +135,15 @@ const NewHome = () => {
 								<li className="fade-animation-on-load year-separator">2023</li>
 								<li className="fade-animation-on-load">
 									<span className="update-date">Oct</span>
-									Published the proceedings for the <Link to="/publications#yrrsds-2023-young">YRRSDS'23 Workshop</Link>
+									Published the proceedings for the <Link to="/publications#yrrsds-2023-young" className="link">YRRSDS'23 Workshop</Link>
 								</li>
 								<li className="fade-animation-on-load">
 									<span className="update-date">Sep</span>
-									Received the <span className="text-accent">Best Short Paper Award</span> at SIGDIAL'23! See the <Link to="/publications#chiyah-garcia-etal-2023-referring">paper here</Link>
+									Received the <span className="text-accent">Best Short Paper Award</span> at SIGDIAL'23! See the <Link to="/publications#chiyah-garcia-etal-2023-referring" className="link">paper here</Link>
 								</li>
 								<li className="fade-animation-on-load">
 									<span className="update-date">Sep</span>
-									Organised the <Link to="https://sites.google.com/view/yrrsds2023" target="_blank">YRRSDS'23 Workshop</Link>
+									Organised the <Link to="https://sites.google.com/view/yrrsds2023" target="_blank" className="link">YRRSDS'23 Workshop</Link>
 								</li>
 								<li className="fade-animation-on-load">
 									<span className="update-date">Jun</span>
@@ -152,65 +158,122 @@ const NewHome = () => {
 				</section>
 
 				<section className="row home-section fade-animation-on-load">
-					<h2 className="mb-4">
-						Featured <span className="text-accent">Publications</span>
-					</h2>
-					<ul className="fade-animation-sequence featured-publications-list">
-						<FeaturedPublication
-							bibkey="chiyah-garcia-etal-2024-repairs"
-							title="Repairs in a Block World: A New Benchmark for Handling User Corrections with Multi-Modal Language Models"
-							authors="Chiyah-Garcia et al."
-							conferenceSeries="EMNLP'24"
-						/>
-						<FeaturedPublication
-							bibkey="chiyah-garcia-etal-2024-adapting"
-							title="Adapting LLM Predictions in In-Context Learning with Data Priors"
-							authors="Chiyah-Garcia et al."
-							conferenceSeries="CustomNLP4U at EMNLP'24"
-						/>
-						<FeaturedPublication
-							bibkey="chiyah-garcia-etal-2023-referring"
-							title="`What are you referring to?' Evaluating the Ability of Multi-Modal Dialogue Models to Process Clarificational Exchanges"
-							authors="Chiyah-Garcia et al."
-							conferenceSeries="SIGDIAL'23"
-							extraHtml={<strong>[Best Paper Award] <FontAwesomeIcon icon={faTrophy} /></strong>}
-						/>
-						<li className="fade-animation-on-load">
-							<Link to="/publications" className="btn btn-primary see-more-link">See all publications</Link>
-						</li>
-					</ul>
-				</section>
+					<div className="row justify-content-center">
 
-				<section className="row home-section fade-animation-on-load">
-					<h2 className="mb-4">
-						<span className="text-accent">Skill</span>set
-					</h2>
-					<p className="text-secondary">
-						These are some of the skills or tools I often use:
-					</p>
-					<SkillCarousel skills={[
-						{ icon: faSquareBinary, text: "PyTorch" },
-						{ icon: faDiagramProject, text: "HuggingFace" },
-						{ icon: faHexagonNodes, text: "Transformers" },
-						{ icon: faPython, text: "Python" },
-						{ icon: faGit, text: "Git" },
-						{ icon: faDocker, text: "Docker" },
-						{ icon: faBraille, text: "Weight & Biases" },
-						{ icon: faBoltLightning, text: "PyTorch Lightning" },
-						{ icon: faObjectUngroup, text: "Multi-Modal LLMs" },
-					]} />
-					<br />
-					<SkillCarousel skills={[
-						{ icon: faJava, text: "Java" },
-						{ icon: faPhp, text: "PHP" },
-						{ icon: faTerminal, text: "C" },
-						{ icon: faCode, text: "C++" },
-						{ icon: faJs, text: "JavaScript" },
-						{ icon: faHtml5, text: "HTML" },
-						{ icon: faCss3, text: "CSS" },
-						{ icon: faReact, text: "React" },
-						{ icon: faSass, text: "Sass" },
-					]} startDirection="left" />
+						<div className="col-lg-6 fade-animation-on-load">
+							<h2 className="mb-4">
+								Featured <span className="text-accent">Publications</span>
+							</h2>
+							<ul className="fade-animation-sequence featured-publications-list">
+								<FeaturedPublication
+									bibkey="chiyah-garcia-etal-2024-repairs"
+									title="Repairs in a Block World: A New Benchmark for Handling User Corrections with Multi-Modal Language Models"
+									authors="Chiyah-Garcia et al."
+									conferenceSeries="EMNLP'24"
+								/>
+								<FeaturedPublication
+									bibkey="chiyah-garcia-etal-2024-adapting"
+									title="Adapting LLM Predictions in In-Context Learning with Data Priors"
+									authors="Chiyah-Garcia et al."
+									conferenceSeries="CustomNLP4U at EMNLP'24"
+								/>
+								<FeaturedPublication
+									bibkey="chiyah-garcia-etal-2023-referring"
+									title="`What are you referring to?' Evaluating the Ability of Multi-Modal Dialogue Models to Process Clarificational Exchanges"
+									authors="Chiyah-Garcia et al."
+									conferenceSeries="SIGDIAL'23"
+									extraHtml={<strong>[Best Paper Award] <FontAwesomeIcon icon={faTrophy} /></strong>}
+								/>
+								<li className="fade-animation-on-load">
+									<Link to="/publications" className="btn btn-primary see-more-link">See all publications</Link>
+								</li>
+							</ul>
+						</div>
+
+						<div className="col-lg-6 fade-animation-on-load">
+							<h2 className="mb-4">
+								<span className="text-accent">Skill</span>set
+							</h2>
+							<p className="text-secondary">
+								These are some of my skills or tools I often use:
+							</p>
+							<SkillCarousel skills={[
+								{ icon: faObjectUngroup, text: "Generative AI" },
+								{ icon: faSquareBinary, text: "PyTorch" },
+								{ icon: faDiagramProject, text: "HuggingFace" },
+								{ icon: faHexagonNodes, text: "Transformers" },
+								{ icon: faBraille, text: "Weight & Biases" },
+								{ icon: faBoltLightning, text: "PyTorch Lightning" },
+								{ icon: faObjectUngroup, text: "Multi-Modal LLMs" },
+								{ icon: faJava, text: "Java" },
+								{ icon: faTerminal, text: "C" },
+								{ icon: faPython, text: "Python" },
+								{ icon: faLinux, text: "Linux" },
+								{ icon: faAmazon, text: "AWS" },
+								{ icon: faGit, text: "Git" },
+								{ icon: faDocker, text: "Docker" },
+								{ icon: faCode, text: "C++" },
+								{ icon: faPhp, text: "PHP" },
+								{ icon: faJs, text: "JavaScript" },
+								{ icon: faHtml5, text: "HTML" },
+								{ icon: faCss3, text: "CSS" },
+								{ icon: faReact, text: "React" },
+								{ icon: faSass, text: "Sass" },
+							]}
+								showAllSkills={showAllSkills} />
+							<SkillCarousel skills={[
+								{ icon: faObjectUngroup, text: "Generative AI" },
+								{ icon: faSquareBinary, text: "PyTorch" },
+								{ icon: faDiagramProject, text: "HuggingFace" },
+								{ icon: faHexagonNodes, text: "Transformers" },
+								{ icon: faBraille, text: "Weight & Biases" },
+								{ icon: faBoltLightning, text: "PyTorch Lightning" },
+								{ icon: faObjectUngroup, text: "Multi-Modal LLMs" },
+								{ icon: faCode, text: "C++" },
+								{ icon: faPhp, text: "PHP" },
+								{ icon: faJs, text: "JavaScript" },
+								{ icon: faHtml5, text: "HTML" },
+								{ icon: faCss3, text: "CSS" },
+								{ icon: faReact, text: "React" },
+								{ icon: faSass, text: "Sass" },
+								{ icon: faJava, text: "Java" },
+								{ icon: faTerminal, text: "C" },
+								{ icon: faPython, text: "Python" },
+								{ icon: faLinux, text: "Linux" },
+								{ icon: faAmazon, text: "AWS" },
+								{ icon: faGit, text: "Git" },
+								{ icon: faDocker, text: "Docker" },
+							]}
+								startDirection="left"
+								showAllSkills={showAllSkills} />
+							<SkillCarousel skills={[
+								{ icon: faCode, text: "C++" },
+								{ icon: faPhp, text: "PHP" },
+								{ icon: faJs, text: "JavaScript" },
+								{ icon: faHtml5, text: "HTML" },
+								{ icon: faCss3, text: "CSS" },
+								{ icon: faReact, text: "React" },
+								{ icon: faSass, text: "Sass" },
+								{ icon: faObjectUngroup, text: "Generative AI" },
+								{ icon: faSquareBinary, text: "PyTorch" },
+								{ icon: faDiagramProject, text: "HuggingFace" },
+								{ icon: faHexagonNodes, text: "Transformers" },
+								{ icon: faBraille, text: "Weight & Biases" },
+								{ icon: faBoltLightning, text: "PyTorch Lightning" },
+								{ icon: faObjectUngroup, text: "Multi-Modal LLMs" },
+								{ icon: faJava, text: "Java" },
+								{ icon: faTerminal, text: "C" },
+								{ icon: faPython, text: "Python" },
+								{ icon: faLinux, text: "Linux" },
+								{ icon: faAmazon, text: "AWS" },
+								{ icon: faGit, text: "Git" },
+								{ icon: faDocker, text: "Docker" },
+							]}
+								startDirection="right"
+								showAllSkills={showAllSkills} />
+							<button className="btn btn-link text-decoration-none text-center">Show all <FontAwesomeIcon icon={faChevronDown} onClick={() => setShowAllSkills(!showAllSkills)} /></button>
+						</div>
+					</div>
 				</section>
 
 				<section className="row home-section fade-animation-on-load" id="contact">
@@ -226,7 +289,7 @@ const NewHome = () => {
 								<span>
 									<FontAwesomeIcon icon={faEnvelope} className="me-2 inline-icon-before text-accent" />Preferred:
 								</span>
-								<a href="" className="btn btn-link text-decoration-none">
+								<a href="" className="btn btn-link text-decoration-none link">
 									&#106;&#099;&#104;&#105;&#121;&#097;&#104;&#032;(&#097;&#116;)&#032;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#032;(&#100;&#111;&#116;)&#032;&#099;&#111;&#109;
 								</a>
 							</li>
@@ -234,7 +297,7 @@ const NewHome = () => {
 								<span>
 									<FontAwesomeIcon icon={faEnvelope} className="me-2 inline-icon-before text-accent" />University:
 								</span>
-								<a href="" className="btn btn-link text-decoration-none">
+								<a href="" className="btn btn-link text-decoration-none link">
 									&#102;&#106;&#099;&#051;&#032;(&#097;&#116;)&#032;&#104;&#119;&#032;(&#100;&#111;&#116;)&#032;&#097;&#099;&#032;(&#100;&#111;&#116;)&#032;&#117;&#107;
 								</a>
 							</li>
@@ -242,7 +305,7 @@ const NewHome = () => {
 								<span>
 									<FontAwesomeIcon icon={faLinkedin} className="me-2 inline-icon-before text-accent" />LinkedIn:
 								</span>
-								<a href="https://www.linkedin.com/in/javier-chiyah-garcia-469045a6/" className="btn btn-link text-decoration-none" target="_blank" rel="noopener noreferrer">
+								<a href="https://www.linkedin.com/in/javier-chiyah-garcia-469045a6/" className="btn btn-link text-decoration-none link" target="_blank" rel="noopener noreferrer">
 									Javier Chiyah-Garcia
 								</a>
 							</li>

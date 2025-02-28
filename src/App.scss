@@ -334,8 +334,8 @@ body {
 		}
 
 		.profile-image {
-			width: 200px;
-			height: 200px;
+			width: 300px;
+			height: 300px;
 			border-radius: 50%;
 			object-fit: cover;
 			margin-bottom: 2rem;
@@ -389,7 +389,7 @@ body {
 		padding-left: 0;
 		margin: 0;
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		// grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		gap: 1rem;
 
 		li {
@@ -470,18 +470,6 @@ body {
 				font-weight: 900;
 			}
 		}
-
-		a {
-			color: getColour("accent");
-			text-decoration: none;
-			font-weight: 500;
-			transition: all 0.3s ease;
-
-			&:hover {
-				opacity: 0.8;
-				text-decoration: none;
-			}
-		}
 	}
 
 	.featured-publications-list {
@@ -549,6 +537,7 @@ body {
 .skill-carousel {
 	position: relative;
 	width: 100%;
+	max-width: breakpoint("md");
 	overflow: hidden;
 	margin-bottom: 1rem;
 
@@ -590,9 +579,13 @@ body {
 	}
 }
 
+.show-all-skills {
+	overflow: visible;
+}
+
 .skill-box {
-	width: 6rem; // Adjust size as needed
-	height: 6rem; // Adjust size as needed
+	width: 5rem; // Adjust size as needed
+	height: 5rem; // Adjust size as needed
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -604,15 +597,16 @@ body {
 	margin: 10px; // Space around the box
 	// color: getColour("accent"); // Text color
 	text-align: center; // Center text
-	font-size: 1.8rem;
+	font-size: 1.3rem;
 
 	.icon {
 		// font-size: 50px; // Adjust icon size
-		margin-bottom: 15px; // Space between icon and text
+		// margin-bottom: 20px; // Space between icon and text
 	}
 
 	.skill-text {
-		font-size: 0.9rem; // Adjust text size
+		margin-top: 4px;
+		font-size: 0.7rem; // Adjust text size
 		// font-weight: 600; // Make text bold
 		color: getColour("textDark"); // Text color
 	}
@@ -637,11 +631,24 @@ body {
 }
 
 .publication-item {
-	font-size: 0.95rem;
+	font-size: 1rem;
 	margin-bottom: 1rem;
 
 	&:last-child {
 		margin-bottom: 0;
+	}
+
+	.publication-title {
+		color: getColour("accent");
+		text-decoration: none;
+		font-weight: 600;
+		transition: all 0.3s ease;
+		font-size: 1.15rem;
+
+		&:hover {
+			opacity: 0.8;
+			text-decoration: underline;
+		}
 	}
 
 	p {
@@ -666,12 +673,15 @@ body {
 		.btn-award {
 			pointer-events: none;
 		}
-	}
 
-	.conference {
-		color: $gray-600;
-	}
+		.btn {
+			text-decoration: none !important;
 
+			&:hover {
+				text-decoration: none !important;
+			}
+		}
+	}
 }
 
 .publication-overlay {
@@ -698,68 +708,64 @@ body {
 	cursor: pointer;
 }
 
+// .bibtex-block {
+// 	height: auto;
+// 	background: lighten($color-primary-accent, 75);
+// 	padding: 0.5em;
+// 	margin: 0.7em 0;
+// 	box-sizing: border-box;
 
+// 	border-radius: 3px;
+// 	border: 2px solid $color-secondary-accent;
 
-.bibtex-block {
-	height: auto;
-	background: lighten($color-primary-accent, 75);
-	padding: 0.5em;
-	margin: 0.7em 0;
-	box-sizing: border-box;
+// 	transition-property: all;
+// 	transition-duration: .8s;
+// 	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 
-	border-radius: 3px;
-	border: 2px solid $color-secondary-accent;
+// 	p {
+// 		margin: 0;
+// 	}
+// }
 
-	transition-property: all;
-	transition-duration: .8s;
-	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+// .bibtex-block:hover {
+// 	border: 2px solid lighten($color-primary-accent, 20);
+// }
 
-	p {
-		margin: 0;
-	}
-}
+// .bibtex-block-closed {
+// 	opacity: 0;
+// 	height: 0;
+// 	overflow: hidden;
+// 	margin: 0 !important;
+// 	padding: 0;
+// }
 
-.bibtex-block:hover {
-	border: 2px solid lighten($color-primary-accent, 20);
-}
+// .contact {
+// 	.email-box {
+// 		margin: 1.5em 0;
 
-.bibtex-block-closed {
-	opacity: 0;
-	height: 0;
-	overflow: hidden;
-	margin: 0 !important;
-	padding: 0;
-}
+// 		p {
+// 			margin-top: 0.5em;
+// 		}
 
-.contact {
+// 		a {
+// 			padding-left: 1em;
+// 		}
+// 	}
 
-	.email-box {
-		margin: 1.5em 0;
+// 	ul {
+// 		list-style: none;
+// 		padding-inline-start: 0;
+// 		margin-left: 1em;
 
-		p {
-			margin-top: 0.5em;
-		}
+// 		li {
+// 			margin: 0.5em 0;
+// 		}
+// 	}
 
-		a {
-			padding-left: 1em;
-		}
-	}
-
-	ul {
-		list-style: none;
-		padding-inline-start: 0;
-		margin-left: 1em;
-
-		li {
-			margin: 0.5em 0;
-		}
-	}
-
-	hr {
-		border-width: 0.5px;
-	}
-}
-
+// 	hr {
+// 		border-width: 0.5px;
+// 	}
+// }
 
 // todo: use this animation for colours?
 @keyframes multicolor {
@@ -849,21 +855,6 @@ body {
 	.project-item-skills {
 		font-size: 0.8rem;
 	}
-
-	.project-item-url {
-		font-size: 0.85rem;
-
-		a {
-			// color: getColour("textDark");
-			// text-decoration: none;
-			// border-bottom: 1px solid $color-primary-text;
-		}
-
-		a:hover {
-			// color: $color-primary-accent;
-			// border-bottom: 1px solid $color-primary-accent;
-		}
-	}
 }
 
 
@@ -879,6 +870,23 @@ body {
 
 .text-accent {
 	color: getColour("accent");
+}
+
+.text-strong-accent {
+	color: getColour("accent");
+	font-weight: bold;
+}
+
+// todo: this should use a, but for some reason it needs !important, which clashes with navbar and any button link
+.link {
+	// color: getColour("accent");
+	text-decoration: none !important;
+	transition: all 0.3s ease;
+
+	&:hover {
+		opacity: 0.8;
+		text-decoration: underline !important;
+	}
 }
 
 // .btn-primary {
@@ -932,11 +940,15 @@ body {
 		}
 
 		.citation-text {
-			padding: 0.05rem 0.5rem;
+			display: block;
 			border-radius: 0.2rem;
 			position: relative;
 			min-height: 2.0rem;
 			transition: background-color 0.2s ease; // Add smooth transition
+
+			.user-select-all {
+				padding: 0.05rem 1.8rem 0.05rem 0.5rem;
+			}
 
 			span {
 				line-height: 1.5;
@@ -959,12 +971,17 @@ body {
 		}
 
 		.bibtex-citation {
-			// white-space: nowrap;
-			overflow-x: auto;
+			overflow-x: scroll;
 			display: block;
 			max-height: 40vh;
-			// max-width: 80%;
+			max-width: 100%;
 			position: relative;
+			// margin-right: -1.8rem;
+			// padding-right: 1.8rem;
+			// padding: 0.05rem 1.8rem 0.05rem 0.5rem;
+			// overflow-y: scroll;
+			// white-space: nowrap;
+			box-sizing: border-box;
 		}
 
 		.text-bg-light {

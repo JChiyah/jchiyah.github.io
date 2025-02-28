@@ -34,7 +34,7 @@ const RootLayout = () => {
 		// '/about': 'About',
 		'/projects': 'Projects',
 		'/publications': 'Publications',
-		'/professional-activities': 'Activities',
+		'/experience': 'Experience',
 		'/contact': 'Contact'
 	};
 
@@ -77,7 +77,7 @@ const router = createBrowserRouter([
 				element: <Publications />,
 			},
 			{
-				path: "/activities",
+				path: "/experience",
 				element: <Activities />,
 			},
 			{
