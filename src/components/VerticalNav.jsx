@@ -13,7 +13,8 @@ const VerticalNav = ({ items = [], title = "" }) => {
 		// Initialize ScrollSpy
 		const scrollspy = new bootstrap.ScrollSpy(document.body, {
 			target: '#vertical-nav',
-			offset: 100
+			method: 'offset',
+			offset: 180
 		});
 
 		// Cleanup on unmount
