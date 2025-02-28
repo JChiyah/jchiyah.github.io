@@ -14,9 +14,25 @@ import SkillCarousel from '../components/SkillCarousel';
 const FeaturedPublication = ({ bibkey, title, authors, conferenceSeries, extraHtml = "" }) => {
 	return (
 		<li className="publication-card fade-animation-on-load" key={bibkey}>
-			<FontAwesomeIcon icon={faFileLines} className="me-2 text-accent" />
-
-			<Link to={`/publications#${bibkey}`}>{title}</Link> (<span className="">{authors}</span>, <strong><span className="">{conferenceSeries}</span></strong>) {extraHtml}
+			<Link to={`/publications#${bibkey}`} className="card-link">
+				<div className="card-body">
+					<div className="d-flex align-items-start gap-2">
+						<FontAwesomeIcon icon={faFileLines} className="text-accent mt-1" />
+						<div>
+							<div className="publication-title">
+								{title}
+							</div>
+							<div className="publication-meta">
+								<span className="authors">{authors}</span>
+								{/* <div className="d-flex align-items-center gap-2"> */}
+								<span className="conference">{conferenceSeries}</span>
+								{extraHtml && <span className="award">{extraHtml}</span>}
+								{/* </div> */}
+							</div>
+						</div>
+					</div>
+				</div>
+			</Link>
 		</li>
 	);
 };
@@ -182,7 +198,7 @@ const NewHome = () => {
 									title="`What are you referring to?' Evaluating the Ability of Multi-Modal Dialogue Models to Process Clarificational Exchanges"
 									authors="Chiyah-Garcia et al."
 									conferenceSeries="SIGDIAL'23"
-									extraHtml={<strong>[Best Paper Award] <FontAwesomeIcon icon={faTrophy} /></strong>}
+									extraHtml={<strong>Best Paper Award <FontAwesomeIcon icon={faTrophy} /></strong>}
 								/>
 								<li className="fade-animation-on-load">
 									<Link to="/publications" className="btn btn-primary see-more-link">See all publications</Link>
