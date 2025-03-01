@@ -1,6 +1,6 @@
 [
 	{
-		"title": "Jobs and Experience",
+		"title": "Jobs and Professional Journey",
 		"id": "jobs",
 		"list": [
 			{
@@ -9,7 +9,7 @@
 				"date": "Jan 2023 - Jun 2023",
 				"description": "Worked in the Alexa AI SocialBot team, collaborating with in-person and remote colleagues. I researched the use of LLMs to understand user behaviour, which required loading, fine-tuning and evaluating large models on distinct tasks.",
 				"description_items": [
-					"Led to a peer-reviewed <a href='/p/chiyah-garcia-etal-2024-adapting'>publication</a>."
+					"Led to a peer-reviewed <a href='/publications#chiyah-garcia-etal-2024-adapting' class='link'>publication</a>."
 				],
 				"icon": "faAmazon"
 			},
@@ -70,7 +70,7 @@
 				"title": "Best Short Paper Award",
 				"subtitle": "SIGDIAL 2023",
 				"date": "Oct 2023",
-				"description": "For the paper <a href='/publications#chiyah-garcia-etal-2023-referring'>‘What are you referring to?’ Evaluating the Ability of Multi-Modal Dialogue Models to Process Clarificational Exchanges</a>.",
+				"description": "For the paper <a href='/publications#chiyah-garcia-etal-2023-referring' class='link'>‘What are you referring to?’ Evaluating the Ability of Multi-Modal Dialogue Models to Process Clarificational Exchanges</a>.",
 				"icon": "faAward"
 			},
 			{
@@ -181,14 +181,14 @@
 				"title": "YRRSDS 2022 & 2023 Workshops",
 				"subtitle": "Organiser",
 				"date": "Feb 2022",
-				"description": "Organiser of <a href=https://sites.google.com/view/yrrsds2023>YRRSDS 2022</a> and <a href=https://sites.google.com/view/yrrsds2022/home>2023</a> Workshops, including the main editor of the <a href='/p/yrrsds-2023-young'>2023 proceedings</a>.",
+				"description": "Organiser of <a href=https://sites.google.com/view/yrrsds2023 class='link'>YRRSDS 2022</a> and <a href=https://sites.google.com/view/yrrsds2022/home class='link'>2023</a> Workshops, including the main editor of the <a href='/publications#yrrsds-2023-young' class='link'>2023 proceedings</a>.",
 				"icon": "faUsers"
 			},
 			{
 				"title": "AAAI 2022 Queer in AI Events",
 				"subtitle": "Co-organiser",
 				"date": "Feb 2022",
-				"description": "Co-organiser of the Queer in AI events at AAAI 2022, check here: <a href='https://sites.google.com/view/queer-in-ai/aaai-2022' target='_blank'>https://sites.google.com/view/queer-in-ai/aaai-2022</a>",
+				"description": "Co-organiser of the Queer in AI events at AAAI 2022, check here: <a href='https://sites.google.com/view/queer-in-ai/aaai-2022' target='_blank' class='link'>https://sites.google.com/view/queer-in-ai/aaai-2022</a>",
 				"icon": "faUsers"
 			},
 			{
@@ -202,7 +202,7 @@
 				"title": "Explainable Software for Cyber-Physical Systems (ES4CPS)",
 				"subtitle": "Schloss Dagstuhl GI Seminar 19023",
 				"date": "Jan 2019",
-				"description": "Check the <a href='https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/19023?highlight=19023'>seminar website</a> and resulting <a href='/p/blumreiter-et-al-2019-towards-self-explainable'>publication</a>.",
+				"description": "Check the <a href='https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/19023?highlight=19023' target='_blank' class='link'>seminar website</a> and resulting <a href='/publications#blumreiter-et-al-2019-towards-self-explainable' class='link'>publication</a>.",
 				"icon": "faBookReader",
 				"image": "jchiyah_shcloss_dagstuhl.jpg",
 				"image-alt": "Me at the Schloss Dagstuhl Seminar"
@@ -217,7 +217,7 @@
 				"title": "Repairs in a Block World Paper",
 				"subtitle": "EMNLP 2024",
 				"date": "Nov 2024",
-				"description": "Presented the paper <a href='/p/chiyah-garcia-etal-2024-repairs'>Repairs in a Block World: A New Benchmark for Handling User Corrections with Multi-Modal Language Models</a> at the conference in Miami, USA.",
+				"description": "Presented the paper <a href='/publications#chiyah-garcia-etal-2024-repairs' class='link'>Repairs in a Block World: A New Benchmark for Handling User Corrections with Multi-Modal Language Models</a> at the conference in Miami, USA.",
 				"icon": "faPersonChalkboard"
 			},
 			{
@@ -231,7 +231,7 @@
 				"title": "Podcast Interview",
 				"subtitle": "Robot Talk Podcast",
 				"date": "March 2021",
-				"description": "I was interviewed by Dr Claire Asher about human-robot collaboration, check the podcast episode here: <a href=\"https://ukrobotics.libsyn.com/episode-six-human-robot-collaboration-working-together\" target=\"_blank\">https://ukrobotics.libsyn.com/episode-six-human-robot-collaboration-working-together</a>",
+				"description": "I was interviewed by Dr Claire Asher about human-robot collaboration, check the podcast episode here: <a href=\"https://ukrobotics.libsyn.com/episode-six-human-robot-collaboration-working-together\" target=\"_blank\" class='link'>https://ukrobotics.libsyn.com/episode-six-human-robot-collaboration-working-together</a>",
 				"icon": "faRobot"
 			},
 			{
