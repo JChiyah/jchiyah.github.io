@@ -5,17 +5,17 @@ import { Navigate, createBrowserRouter, RouterProvider, Outlet, useLocation } fr
 
 import './App.scss';
 
-import NavigationBar from './components/NavigationBar';
+// import NavigationBar from './components/NavigationBar';
 import NewNavBar from './components/NewNavBar';
 import Footer from './components/Footer';
 
 import Home from './views/Home';
 import NewHome from './views/NewHome';
-import About from './views/About';
+// import About from './views/About';
 import Projects from './views/Projects';
 import Publications from './views/Publications';
 import Activities from './views/Activities';
-import Contact from './views/Contact';
+// import Contact from './views/Contact';
 import PageNotFound from './views/PageNotFound';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -48,6 +48,13 @@ const RootLayout = () => {
 			<Footer />
 		</>
 	);
+};
+
+const ExternalRedirect = ({ to }) => {
+	React.useEffect(() => {
+		window.location.replace(to);
+	}, [to]);
+	return null; // This component does not render anything visible
 };
 
 // Define routes using createBrowserRouter with a parent layout
@@ -83,6 +90,14 @@ const router = createBrowserRouter([
 			{
 				path: "/#contact",
 				element: <Home />,
+			},
+			{
+				path: "/cv",
+				element: <ExternalRedirect to="/JChiyahGarcia_CV.pdf" />,
+			},
+			{
+				path: "/CV",
+				element: <ExternalRedirect to="/JChiyahGarcia_CV.pdf" />,
 			},
 			{
 				path: "*",
