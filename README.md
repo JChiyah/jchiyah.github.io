@@ -3,16 +3,24 @@
 My personal website!
 
 __2025-02-17__
+- System: Windows 11
+- Node version: 20.11.0
+- NPM version: 10.9.0
+- Python 3.13.7
+- Warning: it was tricky to make it work, had to use Chocolatey + nvm + installing VS to make it work in this particular version in Windows. Anything above NodeJS 20 did not work.
+
+
+__2025-02-17__
 - System: MacOS 15.3
 - Node version: 20.11.0
 - NPM version: 10.9.0
-WIP
+
 
 __2023-03-29__
 - System: Windows 11
 - Node version: 17.7.1
 - NPM version: 8.5.5
-- Warning: getting some errors when trying to update packages, might need to use another template. Maybe check: https://github.com/academicpages/academicpages.github.io
+- Warning: getting some errors when trying to update packages. Fixed now.
 
 
 __2022-03-18__

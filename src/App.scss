@@ -1108,7 +1108,7 @@ body {
 .fade-animation-sequence {
 
 	>.fade-animation-on-load {
-		@for $i from 1 through 10 {
+		@for $i from 1 through 20 {
 			&:nth-child(#{$i}) {
 				animation-delay: #{$i * 0.15}s;
 			}

@@ -92,6 +92,14 @@ const router = createBrowserRouter([
 				element: <Home />,
 			},
 			{
+				path: "/phd",
+				element: <ExternalRedirect to="/Chiyah-Garcia_Thesis.pdf" />,
+			},
+			{
+				path: "/thesis",
+				element: <ExternalRedirect to="/Chiyah-Garcia_Thesis.pdf" />,
+			},
+			{
 				path: "/cv",
 				element: <ExternalRedirect to="/JChiyahGarcia_CV.pdf" />,
 			},

@@ -1,9 +1,9 @@
-import React, { useState, setState } from 'react';
+import React, { useState } from 'react';
 import { useEffect } from 'react';
 
 import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFileLines, faTrophy, faEnvelope, faHexagonNodes, faSquareBinary, faTerminal, faCode, faDiagramProject, faBoltLightning, faBraille, faObjectUngroup, faCaretDown, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faFileLines, faTrophy, faEnvelope, faHexagonNodes, faSquareBinary, faTerminal, faCode, faDiagramProject, faBoltLightning, faBraille, faObjectUngroup } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faPython, faJava, faJs, faHtml5, faCss3, faReact, faSass, faGit, faDocker, faPhp, faAmazon, faLinux } from '@fortawesome/free-brands-svg-icons';
 
 import { SocialLinks } from '../components/SocialLinks';
@@ -61,6 +61,7 @@ const NewHome = () => {
 		}
 	}, [location]);
 
+	// eslint-disable-next-line
 	const setShowAllSkills = (showAllSkills) => {
 		// setStat(showAllSkills);
 		document.getElementsByClassName("skill-carousel-container").classList.add("show-all-skills");
@@ -135,18 +136,34 @@ const NewHome = () => {
 								Recent <span className="text-accent">Updates</span></h3>
 							<ul className="fade-animation-sequence">
 								<li className="fade-animation-on-load year-separator">2025</li>
-								<li>
+								<li className="fade-animation-on-load">
+									<span className="update-date">Jun</span>
+									Graduated from Heriot-Watt University! Check out my <Link to="/phd" className="link">PhD thesis</Link> in Conversational AI
+								</li>
+								<li className="fade-animation-on-load">
+									<span className="update-date">Apr</span>
+									At Yokohama (Japan) for CHI'25, say hi if you see me around :)
+								</li>
+								<li className="fade-animation-on-load">
 									<span className="update-date">Feb</span>
 									Successfully defended my PhD!
 								</li>
 								<li className="fade-animation-on-load year-separator">2024</li>
 								<li className="fade-animation-on-load">
 									<span className="update-date">Nov</span>
-									Presented two papers [<Link to="/publications#chiyah-garcia-etal-2024-repairs" className="link">1</Link>, <Link to="/publications#chiyah-garcia-etal-2024-adapting" className="link">2</Link>] at EMNLP'24 in Miami
+									Excited to present two papers [<Link to="/publications#chiyah-garcia-etal-2024-repairs" className="link">1</Link>, <Link to="/publications#chiyah-garcia-etal-2024-adapting" className="link">2</Link>] at EMNLP'24 in Miami!
+								</li>
+								<li className="fade-animation-on-load">
+									<span className="update-date">Nov</span>
+									Proud to have mentored a team of undergraduates to a <Link to="/publications#bruce-etal-2024-follow" className="link">publication at HAI'24</Link>
 								</li>
 								<li className="fade-animation-on-load">
 									<span className="update-date">Oct</span>
 									Presented at the EUtopia Beyond Words Workshop in Sweden
+								</li>
+								<li className="fade-animation-on-load">
+									<span className="update-date">May</span>
+									Attended CHI'24 and CUI@CHI in Honolulu, Hawaii!
 								</li>
 								<li className="fade-animation-on-load year-separator">2023</li>
 								<li className="fade-animation-on-load">
@@ -253,6 +270,7 @@ const NewHome = () => {
 								<span>
 									<FontAwesomeIcon icon={faEnvelope} className="me-2 inline-icon-before text-accent" />Preferred:
 								</span>
+								{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
 								<a href="" className="btn btn-link text-decoration-none link">
 									&#106;&#099;&#104;&#105;&#121;&#097;&#104;&#032;(&#097;&#116;)&#032;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#032;(&#100;&#111;&#116;)&#032;&#099;&#111;&#109;
 								</a>
@@ -261,7 +279,8 @@ const NewHome = () => {
 								<span>
 									<FontAwesomeIcon icon={faEnvelope} className="me-2 inline-icon-before text-accent" />University:
 								</span>
-								<a href="" className="btn btn-link text-decoration-none link">
+								{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+								<a href="" className="btn btn-link text-decoration-none link"> 
 									&#102;&#106;&#099;&#051;&#032;(&#097;&#116;)&#032;&#104;&#119;&#032;(&#100;&#111;&#116;)&#032;&#097;&#099;&#032;(&#100;&#111;&#116;)&#032;&#117;&#107;
 								</a>
 							</li>
