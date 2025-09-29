@@ -63,8 +63,13 @@ const NewNavBar = () => {
 		>
 			<Container>
 				<Navbar.Brand as={Link} to="/">
-					Javier Chiyah-Garcia
-					<span className="ms-2 text-secondary d-md-none">
+					Javier
+					{/* Hide full name on screens smaller than lg */}
+					<span className="d-none d-lg-inline">
+						&nbsp;Chiyah-Garcia
+					</span>
+					{/* d-lg-none hide on lg screens and larger */}
+					<span className="ms-2 text-secondary d-lg-none">
 						{currentPage !== '' && currentPage !== 'Home' ? `/ ${currentPage}` : ''}
 					</span>
 				</Navbar.Brand>
