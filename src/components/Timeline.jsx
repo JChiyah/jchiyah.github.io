@@ -41,7 +41,14 @@ const TimelineItem = ({ icon, title, subtitle, date, description, description_it
 		checkTruncation();
 		// Re-check on window resize
 		window.addEventListener('resize', checkTruncation);
-		return () => window.removeEventListener('resize', checkTruncation);
+		// Re-check once each image has loaded. Measured before then, an image adds no
+		// height, so the item would only be truncated for visitors who had it cached.
+		const images = descriptionRef.current ? [...descriptionRef.current.querySelectorAll('img')] : [];
+		images.forEach((img) => img.addEventListener('load', checkTruncation));
+		return () => {
+			window.removeEventListener('resize', checkTruncation);
+			images.forEach((img) => img.removeEventListener('load', checkTruncation));
+		};
 	}, [description, isExpanded]);
 
 	return (

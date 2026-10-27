@@ -138,7 +138,7 @@ const NewHome = () => {
 								<li className="fade-animation-on-load year-separator">2026</li>
 								<li className="fade-animation-on-load">
 									<span className="update-date">Mar</span>
-									Joined <Link to="https://www.electrictwin.com" target="_blank" className="link">Electric Twin</Link> as an AI Research Engineer
+									Joined <Link to="https://www.electrictwin.com" target="_blank" rel="noopener noreferrer" className="link">Electric Twin</Link> as an AI Research Engineer
 								</li>
 								<li className="fade-animation-on-load year-separator">2025</li>
 								<li className="fade-animation-on-load">
@@ -185,7 +185,7 @@ const NewHome = () => {
 								</li>
 								<li className="fade-animation-on-load">
 									<span className="update-date">Sep</span>
-									Organised the <Link to="https://sites.google.com/view/yrrsds2023" target="_blank" className="link">YRRSDS'23 Workshop</Link>
+									Organised the <Link to="https://sites.google.com/view/yrrsds2023" target="_blank" rel="noopener noreferrer" className="link">YRRSDS'23 Workshop</Link>
 								</li>
 								<li className="fade-animation-on-load">
 									<span className="update-date">Jun</span>
