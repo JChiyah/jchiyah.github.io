@@ -174,6 +174,13 @@ class Reference {
 		// remove extra lines at the end of the string
 		bibtex = bibtex.replace(/\s*$/, '');
 
+		// Drop the abstract. It is far longer than the rest of the entry and nobody
+		// wants it in a citation they copy. Stripped here rather than in
+		// getBibtexHTML() so the copied text matches what is shown on screen.
+		bibtex = bibtex.replace(/\s*abstract\s*=\s*("[^"]*"|{[^}]*})\s*,?/i, '');
+		// tidy a trailing comma left behind when the abstract was the last field
+		bibtex = bibtex.replace(/,(\s*)}$/, '$1}');
+
 		return bibtex;
 	}
 
@@ -187,10 +194,6 @@ class Reference {
 
 	getBibtexHTML() {
 		let bibtex = this.getBibtexString();
-
-		// Remove the abstract field
-		bibtex = bibtex.replace(/,\s*abstract\s*=\s*{[^}]*}/, '');
-		bibtex = bibtex.replace(/,\s*abstract\s*=\s*"[^"]*"/, '');
 
 		// Replace newlines with HTML line breaks and indentation
 		bibtex = bibtex.replace(/(?:\r\n|\r|\n)/g, '<br/>&nbsp;&nbsp;&nbsp;');

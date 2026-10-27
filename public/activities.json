@@ -4,6 +4,25 @@
 		"id": "jobs",
 		"list": [
 			{
+				"title": "AI Research Engineer",
+				"subtitle": "Electric Twin",
+				"date": "Mar 2026 - Present",
+				"description": "Research engineer working on large-scale AI simulations of human responses and behaviour.",
+				"icon": "faRobot"
+			},
+			{
+				"title": "Independent AI Research Consultant",
+				"subtitle": "Self-employed",
+				"date": "Oct 2025 - Mar 2026",
+				"description": "Provided PhD-level consulting for leading AI platforms to accelerate the evaluation and alignment of foundation models.<br>Relevant areas:",
+				"description_items": [
+					"<strong>Model Alignment &amp; RLHF:</strong> Evaluated complex LLM/VLM outputs, providing critical human feedback to directly improve model reasoning, accuracy and safety.",
+					"<strong>Adversarial Evaluation:</strong> Curated and critiqued rigorous, domain-specific problem sets to benchmark model performance and expose edge-case vulnerabilities.",
+					"<strong>Subject Matter Expertise:</strong> Served as a Technical Expert for AI labs, leveraging my PhD background in conversational AI to assess model logic and factual consistency."
+				],
+				"icon": "faUserGraduate"
+			},
+			{
 				"title": "Applied Scientist Intern",
 				"subtitle": "Amazon Alexa AI",
 				"date": "Jan 2023 - Jun 2023",
@@ -264,7 +283,7 @@
 			{
 				"title": "PhD in Computer Science (Natural Language Processing)",
 				"subtitle": "Heriot-Watt University, Siemens",
-				"date": "2019 - 2024",
+				"date": "2019 - 2025",
 				"description": "<strong>Thesis: Learning to Handle Miscommunication in Multi-modal Conversational AI</strong><br>The thesis focuses on miscommunications arising from ambiguity in situated discourse, with industry partner Siemens. I have investigated vision and language models to identify and resolve ambiguous coreferences, along with the ability of distinct model architectures to resolve coreferences depending on the property used, such as colour or positions. I also recently proposed a novel dataset collected via a crowdsourcing protocol, and benchmark to train and evaluate VLLMs on context-dependent ambiguities in simulated environments.<br>Relevant topics:",
 				"description_items": [
 					"Vision and language models for dialogue and instruction understanding.",

@@ -101,14 +101,14 @@ const NewHome = () => {
 						About <span className="text-accent">Me</span>
 					</h2>
 					<p className="">
-						Hi! I'm Javier Chiyah-Garcia, a Computer Science researcher passionate about improving human-machine communication. I recently completed my PhD at Heriot-Watt University, where I focused on helping <strong className="text-accent">conversational AI</strong> systems understand and overcome <strong className="text-accent">miscommunications in multi-modal dialogues</strong>.
+						Hi! I'm Javier Chiyah-Garcia, a Computer Science researcher passionate about improving human-machine communication. I'm an <strong className="text-accent">AI Research Engineer</strong> at <strong className="text-accent">Electric Twin</strong>, based in London. I completed my PhD at Heriot-Watt University, where I focused on helping <strong className="text-accent">conversational AI</strong> systems understand and overcome <strong className="text-accent">miscommunications in multi-modal dialogues</strong>.
 						My research journey has taken me from helping underwater robots explain their actions to teaching <strong className="text-accent">Large Language Models</strong> to interpret ambiguous instructions across visual and language modalities effectively.
 						<br /><br />
 
 						I've collaborated with companies like <strong className="text-accent">Siemens</strong> or <strong className="text-accent">SeeByte</strong> throughout my research, including interning at <strong className="text-accent">Amazon Alexa AI</strong> and <strong className="text-accent">SeeByte</strong>, applying my work to real-world challenges. This has resulted in many publications at top conferences and several industry partnerships.
 						<br /><br />
 
-						I'm currently actively <strong className="text-accent">looking for new opportunities</strong> in the field of AI and NLP, particularly with multi-modal LLMs, so don't hesitate to <Link to="/#contact" className="link">contact me!</Link>
+						I'm always happy to talk about AI and NLP, particularly multi-modal LLMs, so don't hesitate to <Link to="/#contact" className="link">contact me!</Link>
 					</p>
 				</section>
 
@@ -135,7 +135,16 @@ const NewHome = () => {
 							<h3 className="mb-4">
 								Recent <span className="text-accent">Updates</span></h3>
 							<ul className="fade-animation-sequence">
+								<li className="fade-animation-on-load year-separator">2026</li>
+								<li className="fade-animation-on-load">
+									<span className="update-date">Mar</span>
+									Joined <Link to="https://www.electrictwin.com" target="_blank" className="link">Electric Twin</Link> as an AI Research Engineer
+								</li>
 								<li className="fade-animation-on-load year-separator">2025</li>
+								<li className="fade-animation-on-load">
+									<span className="update-date">Oct</span>
+									Started independent AI research consulting on model evaluation and alignment
+								</li>
 								<li className="fade-animation-on-load">
 									<span className="update-date">Jun</span>
 									Graduated from Heriot-Watt University! Check out my <Link to="/phd" className="link">PhD thesis</Link> in Conversational AI
