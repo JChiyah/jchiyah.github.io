@@ -1,6 +1,14 @@
 @import "_Variables.scss";
 
 
+// FontAwesome 7 added `width: var(--fa-width, 1.25em)` to `.svg-inline--fa`,
+// forcing every icon to a uniform width. FontAwesome 6 set no width at all, so
+// icons sized to their own aspect ratio. Setting `auto` restores that and keeps
+// the navbar and button rows at their original widths.
+:root {
+	--fa-width: auto;
+}
+
 html {
 	// this gives the fixed navbar space
 	padding-top: $navbar-final-height * 2;
