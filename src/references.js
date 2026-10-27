@@ -1,12 +1,17 @@
 // New file, 2025
 
 
-import Cite from 'citation-js';
+// Import citation-js's core plus only the two plugins this site uses (BibTeX in,
+// CSL bibliographies out). The \`citation-js\` meta package also bundles the DOI,
+// RIS, BibJSON and Wikidata plugins; Wikidata alone was ~38% of the JS bundle.
+import { Cite, plugins } from '@citation-js/core';
+import '@citation-js/plugin-bibtex';
+import '@citation-js/plugin-csl';
 
 
 function newCSLTemplate(name, csl) {
-	// Cite.plugins.config.get('@csl').locales.add('en-US', csl);
-	Cite.plugins.config.get('@csl').templates.add(name, csl);
+	// plugins.config.get('@csl').locales.add('en-US', csl);
+	plugins.config.get('@csl').templates.add(name, csl);
 }
 
 // local adding CSL style

@@ -1,6 +1,6 @@
 /** Import Bootstrap SCSS **/
-@import "~bootstrap/scss/_functions";
-@import "~bootstrap/scss/_variables";
+@import "bootstrap/scss/_functions";
+@import "bootstrap/scss/_variables";
 
 // backgroundLight/dark
 // text dark/light/secondary
@@ -145,6 +145,6 @@ $font-family-base: 'Raleway', serif;
 // $font-family-base: 'Lato', sans-serif;
 
 /** External Resources **/
-@import '~bootstrap/scss/bootstrap';
+@import 'bootstrap/scss/bootstrap';
 
 // End of variables

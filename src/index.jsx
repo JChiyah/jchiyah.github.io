@@ -1,5 +1,4 @@
 import React from 'react';
-import * as serviceWorker from './serviceWorker';
 import { createRoot } from 'react-dom/client';
 import { Navigate, createBrowserRouter, RouterProvider, Outlet, useLocation } from "react-router-dom";
 
@@ -125,7 +124,9 @@ root.render(
 
 // ReactDOM.render(<App />, document.getElementById('root'));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// Earlier versions of this site were built with Create React App, which could
+// register a service worker. Keep evicting any that a returning visitor still
+// has, otherwise they would keep being served a stale cached copy of the site.
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.ready.then((registration) => registration.unregister());
+}
