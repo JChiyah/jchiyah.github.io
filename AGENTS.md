@@ -6,7 +6,7 @@ Personal academic website. Static single-page app, no backend.
 
 **Vite** — *not* Next.js, and no longer Create React App. React 19, `react-router` v7, Bootstrap 5 + `react-bootstrap`, SCSS via Dart Sass (`sass`), `citation-js` for publications.
 
-Requires **Node >=22.12** (`engines` in package.json); developed on **Node 24 LTS** with npm 11. Config is in `vite.config.js`.
+Requires **Node >=22.12** (`engines` in package.json); developed on **Node 26 LTS** with npm 11. Config is in `vite.config.js`.
 
 Use npm 11+. npm 10.8.x crashes (`edgesOut`, in peer resolution) when *adding* Vite 8 packages.
 
@@ -59,6 +59,7 @@ GitHub Pages has no server-side rewrite, so deep links work through the `spa-git
 - Mixed class and function components. Function components with hooks for anything new.
 - `New*`-prefixed files (`NewHome`, `NewNavBar`, `NewModal`) are the current generation; their predecessors are still in the tree but commented out of `src/index.jsx`. Prefer the `New*` ones.
 - Pages wrap content in `src/views/PageLayout.jsx`, which handles the Bootstrap grid and the optional right-hand `VerticalNav`.
+- **Icons are imported one by one**, never as whole sets (`fas`, `import * as`): a whole set adds ~2,000 icons to the bundle, and a test fails if one appears. Icons named in `activities.json` (`"icon": "faRobot"`) must be listed in `src/timelineIcons.js`; the icon tests name any that are missing.
 
 ## Testing
 
@@ -81,4 +82,4 @@ Run `npm test` and `npm run test:e2e` before handing over any change.
 
 - SCSS still uses `@import` and global colour functions (`darken`, `map-get`), as does Bootstrap 5.3. Dart Sass 1.x supports them; the deprecation warnings are silenced in `vite.config.js`. Dart Sass 3.0 will remove `@import`, so moving to `@use` is the eventual fix.
 - Nothing runs ESLint any more (CRA did it during build).
-- The JS bundle is ~1.5 MB gzipped, mostly the full FontAwesome solid and brand sets (`library.add(fas)` in `src/index.jsx`, `import * as Icons` in `Timeline.jsx`).
+- The JS bundle is ~360 kB gzipped; the largest parts are citeproc (citation formatting, only needed on `/publications`) and React. Everything is one chunk, so the home page downloads citation code it doesn't use.

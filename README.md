@@ -4,8 +4,8 @@ My personal website!
 
 __2026-10-28__
 - System: macOS (Darwin 27)
-- Node version: 24.22.1 (Homebrew `node@24`). Node 20 is end-of-life since April 2026.
-- NPM version: 11.19.1
+- Node version: 26.12.1 (Homebrew `node`; Node 26 is LTS from 2026-10-28, supported until April 2029). Node 20 is end-of-life since April 2026.
+- NPM version: 11.20.0
 - Added unit tests (Vitest) and browser tests (Playwright). See "Available Scripts" below.
 
 __2026-10-27__

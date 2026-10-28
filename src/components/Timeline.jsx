@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import * as Icons from '@fortawesome/free-solid-svg-icons';
-import * as BrandIcons from '@fortawesome/free-brands-svg-icons';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 import './../components/Timeline.scss';
+import timelineIcons from '../timelineIcons';
 
 
 const TimelineItem = ({ icon, title, subtitle, date, description, description_items, image, image_alt }) => {
@@ -54,7 +54,7 @@ const TimelineItem = ({ icon, title, subtitle, date, description, description_it
 	return (
 		<div className="timeline-item fade-animation-on-load">
 			<div className="timeline-icon">
-				<FontAwesomeIcon icon={Icons[icon] || BrandIcons[icon]} />
+				<FontAwesomeIcon icon={timelineIcons[icon]} />
 			</div>
 			<div className="timeline-content" >
 				<h3>
@@ -74,7 +74,7 @@ const TimelineItem = ({ icon, title, subtitle, date, description, description_it
 							onClick={() => setIsExpanded(!isExpanded)}
 						>
 							{isExpanded ? 'Show less' : 'Show more'}
-							<FontAwesomeIcon icon={isExpanded ? Icons.faChevronUp : Icons.faChevronDown} className="inline-icon-after" />
+							<FontAwesomeIcon icon={isExpanded ? faChevronUp : faChevronDown} className="inline-icon-after" />
 						</button>
 					)}
 				</div>
