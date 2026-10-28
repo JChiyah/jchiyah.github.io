@@ -182,7 +182,7 @@ class Reference {
 		// Drop the abstract. It is far longer than the rest of the entry and nobody
 		// wants it in a citation they copy. Stripped here rather than in
 		// getBibtexHTML() so the copied text matches what is shown on screen.
-		bibtex = bibtex.replace(/\s*abstract\s*=\s*("[^"]*"|{[^}]*})\s*,?/i, '');
+		bibtex = bibtex.replace(/\s*abstract\s*=\s*("[^"]*"|{[^}]*})[ \t]*,?/i, '');
 		// tidy a trailing comma left behind when the abstract was the last field
 		bibtex = bibtex.replace(/,(\s*)}$/, '$1}');
 

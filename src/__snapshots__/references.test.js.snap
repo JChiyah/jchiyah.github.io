@@ -1,0 +1,1087 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`golden citations > 10.1145/3319502.3374789 1`] = `
+{
+  "ACL": {
+    "copied": "David A. Robb, Muneeb I. Ahmad, Carlo Tiseo, Simona Aracri, Alistair C. McConnell, Vincent Page, Christian Dondrup, Francisco J. Chiyah Garcia, Hai-Nguyen Nguyen, Èric Pairet, Paola Ardón Ramı́rez, Tushar Semwal, Hazel M. Taylor, Lindsay J. Wilson, David Lane, Helen Hastie, and Katrin Lohan. 2020. Robots in the Danger Zone: Exploring Public Perception through Engagement. In Proceedings of the 2020 ACM/IEEE International Conference on Human-Robot Interaction, pages 93–102, Cambridge, United Kingdom. Association for Computing Machinery.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="10.1145/3319502.3374789" class="csl-entry">David A. Robb, Muneeb I. Ahmad, Carlo Tiseo, Simona Aracri, Alistair C. McConnell, Vincent Page, Christian Dondrup, Francisco J. Chiyah Garcia, Hai-Nguyen Nguyen, Èric Pairet, Paola Ardón Ramı́rez, Tushar Semwal, Hazel M. Taylor, Lindsay J. Wilson, David Lane, Helen Hastie, and Katrin Lohan. 2020. <a href="https://doi.org/10.1145/3319502.3374789">Robots in the Danger Zone: Exploring Public Perception through Engagement</a>. In <i>Proceedings of the 2020 ACM/IEEE International Conference on Human-Robot Interaction</i>, pages 93–102, Cambridge, United Kingdom. Association for Computing Machinery.</div>
+</div>",
+  },
+  "ACL&nbsp;Bibkey": {
+    "copied": null,
+    "shown": null,
+  },
+  "BibTex": {
+    "copied": "@inproceedings{10.1145/3319502.3374789,
+    author = {Robb, David A. and Ahmad, Muneeb I. and Tiseo, Carlo and Aracri, Simona and McConnell, Alistair C. and Page, Vincent and Dondrup, Christian and Chiyah Garcia, Francisco J. and Nguyen, Hai-Nguyen and Pairet, \\\`{E}ric and Ard\\'{o}n Ram\\'{\\i}rez, Paola and Semwal, Tushar and Taylor, Hazel M. and Wilson, Lindsay J. and Lane, David and Hastie, Helen and Lohan, Katrin},
+    title = {Robots in the Danger Zone: Exploring Public Perception through Engagement},
+    year = {2020},
+    isbn = {9781450367462},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3319502.3374789},
+    doi = {10.1145/3319502.3374789},
+    booktitle = {Proceedings of the 2020 ACM/IEEE International Conference on Human-Robot Interaction},
+    pages = {93–102},
+    numpages = {10},
+    keywords = {robotics and society, human robot interaction, artificial intelligence, robotics, public perceptions of robots, public engagement},
+    location = {Cambridge, United Kingdom},
+    series = {HRI '20}
+}",
+    "shown": "<tt class="bibtex-citation"><b>@inproceedings</b>{10.1145/3319502.3374789,<br/>&nbsp;&nbsp;&nbsp;    author = {Robb, David A. and Ahmad, Muneeb I. and Tiseo, Carlo and Aracri, Simona and McConnell, Alistair C. and Page, Vincent and Dondrup, Christian and Chiyah Garcia, Francisco J. and Nguyen, Hai-Nguyen and Pairet, \\\`{E}ric and Ard\\'{o}n Ram\\'{\\i}rez, Paola and Semwal, Tushar and Taylor, Hazel M. and Wilson, Lindsay J. and Lane, David and Hastie, Helen and Lohan, Katrin},<br/>&nbsp;&nbsp;&nbsp;    title = {Robots in the Danger Zone: Exploring Public Perception through Engagement},<br/>&nbsp;&nbsp;&nbsp;    year = {2020},<br/>&nbsp;&nbsp;&nbsp;    isbn = {9781450367462},<br/>&nbsp;&nbsp;&nbsp;    publisher = {Association for Computing Machinery},<br/>&nbsp;&nbsp;&nbsp;    address = {New York, NY, USA},<br/>&nbsp;&nbsp;&nbsp;    url = {https://doi.org/10.1145/3319502.3374789},<br/>&nbsp;&nbsp;&nbsp;    doi = {10.1145/3319502.3374789},<br/>&nbsp;&nbsp;&nbsp;    booktitle = {Proceedings of the 2020 ACM/IEEE International Conference on Human-Robot Interaction},<br/>&nbsp;&nbsp;&nbsp;    pages = {93–102},<br/>&nbsp;&nbsp;&nbsp;    numpages = {10},<br/>&nbsp;&nbsp;&nbsp;    keywords = {robotics and society, human robot interaction, artificial intelligence, robotics, public perceptions of robots, public engagement},<br/>&nbsp;&nbsp;&nbsp;    location = {Cambridge, United Kingdom},<br/>&nbsp;&nbsp;&nbsp;    series = {HRI '20}<br/>}</tt>",
+  },
+  "Harvard": {
+    "copied": "Robb, D.A. et al. (2020) “Robots in the Danger Zone: Exploring Public Perception through Engagement,” in Proceedings of the 2020 ACM/IEEE International Conference on Human-Robot Interaction. Cambridge, United Kingdom: Association for Computing Machinery (HRI ’20), pp. 93–102. doi:10.1145/3319502.3374789.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="10.1145/3319502.3374789" class="csl-entry">Robb, D.A. <i>et al.</i> (2020) “Robots in the Danger Zone: Exploring Public Perception through Engagement,” in <i>Proceedings of the 2020 ACM/IEEE International Conference on Human-Robot Interaction</i>. Cambridge, United Kingdom: Association for Computing Machinery (HRI ’20), pp. 93–102. doi:10.1145/3319502.3374789.</div>
+</div>",
+  },
+  "Markdown<br/>(Informal)": {
+    "copied": "[Robots in the Danger Zone: Exploring Public Perception through Engagement](https://doi.org/10.1145/3319502.3374789) (Robb et al., HRI  2020)",
+    "shown": "<a href="https://doi.org/10.1145/3319502.3374789" target="_blank" rel="noopener noreferrer">Robots in the Danger Zone: Exploring Public Perception through Engagement</a> (Robb et al., HRI  2020)",
+  },
+  "address": "Cambridge, United Kingdom",
+  "authors": "David A. Robb, Muneeb I. Ahmad, Carlo Tiseo, Simona Aracri, Alistair C. McConnell, Vincent Page, Christian Dondrup, Francisco J. Chiyah Garcia, Hai-Nguyen Nguyen, Èric Pairet, Paola Ardón Ramı́rez, Tushar Semwal, Hazel M. Taylor, Lindsay J. Wilson, David Lane, Helen Hastie, Katrin Lohan",
+  "doi": "10.1145/3319502.3374789",
+  "series": "HRI  2020",
+  "title": "Robots in the Danger Zone: Exploring Public Perception through Engagement",
+  "url": "https://doi.org/10.1145/3319502.3374789",
+  "venue": "Proceedings of the 2020 ACM/IEEE International Conference on Human-Robot Interaction",
+  "year": 2020,
+}
+`;
+
+exports[`golden citations > ChiyahGarciaHRI20Workshop 1`] = `
+{
+  "ACL": {
+    "copied": "Francisco J. Chiyah Garcia, José Lopes, and Helen Hastie. 2020. Natural Language Interaction to Facilitate Mental Models of Remote Robots. In Workshop on Mental Models of Robots, Cambridge, UK. ACM.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="ChiyahGarciaHRI20Workshop" class="csl-entry">Francisco J. Chiyah Garcia, José Lopes, and Helen Hastie. 2020. <a href="https://arxiv.org/abs/2003.05870">Natural Language Interaction to Facilitate Mental Models of Remote Robots</a>. In <i>Workshop on Mental Models of Robots</i>, Cambridge, UK. ACM.</div>
+</div>",
+  },
+  "ACL&nbsp;Bibkey": {
+    "copied": null,
+    "shown": null,
+  },
+  "BibTex": {
+    "copied": "@inproceedings{ChiyahGarciaHRI20Workshop,
+    title = {Natural Language Interaction to Facilitate Mental Models of Remote Robots},
+    author = {Chiyah Garcia, Francisco J. and Lopes, Jos{\\'e} and Hastie, Helen},
+    booktitle = {Workshop on Mental Models of Robots},
+    series = {HRI'20},
+    year = {2020},
+    month = {3},
+    address = {Cambridge, UK},
+    publisher = {ACM},
+    url = {https://arxiv.org/abs/2003.05870}
+}",
+    "shown": "<tt class="bibtex-citation"><b>@inproceedings</b>{ChiyahGarciaHRI20Workshop,<br/>&nbsp;&nbsp;&nbsp;    title = {Natural Language Interaction to Facilitate Mental Models of Remote Robots},<br/>&nbsp;&nbsp;&nbsp;    author = {Chiyah Garcia, Francisco J. and Lopes, Jos{\\'e} and Hastie, Helen},<br/>&nbsp;&nbsp;&nbsp;    booktitle = {Workshop on Mental Models of Robots},<br/>&nbsp;&nbsp;&nbsp;    series = {HRI'20},<br/>&nbsp;&nbsp;&nbsp;    year = {2020},<br/>&nbsp;&nbsp;&nbsp;    month = {3},<br/>&nbsp;&nbsp;&nbsp;    address = {Cambridge, UK},<br/>&nbsp;&nbsp;&nbsp;    publisher = {ACM},<br/>&nbsp;&nbsp;&nbsp;    url = {https://arxiv.org/abs/2003.05870}<br/>}</tt>",
+  },
+  "Harvard": {
+    "copied": "Chiyah Garcia, F.J., Lopes, J. and Hastie, H. (2020) “Natural Language Interaction to Facilitate Mental Models of Remote Robots,” in Workshop on Mental Models of Robots. Cambridge, UK: ACM (HRI’20). Available at: https://arxiv.org/abs/2003.05870.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="ChiyahGarciaHRI20Workshop" class="csl-entry">Chiyah Garcia, F.J., Lopes, J. and Hastie, H. (2020) “Natural Language Interaction to Facilitate Mental Models of Remote Robots,” in <i>Workshop on Mental Models of Robots</i>. Cambridge, UK: ACM (HRI’20). Available at: https://arxiv.org/abs/2003.05870.</div>
+</div>",
+  },
+  "Markdown<br/>(Informal)": {
+    "copied": "[Natural Language Interaction to Facilitate Mental Models of Remote Robots](https://arxiv.org/abs/2003.05870) (Chiyah Garcia et al., HRI 2020)",
+    "shown": "<a href="https://arxiv.org/abs/2003.05870" target="_blank" rel="noopener noreferrer">Natural Language Interaction to Facilitate Mental Models of Remote Robots</a> (Chiyah Garcia et al., HRI 2020)",
+  },
+  "address": "Cambridge, UK",
+  "authors": "Francisco J. Chiyah Garcia, José Lopes, Helen Hastie",
+  "doi": undefined,
+  "series": "HRI 2020",
+  "title": "Natural Language Interaction to Facilitate Mental Models of Remote Robots",
+  "url": "https://arxiv.org/abs/2003.05870",
+  "venue": "Workshop on Mental Models of Robots",
+  "year": 2020,
+}
+`;
+
+exports[`golden citations > ChiyahGarciaHRI21Video 1`] = `
+{
+  "ACL": {
+    "copied": "Francisco J. Chiyah Garcia, Simón C. Smith, José Lopes, Subramanian Ramamoorthy, and Helen Hastie. 2021. Self-Explainable Robots in Remote Environments. In Companion of the 2021 ACM/IEEE International Conference on Human-Robot Interaction, pages 662–664, Boulder, CO, USA. Association for Computing Machinery.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="ChiyahGarciaHRI21Video" class="csl-entry">Francisco J. Chiyah Garcia, Simón C. Smith, José Lopes, Subramanian Ramamoorthy, and Helen Hastie. 2021. <a href="https://doi.org/10.1145/3434074.3447275">Self-Explainable Robots in Remote Environments</a>. In <i>Companion of the 2021 ACM/IEEE International Conference on Human-Robot Interaction</i>, pages 662–664, Boulder, CO, USA. Association for Computing Machinery.</div>
+</div>",
+  },
+  "ACL&nbsp;Bibkey": {
+    "copied": null,
+    "shown": null,
+  },
+  "BibTex": {
+    "copied": "@inproceedings{ChiyahGarciaHRI21Video,
+    author = {Chiyah Garcia, Francisco J. and Smith, Sim\\'{o}n C. and Lopes, Jos\\'{e} and Ramamoorthy, Subramanian and Hastie, Helen},
+    title = {Self-Explainable Robots in Remote Environments},
+    year = {2021},
+    isbn = {9781450382908},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3434074.3447275},
+    doi = {10.1145/3434074.3447275},
+    booktitle = {Companion of the 2021 ACM/IEEE International Conference on Human-Robot Interaction},
+    pages = {662–664},
+    numpages = {3},
+    keywords = {explainable robot, nlg, semi-supervised learning, autonomous control, transparent interfaces, remote location},
+    location = {Boulder, CO, USA},
+    series = {HRI '21 Companion}
+}",
+    "shown": "<tt class="bibtex-citation"><b>@inproceedings</b>{ChiyahGarciaHRI21Video,<br/>&nbsp;&nbsp;&nbsp;    author = {Chiyah Garcia, Francisco J. and Smith, Sim\\'{o}n C. and Lopes, Jos\\'{e} and Ramamoorthy, Subramanian and Hastie, Helen},<br/>&nbsp;&nbsp;&nbsp;    title = {Self-Explainable Robots in Remote Environments},<br/>&nbsp;&nbsp;&nbsp;    year = {2021},<br/>&nbsp;&nbsp;&nbsp;    isbn = {9781450382908},<br/>&nbsp;&nbsp;&nbsp;    publisher = {Association for Computing Machinery},<br/>&nbsp;&nbsp;&nbsp;    address = {New York, NY, USA},<br/>&nbsp;&nbsp;&nbsp;    url = {https://doi.org/10.1145/3434074.3447275},<br/>&nbsp;&nbsp;&nbsp;    doi = {10.1145/3434074.3447275},<br/>&nbsp;&nbsp;&nbsp;    booktitle = {Companion of the 2021 ACM/IEEE International Conference on Human-Robot Interaction},<br/>&nbsp;&nbsp;&nbsp;    pages = {662–664},<br/>&nbsp;&nbsp;&nbsp;    numpages = {3},<br/>&nbsp;&nbsp;&nbsp;    keywords = {explainable robot, nlg, semi-supervised learning, autonomous control, transparent interfaces, remote location},<br/>&nbsp;&nbsp;&nbsp;    location = {Boulder, CO, USA},<br/>&nbsp;&nbsp;&nbsp;    series = {HRI '21 Companion}<br/>}</tt>",
+  },
+  "Harvard": {
+    "copied": "Chiyah Garcia, F.J. et al. (2021) “Self-Explainable Robots in Remote Environments,” in Companion of the 2021 ACM/IEEE International Conference on Human-Robot Interaction. Boulder, CO, USA: Association for Computing Machinery (HRI ’21 Companion), pp. 662–664. doi:10.1145/3434074.3447275.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="ChiyahGarciaHRI21Video" class="csl-entry">Chiyah Garcia, F.J. <i>et al.</i> (2021) “Self-Explainable Robots in Remote Environments,” in <i>Companion of the 2021 ACM/IEEE International Conference on Human-Robot Interaction</i>. Boulder, CO, USA: Association for Computing Machinery (HRI ’21 Companion), pp. 662–664. doi:10.1145/3434074.3447275.</div>
+</div>",
+  },
+  "Markdown<br/>(Informal)": {
+    "copied": "[Self-Explainable Robots in Remote Environments](https://doi.org/10.1145/3434074.3447275) (Chiyah Garcia et al., HRI  Companion 2021)",
+    "shown": "<a href="https://doi.org/10.1145/3434074.3447275" target="_blank" rel="noopener noreferrer">Self-Explainable Robots in Remote Environments</a> (Chiyah Garcia et al., HRI  Companion 2021)",
+  },
+  "address": "Boulder, CO, USA",
+  "authors": "Francisco J. Chiyah Garcia, Simón C. Smith, José Lopes, Subramanian Ramamoorthy, Helen Hastie",
+  "doi": "10.1145/3434074.3447275",
+  "series": "HRI  Companion 2021",
+  "title": "Self-Explainable Robots in Remote Environments",
+  "url": "https://doi.org/10.1145/3434074.3447275",
+  "venue": "Companion of the 2021 ACM/IEEE International Conference on Human-Robot Interaction",
+  "year": 2021,
+}
+`;
+
+exports[`golden citations > ChiyahHRI18 1`] = `
+{
+  "ACL": {
+    "copied": "Francisco J. Chiyah Garcia, David A. Robb, Xingkun Liu, Atanas Laskov, Patron Patron, and Helen Hastie. 2018. Explain Yourself: A Natural Language Interface for Scrutable Autonomous Robots. In Proceedings of Explainable Robotic Systems Workshop, Chicago, IL, USA.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="ChiyahHRI18" class="csl-entry">Francisco J. Chiyah Garcia, David A. Robb, Xingkun Liu, Atanas Laskov, Patron Patron, and Helen Hastie. 2018. <a href="https://arxiv.org/abs/1803.02088">Explain Yourself: A Natural Language Interface for Scrutable Autonomous Robots</a>. In <i>Proceedings of Explainable Robotic Systems Workshop</i>, Chicago, IL, USA.</div>
+</div>",
+  },
+  "ACL&nbsp;Bibkey": {
+    "copied": null,
+    "shown": null,
+  },
+  "BibTex": {
+    "copied": "@inproceedings{ChiyahHRI18,
+    author= {Chiyah Garcia, Francisco J. and Robb, David A. and Liu, Xingkun and Laskov, Atanas and  Patron, Patron and Hastie, Helen},
+    title= {Explain Yourself: A Natural Language Interface for Scrutable Autonomous Robots},
+    booktitle = {Proceedings of Explainable Robotic Systems Workshop},
+    series = {HRI'18},
+    year = {2018},
+    address = {Chicago, IL, USA},
+    url = {https://arxiv.org/abs/1803.02088}
+}",
+    "shown": "<tt class="bibtex-citation"><b>@inproceedings</b>{ChiyahHRI18,<br/>&nbsp;&nbsp;&nbsp;    author= {Chiyah Garcia, Francisco J. and Robb, David A. and Liu, Xingkun and Laskov, Atanas and  Patron, Patron and Hastie, Helen},<br/>&nbsp;&nbsp;&nbsp;    title= {Explain Yourself: A Natural Language Interface for Scrutable Autonomous Robots},<br/>&nbsp;&nbsp;&nbsp;    booktitle = {Proceedings of Explainable Robotic Systems Workshop},<br/>&nbsp;&nbsp;&nbsp;    series = {HRI'18},<br/>&nbsp;&nbsp;&nbsp;    year = {2018},<br/>&nbsp;&nbsp;&nbsp;    address = {Chicago, IL, USA},<br/>&nbsp;&nbsp;&nbsp;    url = {https://arxiv.org/abs/1803.02088}<br/>}</tt>",
+  },
+  "Harvard": {
+    "copied": "Chiyah Garcia, F.J. et al. (2018) “Explain Yourself: A Natural Language Interface for Scrutable Autonomous Robots,” in Proceedings of Explainable Robotic Systems Workshop. Chicago, IL, USA (HRI’18). Available at: https://arxiv.org/abs/1803.02088.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="ChiyahHRI18" class="csl-entry">Chiyah Garcia, F.J. <i>et al.</i> (2018) “Explain Yourself: A Natural Language Interface for Scrutable Autonomous Robots,” in <i>Proceedings of Explainable Robotic Systems Workshop</i>. Chicago, IL, USA (HRI’18). Available at: https://arxiv.org/abs/1803.02088.</div>
+</div>",
+  },
+  "Markdown<br/>(Informal)": {
+    "copied": "[Explain Yourself: A Natural Language Interface for Scrutable Autonomous Robots](https://arxiv.org/abs/1803.02088) (Chiyah Garcia et al., HRI 2018)",
+    "shown": "<a href="https://arxiv.org/abs/1803.02088" target="_blank" rel="noopener noreferrer">Explain Yourself: A Natural Language Interface for Scrutable Autonomous Robots</a> (Chiyah Garcia et al., HRI 2018)",
+  },
+  "address": "Chicago, IL, USA",
+  "authors": "Francisco J. Chiyah Garcia, David A. Robb, Xingkun Liu, Atanas Laskov, Patron Patron, Helen Hastie",
+  "doi": undefined,
+  "series": "HRI 2018",
+  "title": "Explain Yourself: A Natural Language Interface for Scrutable Autonomous Robots",
+  "url": "https://arxiv.org/abs/1803.02088",
+  "venue": "Proceedings of Explainable Robotic Systems Workshop",
+  "year": 2018,
+}
+`;
+
+exports[`golden citations > ChiyahINLG18 1`] = `
+{
+  "ACL": {
+    "copied": "Francisco J. Chiyah Garcia, David A. Robb, Atanas Laskov, Xingkun Liu, Pedro Patron, and Helen Hastie. 2018. Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models. In Proceedings of The 11th International Natural Language Generation Conference, pages 99--108, Tilburg, The Netherlands. ACM.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="ChiyahINLG18" class="csl-entry">Francisco J. Chiyah Garcia, David A. Robb, Atanas Laskov, Xingkun Liu, Pedro Patron, and Helen Hastie. 2018. <a href="https://www.aclweb.org/anthology/W18-6511/">Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models</a>. In <i>Proceedings of The 11th International Natural Language Generation Conference</i>, pages 99--108, Tilburg, The Netherlands. ACM.</div>
+</div>",
+  },
+  "ACL&nbsp;Bibkey": {
+    "copied": null,
+    "shown": null,
+  },
+  "BibTex": {
+    "copied": "@inproceedings{ChiyahINLG18,
+    title = {Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models},
+    author = {Chiyah Garcia, Francisco J. and Robb, David A. and Laskov, Atanas and Liu, Xingkun and Patron, Pedro and Hastie, Helen},
+    booktitle = {Proceedings of The 11th International Natural Language Generation Conference},
+    series = {INLG'18},
+    year = {2018},
+    month = {11},
+    pages = {99–-108},
+    address = {Tilburg, The Netherlands},
+    type = {Conference Proceedings},
+    publisher = {ACM},
+    url = {https://www.aclweb.org/anthology/W18-6511/}
+}",
+    "shown": "<tt class="bibtex-citation"><b>@inproceedings</b>{ChiyahINLG18,<br/>&nbsp;&nbsp;&nbsp;    title = {Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models},<br/>&nbsp;&nbsp;&nbsp;    author = {Chiyah Garcia, Francisco J. and Robb, David A. and Laskov, Atanas and Liu, Xingkun and Patron, Pedro and Hastie, Helen},<br/>&nbsp;&nbsp;&nbsp;    booktitle = {Proceedings of The 11th International Natural Language Generation Conference},<br/>&nbsp;&nbsp;&nbsp;    series = {INLG'18},<br/>&nbsp;&nbsp;&nbsp;    year = {2018},<br/>&nbsp;&nbsp;&nbsp;    month = {11},<br/>&nbsp;&nbsp;&nbsp;    pages = {99–-108},<br/>&nbsp;&nbsp;&nbsp;    address = {Tilburg, The Netherlands},<br/>&nbsp;&nbsp;&nbsp;    type = {Conference Proceedings},<br/>&nbsp;&nbsp;&nbsp;    publisher = {ACM},<br/>&nbsp;&nbsp;&nbsp;    url = {https://www.aclweb.org/anthology/W18-6511/}<br/>}</tt>",
+  },
+  "Harvard": {
+    "copied": "Chiyah Garcia, F.J. et al. (2018) “Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models,” in Proceedings of The 11th International Natural Language Generation Conference. Tilburg, The Netherlands: ACM (INLG’18), pp. 99--108. Available at: https://www.aclweb.org/anthology/W18-6511/.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="ChiyahINLG18" class="csl-entry">Chiyah Garcia, F.J. <i>et al.</i> (2018) “Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models,” in <i>Proceedings of The 11th International Natural Language Generation Conference</i>. Tilburg, The Netherlands: ACM (INLG’18), pp. 99--108. Available at: https://www.aclweb.org/anthology/W18-6511/.</div>
+</div>",
+  },
+  "Markdown<br/>(Informal)": {
+    "copied": "[Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models](https://www.aclweb.org/anthology/W18-6511/) (Chiyah Garcia et al., INLG 2018)",
+    "shown": "<a href="https://www.aclweb.org/anthology/W18-6511/" target="_blank" rel="noopener noreferrer">Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models</a> (Chiyah Garcia et al., INLG 2018)",
+  },
+  "address": "Tilburg, The Netherlands",
+  "authors": "Francisco J. Chiyah Garcia, David A. Robb, Atanas Laskov, Xingkun Liu, Pedro Patron, Helen Hastie",
+  "doi": undefined,
+  "series": "INLG 2018",
+  "title": "Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models",
+  "url": "https://www.aclweb.org/anthology/W18-6511/",
+  "venue": "Proceedings of The 11th International Natural Language Generation Conference",
+  "year": 2018,
+}
+`;
+
+exports[`golden citations > ES4CPSReport19 1`] = `
+{
+  "ACL": {
+    "copied": "Joel Greenyer, Malte Lochau, and Thomas Vogel, editors. 2019. Explainable Software for Cyber-Physical Systems (ES4CPS): Report from the GI Dagstuhl Seminar 19023, January 06-11 2019, Schloss Dagstuhl.volume abs/1904.11851 of CoRR. Schloss Dagstuhl, Germany.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="ES4CPSReport19" class="csl-entry">Joel Greenyer, Malte Lochau, and Thomas Vogel, editors. 2019. <i><a href="https://arxiv.org/abs/1904.11851">Explainable Software for Cyber-Physical Systems (ES4CPS): Report from the GI Dagstuhl Seminar 19023, January 06-11 2019, Schloss Dagstuhl</a></i>.volume abs/1904.11851 of <i>CoRR</i>. Schloss Dagstuhl, Germany.</div>
+</div>",
+  },
+  "ACL&nbsp;Bibkey": {
+    "copied": null,
+    "shown": null,
+  },
+  "BibTex": {
+    "copied": "@proceedings{ES4CPSReport19,
+    title = {Explainable Software for Cyber-Physical Systems (ES4CPS): Report from the GI Dagstuhl Seminar 19023, January 06-11 2019, Schloss Dagstuhl},
+    year = {2019},
+    editor = {Greenyer, Joel and Lochau, Malte and Vogel, Thomas},
+    booktitle = {Arxiv},
+    series = {CoRR},
+    volume = {abs/1904.11851},
+    url = {https://arxiv.org/abs/1904.11851},
+    address = {Schloss Dagstuhl, Germany}
+}",
+    "shown": "<tt class="bibtex-citation"><b>@proceedings</b>{ES4CPSReport19,<br/>&nbsp;&nbsp;&nbsp;    title = {Explainable Software for Cyber-Physical Systems (ES4CPS): Report from the GI Dagstuhl Seminar 19023, January 06-11 2019, Schloss Dagstuhl},<br/>&nbsp;&nbsp;&nbsp;    year = {2019},<br/>&nbsp;&nbsp;&nbsp;    editor = {Greenyer, Joel and Lochau, Malte and Vogel, Thomas},<br/>&nbsp;&nbsp;&nbsp;    booktitle = {Arxiv},<br/>&nbsp;&nbsp;&nbsp;    series = {CoRR},<br/>&nbsp;&nbsp;&nbsp;    volume = {abs/1904.11851},<br/>&nbsp;&nbsp;&nbsp;    url = {https://arxiv.org/abs/1904.11851},<br/>&nbsp;&nbsp;&nbsp;    address = {Schloss Dagstuhl, Germany}<br/>}</tt>",
+  },
+  "Harvard": {
+    "copied": "Greenyer, J., Lochau, M. and Vogel, T. (eds.) (2019) Explainable Software for Cyber-Physical Systems (ES4CPS): Report from the GI Dagstuhl Seminar 19023, January 06-11 2019, Schloss Dagstuhl, Arxiv. Schloss Dagstuhl, Germany (CoRR). Available at: https://arxiv.org/abs/1904.11851.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="ES4CPSReport19" class="csl-entry">Greenyer, J., Lochau, M. and Vogel, T. (eds.) (2019) <i>Explainable Software for Cyber-Physical Systems (ES4CPS): Report from the GI Dagstuhl Seminar 19023, January 06-11 2019, Schloss Dagstuhl</i>, <i>Arxiv</i>. Schloss Dagstuhl, Germany (CoRR). Available at: https://arxiv.org/abs/1904.11851.</div>
+</div>",
+  },
+  "Markdown<br/>(Informal)": {
+    "copied": "[Explainable Software for Cyber-Physical Systems (ES4CPS): Report from the GI Dagstuhl Seminar 19023, January 06-11 2019, Schloss Dagstuhl](https://arxiv.org/abs/1904.11851) (Greenyer et al., CoRR 2019)",
+    "shown": "<a href="https://arxiv.org/abs/1904.11851" target="_blank" rel="noopener noreferrer">Explainable Software for Cyber-Physical Systems (ES4CPS): Report from the GI Dagstuhl Seminar 19023, January 06-11 2019, Schloss Dagstuhl</a> (Greenyer et al., CoRR 2019)",
+  },
+  "address": "Schloss Dagstuhl, Germany",
+  "authors": "Joel Greenyer, Malte Lochau, Thomas Vogel",
+  "doi": undefined,
+  "series": "CoRR 2019",
+  "title": "Explainable Software for Cyber-Physical Systems (ES4CPS): Report from the GI Dagstuhl Seminar 19023, January 06-11 2019, Schloss Dagstuhl",
+  "url": "https://arxiv.org/abs/1904.11851",
+  "venue": "Arxiv",
+  "year": 2019,
+}
+`;
+
+exports[`golden citations > HastieICMI17 1`] = `
+{
+  "ACL": {
+    "copied": "Helen Hastie, Francisco J. Chiyah Garcia, David A. Robb, Pedro Patron, and Atanas Laskov. 2017. MIRIAM: A Multimodal Chat-Based Interface for Autonomous Systems. In Proceedings of the 19th ACM International Conference on Multimodal Interaction, pages 495–496, Glasgow, UK. ACM.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="HastieICMI17" class="csl-entry">Helen Hastie, Francisco J. Chiyah Garcia, David A. Robb, Pedro Patron, and Atanas Laskov. 2017. <a href="https://doi.org/10.1145/3136755.3143022">MIRIAM: A Multimodal Chat-Based Interface for Autonomous Systems</a>. In <i>Proceedings of the 19th ACM International Conference on Multimodal Interaction</i>, pages 495–496, Glasgow, UK. ACM.</div>
+</div>",
+  },
+  "ACL&nbsp;Bibkey": {
+    "copied": null,
+    "shown": null,
+  },
+  "BibTex": {
+    "copied": "@inproceedings{HastieICMI17,
+    author = {Hastie, Helen and Chiyah Garcia, Francisco J. and Robb, David A. and Patron, Pedro and Laskov, Atanas},
+    title = {MIRIAM: A Multimodal Chat-Based Interface for Autonomous Systems},
+    booktitle = {Proceedings of the 19th ACM International Conference on Multimodal Interaction},
+    series = {ICMI'17},
+    publisher = {ACM},
+    pages = {495-496},
+    DOI = {10.1145/3136755.3143022},
+    url = {https://doi.org/10.1145/3136755.3143022},
+    year = {2017},
+    address = {Glasgow, UK},
+    type = {Conference Proceedings}
+}",
+    "shown": "<tt class="bibtex-citation"><b>@inproceedings</b>{HastieICMI17,<br/>&nbsp;&nbsp;&nbsp;    author = {Hastie, Helen and Chiyah Garcia, Francisco J. and Robb, David A. and Patron, Pedro and Laskov, Atanas},<br/>&nbsp;&nbsp;&nbsp;    title = {MIRIAM: A Multimodal Chat-Based Interface for Autonomous Systems},<br/>&nbsp;&nbsp;&nbsp;    booktitle = {Proceedings of the 19th ACM International Conference on Multimodal Interaction},<br/>&nbsp;&nbsp;&nbsp;    series = {ICMI'17},<br/>&nbsp;&nbsp;&nbsp;    publisher = {ACM},<br/>&nbsp;&nbsp;&nbsp;    pages = {495-496},<br/>&nbsp;&nbsp;&nbsp;    DOI = {10.1145/3136755.3143022},<br/>&nbsp;&nbsp;&nbsp;    url = {https://doi.org/10.1145/3136755.3143022},<br/>&nbsp;&nbsp;&nbsp;    year = {2017},<br/>&nbsp;&nbsp;&nbsp;    address = {Glasgow, UK},<br/>&nbsp;&nbsp;&nbsp;    type = {Conference Proceedings}<br/>}</tt>",
+  },
+  "Harvard": {
+    "copied": "Hastie, H. et al. (2017) “MIRIAM: A Multimodal Chat-Based Interface for Autonomous Systems,” in Proceedings of the 19th ACM International Conference on Multimodal Interaction. Glasgow, UK: ACM (ICMI’17), pp. 495–496. doi:10.1145/3136755.3143022.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="HastieICMI17" class="csl-entry">Hastie, H. <i>et al.</i> (2017) “MIRIAM: A Multimodal Chat-Based Interface for Autonomous Systems,” in <i>Proceedings of the 19th ACM International Conference on Multimodal Interaction</i>. Glasgow, UK: ACM (ICMI’17), pp. 495–496. doi:10.1145/3136755.3143022.</div>
+</div>",
+  },
+  "Markdown<br/>(Informal)": {
+    "copied": "[MIRIAM: A Multimodal Chat-Based Interface for Autonomous Systems](https://doi.org/10.1145/3136755.3143022) (Hastie et al., ICMI 2017)",
+    "shown": "<a href="https://doi.org/10.1145/3136755.3143022" target="_blank" rel="noopener noreferrer">MIRIAM: A Multimodal Chat-Based Interface for Autonomous Systems</a> (Hastie et al., ICMI 2017)",
+  },
+  "address": "Glasgow, UK",
+  "authors": "Helen Hastie, Francisco J. Chiyah Garcia, David A. Robb, Pedro Patron, Atanas Laskov",
+  "doi": "10.1145/3136755.3143022",
+  "series": "ICMI 2017",
+  "title": "MIRIAM: A Multimodal Chat-Based Interface for Autonomous Systems",
+  "url": "https://doi.org/10.1145/3136755.3143022",
+  "venue": "Proceedings of the 19th ACM International Conference on Multimodal Interaction",
+  "year": 2017,
+}
+`;
+
+exports[`golden citations > HastieICMI18 1`] = `
+{
+  "ACL": {
+    "copied": "Helen Hastie, Francisco J. Chiyah Garcia, David A. Robb, Pedro Patron, and Atanas Laskov. 2018. MIRIAM: A Multimodal Interface for Explaining the Reasoning Behind Actions of Remote Autonomous Systems. In Proceedings of the 20th ACM 2018 International Conference on Multimodal Interaction, Boulder, Colorado, USA. ACM.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="HastieICMI18" class="csl-entry">Helen Hastie, Francisco J. Chiyah Garcia, David A. Robb, Pedro Patron, and Atanas Laskov. 2018. <a href="https://doi.org/10.1145/3242969.3266297">MIRIAM: A Multimodal Interface for Explaining the Reasoning Behind Actions of Remote Autonomous Systems</a>. In <i>Proceedings of the 20th ACM 2018 International Conference on Multimodal Interaction</i>, Boulder, Colorado, USA. ACM.</div>
+</div>",
+  },
+  "ACL&nbsp;Bibkey": {
+    "copied": null,
+    "shown": null,
+  },
+  "BibTex": {
+    "copied": "@inproceedings{HastieICMI18,
+    author = {Hastie, Helen and Chiyah Garcia, Francisco J. and Robb, David A. and Patron, Pedro and Laskov, Atanas},
+    title = {MIRIAM: A Multimodal Interface for Explaining the Reasoning Behind Actions of Remote Autonomous Systems},
+    booktitle = {Proceedings of the 20th ACM 2018 International Conference on Multimodal Interaction},
+    series = {ICMI'18},
+    address = {Boulder, Colorado, USA},
+    publisher = {ACM},
+    DOI = {10.1145/3242969.3266297},
+    url = {https://doi.org/10.1145/3242969.3266297},
+    year = {2018},
+    type = {Conference Proceedings}
+}",
+    "shown": "<tt class="bibtex-citation"><b>@inproceedings</b>{HastieICMI18,<br/>&nbsp;&nbsp;&nbsp;    author = {Hastie, Helen and Chiyah Garcia, Francisco J. and Robb, David A. and Patron, Pedro and Laskov, Atanas},<br/>&nbsp;&nbsp;&nbsp;    title = {MIRIAM: A Multimodal Interface for Explaining the Reasoning Behind Actions of Remote Autonomous Systems},<br/>&nbsp;&nbsp;&nbsp;    booktitle = {Proceedings of the 20th ACM 2018 International Conference on Multimodal Interaction},<br/>&nbsp;&nbsp;&nbsp;    series = {ICMI'18},<br/>&nbsp;&nbsp;&nbsp;    address = {Boulder, Colorado, USA},<br/>&nbsp;&nbsp;&nbsp;    publisher = {ACM},<br/>&nbsp;&nbsp;&nbsp;    DOI = {10.1145/3242969.3266297},<br/>&nbsp;&nbsp;&nbsp;    url = {https://doi.org/10.1145/3242969.3266297},<br/>&nbsp;&nbsp;&nbsp;    year = {2018},<br/>&nbsp;&nbsp;&nbsp;    type = {Conference Proceedings}<br/>}</tt>",
+  },
+  "Harvard": {
+    "copied": "Hastie, H. et al. (2018) “MIRIAM: A Multimodal Interface for Explaining the Reasoning Behind Actions of Remote Autonomous Systems,” in Proceedings of the 20th ACM 2018 International Conference on Multimodal Interaction. Boulder, Colorado, USA: ACM (ICMI’18). doi:10.1145/3242969.3266297.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="HastieICMI18" class="csl-entry">Hastie, H. <i>et al.</i> (2018) “MIRIAM: A Multimodal Interface for Explaining the Reasoning Behind Actions of Remote Autonomous Systems,” in <i>Proceedings of the 20th ACM 2018 International Conference on Multimodal Interaction</i>. Boulder, Colorado, USA: ACM (ICMI’18). doi:10.1145/3242969.3266297.</div>
+</div>",
+  },
+  "Markdown<br/>(Informal)": {
+    "copied": "[MIRIAM: A Multimodal Interface for Explaining the Reasoning Behind Actions of Remote Autonomous Systems](https://doi.org/10.1145/3242969.3266297) (Hastie et al., ICMI 2018)",
+    "shown": "<a href="https://doi.org/10.1145/3242969.3266297" target="_blank" rel="noopener noreferrer">MIRIAM: A Multimodal Interface for Explaining the Reasoning Behind Actions of Remote Autonomous Systems</a> (Hastie et al., ICMI 2018)",
+  },
+  "address": "Boulder, Colorado, USA",
+  "authors": "Helen Hastie, Francisco J. Chiyah Garcia, David A. Robb, Pedro Patron, Atanas Laskov",
+  "doi": "10.1145/3242969.3266297",
+  "series": "ICMI 2018",
+  "title": "MIRIAM: A Multimodal Interface for Explaining the Reasoning Behind Actions of Remote Autonomous Systems",
+  "url": "https://doi.org/10.1145/3242969.3266297",
+  "venue": "Proceedings of the 20th ACM 2018 International Conference on Multimodal Interaction",
+  "year": 2018,
+}
+`;
+
+exports[`golden citations > Robb:2019:EIR:3322276.3322318 1`] = `
+{
+  "ACL": {
+    "copied": "David A. Robb, José Lopes, Stefano Padilla, Atanas Laskov, Francisco J. Chiyah Garcia, Xingkun Liu, Jonatan Scharff Willners, Nicolas Valeyrie, Katrin Lohan, David Lane, Pedro Patron, Yvan Petillot, Mike J. Chantler, and Helen Hastie. 2019. Exploring Interaction with Remote Autonomous Systems Using Conversational Agents. In Proceedings of the 2019 on Designing Interactive Systems Conference, pages 1543–1556, San Diego, CA, USA. ACM.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="Robb:2019:EIR:3322276.3322318" class="csl-entry">David A. Robb, José Lopes, Stefano Padilla, Atanas Laskov, Francisco J. Chiyah Garcia, Xingkun Liu, Jonatan Scharff Willners, Nicolas Valeyrie, Katrin Lohan, David Lane, Pedro Patron, Yvan Petillot, Mike J. Chantler, and Helen Hastie. 2019. <a href="http://doi.acm.org/10.1145/3322276.3322318">Exploring Interaction with Remote Autonomous Systems Using Conversational Agents</a>. In <i>Proceedings of the 2019 on Designing Interactive Systems Conference</i>, pages 1543–1556, San Diego, CA, USA. ACM.</div>
+</div>",
+  },
+  "ACL&nbsp;Bibkey": {
+    "copied": null,
+    "shown": null,
+  },
+  "BibTex": {
+    "copied": "@inproceedings{Robb:2019:EIR:3322276.3322318,
+    author = {Robb, David A. and Lopes, Jos{\\'e} and Padilla, Stefano and Laskov, Atanas and Chiyah Garcia, Francisco J. and Liu, Xingkun and Scharff Willners, Jonatan and Valeyrie, Nicolas and Lohan, Katrin and Lane, David and Patron, Pedro and Petillot, Yvan and Chantler, Mike J. and Hastie, Helen},
+    title = {Exploring Interaction with Remote Autonomous Systems Using Conversational Agents},
+    booktitle = {Proceedings of the 2019 on Designing Interactive Systems Conference},
+    series = {DIS '19},
+    year = {2019},
+    isbn = {978-1-4503-5850-7},
+    location = {San Diego, CA, USA},
+    pages = {1543--1556},
+    numpages = {14},
+    url = {http://doi.acm.org/10.1145/3322276.3322318},
+    doi = {10.1145/3322276.3322318},
+    acmid = {3322318},
+    publisher = {ACM},
+    address = {New York, NY, USA}
+}",
+    "shown": "<tt class="bibtex-citation"><b>@inproceedings</b>{Robb:2019:EIR:3322276.3322318,<br/>&nbsp;&nbsp;&nbsp;    author = {Robb, David A. and Lopes, Jos{\\'e} and Padilla, Stefano and Laskov, Atanas and Chiyah Garcia, Francisco J. and Liu, Xingkun and Scharff Willners, Jonatan and Valeyrie, Nicolas and Lohan, Katrin and Lane, David and Patron, Pedro and Petillot, Yvan and Chantler, Mike J. and Hastie, Helen},<br/>&nbsp;&nbsp;&nbsp;    title = {Exploring Interaction with Remote Autonomous Systems Using Conversational Agents},<br/>&nbsp;&nbsp;&nbsp;    booktitle = {Proceedings of the 2019 on Designing Interactive Systems Conference},<br/>&nbsp;&nbsp;&nbsp;    series = {DIS '19},<br/>&nbsp;&nbsp;&nbsp;    year = {2019},<br/>&nbsp;&nbsp;&nbsp;    isbn = {978-1-4503-5850-7},<br/>&nbsp;&nbsp;&nbsp;    location = {San Diego, CA, USA},<br/>&nbsp;&nbsp;&nbsp;    pages = {1543--1556},<br/>&nbsp;&nbsp;&nbsp;    numpages = {14},<br/>&nbsp;&nbsp;&nbsp;    url = {http://doi.acm.org/10.1145/3322276.3322318},<br/>&nbsp;&nbsp;&nbsp;    doi = {10.1145/3322276.3322318},<br/>&nbsp;&nbsp;&nbsp;    acmid = {3322318},<br/>&nbsp;&nbsp;&nbsp;    publisher = {ACM},<br/>&nbsp;&nbsp;&nbsp;    address = {New York, NY, USA}<br/>}</tt>",
+  },
+  "Harvard": {
+    "copied": "Robb, D.A. et al. (2019) “Exploring Interaction with Remote Autonomous Systems Using Conversational Agents,” in Proceedings of the 2019 on Designing Interactive Systems Conference. San Diego, CA, USA: ACM (DIS ’19), pp. 1543–1556. doi:10.1145/3322276.3322318.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="Robb:2019:EIR:3322276.3322318" class="csl-entry">Robb, D.A. <i>et al.</i> (2019) “Exploring Interaction with Remote Autonomous Systems Using Conversational Agents,” in <i>Proceedings of the 2019 on Designing Interactive Systems Conference</i>. San Diego, CA, USA: ACM (DIS ’19), pp. 1543–1556. doi:10.1145/3322276.3322318.</div>
+</div>",
+  },
+  "Markdown<br/>(Informal)": {
+    "copied": "[Exploring Interaction with Remote Autonomous Systems Using Conversational Agents](http://doi.acm.org/10.1145/3322276.3322318) (Robb et al., DIS  2019)",
+    "shown": "<a href="http://doi.acm.org/10.1145/3322276.3322318" target="_blank" rel="noopener noreferrer">Exploring Interaction with Remote Autonomous Systems Using Conversational Agents</a> (Robb et al., DIS  2019)",
+  },
+  "address": "San Diego, CA, USA",
+  "authors": "David A. Robb, José Lopes, Stefano Padilla, Atanas Laskov, Francisco J. Chiyah Garcia, Xingkun Liu, Jonatan Scharff Willners, Nicolas Valeyrie, Katrin Lohan, David Lane, Pedro Patron, Yvan Petillot, Mike J. Chantler, Helen Hastie",
+  "doi": "10.1145/3322276.3322318",
+  "series": "DIS  2019",
+  "title": "Exploring Interaction with Remote Autonomous Systems Using Conversational Agents",
+  "url": "http://doi.acm.org/10.1145/3322276.3322318",
+  "venue": "Proceedings of the 2019 on Designing Interactive Systems Conference",
+  "year": 2019,
+}
+`;
+
+exports[`golden citations > RobbAUV18 1`] = `
+{
+  "ACL": {
+    "copied": "David A. Robb, Jonatan S. Willners, Nicolas Valeyrie, Francisco J. Chiyah Garcia, Atanas Laskov, Xingkun Liu, Pedro Patron, Helen Hastie, and Yvan Petillot. 2018. A Natural Language Interface and Relayed Acoustic Communications for Improved Command and Control of AUVs. In Proceedings of the 2018 IEEE/OES Autonomous Underwater Vehicles Symposium, Porto, Portugal. IEEE.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="RobbAUV18" class="csl-entry">David A. Robb, Jonatan S. Willners, Nicolas Valeyrie, Francisco J. Chiyah Garcia, Atanas Laskov, Xingkun Liu, Pedro Patron, Helen Hastie, and Yvan Petillot. 2018. <a href="https://ieeexplore.ieee.org/document/8729778">A Natural Language Interface and Relayed Acoustic Communications for Improved Command and Control of AUVs</a>. In <i>Proceedings of the 2018 IEEE/OES Autonomous Underwater Vehicles Symposium</i>, Porto, Portugal. IEEE.</div>
+</div>",
+  },
+  "ACL&nbsp;Bibkey": {
+    "copied": null,
+    "shown": null,
+  },
+  "BibTex": {
+    "copied": "@inproceedings{RobbAUV18,
+    author = {Robb, David A. and Willners, Jonatan S. and Valeyrie, Nicolas and Chiyah Garcia, Francisco J. and Laskov, Atanas and Liu, Xingkun and Patron, Pedro and Hastie, Helen and Petillot, Yvan},
+    title = {A Natural Language Interface and Relayed Acoustic Communications for Improved Command and Control of AUVs},
+    booktitle = {Proceedings of the 2018 IEEE/OES Autonomous Underwater Vehicles Symposium},
+    series={AUV'18},
+    publisher = {IEEE},
+    year = {2018},
+    month = {11},
+    address={Porto, Portugal},
+    type = {Conference Proceedings},
+    url = {https://ieeexplore.ieee.org/document/8729778}
+}",
+    "shown": "<tt class="bibtex-citation"><b>@inproceedings</b>{RobbAUV18,<br/>&nbsp;&nbsp;&nbsp;    author = {Robb, David A. and Willners, Jonatan S. and Valeyrie, Nicolas and Chiyah Garcia, Francisco J. and Laskov, Atanas and Liu, Xingkun and Patron, Pedro and Hastie, Helen and Petillot, Yvan},<br/>&nbsp;&nbsp;&nbsp;    title = {A Natural Language Interface and Relayed Acoustic Communications for Improved Command and Control of AUVs},<br/>&nbsp;&nbsp;&nbsp;    booktitle = {Proceedings of the 2018 IEEE/OES Autonomous Underwater Vehicles Symposium},<br/>&nbsp;&nbsp;&nbsp;    series={AUV'18},<br/>&nbsp;&nbsp;&nbsp;    publisher = {IEEE},<br/>&nbsp;&nbsp;&nbsp;    year = {2018},<br/>&nbsp;&nbsp;&nbsp;    month = {11},<br/>&nbsp;&nbsp;&nbsp;    address={Porto, Portugal},<br/>&nbsp;&nbsp;&nbsp;    type = {Conference Proceedings},<br/>&nbsp;&nbsp;&nbsp;    url = {https://ieeexplore.ieee.org/document/8729778}<br/>}</tt>",
+  },
+  "Harvard": {
+    "copied": "Robb, D.A. et al. (2018) “A Natural Language Interface and Relayed Acoustic Communications for Improved Command and Control of AUVs,” in Proceedings of the 2018 IEEE/OES Autonomous Underwater Vehicles Symposium. Porto, Portugal: IEEE (AUV’18). Available at: https://ieeexplore.ieee.org/document/8729778.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="RobbAUV18" class="csl-entry">Robb, D.A. <i>et al.</i> (2018) “A Natural Language Interface and Relayed Acoustic Communications for Improved Command and Control of AUVs,” in <i>Proceedings of the 2018 IEEE/OES Autonomous Underwater Vehicles Symposium</i>. Porto, Portugal: IEEE (AUV’18). Available at: https://ieeexplore.ieee.org/document/8729778.</div>
+</div>",
+  },
+  "Markdown<br/>(Informal)": {
+    "copied": "[A Natural Language Interface and Relayed Acoustic Communications for Improved Command and Control of AUVs](https://ieeexplore.ieee.org/document/8729778) (Robb et al., AUV 2018)",
+    "shown": "<a href="https://ieeexplore.ieee.org/document/8729778" target="_blank" rel="noopener noreferrer">A Natural Language Interface and Relayed Acoustic Communications for Improved Command and Control of AUVs</a> (Robb et al., AUV 2018)",
+  },
+  "address": "Porto, Portugal",
+  "authors": "David A. Robb, Jonatan S. Willners, Nicolas Valeyrie, Francisco J. Chiyah Garcia, Atanas Laskov, Xingkun Liu, Pedro Patron, Helen Hastie, Yvan Petillot",
+  "doi": undefined,
+  "series": "AUV 2018",
+  "title": "A Natural Language Interface and Relayed Acoustic Communications for Improved Command and Control of AUVs",
+  "url": "https://ieeexplore.ieee.org/document/8729778",
+  "venue": "Proceedings of the 2018 IEEE/OES Autonomous Underwater Vehicles Symposium",
+  "year": 2018,
+}
+`;
+
+exports[`golden citations > RobbICMI18 1`] = `
+{
+  "ACL": {
+    "copied": "David A. Robb, Francisco J. Chiyah Garcia, Atanas Laskov, Xingkun Liu, Pedro Patron, and Helen Hastie. 2018. Keep Me in the Loop: Increasing Operator Situation Awareness through a Conversational Multimodal Interface. In Proceedings of the 20th ACM International Conference on Multimodal Interaction, pages 384–392, Boulder, Colorado, USA. ACM.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="RobbICMI18" class="csl-entry">David A. Robb, Francisco J. Chiyah Garcia, Atanas Laskov, Xingkun Liu, Pedro Patron, and Helen Hastie. 2018. <a href="https://dl.acm.org/doi/10.1145/3242969.3242974">Keep Me in the Loop: Increasing Operator Situation Awareness through a Conversational Multimodal Interface</a>. In <i>Proceedings of the 20th ACM International Conference on Multimodal Interaction</i>, pages 384–392, Boulder, Colorado, USA. ACM.</div>
+</div>",
+  },
+  "ACL&nbsp;Bibkey": {
+    "copied": null,
+    "shown": null,
+  },
+  "BibTex": {
+    "copied": "@inproceedings{RobbICMI18,
+    author = {Robb, David A. and Chiyah Garcia, Francisco J. and Laskov, Atanas and Liu, Xingkun and Patron, Pedro and Hastie, Helen},
+    title = {Keep Me in the Loop: Increasing Operator Situation Awareness through a Conversational Multimodal Interface},
+    booktitle = {Proceedings of the 20th ACM International Conference on Multimodal Interaction},
+    series = {ICMI'18},
+    volume = {},
+    publisher = {ACM},
+    address = {Boulder, Colorado, USA},
+    year = {2018},
+    month = {10},
+    DOI = {10.1145/3242969.3242974},
+    url = {https://dl.acm.org/doi/10.1145/3242969.3242974},
+    pages = {384--392},
+    type = {Conference Proceedings}
+}",
+    "shown": "<tt class="bibtex-citation"><b>@inproceedings</b>{RobbICMI18,<br/>&nbsp;&nbsp;&nbsp;    author = {Robb, David A. and Chiyah Garcia, Francisco J. and Laskov, Atanas and Liu, Xingkun and Patron, Pedro and Hastie, Helen},<br/>&nbsp;&nbsp;&nbsp;    title = {Keep Me in the Loop: Increasing Operator Situation Awareness through a Conversational Multimodal Interface},<br/>&nbsp;&nbsp;&nbsp;    booktitle = {Proceedings of the 20th ACM International Conference on Multimodal Interaction},<br/>&nbsp;&nbsp;&nbsp;    series = {ICMI'18},<br/>&nbsp;&nbsp;&nbsp;    volume = {},<br/>&nbsp;&nbsp;&nbsp;    publisher = {ACM},<br/>&nbsp;&nbsp;&nbsp;    address = {Boulder, Colorado, USA},<br/>&nbsp;&nbsp;&nbsp;    year = {2018},<br/>&nbsp;&nbsp;&nbsp;    month = {10},<br/>&nbsp;&nbsp;&nbsp;    DOI = {10.1145/3242969.3242974},<br/>&nbsp;&nbsp;&nbsp;    url = {https://dl.acm.org/doi/10.1145/3242969.3242974},<br/>&nbsp;&nbsp;&nbsp;    pages = {384--392},<br/>&nbsp;&nbsp;&nbsp;    type = {Conference Proceedings}<br/>}</tt>",
+  },
+  "Harvard": {
+    "copied": "Robb, D.A. et al. (2018) “Keep Me in the Loop: Increasing Operator Situation Awareness through a Conversational Multimodal Interface,” in Proceedings of the 20th ACM International Conference on Multimodal Interaction. Boulder, Colorado, USA: ACM (ICMI’18), pp. 384–392. doi:10.1145/3242969.3242974.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="RobbICMI18" class="csl-entry">Robb, D.A. <i>et al.</i> (2018) “Keep Me in the Loop: Increasing Operator Situation Awareness through a Conversational Multimodal Interface,” in <i>Proceedings of the 20th ACM International Conference on Multimodal Interaction</i>. Boulder, Colorado, USA: ACM (ICMI’18), pp. 384–392. doi:10.1145/3242969.3242974.</div>
+</div>",
+  },
+  "Markdown<br/>(Informal)": {
+    "copied": "[Keep Me in the Loop: Increasing Operator Situation Awareness through a Conversational Multimodal Interface](https://dl.acm.org/doi/10.1145/3242969.3242974) (Robb et al., ICMI 2018)",
+    "shown": "<a href="https://dl.acm.org/doi/10.1145/3242969.3242974" target="_blank" rel="noopener noreferrer">Keep Me in the Loop: Increasing Operator Situation Awareness through a Conversational Multimodal Interface</a> (Robb et al., ICMI 2018)",
+  },
+  "address": "Boulder, Colorado, USA",
+  "authors": "David A. Robb, Francisco J. Chiyah Garcia, Atanas Laskov, Xingkun Liu, Pedro Patron, Helen Hastie",
+  "doi": "10.1145/3242969.3242974",
+  "series": "ICMI 2018",
+  "title": "Keep Me in the Loop: Increasing Operator Situation Awareness through a Conversational Multimodal Interface",
+  "url": "https://dl.acm.org/doi/10.1145/3242969.3242974",
+  "venue": "Proceedings of the 20th ACM International Conference on Multimodal Interaction",
+  "year": 2018,
+}
+`;
+
+exports[`golden citations > blumreiter-et-al-2019-towards-self-explainable 1`] = `
+{
+  "ACL": {
+    "copied": "Mathias Blumreiter, Joel Greenyer, Francisco Javier Chiyah Garcia, Verena Klös, Maike Schwammberger, Christoph Sommer, Andreas Vogelsang, and Andreas Wortmann. 2019. Towards Self-Explainable Cyber-Physical Systems. In 2019 ACM/IEEE 22nd International Conference on Model Driven Engineering Languages and Systems Companion (MODELS-C), pages 543–548.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="blumreiter-et-al-2019-towards-self-explainable" class="csl-entry">Mathias Blumreiter, Joel Greenyer, Francisco Javier Chiyah Garcia, Verena Klös, Maike Schwammberger, Christoph Sommer, Andreas Vogelsang, and Andreas Wortmann. 2019. <a href="https://ieeexplore.ieee.org/document/8904796">Towards Self-Explainable Cyber-Physical Systems</a>. In <i>2019 ACM/IEEE 22nd International Conference on Model Driven Engineering Languages and Systems Companion (MODELS-C)</i>, pages 543–548.</div>
+</div>",
+  },
+  "ACL&nbsp;Bibkey": {
+    "copied": null,
+    "shown": null,
+  },
+  "BibTex": {
+    "copied": "@inproceedings{blumreiter-et-al-2019-towards-self-explainable,
+    author={Blumreiter, Mathias and Greenyer, Joel and Chiyah Garcia, Francisco Javier and Klös, Verena and Schwammberger, Maike and Sommer, Christoph and Vogelsang, Andreas and Wortmann, Andreas},
+    booktitle={2019 ACM/IEEE 22nd International Conference on Model Driven Engineering Languages and Systems Companion (MODELS-C)},
+    title={Towards Self-Explainable Cyber-Physical Systems},
+    year={2019},
+    volume={},
+    number={},
+    pages={543-548},
+    doi={10.1109/MODELS-C.2019.00084},
+    url={https://ieeexplore.ieee.org/document/8904796}
+}",
+    "shown": "<tt class="bibtex-citation"><b>@inproceedings</b>{blumreiter-et-al-2019-towards-self-explainable,<br/>&nbsp;&nbsp;&nbsp;    author={Blumreiter, Mathias and Greenyer, Joel and Chiyah Garcia, Francisco Javier and Klös, Verena and Schwammberger, Maike and Sommer, Christoph and Vogelsang, Andreas and Wortmann, Andreas},<br/>&nbsp;&nbsp;&nbsp;    booktitle={2019 ACM/IEEE 22nd International Conference on Model Driven Engineering Languages and Systems Companion (MODELS-C)},<br/>&nbsp;&nbsp;&nbsp;    title={Towards Self-Explainable Cyber-Physical Systems},<br/>&nbsp;&nbsp;&nbsp;    year={2019},<br/>&nbsp;&nbsp;&nbsp;    volume={},<br/>&nbsp;&nbsp;&nbsp;    number={},<br/>&nbsp;&nbsp;&nbsp;    pages={543-548},<br/>&nbsp;&nbsp;&nbsp;    doi={10.1109/MODELS-C.2019.00084},<br/>&nbsp;&nbsp;&nbsp;    url={https://ieeexplore.ieee.org/document/8904796}<br/>}</tt>",
+  },
+  "Harvard": {
+    "copied": "Blumreiter, M. et al. (2019) “Towards Self-Explainable Cyber-Physical Systems,” in 2019 ACM/IEEE 22nd International Conference on Model Driven Engineering Languages and Systems Companion (MODELS-C), pp. 543–548. doi:10.1109/MODELS-C.2019.00084.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="blumreiter-et-al-2019-towards-self-explainable" class="csl-entry">Blumreiter, M. <i>et al.</i> (2019) “Towards Self-Explainable Cyber-Physical Systems,” in <i>2019 ACM/IEEE 22nd International Conference on Model Driven Engineering Languages and Systems Companion (MODELS-C)</i>, pp. 543–548. doi:10.1109/MODELS-C.2019.00084.</div>
+</div>",
+  },
+  "Markdown<br/>(Informal)": {
+    "copied": "[Towards Self-Explainable Cyber-Physical Systems](https://ieeexplore.ieee.org/document/8904796) (Blumreiter et al., 2019 ACM/IEEE 22nd International Conference on Model Driven Engineering Languages and Systems Companion (MODELS-C) 2019)",
+    "shown": "<a href="https://ieeexplore.ieee.org/document/8904796" target="_blank" rel="noopener noreferrer">Towards Self-Explainable Cyber-Physical Systems</a> (Blumreiter et al., 2019 ACM/IEEE 22nd International Conference on Model Driven Engineering Languages and Systems Companion (MODELS-C) 2019)",
+  },
+  "address": undefined,
+  "authors": "Mathias Blumreiter, Joel Greenyer, Francisco Javier Chiyah Garcia, Verena Klös, Maike Schwammberger, Christoph Sommer, Andreas Vogelsang, Andreas Wortmann",
+  "doi": "10.1109/MODELS-C.2019.00084",
+  "series": null,
+  "title": "Towards Self-Explainable Cyber-Physical Systems",
+  "url": "https://ieeexplore.ieee.org/document/8904796",
+  "venue": "2019 ACM/IEEE 22nd International Conference on Model Driven Engineering Languages and Systems Companion (MODELS-C)",
+  "year": 2019,
+}
+`;
+
+exports[`golden citations > bruce-etal-2024-follow 1`] = `
+{
+  "ACL": {
+    "copied": "Bruce W Wilson, Shivaanee Eswaran, Omar Riyaz, Javier Chiyah-Garcia, and Matthew Peter Aylett. 2024. Follow the Yellow or Red Brick Road? Investigating the Impact of Narratives in a Guided Navigation Task. In Proceedings of the 12th International Conference on Human-Agent Interaction, pages 411–413, Swansea, United Kingdom. Association for Computing Machinery.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="bruce-etal-2024-follow" class="csl-entry">Bruce W Wilson, Shivaanee Eswaran, Omar Riyaz, Javier Chiyah-Garcia, and Matthew Peter Aylett. 2024. <a href="https://doi.org/10.1145/3687272.3690900">Follow the Yellow or Red Brick Road? Investigating the Impact of Narratives in a Guided Navigation Task</a>. In <i>Proceedings of the 12th International Conference on Human-Agent Interaction</i>, pages 411–413, Swansea, United Kingdom. Association for Computing Machinery.</div>
+</div>",
+  },
+  "ACL&nbsp;Bibkey": {
+    "copied": null,
+    "shown": null,
+  },
+  "BibTex": {
+    "copied": "@inproceedings{bruce-etal-2024-follow,
+    author = {Wilson, Bruce W and Eswaran, Shivaanee and Riyaz, Omar and Chiyah-Garcia, Javier and Aylett, Matthew Peter},
+    title = {Follow the Yellow or Red Brick Road? Investigating the Impact of Narratives in a Guided Navigation Task},
+    year = {2024},
+    isbn = {9798400711787},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3687272.3690900},
+    doi = {10.1145/3687272.3690900},
+    booktitle = {Proceedings of the 12th International Conference on Human-Agent Interaction},
+    pages = {411–413},
+    numpages = {3},
+    keywords = {Social agents, narratives, navigation},
+    location = {Swansea, United Kingdom},
+    series = {HAI'24}
+}",
+    "shown": "<tt class="bibtex-citation"><b>@inproceedings</b>{bruce-etal-2024-follow,<br/>&nbsp;&nbsp;&nbsp;    author = {Wilson, Bruce W and Eswaran, Shivaanee and Riyaz, Omar and Chiyah-Garcia, Javier and Aylett, Matthew Peter},<br/>&nbsp;&nbsp;&nbsp;    title = {Follow the Yellow or Red Brick Road? Investigating the Impact of Narratives in a Guided Navigation Task},<br/>&nbsp;&nbsp;&nbsp;    year = {2024},<br/>&nbsp;&nbsp;&nbsp;    isbn = {9798400711787},<br/>&nbsp;&nbsp;&nbsp;    publisher = {Association for Computing Machinery},<br/>&nbsp;&nbsp;&nbsp;    address = {New York, NY, USA},<br/>&nbsp;&nbsp;&nbsp;    url = {https://doi.org/10.1145/3687272.3690900},<br/>&nbsp;&nbsp;&nbsp;    doi = {10.1145/3687272.3690900},<br/>&nbsp;&nbsp;&nbsp;    booktitle = {Proceedings of the 12th International Conference on Human-Agent Interaction},<br/>&nbsp;&nbsp;&nbsp;    pages = {411–413},<br/>&nbsp;&nbsp;&nbsp;    numpages = {3},<br/>&nbsp;&nbsp;&nbsp;    keywords = {Social agents, narratives, navigation},<br/>&nbsp;&nbsp;&nbsp;    location = {Swansea, United Kingdom},<br/>&nbsp;&nbsp;&nbsp;    series = {HAI'24}<br/>}</tt>",
+  },
+  "Harvard": {
+    "copied": "Wilson, B.W. et al. (2024) “Follow the Yellow or Red Brick Road? Investigating the Impact of Narratives in a Guided Navigation Task,” in Proceedings of the 12th International Conference on Human-Agent Interaction. Swansea, United Kingdom: Association for Computing Machinery (HAI’24), pp. 411–413. doi:10.1145/3687272.3690900.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="bruce-etal-2024-follow" class="csl-entry">Wilson, B.W. <i>et al.</i> (2024) “Follow the Yellow or Red Brick Road? Investigating the Impact of Narratives in a Guided Navigation Task,” in <i>Proceedings of the 12th International Conference on Human-Agent Interaction</i>. Swansea, United Kingdom: Association for Computing Machinery (HAI’24), pp. 411–413. doi:10.1145/3687272.3690900.</div>
+</div>",
+  },
+  "Markdown<br/>(Informal)": {
+    "copied": "[Follow the Yellow or Red Brick Road? Investigating the Impact of Narratives in a Guided Navigation Task](https://doi.org/10.1145/3687272.3690900) (Wilson et al., HAI 2024)",
+    "shown": "<a href="https://doi.org/10.1145/3687272.3690900" target="_blank" rel="noopener noreferrer">Follow the Yellow or Red Brick Road? Investigating the Impact of Narratives in a Guided Navigation Task</a> (Wilson et al., HAI 2024)",
+  },
+  "address": "Swansea, United Kingdom",
+  "authors": "Bruce W Wilson, Shivaanee Eswaran, Omar Riyaz, Javier Chiyah-Garcia, Matthew Peter Aylett",
+  "doi": "10.1145/3687272.3690900",
+  "series": "HAI 2024",
+  "title": "Follow the Yellow or Red Brick Road? Investigating the Impact of Narratives in a Guided Navigation Task",
+  "url": "https://doi.org/10.1145/3687272.3690900",
+  "venue": "Proceedings of the 12th International Conference on Human-Agent Interaction",
+  "year": 2024,
+}
+`;
+
+exports[`golden citations > chiyah-garcia-2025-thesis 1`] = `
+{
+  "ACL": {
+    "copied": "Javier Chiyah-Garcia. 2025. Learning to Handle Miscommunication in Multi-modal Conversational AI. PhD Thesis, Heriot-Watt University, Edinburgh, UK.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="chiyah-garcia-2025-thesis" class="csl-entry">Javier Chiyah-Garcia. 2025. <i>Learning to Handle Miscommunication in Multi-modal Conversational AI</i>. PhD Thesis, Heriot-Watt University, Edinburgh, UK.</div>
+</div>",
+  },
+  "ACL&nbsp;Bibkey": {
+    "copied": null,
+    "shown": null,
+  },
+  "BibTex": {
+    "copied": "@phdthesis{chiyah-garcia-2025-thesis,
+    title = "Learning to Handle Miscommunication in Multi-modal Conversational AI",
+    author = "Chiyah-Garcia, Javier",
+    school = "Heriot-Watt University",
+    booktitle = "Heriot-Watt University",
+    series = "PhD Thesis",
+    month = apr,
+    year = "2025",
+    address = "Edinburgh, UK",
+    url = "https://jchiyah.github.io/Chiyah-Garcia_Thesis.pdf",
+    type = "PhD Thesis"
+}",
+    "shown": "<tt class="bibtex-citation"><b>@phdthesis</b>{chiyah-garcia-2025-thesis,<br/>&nbsp;&nbsp;&nbsp;    title = "Learning to Handle Miscommunication in Multi-modal Conversational AI",<br/>&nbsp;&nbsp;&nbsp;    author = "Chiyah-Garcia, Javier",<br/>&nbsp;&nbsp;&nbsp;    school = "Heriot-Watt University",<br/>&nbsp;&nbsp;&nbsp;    booktitle = "Heriot-Watt University",<br/>&nbsp;&nbsp;&nbsp;    series = "PhD Thesis",<br/>&nbsp;&nbsp;&nbsp;    month = apr,<br/>&nbsp;&nbsp;&nbsp;    year = "2025",<br/>&nbsp;&nbsp;&nbsp;    address = "Edinburgh, UK",<br/>&nbsp;&nbsp;&nbsp;    url = "https://jchiyah.github.io/Chiyah-Garcia_Thesis.pdf",<br/>&nbsp;&nbsp;&nbsp;    type = "PhD Thesis"<br/>}</tt>",
+  },
+  "Harvard": {
+    "copied": "Chiyah-Garcia, J. (2025) Learning to Handle Miscommunication in Multi-modal Conversational AI, Heriot-Watt University. PhD Thesis. Heriot-Watt University. Available at: https://jchiyah.github.io/Chiyah-Garcia_Thesis.pdf.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="chiyah-garcia-2025-thesis" class="csl-entry">Chiyah-Garcia, J. (2025) <i>Learning to Handle Miscommunication in Multi-modal Conversational AI</i>, <i>Heriot-Watt University</i>. PhD Thesis. Heriot-Watt University. Available at: https://jchiyah.github.io/Chiyah-Garcia_Thesis.pdf.</div>
+</div>",
+  },
+  "Markdown<br/>(Informal)": {
+    "copied": "[Learning to Handle Miscommunication in Multi-modal Conversational AI](https://jchiyah.github.io/Chiyah-Garcia_Thesis.pdf) (Chiyah-Garcia, PhD Thesis 2025)",
+    "shown": "<a href="https://jchiyah.github.io/Chiyah-Garcia_Thesis.pdf" target="_blank" rel="noopener noreferrer">Learning to Handle Miscommunication in Multi-modal Conversational AI</a> (Chiyah-Garcia, PhD Thesis 2025)",
+  },
+  "address": "Edinburgh, UK",
+  "authors": "Javier Chiyah-Garcia",
+  "doi": undefined,
+  "series": "PhD Thesis 2025",
+  "title": "Learning to Handle Miscommunication in Multi-modal Conversational AI",
+  "url": "https://jchiyah.github.io/Chiyah-Garcia_Thesis.pdf",
+  "venue": "Heriot-Watt University",
+  "year": 2025,
+}
+`;
+
+exports[`golden citations > chiyah-garcia-etal-2020-crwiz 1`] = `
+{
+  "ACL": {
+    "copied": "Francisco J. Chiyah Garcia, José Lopes, Xingkun Liu, and Helen Hastie. 2020. CRWIZ: A Framework for Crowdsourcing Real-Time Wizard-of-Oz Dialogues. In Proceedings of the 12th Language Resources and Evaluation Conference, pages 288–297, Marseille, France. European Language Resources Association.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="chiyah-garcia-etal-2020-crwiz" class="csl-entry">Francisco J. Chiyah Garcia, José Lopes, Xingkun Liu, and Helen Hastie. 2020. <a href="https://www.aclweb.org/anthology/2020.lrec-1.36">CRWIZ: A Framework for Crowdsourcing Real-Time Wizard-of-Oz Dialogues</a>. In <i>Proceedings of the 12th Language Resources and Evaluation Conference</i>, pages 288–297, Marseille, France. European Language Resources Association.</div>
+</div>",
+  },
+  "ACL&nbsp;Bibkey": {
+    "copied": null,
+    "shown": null,
+  },
+  "BibTex": {
+    "copied": "@inproceedings{chiyah-garcia-etal-2020-crwiz,
+    title = {{CRWIZ}: A Framework for Crowdsourcing Real-Time {W}izard-of-{O}z Dialogues},
+    author = {Chiyah Garcia, Francisco J. and Lopes, Jos{\\'e} and Liu, Xingkun and Hastie, Helen},
+    booktitle = {Proceedings of the 12th Language Resources and Evaluation Conference},
+    month = {5},
+    year = {2020},
+    series = {LREC '20},
+    address = {Marseille, France},
+    publisher = {European Language Resources Association},
+    url = {https://www.aclweb.org/anthology/2020.lrec-1.36},
+    pages = {288--297},
+    language = {English},
+    ISBN = {979-10-95546-34-4}
+}",
+    "shown": "<tt class="bibtex-citation"><b>@inproceedings</b>{chiyah-garcia-etal-2020-crwiz,<br/>&nbsp;&nbsp;&nbsp;    title = {{CRWIZ}: A Framework for Crowdsourcing Real-Time {W}izard-of-{O}z Dialogues},<br/>&nbsp;&nbsp;&nbsp;    author = {Chiyah Garcia, Francisco J. and Lopes, Jos{\\'e} and Liu, Xingkun and Hastie, Helen},<br/>&nbsp;&nbsp;&nbsp;    booktitle = {Proceedings of the 12th Language Resources and Evaluation Conference},<br/>&nbsp;&nbsp;&nbsp;    month = {5},<br/>&nbsp;&nbsp;&nbsp;    year = {2020},<br/>&nbsp;&nbsp;&nbsp;    series = {LREC '20},<br/>&nbsp;&nbsp;&nbsp;    address = {Marseille, France},<br/>&nbsp;&nbsp;&nbsp;    publisher = {European Language Resources Association},<br/>&nbsp;&nbsp;&nbsp;    url = {https://www.aclweb.org/anthology/2020.lrec-1.36},<br/>&nbsp;&nbsp;&nbsp;    pages = {288--297},<br/>&nbsp;&nbsp;&nbsp;    language = {English},<br/>&nbsp;&nbsp;&nbsp;    ISBN = {979-10-95546-34-4}<br/>}</tt>",
+  },
+  "Harvard": {
+    "copied": "Chiyah Garcia, F.J. et al. (2020) “CRWIZ: A Framework for Crowdsourcing Real-Time Wizard-of-Oz Dialogues,” in Proceedings of the 12th Language Resources and Evaluation Conference. Marseille, France: European Language Resources Association (LREC ’20), pp. 288–297. Available at: https://www.aclweb.org/anthology/2020.lrec-1.36.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="chiyah-garcia-etal-2020-crwiz" class="csl-entry">Chiyah Garcia, F.J. <i>et al.</i> (2020) “CRWIZ: A Framework for Crowdsourcing Real-Time Wizard-of-Oz Dialogues,” in <i>Proceedings of the 12th Language Resources and Evaluation Conference</i>. Marseille, France: European Language Resources Association (LREC ’20), pp. 288–297. Available at: https://www.aclweb.org/anthology/2020.lrec-1.36.</div>
+</div>",
+  },
+  "Markdown<br/>(Informal)": {
+    "copied": "[CRWIZ: A Framework for Crowdsourcing Real-Time Wizard-of-Oz Dialogues](https://www.aclweb.org/anthology/2020.lrec-1.36) (Chiyah Garcia et al., LREC  2020)",
+    "shown": "<a href="https://www.aclweb.org/anthology/2020.lrec-1.36" target="_blank" rel="noopener noreferrer">CRWIZ: A Framework for Crowdsourcing Real-Time Wizard-of-Oz Dialogues</a> (Chiyah Garcia et al., LREC  2020)",
+  },
+  "address": "Marseille, France",
+  "authors": "Francisco J. Chiyah Garcia, José Lopes, Xingkun Liu, Helen Hastie",
+  "doi": undefined,
+  "series": "LREC  2020",
+  "title": "CRWIZ: A Framework for Crowdsourcing Real-Time Wizard-of-Oz Dialogues",
+  "url": "https://www.aclweb.org/anthology/2020.lrec-1.36",
+  "venue": "Proceedings of the 12th Language Resources and Evaluation Conference",
+  "year": 2020,
+}
+`;
+
+exports[`golden citations > chiyah-garcia-etal-2023-referring 1`] = `
+{
+  "ACL": {
+    "copied": "Javier Chiyah-Garcia, Alessandro Suglia, Arash Eshghi, and Helen Hastie. 2023. \`What are you referring to?’ Evaluating the Ability of Multi-Modal Dialogue Models to Process Clarificational Exchanges. In Proceedings of the 24th Annual Meeting of the Special Interest Group on Discourse and Dialogue, pages 175–182, Prague, Czechia. Association for Computational Linguistics.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="chiyah-garcia-etal-2023-referring" class="csl-entry">Javier Chiyah-Garcia, Alessandro Suglia, Arash Eshghi, and Helen Hastie. 2023. <a href="https://aclanthology.org/2023.sigdial-1.16">\`What are you referring to?’ Evaluating the Ability of Multi-Modal Dialogue Models to Process Clarificational Exchanges</a>. In <i>Proceedings of the 24th Annual Meeting of the Special Interest Group on Discourse and Dialogue</i>, pages 175–182, Prague, Czechia. Association for Computational Linguistics.</div>
+</div>",
+  },
+  "ACL&nbsp;Bibkey": {
+    "copied": "chiyah-garcia-etal-2023-referring",
+    "shown": "<samp>chiyah-garcia-etal-2023-referring</samp>",
+  },
+  "BibTex": {
+    "copied": "@inproceedings{chiyah-garcia-etal-2023-referring,
+    title = "{\`}{W}hat are you referring to?{'} {E}valuating the Ability of Multi-Modal Dialogue Models to Process Clarificational Exchanges",
+    author = "Chiyah-Garcia, Javier and Suglia, Alessandro and Eshghi, Arash and Hastie, Helen",
+    editor = "Stoyanchev, Svetlana and Joty, Shafiq and Schlangen, David and Dusek, Ondrej and Kennington, Casey and Alikhani, Malihe",
+    booktitle = "Proceedings of the 24th Annual Meeting of the Special Interest Group on Discourse and Dialogue",
+    series = "SIGDIAL'23",
+    month = sep,
+    year = "2023",
+    address = "Prague, Czechia",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.sigdial-1.16",
+    doi = "10.18653/v1/2023.sigdial-1.16",
+    pages = "175--182"
+}",
+    "shown": "<tt class="bibtex-citation"><b>@inproceedings</b>{chiyah-garcia-etal-2023-referring,<br/>&nbsp;&nbsp;&nbsp;    title = "{\`}{W}hat are you referring to?{'} {E}valuating the Ability of Multi-Modal Dialogue Models to Process Clarificational Exchanges",<br/>&nbsp;&nbsp;&nbsp;    author = "Chiyah-Garcia, Javier and Suglia, Alessandro and Eshghi, Arash and Hastie, Helen",<br/>&nbsp;&nbsp;&nbsp;    editor = "Stoyanchev, Svetlana and Joty, Shafiq and Schlangen, David and Dusek, Ondrej and Kennington, Casey and Alikhani, Malihe",<br/>&nbsp;&nbsp;&nbsp;    booktitle = "Proceedings of the 24th Annual Meeting of the Special Interest Group on Discourse and Dialogue",<br/>&nbsp;&nbsp;&nbsp;    series = "SIGDIAL'23",<br/>&nbsp;&nbsp;&nbsp;    month = sep,<br/>&nbsp;&nbsp;&nbsp;    year = "2023",<br/>&nbsp;&nbsp;&nbsp;    address = "Prague, Czechia",<br/>&nbsp;&nbsp;&nbsp;    publisher = "Association for Computational Linguistics",<br/>&nbsp;&nbsp;&nbsp;    url = "https://aclanthology.org/2023.sigdial-1.16",<br/>&nbsp;&nbsp;&nbsp;    doi = "10.18653/v1/2023.sigdial-1.16",<br/>&nbsp;&nbsp;&nbsp;    pages = "175--182"<br/>}</tt>",
+  },
+  "Harvard": {
+    "copied": "Chiyah-Garcia, J. et al. (2023) “\`What are you referring to?’ Evaluating the Ability of Multi-Modal Dialogue Models to Process Clarificational Exchanges,” in Stoyanchev, S. et al. (eds.) Proceedings of the 24th Annual Meeting of the Special Interest Group on Discourse and Dialogue. Prague, Czechia: Association for Computational Linguistics (SIGDIAL’23), pp. 175–182. doi:10.18653/v1/2023.sigdial-1.16.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="chiyah-garcia-etal-2023-referring" class="csl-entry">Chiyah-Garcia, J. <i>et al.</i> (2023) “\`What are you referring to?’ Evaluating the Ability of Multi-Modal Dialogue Models to Process Clarificational Exchanges,” in Stoyanchev, S. et al. (eds.) <i>Proceedings of the 24th Annual Meeting of the Special Interest Group on Discourse and Dialogue</i>. Prague, Czechia: Association for Computational Linguistics (SIGDIAL’23), pp. 175–182. doi:10.18653/v1/2023.sigdial-1.16.</div>
+</div>",
+  },
+  "Markdown<br/>(Informal)": {
+    "copied": "[\`What are you referring to?' Evaluating the Ability of Multi-Modal Dialogue Models to Process Clarificational Exchanges](https://aclanthology.org/2023.sigdial-1.16) (Chiyah-Garcia et al., SIGDIAL 2023)",
+    "shown": "<a href="https://aclanthology.org/2023.sigdial-1.16" target="_blank" rel="noopener noreferrer">\`What are you referring to?' Evaluating the Ability of Multi-Modal Dialogue Models to Process Clarificational Exchanges</a> (Chiyah-Garcia et al., SIGDIAL 2023)",
+  },
+  "address": "Prague, Czechia",
+  "authors": "Javier Chiyah-Garcia, Alessandro Suglia, Arash Eshghi, Helen Hastie",
+  "doi": "10.18653/v1/2023.sigdial-1.16",
+  "series": "SIGDIAL 2023",
+  "title": "\`What are you referring to?' Evaluating the Ability of Multi-Modal Dialogue Models to Process Clarificational Exchanges",
+  "url": "https://aclanthology.org/2023.sigdial-1.16",
+  "venue": "Proceedings of the 24th Annual Meeting of the Special Interest Group on Discourse and Dialogue",
+  "year": 2023,
+}
+`;
+
+exports[`golden citations > chiyah-garcia-etal-2024-adapting 1`] = `
+{
+  "ACL": {
+    "copied": "Javier Chiyah-Garcia, Prasoon Goyal, Michael Johnston, and Reza Ghanadan. 2024. Adapting LLM Predictions in In-Context Learning with Data Priors. In Proceedings of the 1st Workshop on Customizable NLP: Progress and Challenges in Customizing NLP for a Domain, Application, Group, or Individual (CustomNLP4U), pages 305–316, Miami, Florida, USA. Association for Computational Linguistics.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="chiyah-garcia-etal-2024-adapting" class="csl-entry">Javier Chiyah-Garcia, Prasoon Goyal, Michael Johnston, and Reza Ghanadan. 2024. <a href="https://aclanthology.org/2024.customnlp4u-1.23/">Adapting LLM Predictions in In-Context Learning with Data Priors</a>. In <i>Proceedings of the 1st Workshop on Customizable NLP: Progress and Challenges in Customizing NLP for a Domain, Application, Group, or Individual (CustomNLP4U)</i>, pages 305–316, Miami, Florida, USA. Association for Computational Linguistics.</div>
+</div>",
+  },
+  "ACL&nbsp;Bibkey": {
+    "copied": "chiyah-garcia-etal-2024-adapting",
+    "shown": "<samp>chiyah-garcia-etal-2024-adapting</samp>",
+  },
+  "BibTex": {
+    "copied": "@inproceedings{chiyah-garcia-etal-2024-adapting,
+    title = "Adapting {LLM} Predictions in In-Context Learning with Data Priors",
+    author = "Chiyah-Garcia, Javier  and
+      Goyal, Prasoon  and
+      Johnston, Michael  and
+      Ghanadan, Reza",
+    editor = "Kumar, Sachin  and
+      Balachandran, Vidhisha  and
+      Park, Chan Young  and
+      Shi, Weijia  and
+      Hayati, Shirley Anugrah  and
+      Tsvetkov, Yulia  and
+      Smith, Noah  and
+      Hajishirzi, Hannaneh  and
+      Kang, Dongyeop  and
+      Jurgens, David",
+    booktitle = "Proceedings of the 1st Workshop on Customizable NLP: Progress and Challenges in Customizing NLP for a Domain, Application, Group, or Individual (CustomNLP4U)",
+    series = "CustomNLP4U at EMNLP'24",
+    month = nov,
+    year = "2024",
+    address = "Miami, Florida, USA",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.customnlp4u-1.23/",
+    doi = "10.18653/v1/2024.customnlp4u-1.23",
+    pages = "305--316"
+}",
+    "shown": "<tt class="bibtex-citation"><b>@inproceedings</b>{chiyah-garcia-etal-2024-adapting,<br/>&nbsp;&nbsp;&nbsp;    title = "Adapting {LLM} Predictions in In-Context Learning with Data Priors",<br/>&nbsp;&nbsp;&nbsp;    author = "Chiyah-Garcia, Javier and       Goyal, Prasoon and       Johnston, Michael and       Ghanadan, Reza",<br/>&nbsp;&nbsp;&nbsp;    editor = "Kumar, Sachin and       Balachandran, Vidhisha and       Park, Chan Young and       Shi, Weijia and       Hayati, Shirley Anugrah and       Tsvetkov, Yulia and       Smith, Noah and       Hajishirzi, Hannaneh and       Kang, Dongyeop and       Jurgens, David",<br/>&nbsp;&nbsp;&nbsp;    booktitle = "Proceedings of the 1st Workshop on Customizable NLP: Progress and Challenges in Customizing NLP for a Domain, Application, Group, or Individual (CustomNLP4U)",<br/>&nbsp;&nbsp;&nbsp;    series = "CustomNLP4U at EMNLP'24",<br/>&nbsp;&nbsp;&nbsp;    month = nov,<br/>&nbsp;&nbsp;&nbsp;    year = "2024",<br/>&nbsp;&nbsp;&nbsp;    address = "Miami, Florida, USA",<br/>&nbsp;&nbsp;&nbsp;    publisher = "Association for Computational Linguistics",<br/>&nbsp;&nbsp;&nbsp;    url = "https://aclanthology.org/2024.customnlp4u-1.23/",<br/>&nbsp;&nbsp;&nbsp;    doi = "10.18653/v1/2024.customnlp4u-1.23",<br/>&nbsp;&nbsp;&nbsp;    pages = "305--316"<br/>}</tt>",
+  },
+  "Harvard": {
+    "copied": "Chiyah-Garcia, J. et al. (2024) “Adapting LLM Predictions in In-Context Learning with Data Priors,” in Kumar, S. et al. (eds.) Proceedings of the 1st Workshop on Customizable NLP: Progress and Challenges in Customizing NLP for a Domain, Application, Group, or Individual (CustomNLP4U). Miami, Florida, USA: Association for Computational Linguistics (CustomNLP4U at EMNLP’24), pp. 305–316. doi:10.18653/v1/2024.customnlp4u-1.23.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="chiyah-garcia-etal-2024-adapting" class="csl-entry">Chiyah-Garcia, J. <i>et al.</i> (2024) “Adapting LLM Predictions in In-Context Learning with Data Priors,” in Kumar, S. et al. (eds.) <i>Proceedings of the 1st Workshop on Customizable NLP: Progress and Challenges in Customizing NLP for a Domain, Application, Group, or Individual (CustomNLP4U)</i>. Miami, Florida, USA: Association for Computational Linguistics (CustomNLP4U at EMNLP’24), pp. 305–316. doi:10.18653/v1/2024.customnlp4u-1.23.</div>
+</div>",
+  },
+  "Markdown<br/>(Informal)": {
+    "copied": "[Adapting LLM Predictions in In-Context Learning with Data Priors](https://aclanthology.org/2024.customnlp4u-1.23/) (Chiyah-Garcia et al., CustomNLP4U at EMNLP 2024)",
+    "shown": "<a href="https://aclanthology.org/2024.customnlp4u-1.23/" target="_blank" rel="noopener noreferrer">Adapting LLM Predictions in In-Context Learning with Data Priors</a> (Chiyah-Garcia et al., CustomNLP4U at EMNLP 2024)",
+  },
+  "address": "Miami, Florida, USA",
+  "authors": "Javier Chiyah-Garcia, Prasoon Goyal, Michael Johnston, Reza Ghanadan",
+  "doi": "10.18653/v1/2024.customnlp4u-1.23",
+  "series": "CustomNLP4U at EMNLP 2024",
+  "title": "Adapting LLM Predictions in In-Context Learning with Data Priors",
+  "url": "https://aclanthology.org/2024.customnlp4u-1.23/",
+  "venue": "Proceedings of the 1st Workshop on Customizable NLP: Progress and Challenges in Customizing NLP for a Domain, Application, Group, or Individual (CustomNLP4U)",
+  "year": 2024,
+}
+`;
+
+exports[`golden citations > chiyah-garcia-etal-2024-repairs 1`] = `
+{
+  "ACL": {
+    "copied": "Javier Chiyah-Garcia, Alessandro Suglia, and Arash Eshghi. 2024. Repairs in a Block World: A New Benchmark for Handling User Corrections with Multi-Modal Language Models. In Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing, pages 11523–11542, Miami, Florida, USA. Association for Computational Linguistics.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="chiyah-garcia-etal-2024-repairs" class="csl-entry">Javier Chiyah-Garcia, Alessandro Suglia, and Arash Eshghi. 2024. <a href="https://aclanthology.org/2024.emnlp-main.643/">Repairs in a Block World: A New Benchmark for Handling User Corrections with Multi-Modal Language Models</a>. In <i>Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing</i>, pages 11523–11542, Miami, Florida, USA. Association for Computational Linguistics.</div>
+</div>",
+  },
+  "ACL&nbsp;Bibkey": {
+    "copied": "chiyah-garcia-etal-2024-repairs",
+    "shown": "<samp>chiyah-garcia-etal-2024-repairs</samp>",
+  },
+  "BibTex": {
+    "copied": "@inproceedings{chiyah-garcia-etal-2024-repairs,
+    title = "Repairs in a Block World: A New Benchmark for Handling User Corrections with Multi-Modal Language Models",
+    author = "Chiyah-Garcia, Javier  and
+      Suglia, Alessandro  and
+      Eshghi, Arash",
+    editor = "Al-Onaizan, Yaser  and
+      Bansal, Mohit  and
+      Chen, Yun-Nung",
+    booktitle = "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing",
+    series = "EMNLP'24",
+    month = nov,
+    year = "2024",
+    address = "Miami, Florida, USA",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.emnlp-main.643/",
+    doi = "10.18653/v1/2024.emnlp-main.643",
+    pages = "11523--11542"
+}",
+    "shown": "<tt class="bibtex-citation"><b>@inproceedings</b>{chiyah-garcia-etal-2024-repairs,<br/>&nbsp;&nbsp;&nbsp;    title = "Repairs in a Block World: A New Benchmark for Handling User Corrections with Multi-Modal Language Models",<br/>&nbsp;&nbsp;&nbsp;    author = "Chiyah-Garcia, Javier and       Suglia, Alessandro and       Eshghi, Arash",<br/>&nbsp;&nbsp;&nbsp;    editor = "Al-Onaizan, Yaser and       Bansal, Mohit and       Chen, Yun-Nung",<br/>&nbsp;&nbsp;&nbsp;    booktitle = "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing",<br/>&nbsp;&nbsp;&nbsp;    series = "EMNLP'24",<br/>&nbsp;&nbsp;&nbsp;    month = nov,<br/>&nbsp;&nbsp;&nbsp;    year = "2024",<br/>&nbsp;&nbsp;&nbsp;    address = "Miami, Florida, USA",<br/>&nbsp;&nbsp;&nbsp;    publisher = "Association for Computational Linguistics",<br/>&nbsp;&nbsp;&nbsp;    url = "https://aclanthology.org/2024.emnlp-main.643/",<br/>&nbsp;&nbsp;&nbsp;    doi = "10.18653/v1/2024.emnlp-main.643",<br/>&nbsp;&nbsp;&nbsp;    pages = "11523--11542"<br/>}</tt>",
+  },
+  "Harvard": {
+    "copied": "Chiyah-Garcia, J., Suglia, A. and Eshghi, A. (2024) “Repairs in a Block World: A New Benchmark for Handling User Corrections with Multi-Modal Language Models,” in Al-Onaizan, Y., Bansal, M., and Chen, Y.-N. (eds.) Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing. Miami, Florida, USA: Association for Computational Linguistics (EMNLP’24), pp. 11523–11542. doi:10.18653/v1/2024.emnlp-main.643.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="chiyah-garcia-etal-2024-repairs" class="csl-entry">Chiyah-Garcia, J., Suglia, A. and Eshghi, A. (2024) “Repairs in a Block World: A New Benchmark for Handling User Corrections with Multi-Modal Language Models,” in Al-Onaizan, Y., Bansal, M., and Chen, Y.-N. (eds.) <i>Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing</i>. Miami, Florida, USA: Association for Computational Linguistics (EMNLP’24), pp. 11523–11542. doi:10.18653/v1/2024.emnlp-main.643.</div>
+</div>",
+  },
+  "Markdown<br/>(Informal)": {
+    "copied": "[Repairs in a Block World: A New Benchmark for Handling User Corrections with Multi-Modal Language Models](https://aclanthology.org/2024.emnlp-main.643/) (Chiyah-Garcia et al., EMNLP 2024)",
+    "shown": "<a href="https://aclanthology.org/2024.emnlp-main.643/" target="_blank" rel="noopener noreferrer">Repairs in a Block World: A New Benchmark for Handling User Corrections with Multi-Modal Language Models</a> (Chiyah-Garcia et al., EMNLP 2024)",
+  },
+  "address": "Miami, Florida, USA",
+  "authors": "Javier Chiyah-Garcia, Alessandro Suglia, Arash Eshghi",
+  "doi": "10.18653/v1/2024.emnlp-main.643",
+  "series": "EMNLP 2024",
+  "title": "Repairs in a Block World: A New Benchmark for Handling User Corrections with Multi-Modal Language Models",
+  "url": "https://aclanthology.org/2024.emnlp-main.643/",
+  "venue": "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing",
+  "year": 2024,
+}
+`;
+
+exports[`golden citations > chiyah-garcia2022dstc10 1`] = `
+{
+  "ACL": {
+    "copied": "Javier Chiyah-Garcia, Alessandro Suglia, José David Lopes, Arash Eshghi, and Helen Hastie. 2022. Exploring Multi-Modal Representations for Ambiguity Detection & Coreference Resolution in the SIMMC 2.0 Challenge. In DSTC10 Workshop at AAAI 2022.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="chiyah-garcia2022dstc10" class="csl-entry">Javier Chiyah-Garcia, Alessandro Suglia, José David Lopes, Arash Eshghi, and Helen Hastie. 2022. <a href="https://arxiv.org/abs/2202.12645">Exploring Multi-Modal Representations for Ambiguity Detection &#38; Coreference Resolution in the SIMMC 2.0 Challenge</a>. In <i>DSTC10 Workshop at AAAI 2022</i>.</div>
+</div>",
+  },
+  "ACL&nbsp;Bibkey": {
+    "copied": null,
+    "shown": null,
+  },
+  "BibTex": {
+    "copied": "@inproceedings{chiyah-garcia2022dstc10,
+    title={Exploring Multi-Modal Representations for Ambiguity Detection \\& Coreference Resolution in the SIMMC 2.0 Challenge},
+    author={Chiyah-Garcia, Javier and Suglia, Alessandro and Lopes, Jos\\'{e} David and Eshghi, Arash and Hastie, Helen},
+    booktitle={DSTC10 Workshop at AAAI 2022},
+    year={2022},
+    month={feb},
+    url={https://arxiv.org/abs/2202.12645},
+    archivePrefix={arXiv},
+    eprint={2202.12645}
+}",
+    "shown": "<tt class="bibtex-citation"><b>@inproceedings</b>{chiyah-garcia2022dstc10,<br/>&nbsp;&nbsp;&nbsp;    title={Exploring Multi-Modal Representations for Ambiguity Detection \\& Coreference Resolution in the SIMMC 2.0 Challenge},<br/>&nbsp;&nbsp;&nbsp;    author={Chiyah-Garcia, Javier and Suglia, Alessandro and Lopes, Jos\\'{e} David and Eshghi, Arash and Hastie, Helen},<br/>&nbsp;&nbsp;&nbsp;    booktitle={DSTC10 Workshop at AAAI 2022},<br/>&nbsp;&nbsp;&nbsp;    year={2022},<br/>&nbsp;&nbsp;&nbsp;    month={feb},<br/>&nbsp;&nbsp;&nbsp;    url={https://arxiv.org/abs/2202.12645},<br/>&nbsp;&nbsp;&nbsp;    archivePrefix={arXiv},<br/>&nbsp;&nbsp;&nbsp;    eprint={2202.12645}<br/>}</tt>",
+  },
+  "Harvard": {
+    "copied": "Chiyah-Garcia, J. et al. (2022) “Exploring Multi-Modal Representations for Ambiguity Detection & Coreference Resolution in the SIMMC 2.0 Challenge,” in DSTC10 Workshop at AAAI 2022. Available at: https://arxiv.org/abs/2202.12645.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="chiyah-garcia2022dstc10" class="csl-entry">Chiyah-Garcia, J. <i>et al.</i> (2022) “Exploring Multi-Modal Representations for Ambiguity Detection &#38; Coreference Resolution in the SIMMC 2.0 Challenge,” in <i>DSTC10 Workshop at AAAI 2022</i>. Available at: https://arxiv.org/abs/2202.12645.</div>
+</div>",
+  },
+  "Markdown<br/>(Informal)": {
+    "copied": "[Exploring Multi-Modal Representations for Ambiguity Detection & Coreference Resolution in the SIMMC 2.0 Challenge](https://arxiv.org/abs/2202.12645) (Chiyah-Garcia et al., DSTC10 Workshop at AAAI 2022 2022)",
+    "shown": "<a href="https://arxiv.org/abs/2202.12645" target="_blank" rel="noopener noreferrer">Exploring Multi-Modal Representations for Ambiguity Detection & Coreference Resolution in the SIMMC 2.0 Challenge</a> (Chiyah-Garcia et al., DSTC10 Workshop at AAAI 2022 2022)",
+  },
+  "address": undefined,
+  "authors": "Javier Chiyah-Garcia, Alessandro Suglia, José David Lopes, Arash Eshghi, Helen Hastie",
+  "doi": undefined,
+  "series": null,
+  "title": "Exploring Multi-Modal Representations for Ambiguity Detection & Coreference Resolution in the SIMMC 2.0 Challenge",
+  "url": "https://arxiv.org/abs/2202.12645",
+  "venue": "DSTC10 Workshop at AAAI 2022",
+  "year": 2022,
+}
+`;
+
+exports[`golden citations > lopes2020neurips_hld_ws 1`] = `
+{
+  "ACL": {
+    "copied": "José Lopes, Francisco J. Chiyah Garcia, and Helen Hastie. 2020. The Lab vs The Crowd: An Investigation into Data Quality for Neural Dialogue Models. In Human in the Loop Dialogue Systems Workshop at NeurIPS 2020.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="lopes2020neurips_hld_ws" class="csl-entry">José Lopes, Francisco J. Chiyah Garcia, and Helen Hastie. 2020. <a href="https://arxiv.org/abs/2012.03855">The Lab vs The Crowd: An Investigation into Data Quality for Neural Dialogue Models</a>. In <i>Human in the Loop Dialogue Systems Workshop at NeurIPS 2020</i>.</div>
+</div>",
+  },
+  "ACL&nbsp;Bibkey": {
+    "copied": null,
+    "shown": null,
+  },
+  "BibTex": {
+    "copied": "@inproceedings{lopes2020neurips_hld_ws,
+    title={The Lab vs The Crowd: An Investigation into Data Quality for Neural Dialogue Models},
+    author={Lopes, Jos{\\'e} and Chiyah Garcia, Francisco J. and Hastie, Helen},
+    year={2020},
+    booktitle={Human in the Loop Dialogue Systems Workshop at NeurIPS 2020},
+    eprint={2012.03855},
+    archivePrefix={arXiv},
+    url = {https://arxiv.org/abs/2012.03855}
+}",
+    "shown": "<tt class="bibtex-citation"><b>@inproceedings</b>{lopes2020neurips_hld_ws,<br/>&nbsp;&nbsp;&nbsp;    title={The Lab vs The Crowd: An Investigation into Data Quality for Neural Dialogue Models},<br/>&nbsp;&nbsp;&nbsp;    author={Lopes, Jos{\\'e} and Chiyah Garcia, Francisco J. and Hastie, Helen},<br/>&nbsp;&nbsp;&nbsp;    year={2020},<br/>&nbsp;&nbsp;&nbsp;    booktitle={Human in the Loop Dialogue Systems Workshop at NeurIPS 2020},<br/>&nbsp;&nbsp;&nbsp;    eprint={2012.03855},<br/>&nbsp;&nbsp;&nbsp;    archivePrefix={arXiv},<br/>&nbsp;&nbsp;&nbsp;    url = {https://arxiv.org/abs/2012.03855}<br/>}</tt>",
+  },
+  "Harvard": {
+    "copied": "Lopes, J., Chiyah Garcia, F.J. and Hastie, H. (2020) “The Lab vs The Crowd: An Investigation into Data Quality for Neural Dialogue Models,” in Human in the Loop Dialogue Systems Workshop at NeurIPS 2020. Available at: https://arxiv.org/abs/2012.03855.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="lopes2020neurips_hld_ws" class="csl-entry">Lopes, J., Chiyah Garcia, F.J. and Hastie, H. (2020) “The Lab vs The Crowd: An Investigation into Data Quality for Neural Dialogue Models,” in <i>Human in the Loop Dialogue Systems Workshop at NeurIPS 2020</i>. Available at: https://arxiv.org/abs/2012.03855.</div>
+</div>",
+  },
+  "Markdown<br/>(Informal)": {
+    "copied": "[The Lab vs The Crowd: An Investigation into Data Quality for Neural Dialogue Models](https://arxiv.org/abs/2012.03855) (Lopes et al., Human in the Loop Dialogue Systems Workshop at NeurIPS 2020 2020)",
+    "shown": "<a href="https://arxiv.org/abs/2012.03855" target="_blank" rel="noopener noreferrer">The Lab vs The Crowd: An Investigation into Data Quality for Neural Dialogue Models</a> (Lopes et al., Human in the Loop Dialogue Systems Workshop at NeurIPS 2020 2020)",
+  },
+  "address": undefined,
+  "authors": "José Lopes, Francisco J. Chiyah Garcia, Helen Hastie",
+  "doi": undefined,
+  "series": null,
+  "title": "The Lab vs The Crowd: An Investigation into Data Quality for Neural Dialogue Models",
+  "url": "https://arxiv.org/abs/2012.03855",
+  "venue": "Human in the Loop Dialogue Systems Workshop at NeurIPS 2020",
+  "year": 2020,
+}
+`;
+
+exports[`golden citations > yrrsds-2023-young 1`] = `
+{
+  "ACL": {
+    "copied": "Vojtech Hudecek, Patricia Schmidtova, Tanvi Dinkar, Javier Chiyah-Garcia, and Weronika Sieinska, editors. 2023. Proceedings of the 19th Annual Meeting of the Young Reseachers’ Roundtable on Spoken Dialogue Systems.YRRSDS’23. Association for Computational Linguistics, Prague, Czechia.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="yrrsds-2023-young" class="csl-entry">Vojtech Hudecek, Patricia Schmidtova, Tanvi Dinkar, Javier Chiyah-Garcia, and Weronika Sieinska, editors. 2023. <i><a href="https://aclanthology.org/2023.yrrsds-1.0">Proceedings of the 19th Annual Meeting of the Young Reseachers’ Roundtable on Spoken Dialogue Systems</a></i>.YRRSDS’23. Association for Computational Linguistics, Prague, Czechia.</div>
+</div>",
+  },
+  "ACL&nbsp;Bibkey": {
+    "copied": "yrrsds-2023-young",
+    "shown": "<samp>yrrsds-2023-young</samp>",
+  },
+  "BibTex": {
+    "copied": "@proceedings{yrrsds-2023-young,
+    title = "Proceedings of the 19th Annual Meeting of the Young Reseachers' Roundtable on Spoken Dialogue Systems",
+    editor = "Hudecek, Vojtech  and
+      Schmidtova, Patricia  and
+      Dinkar, Tanvi  and
+      Chiyah-Garcia, Javier  and
+      Sieinska, Weronika",
+    month = sep,
+    year = "2023",
+    address = "Prague, Czechia",
+    series = "YRRSDS'23",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.yrrsds-1.0",
+    annotation = "YRRSDS'23 Workshop"
+}",
+    "shown": "<tt class="bibtex-citation"><b>@proceedings</b>{yrrsds-2023-young,<br/>&nbsp;&nbsp;&nbsp;    title = "Proceedings of the 19th Annual Meeting of the Young Reseachers' Roundtable on Spoken Dialogue Systems",<br/>&nbsp;&nbsp;&nbsp;    editor = "Hudecek, Vojtech and       Schmidtova, Patricia and       Dinkar, Tanvi and       Chiyah-Garcia, Javier and       Sieinska, Weronika",<br/>&nbsp;&nbsp;&nbsp;    month = sep,<br/>&nbsp;&nbsp;&nbsp;    year = "2023",<br/>&nbsp;&nbsp;&nbsp;    address = "Prague, Czechia",<br/>&nbsp;&nbsp;&nbsp;    series = "YRRSDS'23",<br/>&nbsp;&nbsp;&nbsp;    publisher = "Association for Computational Linguistics",<br/>&nbsp;&nbsp;&nbsp;    url = "https://aclanthology.org/2023.yrrsds-1.0",<br/>&nbsp;&nbsp;&nbsp;    annotation = "YRRSDS'23 Workshop"<br/>}</tt>",
+  },
+  "Harvard": {
+    "copied": "Hudecek, V. et al. (eds.) (2023) Proceedings of the 19th Annual Meeting of the Young Reseachers’ Roundtable on Spoken Dialogue Systems. Prague, Czechia: Association for Computational Linguistics (YRRSDS’23). Available at: https://aclanthology.org/2023.yrrsds-1.0.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="yrrsds-2023-young" class="csl-entry">Hudecek, V. <i>et al.</i> (eds.) (2023) <i>Proceedings of the 19th Annual Meeting of the Young Reseachers’ Roundtable on Spoken Dialogue Systems</i>. Prague, Czechia: Association for Computational Linguistics (YRRSDS’23). Available at: https://aclanthology.org/2023.yrrsds-1.0.</div>
+</div>",
+  },
+  "Markdown<br/>(Informal)": {
+    "copied": "[Proceedings of the 19th Annual Meeting of the Young Reseachers' Roundtable on Spoken Dialogue Systems](https://aclanthology.org/2023.yrrsds-1.0) (Hudecek et al., YRRSDS 2023)",
+    "shown": "<a href="https://aclanthology.org/2023.yrrsds-1.0" target="_blank" rel="noopener noreferrer">Proceedings of the 19th Annual Meeting of the Young Reseachers' Roundtable on Spoken Dialogue Systems</a> (Hudecek et al., YRRSDS 2023)",
+  },
+  "address": "Prague, Czechia",
+  "authors": "Vojtech Hudecek, Patricia Schmidtova, Tanvi Dinkar, Javier Chiyah-Garcia, Weronika Sieinska",
+  "doi": undefined,
+  "series": "YRRSDS 2023",
+  "title": "Proceedings of the 19th Annual Meeting of the Young Reseachers' Roundtable on Spoken Dialogue Systems",
+  "url": "https://aclanthology.org/2023.yrrsds-1.0",
+  "venue": undefined,
+  "year": 2023,
+}
+`;

@@ -2,6 +2,12 @@
 
 My personal website!
 
+__2026-10-28__
+- System: macOS (Darwin 27)
+- Node version: 24.22.1 (Homebrew `node@24`). Node 20 is end-of-life since April 2026.
+- NPM version: 11.19.1
+- Added unit tests (Vitest) and browser tests (Playwright). See "Available Scripts" below.
+
 __2026-10-27__
 - System: macOS (Darwin 27)
 - Node version: 20.20.2 (Homebrew `node@20`)
@@ -103,3 +109,8 @@ Built with [Vite](https://vite.dev/). Configuration is in `vite.config.js`.
 - `npm run build` writes the production build to `build/`.
 - `npm run preview` serves that production build locally, to check it before deploying.
 - `npm run deploy` builds and publishes `build/` to the `master` branch with `gh-pages`.
+- `npm test` runs the unit tests: citations, icons and content files.
+- `npm run test:e2e` builds the site and runs the browser tests against it, served the way GitHub Pages serves it.
+- `npm run test:visual:update` records new screenshot baselines. Do this on a version you trust, before making changes.
+
+The first time on a new machine, install the browser with `npx playwright install chromium`.

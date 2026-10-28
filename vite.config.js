@@ -25,4 +25,9 @@ export default defineConfig({
 		port: 3000,
 		open: true,
 	},
+	// Unit tests (`npm test`). Browser tests live in tests/e2e and use Playwright.
+	test: {
+		include: ['src/**/*.test.{js,jsx}'],
+		setupFiles: ['src/test/setup.js'],
+	},
 });

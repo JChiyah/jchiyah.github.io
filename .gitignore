@@ -24,3 +24,7 @@ yarn-error.log*
 
 # visual regression baselines (local only)
 /.screenshots
+
+# Playwright output
+/test-results
+/playwright-report

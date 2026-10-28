@@ -6,9 +6,9 @@ Personal academic website. Static single-page app, no backend.
 
 **Vite** — *not* Next.js, and no longer Create React App. React 19, `react-router` v7, Bootstrap 5 + `react-bootstrap`, SCSS via Dart Sass (`sass`), `citation-js` for publications.
 
-Requires **Node `^20.19` or `>=22.12`** (Vite 8's engine range). Config is in `vite.config.js`.
+Requires **Node >=22.12** (`engines` in package.json); developed on **Node 24 LTS** with npm 11. Config is in `vite.config.js`.
 
-npm 10.8.x cannot *add* Vite 8 packages (an arborist `edgesOut` crash in peer resolution); `npm install`/`npm ci` from the existing lockfile works fine. To add or upgrade a dev dependency, use `npx npm@11 install -D <pkg>` or upgrade npm.
+Use npm 11+. npm 10.8.x crashes (`edgesOut`, in peer resolution) when *adding* Vite 8 packages.
 
 ## Commands
 
@@ -17,6 +17,10 @@ npm start       # Vite dev server on :3000
 npm run build   # production build to build/
 npm run preview # serve the production build locally
 npm run deploy  # gh-pages: pushes build/ to the master branch
+
+npm test                    # unit tests (Vitest), ~1s
+npm run test:e2e            # build, then browser tests (Playwright), ~10s
+npm run test:visual:update  # build, then re-record the visual baselines
 ```
 
 Source lives on `master-source`; `npm run deploy` publishes the built output to `master`. Don't commit to `master` by hand.
@@ -56,8 +60,25 @@ GitHub Pages has no server-side rewrite, so deep links work through the `spa-git
 - `New*`-prefixed files (`NewHome`, `NewNavBar`, `NewModal`) are the current generation; their predecessors are still in the tree but commented out of `src/index.jsx`. Prefer the `New*` ones.
 - Pages wrap content in `src/views/PageLayout.jsx`, which handles the Bootstrap grid and the optional right-hand `VerticalNav`.
 
+## Testing
+
+Run `npm test` and `npm run test:e2e` before handing over any change.
+
+| Layer | Files | Catches |
+|---|---|---|
+| Unit | `src/references.test.js` | Any change to citation output: golden snapshots of every entry in every Cite-modal style, shown and copied. Also the ACL style really being applied (citation-js 0.7 silently falls back to APA) and BibTeX copy matching what is shown. |
+| Unit | `src/icons.test.js` | FontAwesome icons that no longer exist (they render as nothing, without an error), in imports and in `activities.json`; the `--fa-width` override losing its effect. |
+| Unit | `src/content.test.js` | Missing or malformed fields in `activities.json` / `projects.json`. |
+| Browser | `tests/e2e/site.spec.js` | Routing through the GitHub Pages 404 flow, PDF redirects, Cite modal, clipboard, `?link=` shortlinks, Experience truncation, icons rendering. Fails on any page error. |
+| Browser | `tests/e2e/visual.spec.js` | Any pixel change on the four pages, desktop and mobile. |
+
+- **Citation snapshots** (`src/__snapshots__/`) are committed. When a change *should* alter citations, check the diff, then accept it with `npx vitest run -u`.
+- **Visual baselines** (`.screenshots/visual/`) are local and gitignored (~5 MB). Record them on a commit you trust (`npm run test:visual:update`) *before* a change that could affect layout, then run `npm run test:e2e` after.
+- `tests/e2e/github-pages-server.js` serves `build/` like GitHub Pages: unknown paths return HTTP 404 with `404.html`, with no single-page-app fallback. `vite preview` would hide breakage in the deep-link redirect.
+- One expected failure is marked `test.fail()`: the `sigdial2023` poster shortlink, which points at a citation key that is not in `publications.bib`. It is a known issue, left as-is on purpose.
+
 ## Known warts
 
 - SCSS still uses `@import` and global colour functions (`darken`, `map-get`), as does Bootstrap 5.3. Dart Sass 1.x supports them; the deprecation warnings are silenced in `vite.config.js`. Dart Sass 3.0 will remove `@import`, so moving to `@use` is the eventual fix.
-- Nothing runs ESLint any more (CRA did it during build). There is no test runner: `src/referenceUtils.test.js` only tests `referenceUtils.js`, which nothing imports.
+- Nothing runs ESLint any more (CRA did it during build).
 - The JS bundle is ~1.5 MB gzipped, mostly the full FontAwesome solid and brand sets (`library.add(fas)` in `src/index.jsx`, `import * as Icons` in `Timeline.jsx`).
