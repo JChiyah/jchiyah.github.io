@@ -51,8 +51,6 @@ GitHub Pages has no server-side rewrite, so deep links work through the `spa-git
 - Component-scoped SCSS exists only for `Timeline` and `VerticalNav`.
 - Every stylesheet imports `_Variables.scss`, which imports *all* of Bootstrap, so Bootstrap's CSS is emitted three times. Harmless to rendering today, but it inflates the CSS.
 
-**Do not edit `src/App.css`, `src/App.css.map`, or `src/index.css`.** They are stale committed artifacts that nothing imports; SCSS is compiled at build time.
-
 ## Conventions
 
 - **Tabs** for indentation.
