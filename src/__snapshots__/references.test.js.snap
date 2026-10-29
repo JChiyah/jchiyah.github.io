@@ -682,7 +682,6 @@ exports[`golden citations > chiyah-garcia-2025-thesis 1`] = `
     title = "Learning to Handle Miscommunication in Multi-modal Conversational AI",
     author = "Chiyah-Garcia, Javier",
     school = "Heriot-Watt University",
-    booktitle = "Heriot-Watt University",
     series = "PhD Thesis",
     month = apr,
     year = "2025",
@@ -690,13 +689,13 @@ exports[`golden citations > chiyah-garcia-2025-thesis 1`] = `
     url = "https://jchiyah.github.io/Chiyah-Garcia_Thesis.pdf",
     type = "PhD Thesis"
 }",
-    "shown": "<tt class="bibtex-citation"><b>@phdthesis</b>{chiyah-garcia-2025-thesis,<br/>&nbsp;&nbsp;&nbsp;    title = "Learning to Handle Miscommunication in Multi-modal Conversational AI",<br/>&nbsp;&nbsp;&nbsp;    author = "Chiyah-Garcia, Javier",<br/>&nbsp;&nbsp;&nbsp;    school = "Heriot-Watt University",<br/>&nbsp;&nbsp;&nbsp;    booktitle = "Heriot-Watt University",<br/>&nbsp;&nbsp;&nbsp;    series = "PhD Thesis",<br/>&nbsp;&nbsp;&nbsp;    month = apr,<br/>&nbsp;&nbsp;&nbsp;    year = "2025",<br/>&nbsp;&nbsp;&nbsp;    address = "Edinburgh, UK",<br/>&nbsp;&nbsp;&nbsp;    url = "https://jchiyah.github.io/Chiyah-Garcia_Thesis.pdf",<br/>&nbsp;&nbsp;&nbsp;    type = "PhD Thesis"<br/>}</tt>",
+    "shown": "<tt class="bibtex-citation"><b>@phdthesis</b>{chiyah-garcia-2025-thesis,<br/>&nbsp;&nbsp;&nbsp;    title = "Learning to Handle Miscommunication in Multi-modal Conversational AI",<br/>&nbsp;&nbsp;&nbsp;    author = "Chiyah-Garcia, Javier",<br/>&nbsp;&nbsp;&nbsp;    school = "Heriot-Watt University",<br/>&nbsp;&nbsp;&nbsp;    series = "PhD Thesis",<br/>&nbsp;&nbsp;&nbsp;    month = apr,<br/>&nbsp;&nbsp;&nbsp;    year = "2025",<br/>&nbsp;&nbsp;&nbsp;    address = "Edinburgh, UK",<br/>&nbsp;&nbsp;&nbsp;    url = "https://jchiyah.github.io/Chiyah-Garcia_Thesis.pdf",<br/>&nbsp;&nbsp;&nbsp;    type = "PhD Thesis"<br/>}</tt>",
   },
   "Harvard": {
-    "copied": "Chiyah-Garcia, J. (2025) Learning to Handle Miscommunication in Multi-modal Conversational AI, Heriot-Watt University. PhD Thesis. Heriot-Watt University. Available at: https://jchiyah.github.io/Chiyah-Garcia_Thesis.pdf.
+    "copied": "Chiyah-Garcia, J. (2025) Learning to Handle Miscommunication in Multi-modal Conversational AI. PhD Thesis. Heriot-Watt University. Available at: https://jchiyah.github.io/Chiyah-Garcia_Thesis.pdf.
 ",
     "shown": "<div class="csl-bib-body">
-  <div data-csl-entry-id="chiyah-garcia-2025-thesis" class="csl-entry">Chiyah-Garcia, J. (2025) <i>Learning to Handle Miscommunication in Multi-modal Conversational AI</i>, <i>Heriot-Watt University</i>. PhD Thesis. Heriot-Watt University. Available at: https://jchiyah.github.io/Chiyah-Garcia_Thesis.pdf.</div>
+  <div data-csl-entry-id="chiyah-garcia-2025-thesis" class="csl-entry">Chiyah-Garcia, J. (2025) <i>Learning to Handle Miscommunication in Multi-modal Conversational AI</i>. PhD Thesis. Heriot-Watt University. Available at: https://jchiyah.github.io/Chiyah-Garcia_Thesis.pdf.</div>
 </div>",
   },
   "Markdown<br/>(Informal)": {

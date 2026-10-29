@@ -72,6 +72,10 @@ class Reference {
 	}
 
 	getJournal() {
+		// A thesis has no venue, so show the university (BibTeX `school`) instead
+		if (this.data.type === 'thesis') {
+			return this.data['container-title'] || this.data.publisher;
+		}
 		return this.data['container-title'];
 	}
 
