@@ -11,7 +11,7 @@ import '@citation-js/plugin-csl';
 
 function newCSLTemplate(name, csl) {
 	// plugins.config.get('@csl').locales.add('en-US', csl);
-	plugins.config.get('@csl').templates.add(name, csl);
+	plugins.config.get('@csl').styles.add(name, csl);
 }
 
 // local adding CSL style
@@ -104,10 +104,10 @@ class Reference {
 		return this.data['collection-title'];
 	}
 
-	getCitation(format = 'html', template = 'apa') {
+	getCitation(format = 'html', style = 'apa') {
 		return this.cite.format('bibliography', {
 			format: format,
-			template: template,
+			style: style,
 			lang: 'en-US'
 		});
 	}

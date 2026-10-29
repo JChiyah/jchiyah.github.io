@@ -65,7 +65,7 @@ Run `npm test` and `npm run test:e2e` before handing over any change.
 
 | Layer | Files | Catches |
 |---|---|---|
-| Unit | `src/references.test.js` | Any change to citation output: golden snapshots of every entry in every Cite-modal style, shown and copied. Also the ACL style really being applied (citation-js 0.7 silently falls back to APA) and BibTeX copy matching what is shown. |
+| Unit | `src/references.test.js` | Any change to citation output: golden snapshots of every entry in every Cite-modal style, shown and copied. Also the ACL style really being applied (citation-js 0.7 silently fell back to APA; 0.8+ throws) and BibTeX copy matching what is shown. |
 | Unit | `src/icons.test.js` | FontAwesome icons that no longer exist (they render as nothing, without an error), in imports and in `activities.json`; the `--fa-width` override losing its effect. |
 | Unit | `src/content.test.js` | Missing or malformed fields in `activities.json` / `projects.json`. |
 | Browser | `tests/e2e/site.spec.js` | Routing through the GitHub Pages 404 flow, PDF redirects, Cite modal, clipboard, `?link=` shortlinks, Experience truncation, icons rendering. Fails on any page error. |

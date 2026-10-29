@@ -12,11 +12,11 @@ import Reference, { parseBibtexFile } from './references';
 
 // The ACL style is fetched and registered asynchronously when references.js loads.
 async function aclStyleRegistered() {
-	const templates = plugins.config.get('@csl').templates;
-	for (let i = 0; i < 100 && !templates.has('acl'); i++) {
+	const styles = plugins.config.get('@csl').styles;
+	for (let i = 0; i < 100 && !styles.has('acl'); i++) {
 		await new Promise((resolve) => setTimeout(resolve, 20));
 	}
-	return templates.has('acl');
+	return styles.has('acl');
 }
 const aclReady = await aclStyleRegistered();
 const references = await parseBibtexFile('/publications.bib');
@@ -75,16 +75,18 @@ describe('citation styles', () => {
 		expect(aclReady).toBe(true);
 	});
 
-	// citation-js 0.7 silently falls back to APA for unknown style names, so a
-	// broken ACL registration would otherwise look like working output.
+	// citation-js 0.7 silently fell back to APA for unknown style names, so a
+	// broken ACL registration looked like working output. 0.8+ throws instead;
+	// this still guards against a downgrade or a regression.
 	test('ACL output really uses the ACL style, not a fallback', () => {
 		const ref = byKey('chiyah-garcia-etal-2024-repairs');
 		expect(ref.getACLCitation('text')).not.toBe(ref.getAPACitation('text'));
 	});
 
-	// citation-js 0.8 drops the bundled `harvard1` style and throws on unknown names.
+	// citation-js 0.8+ throws on unknown style names, so if a future release stops
+	// bundling `harvard1`, this names the cause before every Harvard snapshot fails.
 	test('Harvard style is available', () => {
-		expect(plugins.config.get('@csl').templates.has('harvard1')).toBe(true);
+		expect(plugins.config.get('@csl').styles.has('harvard1')).toBe(true);
 	});
 
 	test('ACL Bibkey appears only for ACL Anthology papers', () => {
