@@ -30,8 +30,9 @@ const PageLayout = ({
 						{children}
 					</div>
 
-					{/* Right sidebar with vertical nav */}
-					<div className="col-md-2" key="sidebar-right">
+					{/* Right sidebar with vertical nav. Hidden on phones, where it would
+					    only appear below all the content. */}
+					<div className="col-md-2 d-none d-md-block" key="sidebar-right">
 						{showVerticalNav ? (
 							<VerticalNav items={navItems} title={navTitle} />
 						) : <></>}

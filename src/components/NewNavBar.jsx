@@ -82,7 +82,7 @@ const NewNavBar = () => {
 				</Navbar.Toggle>
 				<Navbar.Collapse id="basic-navbar-nav" className="text-center">
 					<Nav className="mx-auto">
-						<NavigationLink icon={faHouse} text="Home" onNavigate={handleNavigate} />
+						<NavigationLink icon={faHouse} text="Home" customUrl="/" onNavigate={handleNavigate} />
 						{/* <NavigationLink icon={faUser} text="About" onNavigate={handleNavigate} /> */}
 						<NavigationLink icon={faCubes} text="Projects" onNavigate={handleNavigate} />
 						<NavigationLink icon={faFileLines} text="Publications" onNavigate={handleNavigate} />

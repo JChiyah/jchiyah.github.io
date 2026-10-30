@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useEffect } from 'react';
 
 import { Link, useLocation } from 'react-router-dom';
@@ -38,6 +38,34 @@ const FeaturedPublication = ({ bibkey, title, authors, conferenceSeries, extraHt
 };
 
 
+// The address is only put together, and shown, when a visitor asks for it. Until
+// then neither the page nor the JS bundle contains it, so scrapers can't harvest it.
+const EmailAddress = ({ user, domain }) => {
+	const [isShown, setIsShown] = useState(false);
+	const linkRef = useRef(null);
+
+	// The button that had focus is gone, so hand focus to the link that replaced it
+	useEffect(() => {
+		if (isShown) linkRef.current.focus();
+	}, [isShown]);
+
+	if (!isShown) {
+		return (
+			<button type="button" className="btn btn-link text-decoration-none link" onClick={() => setIsShown(true)}>
+				Show email address
+			</button>
+		);
+	}
+
+	const address = `${user}@${domain}`;
+	return (
+		<a href={`mailto:${address}`} ref={linkRef} className="btn btn-link text-decoration-none link">
+			{address}
+		</a>
+	);
+};
+
+
 const highlightTarget = (element) => {
 	// Remove highlight class and re-add it to trigger animation
 	element.classList.remove('highlight-target');
@@ -66,7 +94,6 @@ const NewHome = () => {
 		// setStat(showAllSkills);
 		document.getElementsByClassName("skill-carousel-container").classList.add("show-all-skills");
 	}
-	console.log(showAllSkills);
 
 	return (
 		<PageLayout
@@ -244,7 +271,7 @@ const NewHome = () => {
 								{ icon: faSquareBinary, text: "PyTorch" },
 								{ icon: faDiagramProject, text: "HuggingFace" },
 								{ icon: faHexagonNodes, text: "Transformers" },
-								{ icon: faBraille, text: "Weight & Biases" },
+								{ icon: faBraille, text: "Weights & Biases" },
 								{ icon: faBoltLightning, text: "PyTorch Lightning" },
 								{ icon: faObjectUngroup, text: "Multi-Modal LLMs" },
 								{ icon: faJava, text: "Java" },
@@ -271,7 +298,7 @@ const NewHome = () => {
 						Contact <span className="text-accent">Me</span>
 					</h2>
 					<p className="">
-						The easiest way get in touch with me is through email or LinkedIn:
+						The easiest way to get in touch with me is through email or LinkedIn:
 					</p>
 					<div className="d-flex flex-column">
 						<ul className="list-unstyled">
@@ -279,19 +306,13 @@ const NewHome = () => {
 								<span>
 									<FontAwesomeIcon icon={faEnvelope} className="me-2 inline-icon-before text-accent" />Preferred:
 								</span>
-								{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-								<a href="" className="btn btn-link text-decoration-none link">
-									&#106;&#099;&#104;&#105;&#121;&#097;&#104;&#032;(&#097;&#116;)&#032;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#032;(&#100;&#111;&#116;)&#032;&#099;&#111;&#109;
-								</a>
+								<EmailAddress user="jchiyah" domain="outlook.com" />
 							</li>
 							<li>
 								<span>
-									<FontAwesomeIcon icon={faEnvelope} className="me-2 inline-icon-before text-accent" />University:
+									<FontAwesomeIcon icon={faEnvelope} className="me-2 inline-icon-before text-accent" />Work:
 								</span>
-								{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-								<a href="" className="btn btn-link text-decoration-none link"> 
-									&#102;&#106;&#099;&#051;&#032;(&#097;&#116;)&#032;&#104;&#119;&#032;(&#100;&#111;&#116;)&#032;&#097;&#099;&#032;(&#100;&#111;&#116;)&#032;&#117;&#107;
-								</a>
+								<EmailAddress user="javier.chiyahgarcia" domain="electrictwin.com" />
 							</li>
 							<li>
 								<span>

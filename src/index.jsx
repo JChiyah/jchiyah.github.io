@@ -35,6 +35,11 @@ const RootLayout = () => {
 
 	const currentPage = pathToTitle[location.pathname] || 'Page Not Found';
 
+	// Name the page in browser tabs, history and bookmarks
+	React.useEffect(() => {
+		document.title = currentPage === 'Home' ? 'Javier Chiyah-Garcia' : `${currentPage} | Javier Chiyah-Garcia`;
+	}, [currentPage]);
+
 	return (
 		<>
 			{/* <NavigationBar currentPage={currentPage} /> */}
@@ -64,7 +69,8 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "/home",
-				element: <Navigate to="/" />,
+				// replace, or Back would land on /home and be sent straight back to /
+				element: <Navigate to="/" replace />,
 			},
 			// {
 			// 	path: "/about",

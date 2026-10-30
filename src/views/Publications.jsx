@@ -90,6 +90,11 @@ class Publications extends Component {
 		if (hash) {
 			const element = document.getElementById(hash);
 			if (element) {
+				// The fade-in slides each section up 20px. Finish it before scrolling, or
+				// the target ends up 20px higher than planned, under the navbar.
+				document.getAnimations()
+					.filter((animation) => animation.animationName === 'fadeIn')
+					.forEach((animation) => animation.finish());
 				this.highlightTarget(element);
 				element.scrollIntoView({ behavior: 'smooth' });
 			}
@@ -153,9 +158,6 @@ class Publications extends Component {
 						pubsArray[pubYear].push(reference);
 					}
 				});
-
-				// output number of publications
-				console.log(references.length + " publications in total :)");
 
 				if (this._isMounted) {
 					this.setState({

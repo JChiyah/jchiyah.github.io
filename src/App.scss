@@ -725,7 +725,7 @@ body {
 /** Publications **/
 
 .publication-section {
-	scroll-margin-top: $navbar-final-height * 2;
+	scroll-margin-top: $navbar-final-height * 2 + 1.5rem;
 	padding-top: 1rem;
 	padding-bottom: 0rem;
 
@@ -1180,7 +1180,10 @@ body {
 
 .highlight-target {
 	animation: softHighlight 2s ease-in-out;
+	// This animation replaces the fade-in, so restore where the fade-in ends,
+	// otherwise the element drops back to its 20px starting offset
 	opacity: 1;
+	transform: none;
 }
 
 // todo: fix footer flashing when loading
@@ -1202,9 +1205,10 @@ body {
 // }
 
 // This ensures that the scroll target is always visible when it is in view,
-// offsetting the fixed navbar
+// offsetting the fixed navbar. The navbar is slightly taller than
+// $navbar-final-height * 2, so add a gap to keep targets clear of it.
 .scroll-target {
-	scroll-margin-top: $navbar-final-height * 2;
+	scroll-margin-top: $navbar-final-height * 2 + 1.5rem;
 }
 
 /** Activities **/

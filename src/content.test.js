@@ -25,6 +25,8 @@ describe('activities.json', () => {
 		expect(item.description).toEqual(expect.any(String));
 		if (item.description_items) expect(Array.isArray(item.description_items)).toBe(true);
 		if (item.image) expect(readFileSync(new URL(`../public/${item.image.replace(/^\//, '')}`, import.meta.url))).toBeTruthy();
+		// Timeline reads image_alt: any other spelling renders the alt text as "undefined"
+		if (item.image) expect(item.image_alt).toBeTruthy();
 	});
 });
 

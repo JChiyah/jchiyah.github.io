@@ -17,7 +17,7 @@
 			"PyTorch",
 			"Transformers",
 			"Object Detection",
-			"Weight & Biases",
+			"Weights & Biases",
 			"HuggingFace"
 		]
 	},
@@ -41,7 +41,7 @@
 			"PyTorch Lightning",
 			"Transformers",
 			"Object Detection",
-			"Weight & Biases",
+			"Weights & Biases",
 			"NLTK",
 			"SpaCy"
 		]
@@ -72,7 +72,7 @@
 		"title": "CRWIZ",
 		"subtitle": "The Intelligent Wizard Interface ",
 		"role": "Software Developer & Research Assistant",
-		"description": "A framework for collecting real-time Wizard-of-Oz dialogues through crowd-sourcing for collaborative, complex tasks. This framework uses semi-guided dialogue to avoid interactions that breach procedures and processes only known to experts, while enabling the capture of a wide variety of interactions. It resides on Slurk (Schlangen et al., 2018). For more information, check the the conference publication in LREC 2020 and website below.",
+		"description": "A framework for collecting real-time Wizard-of-Oz dialogues through crowd-sourcing for collaborative, complex tasks. This framework uses semi-guided dialogue to avoid interactions that breach procedures and processes only known to experts, while enabling the capture of a wide variety of interactions. It resides on Slurk (Schlangen et al., 2018). For more information, check the conference publication in LREC 2020 and website below.",
 		"url": "https://github.com/JChiyah/crwiz",
 		"topics": [
 			"Crowd-sourcing",

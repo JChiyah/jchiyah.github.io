@@ -59,10 +59,10 @@
 				"icon": "faLaptopCode"
 			},
 			{
-				"title": "Various Teacher Assistant Roles",
+				"title": "Various Teaching Assistant Roles",
 				"subtitle": "Heriot-Watt University",
 				"date": "Sep 2017 - May 2024 (term-time only)",
-				"description": "Mentored students and graded university coursework and exams for several graduate and undergraduate courses: Artificial Intelligence and Intelligent Agents (Year 3/MSc), Conversational Agents and Dialogue Systems (Year 4/Msc), Language Processors (Year 3) and Software Development 1 & 2 (Year 1).",
+				"description": "Mentored students and graded university coursework and exams for several graduate and undergraduate courses: Artificial Intelligence and Intelligent Agents (Year 3/MSc), Conversational Agents and Dialogue Systems (Year 4/MSc), Language Processors (Year 3) and Software Development 1 & 2 (Year 1).",
 				"icon": "faChalkboardTeacher"
 			},
 			{
@@ -199,7 +199,7 @@
 			{
 				"title": "YRRSDS 2022 & 2023 Workshops",
 				"subtitle": "Organiser",
-				"date": "Feb 2022",
+				"date": "Sep 2022 - Sep 2023",
 				"description": "Organiser of <a href=https://sites.google.com/view/yrrsds2023 class='link'>YRRSDS 2022</a> and <a href=https://sites.google.com/view/yrrsds2022/home class='link'>2023</a> Workshops, including the main editor of the <a href='/publications#yrrsds-2023-young' class='link'>2023 proceedings</a>.",
 				"icon": "faUsers"
 			},
@@ -224,7 +224,7 @@
 				"description": "Check the <a href='https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/19023?highlight=19023' target='_blank' class='link'>seminar website</a> and resulting <a href='/publications#blumreiter-et-al-2019-towards-self-explainable' class='link'>publication</a>.",
 				"icon": "faBookReader",
 				"image": "jchiyah_shcloss_dagstuhl.jpg",
-				"image-alt": "Me at the Schloss Dagstuhl Seminar"
+				"image_alt": "Me at the Schloss Dagstuhl Seminar"
 			}
 		]
 	},
@@ -244,7 +244,9 @@
 				"subtitle": "Beyond Words Workshop",
 				"date": "Oct 2024",
 				"description": "Presented 'Repairs in Multi-Modal Collaborative Dialogues with VLMs' at the Beyond Words Workshop.",
-				"icon": "faPersonChalkboard"
+				"icon": "faPersonChalkboard",
+				"image": "2024-10_eutopia_workshop.webp",
+				"image_alt": "Group photo at the EUtopia Beyond Words Workshop"
 			},
 			{
 				"title": "Podcast Interview",

@@ -160,10 +160,10 @@ exports[`golden citations > ChiyahGarciaHRI21Video 1`] = `
 exports[`golden citations > ChiyahHRI18 1`] = `
 {
   "ACL": {
-    "copied": "Francisco J. Chiyah Garcia, David A. Robb, Xingkun Liu, Atanas Laskov, Patron Patron, and Helen Hastie. 2018. Explain Yourself: A Natural Language Interface for Scrutable Autonomous Robots. In Proceedings of Explainable Robotic Systems Workshop, Chicago, IL, USA.
+    "copied": "Francisco J. Chiyah Garcia, David A. Robb, Xingkun Liu, Atanas Laskov, Pedro Patron, and Helen Hastie. 2018. Explain Yourself: A Natural Language Interface for Scrutable Autonomous Robots. In Proceedings of Explainable Robotic Systems Workshop, Chicago, IL, USA.
 ",
     "shown": "<div class="csl-bib-body">
-  <div data-csl-entry-id="ChiyahHRI18" class="csl-entry">Francisco J. Chiyah Garcia, David A. Robb, Xingkun Liu, Atanas Laskov, Patron Patron, and Helen Hastie. 2018. <a href="https://arxiv.org/abs/1803.02088">Explain Yourself: A Natural Language Interface for Scrutable Autonomous Robots</a>. In <i>Proceedings of Explainable Robotic Systems Workshop</i>, Chicago, IL, USA.</div>
+  <div data-csl-entry-id="ChiyahHRI18" class="csl-entry">Francisco J. Chiyah Garcia, David A. Robb, Xingkun Liu, Atanas Laskov, Pedro Patron, and Helen Hastie. 2018. <a href="https://arxiv.org/abs/1803.02088">Explain Yourself: A Natural Language Interface for Scrutable Autonomous Robots</a>. In <i>Proceedings of Explainable Robotic Systems Workshop</i>, Chicago, IL, USA.</div>
 </div>",
   },
   "ACL&nbsp;Bibkey": {
@@ -172,7 +172,7 @@ exports[`golden citations > ChiyahHRI18 1`] = `
   },
   "BibTex": {
     "copied": "@inproceedings{ChiyahHRI18,
-    author= {Chiyah Garcia, Francisco J. and Robb, David A. and Liu, Xingkun and Laskov, Atanas and  Patron, Patron and Hastie, Helen},
+    author= {Chiyah Garcia, Francisco J. and Robb, David A. and Liu, Xingkun and Laskov, Atanas and  Patron, Pedro and Hastie, Helen},
     title= {Explain Yourself: A Natural Language Interface for Scrutable Autonomous Robots},
     booktitle = {Proceedings of Explainable Robotic Systems Workshop},
     series = {HRI'18},
@@ -180,7 +180,7 @@ exports[`golden citations > ChiyahHRI18 1`] = `
     address = {Chicago, IL, USA},
     url = {https://arxiv.org/abs/1803.02088}
 }",
-    "shown": "<tt class="bibtex-citation"><b>@inproceedings</b>{ChiyahHRI18,<br/>&nbsp;&nbsp;&nbsp;    author= {Chiyah Garcia, Francisco J. and Robb, David A. and Liu, Xingkun and Laskov, Atanas and  Patron, Patron and Hastie, Helen},<br/>&nbsp;&nbsp;&nbsp;    title= {Explain Yourself: A Natural Language Interface for Scrutable Autonomous Robots},<br/>&nbsp;&nbsp;&nbsp;    booktitle = {Proceedings of Explainable Robotic Systems Workshop},<br/>&nbsp;&nbsp;&nbsp;    series = {HRI'18},<br/>&nbsp;&nbsp;&nbsp;    year = {2018},<br/>&nbsp;&nbsp;&nbsp;    address = {Chicago, IL, USA},<br/>&nbsp;&nbsp;&nbsp;    url = {https://arxiv.org/abs/1803.02088}<br/>}</tt>",
+    "shown": "<tt class="bibtex-citation"><b>@inproceedings</b>{ChiyahHRI18,<br/>&nbsp;&nbsp;&nbsp;    author= {Chiyah Garcia, Francisco J. and Robb, David A. and Liu, Xingkun and Laskov, Atanas and  Patron, Pedro and Hastie, Helen},<br/>&nbsp;&nbsp;&nbsp;    title= {Explain Yourself: A Natural Language Interface for Scrutable Autonomous Robots},<br/>&nbsp;&nbsp;&nbsp;    booktitle = {Proceedings of Explainable Robotic Systems Workshop},<br/>&nbsp;&nbsp;&nbsp;    series = {HRI'18},<br/>&nbsp;&nbsp;&nbsp;    year = {2018},<br/>&nbsp;&nbsp;&nbsp;    address = {Chicago, IL, USA},<br/>&nbsp;&nbsp;&nbsp;    url = {https://arxiv.org/abs/1803.02088}<br/>}</tt>",
   },
   "Harvard": {
     "copied": "Chiyah Garcia, F.J. et al. (2018) “Explain Yourself: A Natural Language Interface for Scrutable Autonomous Robots,” Proceedings of Explainable Robotic Systems Workshop. Chicago, IL, USA (HRI’18). Available at: https://arxiv.org/abs/1803.02088.
@@ -194,63 +194,12 @@ exports[`golden citations > ChiyahHRI18 1`] = `
     "shown": "<a href="https://arxiv.org/abs/1803.02088" target="_blank" rel="noopener noreferrer">Explain Yourself: A Natural Language Interface for Scrutable Autonomous Robots</a> (Chiyah Garcia et al., HRI 2018)",
   },
   "address": "Chicago, IL, USA",
-  "authors": "Francisco J. Chiyah Garcia, David A. Robb, Xingkun Liu, Atanas Laskov, Patron Patron, Helen Hastie",
+  "authors": "Francisco J. Chiyah Garcia, David A. Robb, Xingkun Liu, Atanas Laskov, Pedro Patron, Helen Hastie",
   "doi": undefined,
   "series": "HRI 2018",
   "title": "Explain Yourself: A Natural Language Interface for Scrutable Autonomous Robots",
   "url": "https://arxiv.org/abs/1803.02088",
   "venue": "Proceedings of Explainable Robotic Systems Workshop",
-  "year": 2018,
-}
-`;
-
-exports[`golden citations > ChiyahINLG18 1`] = `
-{
-  "ACL": {
-    "copied": "Francisco J. Chiyah Garcia, David A. Robb, Atanas Laskov, Xingkun Liu, Pedro Patron, and Helen Hastie. 2018. Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models. In Proceedings of The 11th International Natural Language Generation Conference, pages 99--108, Tilburg, The Netherlands. ACM.
-",
-    "shown": "<div class="csl-bib-body">
-  <div data-csl-entry-id="ChiyahINLG18" class="csl-entry">Francisco J. Chiyah Garcia, David A. Robb, Atanas Laskov, Xingkun Liu, Pedro Patron, and Helen Hastie. 2018. <a href="https://www.aclweb.org/anthology/W18-6511/">Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models</a>. In <i>Proceedings of The 11th International Natural Language Generation Conference</i>, pages 99--108, Tilburg, The Netherlands. ACM.</div>
-</div>",
-  },
-  "ACL&nbsp;Bibkey": {
-    "copied": null,
-    "shown": null,
-  },
-  "BibTex": {
-    "copied": "@inproceedings{ChiyahINLG18,
-    title = {Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models},
-    author = {Chiyah Garcia, Francisco J. and Robb, David A. and Laskov, Atanas and Liu, Xingkun and Patron, Pedro and Hastie, Helen},
-    booktitle = {Proceedings of The 11th International Natural Language Generation Conference},
-    series = {INLG'18},
-    year = {2018},
-    month = {11},
-    pages = {99–-108},
-    address = {Tilburg, The Netherlands},
-    type = {Conference Proceedings},
-    publisher = {ACM},
-    url = {https://www.aclweb.org/anthology/W18-6511/}
-}",
-    "shown": "<tt class="bibtex-citation"><b>@inproceedings</b>{ChiyahINLG18,<br/>&nbsp;&nbsp;&nbsp;    title = {Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models},<br/>&nbsp;&nbsp;&nbsp;    author = {Chiyah Garcia, Francisco J. and Robb, David A. and Laskov, Atanas and Liu, Xingkun and Patron, Pedro and Hastie, Helen},<br/>&nbsp;&nbsp;&nbsp;    booktitle = {Proceedings of The 11th International Natural Language Generation Conference},<br/>&nbsp;&nbsp;&nbsp;    series = {INLG'18},<br/>&nbsp;&nbsp;&nbsp;    year = {2018},<br/>&nbsp;&nbsp;&nbsp;    month = {11},<br/>&nbsp;&nbsp;&nbsp;    pages = {99–-108},<br/>&nbsp;&nbsp;&nbsp;    address = {Tilburg, The Netherlands},<br/>&nbsp;&nbsp;&nbsp;    type = {Conference Proceedings},<br/>&nbsp;&nbsp;&nbsp;    publisher = {ACM},<br/>&nbsp;&nbsp;&nbsp;    url = {https://www.aclweb.org/anthology/W18-6511/}<br/>}</tt>",
-  },
-  "Harvard": {
-    "copied": "Chiyah Garcia, F.J. et al. (2018) “Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models,” Proceedings of The 11th International Natural Language Generation Conference. Tilburg, The Netherlands: ACM (INLG’18), pp. 99--108. Available at: https://www.aclweb.org/anthology/W18-6511/.
-",
-    "shown": "<div class="csl-bib-body">
-  <div data-csl-entry-id="ChiyahINLG18" class="csl-entry">Chiyah Garcia, F.J. <i>et al.</i> (2018) “Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models,” <i>Proceedings of The 11th International Natural Language Generation Conference</i>. Tilburg, The Netherlands: ACM (INLG’18), pp. 99--108. Available at: https://www.aclweb.org/anthology/W18-6511/.</div>
-</div>",
-  },
-  "Markdown<br/>(Informal)": {
-    "copied": "[Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models](https://www.aclweb.org/anthology/W18-6511/) (Chiyah Garcia et al., INLG 2018)",
-    "shown": "<a href="https://www.aclweb.org/anthology/W18-6511/" target="_blank" rel="noopener noreferrer">Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models</a> (Chiyah Garcia et al., INLG 2018)",
-  },
-  "address": "Tilburg, The Netherlands",
-  "authors": "Francisco J. Chiyah Garcia, David A. Robb, Atanas Laskov, Xingkun Liu, Pedro Patron, Helen Hastie",
-  "doi": undefined,
-  "series": "INLG 2018",
-  "title": "Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models",
-  "url": "https://www.aclweb.org/anthology/W18-6511/",
-  "venue": "Proceedings of The 11th International Natural Language Generation Conference",
   "year": 2018,
 }
 `;
@@ -710,6 +659,65 @@ exports[`golden citations > chiyah-garcia-2025-thesis 1`] = `
   "url": "https://jchiyah.github.io/Chiyah-Garcia_Thesis.pdf",
   "venue": "Heriot-Watt University",
   "year": 2025,
+}
+`;
+
+exports[`golden citations > chiyah-garcia-etal-2018-explainable 1`] = `
+{
+  "ACL": {
+    "copied": "Francisco Javier Chiyah Garcia, David A. Robb, Xingkun Liu, Atanas Laskov, Pedro Patron, and Helen Hastie. 2018. Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models. In Proceedings of the 11th International Conference on Natural Language Generation, pages 99–108, Tilburg University, The Netherlands. Association for Computational Linguistics.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="chiyah-garcia-etal-2018-explainable" class="csl-entry">Francisco Javier Chiyah Garcia, David A. Robb, Xingkun Liu, Atanas Laskov, Pedro Patron, and Helen Hastie. 2018. <a href="https://aclanthology.org/W18-6511/">Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models</a>. In <i>Proceedings of the 11th International Conference on Natural Language Generation</i>, pages 99–108, Tilburg University, The Netherlands. Association for Computational Linguistics.</div>
+</div>",
+  },
+  "ACL&nbsp;Bibkey": {
+    "copied": "chiyah-garcia-etal-2018-explainable",
+    "shown": "<samp>chiyah-garcia-etal-2018-explainable</samp>",
+  },
+  "BibTex": {
+    "copied": "@inproceedings{chiyah-garcia-etal-2018-explainable,
+    title = "Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models",
+    author = "Chiyah Garcia, Francisco Javier  and
+      Robb, David A.  and
+      Liu, Xingkun  and
+      Laskov, Atanas  and
+      Patron, Pedro  and
+      Hastie, Helen",
+    editor = "Krahmer, Emiel  and
+      Gatt, Albert  and
+      Goudbeek, Martijn",
+    booktitle = "Proceedings of the 11th International Conference on Natural Language Generation",
+    series = "INLG'18",
+    month = nov,
+    year = "2018",
+    address = "Tilburg University, The Netherlands",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/W18-6511/",
+    doi = "10.18653/v1/W18-6511",
+    pages = "99--108"
+}",
+    "shown": "<tt class="bibtex-citation"><b>@inproceedings</b>{chiyah-garcia-etal-2018-explainable,<br/>&nbsp;&nbsp;&nbsp;    title = "Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models",<br/>&nbsp;&nbsp;&nbsp;    author = "Chiyah Garcia, Francisco Javier and       Robb, David A. and       Liu, Xingkun and       Laskov, Atanas and       Patron, Pedro and       Hastie, Helen",<br/>&nbsp;&nbsp;&nbsp;    editor = "Krahmer, Emiel and       Gatt, Albert and       Goudbeek, Martijn",<br/>&nbsp;&nbsp;&nbsp;    booktitle = "Proceedings of the 11th International Conference on Natural Language Generation",<br/>&nbsp;&nbsp;&nbsp;    series = "INLG'18",<br/>&nbsp;&nbsp;&nbsp;    month = nov,<br/>&nbsp;&nbsp;&nbsp;    year = "2018",<br/>&nbsp;&nbsp;&nbsp;    address = "Tilburg University, The Netherlands",<br/>&nbsp;&nbsp;&nbsp;    publisher = "Association for Computational Linguistics",<br/>&nbsp;&nbsp;&nbsp;    url = "https://aclanthology.org/W18-6511/",<br/>&nbsp;&nbsp;&nbsp;    doi = "10.18653/v1/W18-6511",<br/>&nbsp;&nbsp;&nbsp;    pages = "99--108"<br/>}</tt>",
+  },
+  "Harvard": {
+    "copied": "Chiyah Garcia, F.J. et al. (2018) “Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models,” in E. Krahmer, A. Gatt, and M. Goudbeek (eds.) Proceedings of the 11th International Conference on Natural Language Generation. Tilburg University, The Netherlands: Association for Computational Linguistics (INLG’18), pp. 99–108. Available at: https://doi.org/10.18653/v1/W18-6511.
+",
+    "shown": "<div class="csl-bib-body">
+  <div data-csl-entry-id="chiyah-garcia-etal-2018-explainable" class="csl-entry">Chiyah Garcia, F.J. <i>et al.</i> (2018) “Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models,” in E. Krahmer, A. Gatt, and M. Goudbeek (eds.) <i>Proceedings of the 11th International Conference on Natural Language Generation</i>. Tilburg University, The Netherlands: Association for Computational Linguistics (INLG’18), pp. 99–108. Available at: https://doi.org/10.18653/v1/W18-6511.</div>
+</div>",
+  },
+  "Markdown<br/>(Informal)": {
+    "copied": "[Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models](https://aclanthology.org/W18-6511/) (Chiyah Garcia et al., INLG 2018)",
+    "shown": "<a href="https://aclanthology.org/W18-6511/" target="_blank" rel="noopener noreferrer">Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models</a> (Chiyah Garcia et al., INLG 2018)",
+  },
+  "address": "Tilburg University, The Netherlands",
+  "authors": "Francisco Javier Chiyah Garcia, David A. Robb, Xingkun Liu, Atanas Laskov, Pedro Patron, Helen Hastie",
+  "doi": "10.18653/v1/W18-6511",
+  "series": "INLG 2018",
+  "title": "Explainable Autonomy: A Study of Explanation Styles for Building Clear Mental Models",
+  "url": "https://aclanthology.org/W18-6511/",
+  "venue": "Proceedings of the 11th International Conference on Natural Language Generation",
+  "year": 2018,
 }
 `;
 

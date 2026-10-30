@@ -21,7 +21,8 @@ const TimelineItem = ({ icon, title, subtitle, date, description, description_it
 		const checkTruncation = () => {
 			if (descriptionRef.current) {
 				const element = descriptionRef.current;
-				const lineHeight = parseInt(window.getComputedStyle(element).lineHeight);
+				// parseFloat: rounding a 22.8px line height down made every 3-line description look too long
+				const lineHeight = parseFloat(window.getComputedStyle(element).lineHeight);
 				const maxHeight = lineHeight * 3 + 1; // Height for 3 lines (2 full + 1 faded)
 
 				// Set initial max-height to allow proper height calculation
@@ -45,9 +46,13 @@ const TimelineItem = ({ icon, title, subtitle, date, description, description_it
 		// height, so the item would only be truncated for visitors who had it cached.
 		const images = descriptionRef.current ? [...descriptionRef.current.querySelectorAll('img')] : [];
 		images.forEach((img) => img.addEventListener('load', checkTruncation));
+		// Re-check once the web font has loaded. Text measured in the fallback font
+		// can wrap to a different number of lines.
+		document.fonts.addEventListener('loadingdone', checkTruncation);
 		return () => {
 			window.removeEventListener('resize', checkTruncation);
 			images.forEach((img) => img.removeEventListener('load', checkTruncation));
+			document.fonts.removeEventListener('loadingdone', checkTruncation);
 		};
 	}, [description, isExpanded]);
 

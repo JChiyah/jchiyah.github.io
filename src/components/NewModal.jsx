@@ -29,12 +29,13 @@ const NewModal = ({
 
 					return (
 						<Row key={citeStyle.name} className="">
-							<Col xs="2" className="fw-bold justify-content-end user-select-none text-end">
+							{/* Labels go above the citation until the modal is wide enough (lg) to fit them alongside */}
+							<Col xs="12" lg="2" className="fw-bold justify-content-end user-select-none text-lg-end">
 								<span dangerouslySetInnerHTML={{
 									__html: citeStyle.name
 								}} />
 							</Col>
-							<Col xs="10">
+							<Col xs="12" lg="10">
 								<div className="citation-text text-bg-light">
 									<span
 										className="user-select-all"

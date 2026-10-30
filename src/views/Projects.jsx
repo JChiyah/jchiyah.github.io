@@ -49,7 +49,7 @@ class Projects extends Component {
 					<h3>Projects</h3>
 
 					<p className="text-secondary">
-						Here are some of the project I have worked on, but this is a <strong className="text-accent">work in progress</strong>!
+						Here are some of the projects I have worked on, but this is a <strong className="text-accent">work in progress</strong>!
 					</p>
 
 					<div className="row row-cols-1 row-cols-lg-2 items fade-animation-sequence">
