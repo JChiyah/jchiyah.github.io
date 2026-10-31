@@ -43,7 +43,7 @@
 				"title": "Software Developer Intern",
 				"subtitle": "SeeByte Ltd",
 				"date": "Jun 2018 - Dec 2018",
-				"description": "Working on a project to monitor underwater autonomous vehicles using augmented reality. I designed and coded a cross-platform program that connected to the vehicles and displayed them through a camera at their real-world GPS location. It required high-performance code for real-time image processing in C++ with OpenCV, Java and using ROS for communication.",
+				"description": "Worked on a project to monitor underwater autonomous vehicles using augmented reality. I designed and coded a cross-platform program that connected to the vehicles and displayed them through a camera at their real-world GPS location. It required high-performance code for real-time image processing in C++ with OpenCV, Java and using ROS for communication.",
 				"icon": "faCode"
 			},
 			{
@@ -59,10 +59,10 @@
 				"icon": "faLaptopCode"
 			},
 			{
-				"title": "Various Teacher Assistant Roles",
+				"title": "Various Teaching Assistant Roles",
 				"subtitle": "Heriot-Watt University",
 				"date": "Sep 2017 - May 2024 (term-time only)",
-				"description": "Mentored students and graded university coursework and exams for several graduate and undergraduate courses: Artificial Intelligence and Intelligent Agents (Year 3/MSc), Conversational Agents and Dialogue Systems (Year 4/Msc), Language Processors (Year 3) and Software Development 1 & 2 (Year 1).",
+				"description": "Mentored students and graded university coursework and exams for several graduate and undergraduate courses: Artificial Intelligence and Intelligent Agents (Year 3/MSc), Conversational Agents and Dialogue Systems (Year 4/MSc), Language Processors (Year 3) and Software Development 1 & 2 (Year 1).",
 				"icon": "faChalkboardTeacher"
 			},
 			{
@@ -88,7 +88,7 @@
 			{
 				"title": "Best Short Paper Award",
 				"subtitle": "SIGDIAL 2023",
-				"date": "Oct 2023",
+				"date": "Sep 2023",
 				"description": "For the paper <a href='/publications#chiyah-garcia-etal-2023-referring' class='link'>‘What are you referring to?’ Evaluating the Ability of Multi-Modal Dialogue Models to Process Clarificational Exchanges</a>.",
 				"icon": "faAward"
 			},
@@ -173,7 +173,7 @@
 				"title": "Certificate of Merit",
 				"subtitle": "Heriot-Watt University",
 				"date": "Aug 2016",
-				"description": "Received after third year of university to recognise the high grades obtained during the academic year 2015-2016.",
+				"description": "Received after second year of university to recognise the high grades obtained during the academic year 2015-2016.",
 				"icon": "faAward"
 			},
 			{
@@ -187,7 +187,7 @@
 				"title": "Certificate of Merit",
 				"subtitle": "Heriot-Watt University",
 				"date": "Aug 2015",
-				"description": "Received after third year of university to recognise the high grades obtained during the academic year 2014-2015.",
+				"description": "Received after first year of university to recognise the high grades obtained during the academic year 2014-2015.",
 				"icon": "faAward"
 			}
 		]
@@ -199,8 +199,8 @@
 			{
 				"title": "YRRSDS 2022 & 2023 Workshops",
 				"subtitle": "Organiser",
-				"date": "Feb 2022",
-				"description": "Organiser of <a href=https://sites.google.com/view/yrrsds2023 class='link'>YRRSDS 2022</a> and <a href=https://sites.google.com/view/yrrsds2022/home class='link'>2023</a> Workshops, including the main editor of the <a href='/publications#yrrsds-2023-young' class='link'>2023 proceedings</a>.",
+				"date": "Sep 2022 - Sep 2023",
+				"description": "Organiser of <a href='https://sites.google.com/view/yrrsds2022/home' class='link'>YRRSDS 2022</a> and <a href='https://sites.google.com/view/yrrsds2023' class='link'>2023</a> Workshops, including the main editor of the <a href='/publications#yrrsds-2023-young' class='link'>2023 proceedings</a>.",
 				"icon": "faUsers"
 			},
 			{
@@ -224,7 +224,7 @@
 				"description": "Check the <a href='https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/19023?highlight=19023' target='_blank' class='link'>seminar website</a> and resulting <a href='/publications#blumreiter-et-al-2019-towards-self-explainable' class='link'>publication</a>.",
 				"icon": "faBookReader",
 				"image": "jchiyah_shcloss_dagstuhl.jpg",
-				"image-alt": "Me at the Schloss Dagstuhl Seminar"
+				"image_alt": "Me at the Schloss Dagstuhl Seminar"
 			}
 		]
 	},
@@ -244,7 +244,9 @@
 				"subtitle": "Beyond Words Workshop",
 				"date": "Oct 2024",
 				"description": "Presented 'Repairs in Multi-Modal Collaborative Dialogues with VLMs' at the Beyond Words Workshop.",
-				"icon": "faPersonChalkboard"
+				"icon": "faPersonChalkboard",
+				"image": "2024-10_eutopia_workshop.webp",
+				"image_alt": "Group photo at the EUtopia Beyond Words Workshop"
 			},
 			{
 				"title": "Podcast Interview",
@@ -284,7 +286,7 @@
 				"title": "PhD in Computer Science (Natural Language Processing)",
 				"subtitle": "Heriot-Watt University, Siemens",
 				"date": "2019 - 2025",
-				"description": "<strong>Thesis: Learning to Handle Miscommunication in Multi-modal Conversational AI</strong><br>The thesis focuses on miscommunications arising from ambiguity in situated discourse, with industry partner Siemens. I have investigated vision and language models to identify and resolve ambiguous coreferences, along with the ability of distinct model architectures to resolve coreferences depending on the property used, such as colour or positions. I also recently proposed a novel dataset collected via a crowdsourcing protocol, and benchmark to train and evaluate VLLMs on context-dependent ambiguities in simulated environments.<br>Relevant topics:",
+				"description": "<strong>Thesis: Learning to Handle Miscommunication in Multi-modal Conversational AI</strong><br>The thesis focuses on miscommunications arising from ambiguity in situated discourse, with industry partner Siemens. I investigated vision and language models to identify and resolve ambiguous coreferences, along with the ability of distinct model architectures to resolve coreferences depending on the property used, such as colour or positions. I also proposed a novel dataset collected via a crowdsourcing protocol, and a benchmark to train and evaluate VLLMs on context-dependent ambiguities in simulated environments.<br>Relevant topics:",
 				"description_items": [
 					"Vision and language models for dialogue and instruction understanding.",
 					"Repairing miscommunication and ambiguity in dialogues.",

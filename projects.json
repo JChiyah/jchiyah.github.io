@@ -17,7 +17,7 @@
 			"PyTorch",
 			"Transformers",
 			"Object Detection",
-			"Weight & Biases",
+			"Weights & Biases",
 			"HuggingFace"
 		]
 	},
@@ -41,7 +41,7 @@
 			"PyTorch Lightning",
 			"Transformers",
 			"Object Detection",
-			"Weight & Biases",
+			"Weights & Biases",
 			"NLTK",
 			"SpaCy"
 		]
@@ -52,7 +52,7 @@
 		"subtitle": "Code and models",
 		"role": "First Author/Developer",
 		"description": "Code and models for the paper 'Exploring Multi-Modal Representations for Ambiguity Detection & Coreference Resolution in the SIMMC 2.0 Challenge' published at AAAI 2022 DSTC10 Workshop.",
-		"url": "https://github.com/jchiyah/exloring-mm-in-simmc2",
+		"url": "https://github.com/JChiyah/exploring-mm-in-simmc2",
 		"topics": [
 			"NLP",
 			"Vision and Language Models",
@@ -72,7 +72,7 @@
 		"title": "CRWIZ",
 		"subtitle": "The Intelligent Wizard Interface ",
 		"role": "Software Developer & Research Assistant",
-		"description": "A framework for collecting real-time Wizard-of-Oz dialogues through crowd-sourcing for collaborative, complex tasks. This framework uses semi-guided dialogue to avoid interactions that breach procedures and processes only known to experts, while enabling the capture of a wide variety of interactions. It resides on Slurk (Schlangen et al., 2018). For more information, check the the conference publication in LREC 2020 and website below.",
+		"description": "A framework for collecting real-time Wizard-of-Oz dialogues through crowd-sourcing for collaborative, complex tasks. This framework uses semi-guided dialogue to avoid interactions that breach procedures and processes only known to experts, while enabling the capture of a wide variety of interactions. It resides on Slurk (Schlangen et al., 2018). For more information, check the conference publication in LREC 2020 and website below.",
 		"url": "https://github.com/JChiyah/crwiz",
 		"topics": [
 			"Crowd-sourcing",
@@ -96,7 +96,7 @@
 		"title": "MIRIAM",
 		"subtitle": "The Multimodal Interface",
 		"role": "Software Developer & Research Assistant",
-		"description": "MIRIAM allows operators to interrogate autonomous underwater vehicle's actions and status in real time through natural language chat. This was developed as part of an internship in 2017. I still work on it and I have added many features like speech-recognition, speech-to-text, etc. The BBC wrote an article about it: https://www.bbc.co.uk/news/uk-scotland-edinburgh-east-fife-54282984",
+		"description": "MIRIAM allows operators to interrogate autonomous underwater vehicle's actions and status in real time through natural language chat. This was developed as part of an internship in 2017. I kept working on it afterwards and added many features like speech-recognition, text-to-speech, etc. The BBC wrote an article about it: https://www.bbc.co.uk/news/uk-scotland-edinburgh-east-fife-54282984",
 		"url": "https://miriamproject.github.io/",
 		"topics": [
 			"Natural Language Generation",
